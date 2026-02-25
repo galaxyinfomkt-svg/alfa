@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { company, localBusinessSchema } from "@/data/company";
+import { company, localBusinessSchema, breadcrumbSchema } from "@/data/company";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
@@ -73,6 +73,9 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+      ])) }} />
 
       {/* ===== HERO SECTION ===== */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

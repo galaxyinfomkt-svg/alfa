@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { company } from "@/data/company";
+import { company, breadcrumbSchema } from "@/data/company";
 import FormEmbed from "@/components/FormEmbed";
 import GoogleMap from "@/components/GoogleMap";
 
@@ -7,11 +7,17 @@ export const metadata: Metadata = {
   title: "Contact Us | Get a Free Estimate",
   description:
     "Contact Alfa Construction Inc for a free estimate on painting, carpentry, siding, windows, or remodeling in Massachusetts. Call (508) 596-3750 or fill out our form.",
+  alternates: { canonical: "https://alfapaintingcarpentry.com/contact" },
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+        { name: "Contact Us", url: "https://alfapaintingcarpentry.com/contact" },
+      ])) }} />
+
       {/* Hero */}
       <section className="pt-32 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">

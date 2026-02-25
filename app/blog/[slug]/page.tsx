@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPostBySlug, getAllBlogSlugs } from "@/data/blog";
+import { breadcrumbSchema, articleSchema } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 export async function generateStaticParams() {
@@ -24,6 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       authors: [post.author],
       images: [{ url: post.image }],
     },
+    alternates: { canonical: `https://alfapaintingcarpentry.com/blog/${slug}` },
   };
 }
 
@@ -36,6 +38,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+        { name: "Blog", url: "https://alfapaintingcarpentry.com/blog" },
+        { name: post.title, url: `https://alfapaintingcarpentry.com/blog/${slug}` },
+      ])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema({
+        title: post.title,
+        description: post.metaDescription,
+        url: `https://alfapaintingcarpentry.com/blog/${slug}`,
+        image: post.image,
+        datePublished: post.date,
+        author: post.author,
+      })) }} />
       <article>
         {/* Hero */}
         <section className="relative pt-32 pb-20 bg-black overflow-hidden">
@@ -108,27 +123,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       )}
 
       <CTASection />
-
-      {/* Article Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: post.title,
-            description: post.excerpt,
-            image: post.image,
-            datePublished: post.date,
-            author: { "@type": "Organization", name: "Alfa Construction Inc" },
-            publisher: {
-              "@type": "Organization",
-              name: "Alfa Construction Inc",
-              logo: { "@type": "ImageObject", url: "/images/logo.png" },
-            },
-          }),
-        }}
-      />
     </>
   );
 }

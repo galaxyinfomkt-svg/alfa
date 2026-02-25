@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCityBySlug, cities } from "@/data/cities";
-import { company } from "@/data/company";
+import { company, breadcrumbSchema } from "@/data/company";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
@@ -129,6 +129,14 @@ export default async function CityPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+          { name: "Home", url: "https://alfapaintingcarpentry.com" },
+          { name: "Service Areas", url: "https://alfapaintingcarpentry.com" },
+          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/cities/${city.slug}` },
+        ])) }}
       />
 
       {/* ===== HERO ===== */}

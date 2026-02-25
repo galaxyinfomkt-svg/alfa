@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/data/company";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: "Our Services | Professional Painting, Carpentry & Remodeling in MA",
   description:
     "Explore Alfa Construction's full range of services: painting, carpentry, siding, window & door installation, and home remodeling across Massachusetts. Licensed & insured. Free estimates.",
+  alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
 };
 
 const services = [
@@ -54,6 +56,11 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+        { name: "Services", url: "https://alfapaintingcarpentry.com/services" },
+      ])) }} />
+
       {/* Hero */}
       <section className="pt-32 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">

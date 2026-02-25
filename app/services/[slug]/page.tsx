@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { company } from "@/data/company";
+import { company, breadcrumbSchema, faqSchema, serviceSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
@@ -256,10 +256,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    alternates: {
+      canonical: `https://alfapaintingcarpentry.com/services/${slug}`,
+    },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      images: [{ url: "/images/new-construction-siding-windows-board-batten-ma.jpg" }],
+      url: `https://alfapaintingcarpentry.com/services/${slug}`,
+      images: [{ url: service.heroImage, width: 1200, height: 630, alt: service.name }],
     },
   };
 }
@@ -271,6 +275,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
+      {/* Schema.org Structured Data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+        { name: "Services", url: "https://alfapaintingcarpentry.com/services" },
+        { name: service.name, url: `https://alfapaintingcarpentry.com/services/${slug}` },
+      ])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({
+        name: service.name,
+        description: service.metaDescription,
+        url: `https://alfapaintingcarpentry.com/services/${slug}`,
+        image: `https://alfapaintingcarpentry.com${service.heroImage}`,
+      })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(service.faqs)) }} />
+
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-black overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -396,21 +414,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       {/* CTA */}
       <CTASection title={`Get Your Free ${service.shortName} Estimate`} />
 
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: service.faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: { "@type": "Answer", text: faq.answer },
-            })),
-          }),
-        }}
-      />
     </>
   );
 }

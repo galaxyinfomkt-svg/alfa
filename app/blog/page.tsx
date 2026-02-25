@@ -2,17 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/data/blog";
+import { breadcrumbSchema } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Blog | Home Improvement Tips for Massachusetts Homeowners",
   description:
     "Expert advice on painting, carpentry, siding, and home remodeling for Massachusetts homeowners. Tips from Alfa Construction Inc's 18+ years of experience.",
+  alternates: { canonical: "https://alfapaintingcarpentry.com/blog" },
 };
 
 export default function BlogPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+        { name: "Blog", url: "https://alfapaintingcarpentry.com/blog" },
+      ])) }} />
+
       <section className="pt-32 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Our Blog</span>

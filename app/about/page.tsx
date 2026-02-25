@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { company } from "@/data/company";
+import { company, breadcrumbSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
@@ -9,11 +9,17 @@ export const metadata: Metadata = {
   title: "About Us | 18+ Years of Construction Excellence in Massachusetts",
   description:
     "Learn about Alfa Construction Inc. Founded by Fabio, we bring 18+ years of painting, carpentry, and remodeling expertise to Massachusetts homeowners. Licensed & insured.",
+  alternates: { canonical: "https://alfapaintingcarpentry.com/about" },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+        { name: "About Us", url: "https://alfapaintingcarpentry.com/about" },
+      ])) }} />
+
       {/* Hero */}
       <section className="pt-32 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">

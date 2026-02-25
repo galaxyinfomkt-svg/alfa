@@ -7,14 +7,21 @@ export const company = {
   email: "info@alfapaintingcarpentry.com",
   website: "https://alfapaintingcarpentry.com",
   address: {
+    street: "50 Mechanic St",
     locality: "Bellingham",
     region: "MA",
+    postalCode: "02019",
     country: "US",
     full: "Bellingham, MA",
+  },
+  geo: {
+    latitude: 42.0687,
+    longitude: -71.4748,
   },
   license: "#192348",
   licenseExpiry: "04/2027",
   experience: "18+",
+  foundedYear: 2006,
   owner: "Fabio",
   hours: "Mon–Sat 7:00 AM – 6:00 PM",
   hoursStructured: "Mo-Sa 07:00-18:00",
@@ -22,6 +29,7 @@ export const company = {
   instagram: "https://www.instagram.com/alfaconstructioninc/",
   facebook: "https://www.facebook.com/alfacarpentrypainting",
   googleReview: "https://g.page/r/CZ1rhJ3jJReMEAE/review",
+  googleMapsUrl: "https://maps.google.com/?cid=10275746837959009437",
   logo: "/images/logo.png",
   differentials: [
     "18+ years of construction excellence",
@@ -53,47 +61,117 @@ export const company = {
   ],
 } as const;
 
+const BASE_URL = "https://alfapaintingcarpentry.com";
+
+// ─── Enhanced LocalBusiness + HomeAndConstructionBusiness Schema ───
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  "@id": `${BASE_URL}/#organization`,
   name: "Alfa Construction Inc",
   alternateName: "Alfa Painting & Carpentry",
   description:
-    "Expert painting, carpentry, siding, window & door installation and home remodeling services in Massachusetts. Licensed & insured. 18+ years experience.",
+    "Expert painting, carpentry, siding, window & door installation and home remodeling services in Massachusetts. Licensed & insured contractor with 18+ years of experience serving 100+ cities.",
   telephone: "+15085963750",
-  url: "https://alfapaintingcarpentry.com",
+  email: "info@alfapaintingcarpentry.com",
+  url: BASE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${BASE_URL}/images/logo.png`,
+    width: 180,
+    height: 50,
+  },
+  image: [
+    `${BASE_URL}/images/new-construction-siding-windows-board-batten-ma.jpg`,
+    `${BASE_URL}/images/exterior-siding-cape-cod-home-bellingham-ma.jpg`,
+    `${BASE_URL}/images/deck-carpentry-staircase-railing-massachusetts.png`,
+  ],
   address: {
     "@type": "PostalAddress",
+    streetAddress: "50 Mechanic St",
     addressLocality: "Bellingham",
     addressRegion: "MA",
+    postalCode: "02019",
     addressCountry: "US",
   },
-  openingHours: ["Mo-Sa 07:00-18:00"],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 42.0687,
+    longitude: -71.4748,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "07:00",
+      closes: "18:00",
+    },
+  ],
+  priceRange: "$$",
+  currenciesAccepted: "USD",
+  paymentAccepted: "Cash, Check, Credit Card",
+  foundingDate: "2006",
+  founder: {
+    "@type": "Person",
+    name: "Fabio",
+  },
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    minValue: 5,
+    maxValue: 15,
+  },
+  knowsLanguage: ["en", "pt"],
+  slogan: "Expert Painting & Carpentry Across Massachusetts",
   sameAs: [
     "https://www.instagram.com/alfaconstructioninc/",
     "https://www.facebook.com/alfacarpentrypainting",
+    "https://g.page/r/CZ1rhJ3jJReMEAE",
   ],
-  areaServed: "Massachusetts",
+  areaServed: [
+    {
+      "@type": "State",
+      name: "Massachusetts",
+      sameAs: "https://en.wikipedia.org/wiki/Massachusetts",
+    },
+    {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 42.0687,
+        longitude: -71.4748,
+      },
+      geoRadius: "80467",
+    },
+  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Alfa Construction Services",
+    name: "Home Improvement Services",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
           name: "Interior & Exterior Painting",
+          url: `${BASE_URL}/services/painting`,
+          description: "Professional interior and exterior painting services across Massachusetts.",
         },
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Carpentry & Trim Work" },
+        itemOffered: {
+          "@type": "Service",
+          name: "Carpentry & Trim Work",
+          url: `${BASE_URL}/services/carpentry`,
+          description: "Fine carpentry, trim replacement, and door installation services.",
+        },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
           name: "Siding Installation & Repair",
+          url: `${BASE_URL}/services/siding`,
+          description: "Hardie Plank, vinyl siding, and full replacement services.",
         },
       },
       {
@@ -101,6 +179,8 @@ export const localBusinessSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Window & Door Installation",
+          url: `${BASE_URL}/services/windows-doors`,
+          description: "Energy-efficient window and door installation services.",
         },
       },
       {
@@ -108,6 +188,8 @@ export const localBusinessSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Home Remodeling & Renovation",
+          url: `${BASE_URL}/services/remodeling`,
+          description: "Complete home renovation from kitchens to bathrooms.",
         },
       },
     ],
@@ -115,6 +197,156 @@ export const localBusinessSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
+    bestRating: "5",
+    worstRating: "1",
+    ratingCount: "22",
     reviewCount: "22",
   },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "John S." },
+      datePublished: "2024-06-15",
+      reviewBody:
+        "Alfa Painting & Carpentry did a great job assisting us with our remodeling. They painted and installed a wide variety of doors. The painting was very well done in a high-end home. Would highly recommend Fabio and his team.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Mark Conti" },
+      datePublished: "2024-04-20",
+      reviewBody:
+        "Real good results always come from really good professionals. They did a very good job replacing rotten trims inside and out of my property.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Joann Polakoff" },
+      datePublished: "2024-02-10",
+      reviewBody:
+        "I give them a 5 star rating. Fabio was very thorough and cordial. All members of his team were pleasant and respectful. The price was very reasonable.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+  ],
 };
+
+// ─── WebSite Schema (for sitelinks search box) ───
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  name: "Alfa Construction Inc",
+  alternateName: "Alfa Painting & Carpentry",
+  url: BASE_URL,
+  publisher: { "@id": `${BASE_URL}/#organization` },
+  inLanguage: "en-US",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${BASE_URL}/services/{search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// ─── Helper: Generate BreadcrumbList schema ───
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+// ─── Helper: Generate FAQ schema ───
+export function faqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+// ─── Helper: Generate Service schema ───
+export function serviceSchema(service: {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+  areaServed?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: service.name,
+    name: service.name,
+    description: service.description,
+    url: service.url,
+    image: service.image,
+    provider: { "@id": `${BASE_URL}/#organization` },
+    areaServed: service.areaServed || {
+      "@type": "State",
+      name: "Massachusetts",
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "USD",
+      },
+    },
+  };
+}
+
+// ─── Helper: Generate Article schema ───
+export function articleSchema(article: {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+  author: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    url: article.url,
+    image: article.image.startsWith("http") ? article.image : `${BASE_URL}${article.image}`,
+    datePublished: article.datePublished,
+    dateModified: article.dateModified || article.datePublished,
+    author: {
+      "@type": "Organization",
+      name: "Alfa Construction Inc",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Alfa Construction Inc",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/images/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": article.url,
+    },
+  };
+}

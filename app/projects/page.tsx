@@ -2,17 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
+import { breadcrumbSchema } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Our Projects | Portfolio of Painting, Carpentry & Remodeling Work",
   description:
     "View Alfa Construction Inc's portfolio of completed projects across Massachusetts. Painting, carpentry, siding, window installation, and home remodeling.",
+  alternates: { canonical: "https://alfapaintingcarpentry.com/projects" },
 };
 
 export default function ProjectsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+        { name: "Home", url: "https://alfapaintingcarpentry.com" },
+        { name: "Projects", url: "https://alfapaintingcarpentry.com/projects" },
+      ])) }} />
+
       <section className="pt-32 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Our Work</span>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCityBySlug, cities } from "@/data/cities";
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
-import { company } from "@/data/company";
+import { company, breadcrumbSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
@@ -170,6 +170,14 @@ export default async function CityServicePage({
   return (
     <>
       {/* JSON-LD Schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
+          { name: "Home", url: "https://alfapaintingcarpentry.com" },
+          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/cities/${city.slug}` },
+          { name: service.name, url: `https://alfapaintingcarpentry.com/cities/${city.slug}/${service.slug}` },
+        ])) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
