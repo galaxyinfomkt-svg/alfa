@@ -26,7 +26,7 @@ const servicesData: Record<string, {
   painting: {
     name: "Interior & Exterior Painting",
     shortName: "Painting",
-    heroImage: "/images/painting-hero.jpg",
+    heroImage: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
     metaTitle: "Interior & Exterior Painting Services in Massachusetts",
     metaDescription: "Professional interior and exterior painting in Massachusetts. Expert prep, premium paints, flawless finish. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
     headline: "Professional Interior & Exterior Painting in Massachusetts",
@@ -70,7 +70,7 @@ const servicesData: Record<string, {
   carpentry: {
     name: "Carpentry & Trim Work",
     shortName: "Carpentry",
-    heroImage: "/images/carpentry-hero.jpg",
+    heroImage: "/images/deck-carpentry-staircase-railing-massachusetts.png",
     metaTitle: "Carpentry & Trim Work Services in Massachusetts",
     metaDescription: "Expert carpentry and trim work in Massachusetts. Trim replacement, door installation, fine woodwork. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
     headline: "Expert Carpentry & Trim Work in Massachusetts",
@@ -114,7 +114,7 @@ const servicesData: Record<string, {
   siding: {
     name: "Siding Installation & Repair",
     shortName: "Siding",
-    heroImage: "/images/siding-hero.jpg",
+    heroImage: "/images/commercial-siding-installation-massachusetts.png",
     metaTitle: "Siding Installation & Repair in Massachusetts | Hardie Plank Experts",
     metaDescription: "Professional siding installation and repair in Massachusetts. Hardie Plank, vinyl siding specialists. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
     headline: "Professional Siding Installation & Repair in Massachusetts",
@@ -158,7 +158,7 @@ const servicesData: Record<string, {
   "windows-doors": {
     name: "Window & Door Installation",
     shortName: "Windows & Doors",
-    heroImage: "/images/windows-doors-hero.jpg",
+    heroImage: "/images/siding-window-installation-before-massachusetts.jpg",
     metaTitle: "Window & Door Installation in Massachusetts",
     metaDescription: "Professional window and door installation in Massachusetts. Energy-efficient upgrades, precise fitting. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
     headline: "Professional Window & Door Installation in Massachusetts",
@@ -202,7 +202,7 @@ const servicesData: Record<string, {
   remodeling: {
     name: "Home Remodeling & Renovation",
     shortName: "Remodeling",
-    heroImage: "/images/remodeling-hero.jpg",
+    heroImage: "/images/new-construction-framing-zip-system-massachusetts.jpg",
     metaTitle: "Home Remodeling & Renovation in Massachusetts",
     metaDescription: "Complete home remodeling and renovation in Massachusetts. Kitchen, bathroom, full-home renovations. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
     headline: "Complete Home Remodeling & Renovation in Massachusetts",
@@ -259,7 +259,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      images: [{ url: "/images/og-image.jpg" }],
+      images: [{ url: "/images/new-construction-siding-windows-board-batten-ma.jpg" }],
     },
   };
 }

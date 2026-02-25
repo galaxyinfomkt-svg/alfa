@@ -78,8 +78,8 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-bg.jpg"
-            alt="Professional painting and construction work by Alfa Construction in Massachusetts"
+            src="/images/siding-window-installation-after-massachusetts.jpg"
+            alt="Professional siding and window installation by Alfa Construction Inc in Massachusetts"
             fill
             className="object-cover"
             priority
@@ -212,8 +212,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/about-team.jpg"
-                  alt="Alfa Construction team working on a project in Massachusetts"
+                  src="/images/deck-carpentry-staircase-railing-massachusetts.png"
+                  alt="Alfa Construction Inc carpentry work - custom deck staircase and railing in Massachusetts"
                   width={600}
                   height={500}
                   className="w-full h-auto object-cover"
@@ -242,12 +242,12 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Exterior Painting – Framingham, MA", service: "Painting", img: "/images/project-1.jpg" },
-              { title: "Interior Painting – Newton, MA", service: "Painting", img: "/images/project-2.jpg" },
-              { title: "Trim & Carpentry – Wellesley, MA", service: "Carpentry", img: "/images/project-3.jpg" },
-              { title: "Siding Installation – Natick, MA", service: "Siding", img: "/images/project-4.jpg" },
-              { title: "Window Installation – Brookline, MA", service: "Windows & Doors", img: "/images/project-5.jpg" },
-              { title: "Home Remodeling – Shrewsbury, MA", service: "Remodeling", img: "/images/project-6.jpg" },
+              { title: "Exterior Siding – Bellingham, MA", service: "Siding", img: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg" },
+              { title: "Commercial Siding – Massachusetts", service: "Siding", img: "/images/commercial-siding-installation-massachusetts.png" },
+              { title: "Deck Carpentry – Massachusetts", service: "Carpentry", img: "/images/deck-carpentry-staircase-railing-massachusetts.png" },
+              { title: "Deck & Siding Remodel – Massachusetts", service: "Remodeling", img: "/images/deck-construction-siding-installation-ma.png" },
+              { title: "Siding & Windows – Massachusetts", service: "Siding", img: "/images/siding-window-installation-after-massachusetts.jpg" },
+              { title: "Board & Batten Siding – MA", service: "Siding", img: "/images/new-construction-siding-windows-board-batten-ma.jpg" },
             ].map((project, i) => (
               <Link key={i} href="/projects" className="group relative block rounded-xl overflow-hidden shadow-lg">
                 <div className="aspect-[4/3] relative">
@@ -366,7 +366,7 @@ export default function HomePage() {
                 excerpt: "Learn the key warning signs that your Massachusetts home's exterior paint is past its prime and needs professional attention.",
                 date: "March 15, 2025",
                 category: "Painting",
-                img: "/images/blog-1.jpg",
+                img: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
               },
               {
                 slug: "hardie-plank-vs-vinyl-siding-new-england",
@@ -374,7 +374,7 @@ export default function HomePage() {
                 excerpt: "A comprehensive comparison of the two most popular siding options for homes in Massachusetts and New England.",
                 date: "February 10, 2025",
                 category: "Siding",
-                img: "/images/blog-2.jpg",
+                img: "/images/siding-window-installation-after-massachusetts.jpg",
               },
               {
                 slug: "why-licensed-contractor-massachusetts-matters",
@@ -382,7 +382,7 @@ export default function HomePage() {
                 excerpt: "Understanding the importance of working with licensed and insured contractors for your Massachusetts home project.",
                 date: "October 15, 2024",
                 category: "General",
-                img: "/images/blog-3.jpg",
+                img: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg",
               },
             ].map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">

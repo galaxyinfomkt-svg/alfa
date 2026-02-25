@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Alfa Construction Inc",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/new-construction-siding-windows-board-batten-ma.jpg",
         width: 1200,
         height: 630,
         alt: "Alfa Construction Inc - Professional Painting & Carpentry in Massachusetts",

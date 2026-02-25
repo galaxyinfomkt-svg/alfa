@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
     author: "Alfa Construction Team",
     category: "Painting",
     readTime: "6 min read",
-    image: "/images/blog-1.jpg",
+    image: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
     metaTitle:
       "Signs Your Exterior Paint Needs Replacing This Spring | Alfa Construction MA",
     metaDescription:
@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
     author: "Alfa Construction Team",
     category: "Siding",
     readTime: "7 min read",
-    image: "/images/blog-2.jpg",
+    image: "/images/siding-window-installation-after-massachusetts.jpg",
     metaTitle:
       "Hardie Plank vs Vinyl Siding for New England Homes | Alfa Construction",
     metaDescription:
@@ -173,7 +173,7 @@ export const blogPosts: BlogPost[] = [
     author: "Alfa Construction Team",
     category: "Painting",
     readTime: "6 min read",
-    image: "/images/blog-3.jpg",
+    image: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg",
     metaTitle:
       "How to Choose Interior Paint Colors for Massachusetts Homes | Alfa Construction",
     metaDescription:
@@ -224,7 +224,7 @@ export const blogPosts: BlogPost[] = [
     author: "Alfa Construction Team",
     category: "Carpentry",
     readTime: "7 min read",
-    image: "/images/blog-4.jpg",
+    image: "/images/deck-carpentry-staircase-railing-massachusetts.png",
     metaTitle:
       "5 Warning Signs Your Trim Needs Repair Before Winter | Alfa Construction MA",
     metaDescription:
@@ -292,7 +292,7 @@ export const blogPosts: BlogPost[] = [
     author: "Alfa Construction Team",
     category: "General",
     readTime: "7 min read",
-    image: "/images/blog-5.jpg",
+    image: "/images/commercial-siding-installation-massachusetts.png",
     metaTitle:
       "Why Hiring a Licensed Contractor in Massachusetts Matters | Alfa Construction",
     metaDescription:
@@ -342,7 +342,7 @@ export const blogPosts: BlogPost[] = [
     author: "Alfa Construction Team",
     category: "Painting",
     readTime: "8 min read",
-    image: "/images/blog-6.jpg",
+    image: "/images/siding-window-installation-before-massachusetts.jpg",
     metaTitle:
       "Before and After Exterior Painting in MetroWest MA | Alfa Construction",
     metaDescription:

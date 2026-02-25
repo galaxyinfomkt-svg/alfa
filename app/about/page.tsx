@@ -34,10 +34,10 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/about-team.jpg"
-                  alt="Fabio and the Alfa Construction team"
-                  width={600}
-                  height={500}
+                  src="/images/deck-carpentry-staircase-railing-massachusetts.png"
+                  alt="Alfa Construction Inc carpentry work - custom deck staircase and railing in Massachusetts"
+                  width={1080}
+                  height={1350}
                   className="w-full h-auto object-cover"
                 />
               </div>

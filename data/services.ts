@@ -35,7 +35,7 @@ const services: Service[] = [
     longDescription:
       "A fresh coat of paint is one of the fastest and most cost-effective ways to transform any home. At Alfa Construction, we go far beyond just rolling paint onto a wall. Our painting process begins with thorough surface preparation — filling nail holes, sanding rough spots, caulking gaps, and priming bare surfaces — so the finished product looks seamless and lasts for years. We use only premium-grade paints from trusted brands like Benjamin Moore and Sherwin-Williams, offering an extensive palette so you can find the exact color and finish that matches your vision. Whether you need a bright, modern refresh for your living room, a protective exterior coat to shield your home from New England winters, or a complete color overhaul before listing your property, our experienced painters deliver clean lines, even coverage, and zero mess. We protect your furniture, floors, and landscaping throughout the project, and we always leave your home cleaner than we found it.",
     icon: "PaintBrush",
-    heroImage: "/images/painting-hero.jpg",
+    heroImage: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
     keywords: [
       "interior painting Massachusetts",
       "exterior house painting MA",
@@ -237,7 +237,7 @@ const services: Service[] = [
     longDescription:
       "Quality carpentry is the backbone of a beautiful home. At Alfa Construction, our skilled carpenters handle everything from replacing rotted exterior trim and installing crown molding to hanging new interior doors and building custom shelving. We understand that the details matter — a perfectly mitered corner, a door that swings silently on balanced hinges, trim that transitions seamlessly between rooms. Our carpentry team brings years of hands-on experience working on Massachusetts homes of every age and style, from centuries-old colonials to brand-new construction. We source quality lumber and materials, measure with precision, and finish every piece to match your home's existing aesthetic. Whether you need a single door replaced or an entire floor of trim and millwork updated, Alfa Construction delivers craftsmanship you can see and feel every time you walk through your home.",
     icon: "Hammer",
-    heroImage: "/images/carpentry-hero.jpg",
+    heroImage: "/images/deck-carpentry-staircase-railing-massachusetts.png",
     keywords: [
       "carpentry services Massachusetts",
       "trim work MA",
@@ -439,7 +439,7 @@ const services: Service[] = [
     longDescription:
       "Your home's siding is its first line of defense against the elements — and its biggest visual statement from the street. At Alfa Construction, we install, repair, and replace siding using the highest-quality materials on the market, including James Hardie fiber cement, premium vinyl, engineered wood, and natural cedar. Our process begins with a thorough inspection of your existing siding and the substrate beneath it. We identify water damage, insulation deficiencies, and structural issues before a single panel goes up. Then we install a proper moisture barrier, ensure adequate ventilation, and mount your new siding with precision fastening for a watertight, wind-resistant finish. Whether your siding has been battered by decades of Massachusetts nor'easters or you simply want a modern aesthetic upgrade, we deliver results that protect your home, slash energy costs, and dramatically boost curb appeal. Every project comes with a detailed warranty and our commitment to your complete satisfaction.",
     icon: "Home",
-    heroImage: "/images/siding-hero.jpg",
+    heroImage: "/images/commercial-siding-installation-massachusetts.png",
     keywords: [
       "siding installation Massachusetts",
       "Hardie Plank installer MA",
@@ -641,7 +641,7 @@ const services: Service[] = [
     longDescription:
       "Windows and doors are the eyes and entry points of your home — they define its character, control its comfort, and determine its energy efficiency. At Alfa Construction, we specialize in precision window and door installation that eliminates drafts, reduces energy waste, enhances security, and elevates your home's curb appeal. We work with top manufacturers including Andersen, Pella, Marvin, Harvey, and Therma-Tru to offer a wide range of styles, materials, and performance ratings suited to the Massachusetts climate. Every installation begins with exact measurements and a thorough assessment of the existing opening, ensuring your new windows and doors fit perfectly and seal completely. We handle the full scope — removal of old units, inspection and repair of the rough opening, shimming, insulating, flashing, trim work, and final caulking. The result is a window or door that operates smoothly, seals tightly, and looks stunning from both inside and out.",
     icon: "Window",
-    heroImage: "/images/windows-doors-hero.jpg",
+    heroImage: "/images/siding-window-installation-before-massachusetts.jpg",
     keywords: [
       "window installation Massachusetts",
       "door replacement MA",
@@ -843,7 +843,7 @@ const services: Service[] = [
     longDescription:
       "When it is time to reimagine your living space, Alfa Construction is the partner you need. We deliver comprehensive home remodeling and renovation services that transform outdated, underperforming rooms into beautiful, functional spaces tailored to how you actually live. Our team handles every aspect of the renovation — demolition, framing, drywall, electrical and plumbing coordination, flooring, tiling, cabinetry, painting, trim, and finish work — so you have a single point of contact from start to finish. We specialize in kitchen renovations, bathroom remodels, basement finishing, and whole-house updates that combine multiple trades into one cohesive project. Every renovation begins with a detailed planning phase where we discuss your goals, establish a realistic budget, and create a scope of work that eliminates surprises. We bring the same attention to detail to a half-bath refresh as we do to a full gut renovation, because we believe every homeowner deserves craftsmanship they can see and feel every day.",
     icon: "Wrench",
-    heroImage: "/images/remodeling-hero.jpg",
+    heroImage: "/images/new-construction-framing-zip-system-massachusetts.jpg",
     keywords: [
       "home remodeling Massachusetts",
       "house renovation MA",
