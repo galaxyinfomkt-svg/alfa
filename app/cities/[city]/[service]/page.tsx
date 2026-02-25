@@ -180,14 +180,14 @@ export default async function CityServicePage({
       />
 
       {/* ===== HERO ===== */}
-      <section className="pt-32 pb-16 bg-alfa-blue relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-alfa-gold rounded-full translate-x-1/3 -translate-y-1/3" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-alfa-gold rounded-full -translate-x-1/2 translate-y-1/2" />
         </div>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           {/* Breadcrumb */}
-          <nav className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-4">
+          <nav className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-4">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -231,13 +231,13 @@ export default async function CityServicePage({
             <br />
             <span className="text-alfa-gold">in {city.name}, MA</span>
           </h1>
-          <p className="text-gray-200 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
             {service.description.replace(/\{cityName\}/g, city.name)}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-dark text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 text-lg"
+              className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 text-lg"
             >
               Get a Free {service.shortName} Estimate
               <svg
@@ -256,7 +256,7 @@ export default async function CityServicePage({
             </Link>
             <a
               href={company.phoneTel}
-              className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
+              className="inline-flex items-center justify-center gap-2 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
             >
               <svg
                 className="w-5 h-5"
@@ -278,9 +278,9 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== TRUST BADGES ===== */}
-      <section className="py-6 bg-white border-b border-gray-100">
+      <section className="py-6 bg-alfa-dark border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-gray-600">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-gray-400">
             <span className="flex items-center gap-1.5">
               <svg
                 className="w-4 h-4 text-alfa-gold"
@@ -342,58 +342,58 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== UNIQUE CITY + SERVICE INTRO ===== */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-4xl mx-auto px-4">
           <div className="prose prose-lg max-w-none">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
               {service.name} in {city.name}
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue mt-2 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
               Professional {service.shortName} for {city.name} Homeowners
             </h2>
 
             {/* Category-based unique intro paragraph */}
-            <p className="text-gray-600 leading-relaxed mb-4">{intro}</p>
+            <p className="text-gray-400 leading-relaxed mb-4">{intro}</p>
 
             {/* Category-based pain point paragraph */}
-            <p className="text-gray-600 leading-relaxed mb-4">{painPoint}</p>
+            <p className="text-gray-400 leading-relaxed mb-4">{painPoint}</p>
 
             {/* Category-based solution paragraph */}
-            <p className="text-gray-600 leading-relaxed mb-4">{solution}</p>
+            <p className="text-gray-400 leading-relaxed mb-4">{solution}</p>
 
             {/* City-specific service note */}
             {cityNote && (
-              <div className="bg-alfa-blue/5 border-l-4 border-alfa-gold rounded-r-xl p-6 my-8">
-                <h3 className="text-lg font-bold text-alfa-blue mb-2">
+              <div className="bg-white/5 border-l-4 border-alfa-gold rounded-r-xl p-6 my-8">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {service.shortName} Note for {city.name}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">{cityNote}</p>
+                <p className="text-gray-300 leading-relaxed">{cityNote}</p>
               </div>
             )}
 
             {/* Category-based closing paragraph */}
-            <p className="text-gray-600 leading-relaxed">{closing}</p>
+            <p className="text-gray-400 leading-relaxed">{closing}</p>
           </div>
         </div>
       </section>
 
       {/* ===== PAIN POINTS & SOLUTIONS ===== */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
               Common Challenges
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
               {service.shortName} Challenges We Solve in {city.name}
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Pain Points */}
             <div>
-              <h3 className="text-xl font-bold text-alfa-blue mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                 <svg
-                  className="w-6 h-6 text-red-500"
+                  className="w-6 h-6 text-red-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -410,10 +410,10 @@ export default async function CityServicePage({
               <ul className="space-y-4">
                 {service.painPoints.map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                    <span className="w-6 h-6 bg-red-500/10 text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                       {i + 1}
                     </span>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       {point.replace(/\{cityName\}/g, city.name)}
                     </p>
                   </li>
@@ -423,7 +423,7 @@ export default async function CityServicePage({
 
             {/* Solutions */}
             <div>
-              <h3 className="text-xl font-bold text-alfa-blue mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                 <svg
                   className="w-6 h-6 text-green-500"
                   fill="none"
@@ -442,10 +442,10 @@ export default async function CityServicePage({
               <ul className="space-y-4">
                 {service.solutions.map((sol, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                    <span className="w-6 h-6 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                       {i + 1}
                     </span>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       {sol.replace(/\{cityName\}/g, city.name)}
                     </p>
                   </li>
@@ -457,16 +457,16 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== PROCESS STEPS ===== */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
               How It Works
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
               Our {service.shortName} Process in {city.name}
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto">
               We follow a proven step-by-step process to deliver outstanding{" "}
               {service.name.toLowerCase()} results for every {city.name}{" "}
               homeowner.
@@ -480,13 +480,13 @@ export default async function CityServicePage({
                   <div className="hidden lg:block absolute top-10 left-[60%] w-[calc(100%-20%)] h-0.5 bg-alfa-gold/20" />
                 )}
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-alfa-blue rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 relative z-10 shadow-lg">
+                  <div className="w-20 h-20 bg-alfa-gold rounded-2xl flex items-center justify-center text-black text-2xl font-bold mx-auto mb-4 relative z-10 shadow-lg">
                     {step.step}
                   </div>
-                  <h3 className="text-lg font-bold text-alfa-blue mb-2">
+                  <h3 className="text-lg font-bold text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-sm leading-relaxed">
                     {step.description.replace(/\{cityName\}/g, city.name)}
                   </p>
                 </div>
@@ -497,7 +497,7 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== BENEFITS ===== */}
-      <section className="py-20 bg-alfa-blue-dark">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
@@ -515,7 +515,7 @@ export default async function CityServicePage({
               >
                 <div className="w-10 h-10 bg-alfa-gold rounded-lg flex items-center justify-center shrink-0">
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-5 h-5 text-black"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -526,7 +526,7 @@ export default async function CityServicePage({
                     />
                   </svg>
                 </div>
-                <p className="text-gray-200 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   {benefit.replace(/\{cityName\}/g, city.name)}
                 </p>
               </div>
@@ -536,13 +536,13 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== FAQs ===== */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
               FAQ
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
               {service.shortName} Questions from {city.name} Homeowners
             </h2>
           </div>
@@ -550,9 +550,9 @@ export default async function CityServicePage({
             {service.faqs.map((faq, i) => (
               <details
                 key={i}
-                className="group bg-alfa-gray rounded-xl overflow-hidden"
+                className="group bg-alfa-card border border-white/5 rounded-xl overflow-hidden"
               >
-                <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-alfa-blue hover:text-alfa-gold transition-colors">
+                <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-white hover:text-alfa-gold transition-colors">
                   <span className="pr-4">
                     {faq.question.replace(/\{cityName\}/g, city.name)}
                   </span>
@@ -570,7 +570,7 @@ export default async function CityServicePage({
                     />
                   </svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                <div className="px-6 pb-6 text-gray-400 leading-relaxed">
                   {faq.answer.replace(/\{cityName\}/g, city.name)}
                 </div>
               </details>
@@ -580,16 +580,16 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== OTHER SERVICES IN THIS CITY ===== */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
               More Services
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
               Other Services in {city.name}, MA
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto">
               In addition to {service.name.toLowerCase()}, we provide a complete
               range of home improvement services to {city.name} homeowners.
             </p>
@@ -607,7 +607,7 @@ export default async function CityServicePage({
                 <Link
                   key={s.slug}
                   href={`/cities/${city.slug}/${s.slug}`}
-                  className="inline-flex items-center gap-2 bg-white hover:bg-alfa-blue hover:text-white text-alfa-blue font-medium px-5 py-3 rounded-lg border border-gray-200 hover:border-alfa-blue transition-all duration-200 shadow-sm"
+                  className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-gray-300 hover:border-alfa-gold/30 hover:text-alfa-gold font-medium px-5 py-3 rounded-lg transition-all duration-200 shadow-md shadow-black/10"
                 >
                   {s.name}
                   <svg
@@ -629,7 +629,7 @@ export default async function CityServicePage({
           <div className="text-center mt-6">
             <Link
               href={`/cities/${city.slug}`}
-              className="inline-flex items-center gap-1 text-alfa-gold font-semibold hover:text-alfa-blue transition-colors"
+              className="inline-flex items-center gap-1 text-alfa-gold font-semibold hover:text-white transition-colors"
             >
               <svg
                 className="w-4 h-4"
@@ -651,16 +651,16 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== REVIEWS ===== */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
               Testimonials
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto">
               Real reviews from Massachusetts homeowners who trust Alfa
               Construction Inc for their {service.name.toLowerCase()} projects.
             </p>
@@ -671,7 +671,7 @@ export default async function CityServicePage({
               href={company.googleReview}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-alfa-blue hover:bg-alfa-blue-light text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300"
             >
               Leave a Review on Google
             </a>
@@ -680,16 +680,16 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== GOOGLE MAP ===== */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
               Service Area
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue mt-2 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
               {service.shortName} Services Near {city.name}
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto">
               Based in Bellingham, MA, Alfa Construction Inc provides{" "}
               {service.name.toLowerCase()} services to {city.name} and all
               surrounding {city.county} County communities.

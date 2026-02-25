@@ -1,150 +1,156 @@
 @import "tailwindcss";
 
 @theme {
-  --color-alfa-blue: #1e3a5f;
-  --color-alfa-blue-light: #2a4f7f;
-  --color-alfa-blue-dark: #0f2440;
-  --color-alfa-gold: #d4a843;
-  --color-alfa-gold-light: #e8c56a;
-  --color-alfa-gold-dark: #b8922e;
-  --color-alfa-gray: #f5f5f5;
-  --color-alfa-gray-dark: #333333;
+  /* Brand gold — extracted from Alfa Construction logo */
+  --color-alfa-gold: #B8963E;
+  --color-alfa-gold-light: #D4AA50;
+  --color-alfa-gold-dark: #9A7A2E;
+
+  /* Dark palette */
+  --color-alfa-dark: #0A0A0A;
+  --color-alfa-card: #111111;
+  --color-alfa-surface: #161616;
+  --color-alfa-border: #1C1C1C;
+
+  /* Legacy aliases (for city/service pages not fully rewritten) */
+  --color-alfa-blue: #B8963E;
+  --color-alfa-blue-light: #D4AA50;
+  --color-alfa-blue-dark: #050505;
+  --color-alfa-gray: #0A0A0A;
+  --color-alfa-gray-dark: #888888;
   --color-alfa-white: #ffffff;
+
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: #e5e5e5;
 }
 
-/* Custom animations */
+/* ─── Animations ────────────────────────────────────── */
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 @keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 8px rgba(184, 150, 62, 0.3); }
+  50% { box-shadow: 0 0 24px rgba(184, 150, 62, 0.6); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgba(212, 168, 67, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(212, 168, 67, 0.8);
-  }
-}
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+.animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+.animate-slide-in-left { animation: slide-in-left 0.6s ease-out forwards; }
+.animate-slide-in-right { animation: slide-in-right 0.6s ease-out forwards; }
+.animate-float { animation: float 3s ease-in-out infinite; }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
-}
+/* ─── Phone button pulse ────────────────────────────── */
+.phone-pulse { animation: pulse-gold 2s ease-in-out infinite; }
 
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 0.6s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 0.6s ease-out forwards;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-/* Phone button pulse */
-.phone-pulse {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-/* Hero overlay */
+/* ─── Hero overlay (dark dramatic) ──────────────────── */
 .hero-overlay {
   background: linear-gradient(
     135deg,
-    rgba(30, 58, 95, 0.85) 0%,
-    rgba(15, 36, 64, 0.7) 50%,
-    rgba(30, 58, 95, 0.6) 100%
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.75) 100%
   );
 }
 
-/* Card hover effects */
+/* ─── Card hover ────────────────────────────────────── */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
 .card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(184, 150, 62, 0.15);
 }
 
-/* Section transition helper */
-.section-transition {
-  transition: all 0.3s ease;
+/* ─── Gold border glow on focus/hover ───────────────── */
+.gold-glow {
+  transition: box-shadow 0.3s ease;
+}
+.gold-glow:hover {
+  box-shadow: 0 0 20px rgba(184, 150, 62, 0.15), 0 0 0 1px rgba(184, 150, 62, 0.3);
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
+/* ─── Gold gradient text ────────────────────────────── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4AA50, #B8963E, #9A7A2E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+/* ─── Gold line separator ───────────────────────────── */
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #B8963E, #D4AA50);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-alfa-blue);
-  border-radius: 4px;
+/* ─── Glass effect ──────────────────────────────────── */
+.glass {
+  background: rgba(17, 17, 17, 0.6);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-alfa-blue-light);
-}
+/* ─── Section transition ────────────────────────────── */
+.section-transition { transition: all 0.3s ease; }
 
-/* Review widget container */
-.review-widget-container iframe {
-  min-height: 400px;
-}
+/* ─── Scrollbar (dark) ──────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000000; }
+::-webkit-scrollbar-thumb { background: #333333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B8963E; }
 
-/* Form container */
-.form-container iframe {
-  min-height: 457px;
+/* ─── Review widget ─────────────────────────────────── */
+.review-widget-container iframe { min-height: 400px; }
+
+/* ─── Form container ────────────────────────────────── */
+.form-container iframe { min-height: 457px; }
+
+/* ─── Prose overrides for dark theme (blog content) ─── */
+.prose { color: #a3a3a3; }
+.prose h2, .prose h3, .prose h4 { color: #ffffff; }
+.prose strong { color: #D4AA50; }
+.prose a { color: #B8963E; }
+.prose a:hover { color: #D4AA50; }
+.prose ul, .prose ol { color: #a3a3a3; }
+.prose li::marker { color: #B8963E; }
+
+/* ─── Selection color ───────────────────────────────── */
+::selection {
+  background: rgba(184, 150, 62, 0.3);
+  color: #ffffff;
 }

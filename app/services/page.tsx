@@ -55,20 +55,20 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-alfa-blue">
+      <section className="pt-32 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">What We Do</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
             Our Professional Services
           </h1>
-          <p className="text-gray-200 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Alfa Construction Inc offers a complete range of home improvement services across Massachusetts. Licensed, insured, and backed by 18+ years of experience.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (

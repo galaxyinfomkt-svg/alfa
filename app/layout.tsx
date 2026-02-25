@@ -70,6 +70,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <meta name="theme-color" content="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
         {/* Reviews widget script */}
         <script
           type="text/javascript"
@@ -77,7 +79,7 @@ export default function RootLayout({
           defer
         />
       </head>
-      <body className="font-sans antialiased bg-white text-gray-900">
+      <body className="font-sans antialiased bg-black text-gray-300">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

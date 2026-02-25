@@ -272,19 +272,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-alfa-blue overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-black overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image src={service.heroImage} alt={service.name} fill className="object-cover" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Our Services</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">{service.headline}</h1>
-          <p className="text-gray-200 max-w-3xl text-lg mb-8">{service.subheadline}</p>
+          <p className="text-gray-400 max-w-3xl text-lg mb-8">{service.subheadline}</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-dark text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg">
               {service.cta}
             </Link>
-            <a href={company.phoneTel} className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg">
+            <a href={company.phoneTel} className="inline-flex items-center justify-center gap-2 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/10 text-lg">
               Call {company.phone}
             </a>
           </div>
@@ -292,30 +292,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Description */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-4xl mx-auto px-4">
           {service.description.map((para, i) => (
-            <p key={i} className="text-gray-700 text-lg leading-relaxed mb-6">{para}</p>
+            <p key={i} className="text-gray-300 text-lg leading-relaxed mb-6">{para}</p>
           ))}
         </div>
       </section>
 
       {/* Pain Points */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue">Common Problems We Solve</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Common Problems We Solve</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {service.painPoints.map((point, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div key={i} className="bg-alfa-card rounded-xl p-6 border border-white/5">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+                  <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center shrink-0">
+                    <svg className="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-alfa-blue mb-1">{point.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{point.text}</p>
+                    <h3 className="font-bold text-white mb-1">{point.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{point.text}</p>
                   </div>
                 </div>
               </div>
@@ -325,19 +325,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue">Our {service.shortName} Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Our {service.shortName} Process</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {service.process.map((step) => (
               <div key={step.step} className="text-center">
-                <div className="w-14 h-14 bg-alfa-gold text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-14 h-14 bg-alfa-gold text-black rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="font-bold text-alfa-blue mb-2 text-sm">{step.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{step.description}</p>
+                <h3 className="font-bold text-white mb-2 text-sm">{step.title}</h3>
+                <p className="text-gray-400 text-xs leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -345,12 +345,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-alfa-blue">
+      <section className="py-20 bg-alfa-dark border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">Why Choose Alfa Construction</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {service.benefits.map((benefit, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white/10 rounded-lg p-4">
+              <div key={i} className="flex items-start gap-3 bg-white/5 border border-white/5 rounded-lg p-4">
                 <svg className="w-5 h-5 text-alfa-gold mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                 <span className="text-white text-sm">{benefit}</span>
               </div>
@@ -360,17 +360,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* FAQs */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-alfa-blue text-center mb-10">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {service.faqs.map((faq, i) => (
-              <details key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 group">
-                <summary className="p-6 cursor-pointer font-semibold text-alfa-blue flex justify-between items-center">
+              <details key={i} className="bg-alfa-card rounded-xl border border-white/5 group">
+                <summary className="p-6 cursor-pointer font-semibold text-white flex justify-between items-center">
                   {faq.question}
-                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-600 leading-relaxed">{faq.answer}</div>
+                <div className="px-6 pb-6 text-gray-400 leading-relaxed">{faq.answer}</div>
               </details>
             ))}
           </div>
@@ -378,17 +378,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Reviews */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-alfa-blue text-center mb-10">Customer Reviews</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-10">Customer Reviews</h2>
           <ReviewsWidget />
         </div>
       </section>
 
       {/* Map */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-alfa-blue text-center mb-10">{service.shortName} Service Area</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-10">{service.shortName} Service Area</h2>
           <GoogleMap />
         </div>
       </section>

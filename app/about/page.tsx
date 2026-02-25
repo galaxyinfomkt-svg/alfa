@@ -15,20 +15,20 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-alfa-blue">
+      <section className="pt-32 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">About Us</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
             {company.experience} Years of Construction Excellence
           </h1>
-          <p className="text-gray-200 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Alfa Construction Inc has been transforming homes across Massachusetts since 2006. Quality craftsmanship, honest service, and results that speak for themselves.
           </p>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -41,38 +41,38 @@ export default function AboutPage() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-alfa-blue text-white p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-alfa-gold text-black p-6 rounded-2xl shadow-xl">
                 <p className="text-4xl font-bold">18+</p>
                 <p className="text-sm font-medium">Years Serving MA</p>
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-alfa-blue mb-6">Our Story</h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
+              <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
+              <p className="text-gray-300 mb-4 leading-relaxed">
                 Alfa Construction Inc was founded by Fabio with a simple vision: deliver exceptional quality construction services with integrity and respect. Starting with residential painting projects in the MetroWest area, the company quickly earned a reputation for meticulous attention to detail and outstanding results.
               </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
+              <p className="text-gray-300 mb-4 leading-relaxed">
                 Over 18 years later, Alfa Construction has grown into a full-service home improvement company offering painting, carpentry, siding, window and door installation, and complete home remodeling. We now serve over 100 cities across Massachusetts and Southern New Hampshire.
               </p>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 What hasn&apos;t changed is our commitment to treating every home as if it were our own. Our bilingual team (English &amp; Portuguese) brings professionalism, craftsmanship, and a personal touch to every project — from a single room repaint to a full home renovation.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-alfa-gray rounded-xl p-4 text-center">
+                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
                   <p className="text-2xl font-bold text-alfa-gold">500+</p>
-                  <p className="text-sm text-gray-600">Projects Completed</p>
+                  <p className="text-sm text-gray-400">Projects Completed</p>
                 </div>
-                <div className="bg-alfa-gray rounded-xl p-4 text-center">
+                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
                   <p className="text-2xl font-bold text-alfa-gold">100+</p>
-                  <p className="text-sm text-gray-600">Cities Served</p>
+                  <p className="text-sm text-gray-400">Cities Served</p>
                 </div>
-                <div className="bg-alfa-gray rounded-xl p-4 text-center">
+                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
                   <p className="text-2xl font-bold text-alfa-gold">5.0</p>
-                  <p className="text-sm text-gray-600">Google Rating</p>
+                  <p className="text-sm text-gray-400">Google Rating</p>
                 </div>
-                <div className="bg-alfa-gray rounded-xl p-4 text-center">
+                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
                   <p className="text-2xl font-bold text-alfa-gold">18+</p>
-                  <p className="text-sm text-gray-600">Years Experience</p>
+                  <p className="text-sm text-gray-400">Years Experience</p>
                 </div>
               </div>
             </div>
@@ -81,9 +81,9 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-alfa-blue text-center mb-12">Why Homeowners Choose Alfa</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Homeowners Choose Alfa</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -108,12 +108,12 @@ export default function AboutPage() {
                 ),
               },
             ].map((value, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm text-center">
-                <div className="w-16 h-16 bg-alfa-blue/10 rounded-xl flex items-center justify-center text-alfa-blue mx-auto mb-4">
+              <div key={i} className="bg-alfa-card rounded-2xl p-8 text-center border border-white/5">
+                <div className="w-16 h-16 bg-alfa-gold/10 rounded-xl flex items-center justify-center text-alfa-gold mx-auto mb-4">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-alfa-blue mb-3">{value.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -121,25 +121,25 @@ export default function AboutPage() {
       </section>
 
       {/* Reviews */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-alfa-blue text-center mb-10">Customer Reviews</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-10">Customer Reviews</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {company.reviews.map((review, i) => (
-              <div key={i} className="bg-alfa-gray rounded-2xl p-6">
+              <div key={i} className="bg-alfa-card rounded-2xl p-6 border border-white/5">
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, j) => (
                     <svg key={j} className="w-5 h-5 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                   ))}
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4 italic">&quot;{review.text}&quot;</p>
-                <p className="font-semibold text-alfa-blue text-sm">— {review.author}</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 italic">&quot;{review.text}&quot;</p>
+                <p className="font-semibold text-white text-sm">— {review.author}</p>
               </div>
             ))}
           </div>
           <ReviewsWidget />
           <div className="text-center mt-8">
-            <a href={company.googleReview} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-alfa-blue hover:bg-alfa-blue-light text-white font-semibold px-6 py-3 rounded-lg transition-all">
+            <a href={company.googleReview} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-semibold px-6 py-3 rounded-lg transition-all">
               Leave a Review on Google
             </a>
           </div>
@@ -147,9 +147,9 @@ export default function AboutPage() {
       </section>
 
       {/* Map */}
-      <section className="py-20 bg-alfa-gray">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-alfa-blue text-center mb-10">Our Location</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-10">Our Location</h2>
           <GoogleMap />
         </div>
       </section>

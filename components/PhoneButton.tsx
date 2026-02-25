@@ -6,7 +6,7 @@ export default function PhoneButton() {
   return (
     <a
       href={company.phoneTel}
-      className="fixed bottom-6 left-6 z-50 bg-alfa-gold hover:bg-alfa-gold-dark text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl phone-pulse transition-all duration-300 hover:scale-110"
+      className="fixed bottom-6 left-6 z-50 bg-alfa-gold hover:bg-alfa-gold-light text-black w-14 h-14 rounded-full flex items-center justify-center shadow-xl shadow-alfa-gold/20 phone-pulse transition-all duration-300 hover:scale-110"
       aria-label={`Call Alfa Construction at ${company.phone}`}
     >
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

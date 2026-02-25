@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <>
       <article>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-alfa-blue overflow-hidden">
+        <section className="relative pt-32 pb-20 bg-black overflow-hidden">
           <div className="absolute inset-0 opacity-20">
             <Image src={post.image} alt={post.title} fill className="object-cover" />
           </div>
@@ -47,13 +47,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
               Back to Blog
             </Link>
-            <span className="inline-block bg-alfa-gold text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            <span className="inline-block bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full mb-4">
               {post.category}
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
               {post.title}
             </h1>
-            <div className="flex items-center gap-4 text-gray-300 text-sm">
+            <div className="flex items-center gap-4 text-gray-400 text-sm">
               <span>{post.author}</span>
               <span>·</span>
               <span>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
@@ -64,17 +64,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </section>
 
         {/* Content */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-alfa-dark">
           <div className="max-w-3xl mx-auto px-4">
             <div
-              className="prose prose-lg max-w-none prose-headings:text-alfa-blue prose-headings:font-bold prose-a:text-alfa-gold prose-strong:text-alfa-blue-dark"
+              className="prose prose-lg max-w-none prose-headings:text-white prose-headings:font-bold prose-a:text-alfa-gold prose-strong:text-alfa-gold prose-invert"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
             {/* Tags */}
-            <div className="mt-10 pt-6 border-t border-gray-200">
+            <div className="mt-10 pt-6 border-t border-white/5">
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <span key={tag} className="bg-alfa-gray text-alfa-blue text-xs font-medium px-3 py-1 rounded-full">
+                  <span key={tag} className="bg-white/5 text-gray-300 text-xs font-medium px-3 py-1 rounded-full">
                     {tag}
                   </span>
                 ))}
@@ -86,18 +86,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 bg-alfa-gray">
+        <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-alfa-blue mb-8 text-center">Related Articles</h2>
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedPosts.map((rp) => (
                 <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group block">
-                  <div className="card-hover bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                  <div className="card-hover bg-alfa-card rounded-2xl overflow-hidden shadow-lg shadow-black/20 border border-white/5">
                     <div className="aspect-[16/10] relative overflow-hidden">
                       <Image src={rp.image} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-5">
-                      <h3 className="font-bold text-alfa-blue group-hover:text-alfa-gold transition-colors text-sm">{rp.title}</h3>
+                      <h3 className="font-bold text-white group-hover:text-alfa-gold transition-colors text-sm">{rp.title}</h3>
                     </div>
                   </div>
                 </Link>
