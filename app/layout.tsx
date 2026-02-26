@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
 import Script from "next/script";
-import { localBusinessSchema, websiteSchema } from "@/data/company";
+import { localBusinessSchema, websiteSchema, contractorSchema, imageGallerySchema } from "@/data/company";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -141,6 +141,16 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        {/* GeneralContractor Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(contractorSchema) }}
+        />
+        {/* ImageGallery Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
         />
 
         {/* Reviews widget script */}

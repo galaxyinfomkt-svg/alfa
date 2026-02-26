@@ -69,7 +69,7 @@ export const localBusinessSchema = {
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   "@id": `${BASE_URL}/#organization`,
   name: "Alfa Construction Inc",
-  alternateName: "Alfa Painting & Carpentry",
+  alternateName: ["Alfa Painting & Carpentry", "Alfa Construction", "Alfa Painting", "Alfa Carpentry", "Alfa Painting Carpentry"],
   description:
     "Expert painting, carpentry, siding, window & door installation and home remodeling services in Massachusetts. Licensed & insured contractor with 18+ years of experience serving 100+ cities.",
   telephone: "+15085963750",
@@ -226,6 +226,122 @@ export const localBusinessSchema = {
       reviewBody:
         "I give them a 5 star rating. Fabio was very thorough and cordial. All members of his team were pleasant and respectful. The price was very reasonable.",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    },
+  ],
+};
+
+// ─── Contractor Schema (like RS Development) ───
+export const contractorSchema = {
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": `${BASE_URL}/#contractor`,
+  name: "Alfa Construction Inc",
+  alternateName: ["Alfa Painting & Carpentry", "Alfa Construction"],
+  description:
+    "Licensed painting, carpentry, siding, window & door installation and home remodeling contractor serving Massachusetts. Expert craftsmanship with 18+ years of experience.",
+  url: BASE_URL,
+  telephone: "+15085963750",
+  email: "info@alfapaintingcarpentry.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "50 Mechanic St",
+    addressLocality: "Bellingham",
+    addressRegion: "MA",
+    postalCode: "02019",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 42.0687,
+    longitude: -71.4748,
+  },
+  areaServed: {
+    "@type": "State",
+    name: "Massachusetts",
+  },
+  knowsAbout: [
+    "Interior Painting",
+    "Exterior Painting",
+    "Carpentry",
+    "Trim Work",
+    "Door Installation",
+    "Siding Installation",
+    "Hardie Plank Siding",
+    "Vinyl Siding",
+    "Window Installation",
+    "Door Replacement",
+    "Home Remodeling",
+    "Kitchen Remodeling",
+    "Bathroom Remodeling",
+    "Deck Construction",
+    "Surface Preparation",
+    "Caulking and Sealing",
+  ],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "Massachusetts Construction License",
+    recognizedBy: {
+      "@type": "Organization",
+      name: "Commonwealth of Massachusetts",
+    },
+  },
+};
+
+// ─── ImageGallery Schema (like RS Development) ───
+export const imageGallerySchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "Alfa Construction Inc Project Gallery",
+  description: "Portfolio of painting, carpentry, siding, and remodeling projects completed by Alfa Construction Inc across Massachusetts.",
+  url: `${BASE_URL}/projects`,
+  image: [
+    {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/images/exterior-siding-cape-cod-home-bellingham-ma.jpg`,
+      name: "Exterior Siding Installation - Bellingham, MA",
+      description: "Complete exterior siding installation on a Cape Cod style home in Bellingham, Massachusetts.",
+      width: 1200,
+      height: 900,
+    },
+    {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/images/commercial-siding-installation-massachusetts.png`,
+      name: "Commercial Siding Installation - Massachusetts",
+      description: "Professional commercial siding installation project in Massachusetts.",
+      width: 1200,
+      height: 900,
+    },
+    {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/images/deck-carpentry-staircase-railing-massachusetts.png`,
+      name: "Deck Carpentry & Staircase - Massachusetts",
+      description: "Custom deck staircase and railing carpentry work in Massachusetts.",
+      width: 1080,
+      height: 1350,
+    },
+    {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/images/deck-construction-siding-installation-ma.png`,
+      name: "Deck Construction & Siding - Massachusetts",
+      description: "Deck construction and siding installation project in Massachusetts.",
+      width: 1200,
+      height: 900,
+    },
+    {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/images/siding-window-installation-after-massachusetts.jpg`,
+      name: "Siding & Window Installation - Massachusetts",
+      description: "Complete siding and window installation showing the after result in Massachusetts.",
+      width: 1200,
+      height: 900,
+    },
+    {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/images/new-construction-siding-windows-board-batten-ma.jpg`,
+      name: "New Construction Board & Batten Siding - Massachusetts",
+      description: "New construction with board and batten siding and window installation in Massachusetts.",
+      width: 1200,
+      height: 900,
     },
   ],
 };
