@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getCityBySlug, cities, getExtendedNearbyCities } from "@/data/cities";
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
@@ -8,6 +9,38 @@ import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import FormEmbed from "@/components/FormEmbed";
+
+/* ---------- hero image rotation by service + city ---------- */
+
+const serviceHeroImages: Record<string, { src: string; alt: string }[]> = {
+  painting: [
+    { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Exterior painting and siding on Cape Cod home" },
+    { src: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg", alt: "Porch soffit and beadboard painting on modern home" },
+    { src: "/images/siding-window-installation-before-massachusetts.jpg", alt: "Home exterior before professional painting" },
+  ],
+  carpentry: [
+    { src: "/images/deck-carpentry-staircase-railing-massachusetts.png", alt: "Custom deck carpentry with staircase and railing" },
+    { src: "/images/deck-construction-siding-installation-ma.png", alt: "Deck construction and carpentry project" },
+    { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "New construction framing and carpentry work" },
+  ],
+  siding: [
+    { src: "/images/new-construction-siding-windows-board-batten-ma.jpg", alt: "Board and batten siding installation" },
+    { src: "/images/commercial-siding-installation-massachusetts.png", alt: "Commercial siding installation project" },
+    { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Siding and window installation project" },
+    { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Cape Cod home siding replacement" },
+  ],
+  "windows-doors": [
+    { src: "/images/siding-window-installation-after-massachusetts.jpg", alt: "Window installation completed project" },
+    { src: "/images/new-construction-siding-windows-board-batten-ma.jpg", alt: "New windows with board and batten siding" },
+    { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Window and siding installation" },
+  ],
+  remodeling: [
+    { src: "/images/deck-construction-siding-installation-ma.png", alt: "Home remodeling with deck and siding" },
+    { src: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg", alt: "Modern home remodel with porch update" },
+    { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "Home renovation framing stage" },
+    { src: "/images/siding-window-installation-after-massachusetts.jpg", alt: "Complete home renovation result" },
+  ],
+};
 
 /* ---------- helpers for unique content rotation ---------- */
 
@@ -127,6 +160,10 @@ export default async function CityServicePage({
   const noteKey = serviceNoteMap[service.slug];
   const cityNote = noteKey ? city[noteKey] : null;
 
+  /* ---- hero image (varied by service + city) ---- */
+  const heroImgs = serviceHeroImages[service.slug] || serviceHeroImages.painting;
+  const heroImg = heroImgs[hashString(city.slug) % heroImgs.length];
+
   /* ---- JSON-LD schemas ---- */
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -212,11 +249,18 @@ export default async function CityServicePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
-      {/* ===== HERO (RS Development split layout with form) ===== */}
-      <section className="relative pt-32 pb-16 bg-black overflow-hidden">
+      {/* ===== HERO (split layout with background image + form) ===== */}
+      <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0">
+          <Image
+            src={heroImg.src}
+            alt={`${heroImg.alt} in ${city.name}, MA`}
+            fill
+            className="object-cover"
+            priority
+            quality={80}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-alfa-gold/5 rounded-full translate-x-1/3 -translate-y-1/3" />
         </div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">

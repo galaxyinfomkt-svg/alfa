@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getCityBySlug, cities } from "@/data/cities";
 import { company, breadcrumbSchema } from "@/data/company";
@@ -7,6 +8,32 @@ import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import FormEmbed from "@/components/FormEmbed";
+
+/* ---------- hero image rotation (10 images, varied by city) ---------- */
+
+const heroImages = [
+  { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Exterior siding on Cape Cod home in Bellingham, MA" },
+  { src: "/images/siding-window-installation-after-massachusetts.jpg", alt: "Siding and window installation in Massachusetts" },
+  { src: "/images/new-construction-siding-windows-board-batten-ma.jpg", alt: "Board and batten siding with new windows in Massachusetts" },
+  { src: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg", alt: "Porch soffit and beadboard siding on modern home in MA" },
+  { src: "/images/deck-construction-siding-installation-ma.png", alt: "Deck construction and siding installation in Massachusetts" },
+  { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Commercial siding and window installation in Massachusetts" },
+  { src: "/images/deck-carpentry-staircase-railing-massachusetts.png", alt: "Custom deck carpentry with staircase railing in MA" },
+  { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "New construction framing with ZIP system in Massachusetts" },
+  { src: "/images/commercial-siding-installation-massachusetts.png", alt: "Commercial siding installation project in Massachusetts" },
+  { src: "/images/siding-window-installation-before-massachusetts.jpg", alt: "Home before siding and window renovation in Massachusetts" },
+];
+
+function hashStr(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) { h = (h << 5) - h + s.charCodeAt(i); h |= 0; }
+  return Math.abs(h);
+}
+
+function getCityHeroImage(slug: string) {
+  return heroImages[hashStr(slug) % heroImages.length];
+}
 
 /* ---------- static generation for all 100 cities ---------- */
 
@@ -139,177 +166,100 @@ export default async function CityPage({
         ])) }}
       />
 
-      {/* ===== HERO ===== */}
-      <section className="pt-32 pb-16 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-alfa-gold rounded-full translate-x-1/3 -translate-y-1/3" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-alfa-gold rounded-full -translate-x-1/2 translate-y-1/2" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <Link
-            href="/cities"
-            className="inline-flex items-center gap-1 text-alfa-gold text-sm font-medium mb-4 hover:text-white transition-colors"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
+      {/* ===== HERO (split layout with image + form) ===== */}
+      {(() => {
+        const heroImg = getCityHeroImage(city.slug);
+        return (
+          <section className="relative pt-32 pb-16 overflow-hidden">
+            <div className="absolute inset-0">
+              <Image
+                src={heroImg.src}
+                alt={`${heroImg.alt} - serving ${city.name}`}
+                fill
+                className="object-cover"
+                priority
+                quality={80}
               />
-            </svg>
-            All Service Areas
-          </Link>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Professional Home Improvement Contractor
-            <br />
-            <span className="text-alfa-gold">in {city.name}, Massachusetts</span>
-          </h1>
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
-            Alfa Construction Inc provides expert painting, carpentry, siding,
-            window &amp; door installation, and home remodeling services to
-            homeowners in {city.name}, Massachusetts. Licensed, insured, and
-            backed by {company.experience} years of experience.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 text-lg"
-            >
-              Get a Free Estimate in {city.name}
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-            <a
-              href={company.phoneTel}
-              className="inline-flex items-center justify-center gap-2 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              Call {company.phone}
-            </a>
-          </div>
-        </div>
-      </section>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                {/* Left Side */}
+                <div>
+                  {/* Breadcrumb */}
+                  <nav className="flex items-center gap-2 text-sm text-gray-400 mb-5 flex-wrap">
+                    <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                    <span className="text-gray-600">/</span>
+                    <Link href="/services" className="hover:text-white transition-colors">Massachusetts</Link>
+                    <span className="text-gray-600">/</span>
+                    <span className="text-alfa-gold">{city.name}, MA</span>
+                  </nav>
 
-      {/* ===== TRUST BADGES ===== */}
-      <section className="py-8 bg-alfa-dark border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-alfa-gold/10 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
+                  {/* Badges */}
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <span className="inline-flex items-center gap-1.5 bg-alfa-gold text-black text-sm font-bold px-4 py-2 rounded-full">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                      Serving {city.name}, MA
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-full border border-white/20">
+                      <span className="flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-3.5 h-3.5 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </span>
+                      5 (22+ reviews)
+                    </span>
+                  </div>
+
+                  <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white mb-5 leading-tight">
+                    Professional Home Improvement Contractor{" "}
+                    <span className="text-alfa-gold">in {city.name}, Massachusetts</span>
+                  </h1>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                    Alfa Construction Inc provides expert painting, carpentry, siding,
+                    window &amp; door installation, and home remodeling services to
+                    homeowners in {city.name}, Massachusetts. Licensed, insured, and
+                    backed by {company.experience} years of experience.
+                  </p>
+
+                  {/* Credentials */}
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Licensed {company.license}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      {company.experience} Years
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Free Estimates
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      {city.county} County
+                    </span>
+                  </div>
+                </div>
+
+                {/* Right Side — Form */}
+                <div className="bg-[#111111]/90 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl shadow-black/50">
+                  <h2 className="text-xl font-bold text-white mb-1 text-center">
+                    Get a Free Estimate in {city.name}
+                  </h2>
+                  <p className="text-sm text-gray-400 mb-4 text-center">Fill out the form and we&apos;ll contact you within 24 hours</p>
+                  <FormEmbed />
+                </div>
               </div>
-              <p className="font-bold text-white text-sm">
-                Licensed &amp; Insured
-              </p>
-              <p className="text-xs text-gray-500">
-                MA License {company.license}
-              </p>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-alfa-gold/10 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <p className="font-bold text-white text-sm">
-                {company.experience} Years Experience
-              </p>
-              <p className="text-xs text-gray-500">Trusted since 2006</p>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-alfa-gold/10 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-alfa-gold"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              </div>
-              <p className="font-bold text-white text-sm">5-Star Rated</p>
-              <p className="text-xs text-gray-500">22+ Google Reviews</p>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-alfa-gold/10 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              </div>
-              <p className="font-bold text-white text-sm">
-                Serving {city.name}
-              </p>
-              <p className="text-xs text-gray-500">{city.county} County, MA</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        );
+      })()}
 
       {/* ===== SERVICES IN THIS CITY ===== */}
       <section className="py-20 bg-black">
