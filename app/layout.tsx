@@ -123,6 +123,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=yes" />
 
+        {/* LLMs.txt for AI search engines */}
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM documentation" />
+
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -153,12 +156,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
         />
 
-        {/* Reviews widget script */}
-        <script
-          type="text/javascript"
-          src="https://reputationhub.site/reputation/assets/review-widget.js"
-          defer
-        />
+        {/* Reviews widget script - loaded lazily for performance */}
       </head>
       <body className="font-sans antialiased bg-black text-gray-300">
         <Header />
@@ -176,6 +174,12 @@ export default function RootLayout({
           src="https://beta.leadconnectorhq.com/loader.js"
           data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="6763359a5436802950cda164"
+          strategy="lazyOnload"
+        />
+
+        {/* Reviews widget script */}
+        <Script
+          src="https://reputationhub.site/reputation/assets/review-widget.js"
           strategy="lazyOnload"
         />
 

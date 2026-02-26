@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCityBySlug, cities } from "@/data/cities";
+import { getCityBySlug, cities, getExtendedNearbyCities } from "@/data/cities";
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 import { company, breadcrumbSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
@@ -350,6 +350,19 @@ export default async function CityServicePage({
         </div>
       </section>
 
+      {/* ===== E-E-A-T CREDENTIALS ===== */}
+      <section className="py-6 bg-black border-b border-white/5">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-gray-400 text-sm leading-relaxed">
+            <strong className="text-white">Alfa Construction Inc</strong> is a{" "}
+            <strong className="text-alfa-gold">Massachusetts Licensed Contractor ({company.license})</strong>,
+            fully insured, with {company.experience} years of verified experience.
+            Founded by <strong className="text-white">Fabio</strong> in {company.foundedYear}.{" "}
+            <strong className="text-alfa-gold">5.0/5.0</strong> Google rating from 22+ verified reviews.
+          </p>
+        </div>
+      </section>
+
       {/* ===== UNIQUE CITY + SERVICE INTRO ===== */}
       <section className="py-20 bg-alfa-dark">
         <div className="max-w-4xl mx-auto px-4">
@@ -358,7 +371,7 @@ export default async function CityServicePage({
               {service.name} in {city.name}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
-              Expert {service.shortName} Services in {city.name}, Massachusetts
+              Why Choose Professional {service.shortName} in {city.name}, Massachusetts?
             </h2>
 
             {/* Category-based unique intro paragraph */}
@@ -394,7 +407,7 @@ export default async function CityServicePage({
               Common Challenges
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Common {service.shortName} Challenges in {city.name}, MA
+              What Are Common {service.shortName} Problems in {city.name}, MA?
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -473,7 +486,7 @@ export default async function CityServicePage({
               How It Works
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Our {service.shortName} Process in {city.name}, MA
+              How Does {service.shortName} Work in {city.name}, MA?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               We follow a proven step-by-step process to deliver outstanding{" "}
@@ -513,7 +526,7 @@ export default async function CityServicePage({
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Why {city.name} Homeowners Choose Our {service.shortName}
+              What Are the Benefits of Professional {service.shortName} in {city.name}?
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -599,8 +612,8 @@ export default async function CityServicePage({
               Other Services in {city.name}, MA
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              In addition to {service.name.toLowerCase()}, we provide a complete
-              range of home improvement services to {city.name} homeowners.
+              Many {city.name} homeowners who invest in {service.name.toLowerCase()} also benefit
+              from our other professional home improvement services. Bundle services for the best value.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
@@ -655,39 +668,49 @@ export default async function CityServicePage({
               </svg>
               Back to all services in {city.name}
             </Link>
+            <span className="mx-3 text-gray-600">|</span>
+            <Link
+              href={`/services/${service.slug}`}
+              className="inline-flex items-center gap-1 text-alfa-gold font-semibold hover:text-white transition-colors"
+            >
+              Learn more about our {service.shortName} services statewide
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* ===== NEIGHBORING CITIES ===== */}
-      {city.neighboringCities.length > 0 && (
-        <section className="py-16 bg-black border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                {service.shortName} Services Near {city.name}, Massachusetts
-              </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                We also provide professional {service.name.toLowerCase()} in cities near {city.name}, MA. Serving all of {city.county} County and surrounding areas.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-3">
-              {city.neighboringCities.map((neighbor) => {
-                const neighborSlug = neighbor.toLowerCase().replace(/\s+/g, "-");
-                return (
+      {(() => {
+        const nearbyCities = getExtendedNearbyCities(city.slug, 8);
+        return nearbyCities.length > 0 ? (
+          <section className="py-16 bg-black border-t border-white/5">
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                  {service.shortName} Services Near {city.name}, Massachusetts
+                </h2>
+                <p className="text-gray-400 max-w-2xl mx-auto">
+                  We also provide professional {service.name.toLowerCase()} in cities near {city.name}, MA. Serving all of {city.county} County and surrounding areas.
+                </p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                {nearbyCities.map((nearbyCity) => (
                   <Link
-                    key={neighbor}
-                    href={`/cities/${neighborSlug}/${service.slug}`}
+                    key={nearbyCity.slug}
+                    href={`/cities/${nearbyCity.slug}/${service.slug}`}
                     className="inline-block bg-alfa-card hover:bg-alfa-gold hover:text-black text-gray-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10 hover:border-alfa-gold transition-all duration-200"
                   >
-                    {service.shortName} in {neighbor}, MA
+                    {service.shortName} in {nearbyCity.name}, MA
                   </Link>
-                );
-              })}
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        ) : null;
+      })()}
 
       {/* ===== REVIEWS ===== */}
       <section className="py-20 bg-alfa-dark">

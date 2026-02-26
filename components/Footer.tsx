@@ -106,7 +106,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link href="/cities/framingham" className="text-sm text-alfa-gold hover:text-alfa-gold-light transition-colors font-medium">
-                  View All 100+ Cities →
+                  View All 109 Cities →
                 </Link>
               </li>
             </ul>
@@ -138,6 +138,17 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
           <p>© {new Date().getFullYear()} Alfa Construction Inc. All rights reserved. MA License {company.license}</p>
+          <p>
+            Developed by{" "}
+            <a
+              href="https://galaxyinfo.us/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-alfa-gold hover:text-alfa-gold-light transition-colors font-medium"
+            >
+              Galaxy IT MKT
+            </a>
+          </p>
           <div className="flex gap-6">
             <Link href="/about" className="hover:text-alfa-gold transition-colors">About</Link>
             <Link href="/contact" className="hover:text-alfa-gold transition-colors">Contact</Link>

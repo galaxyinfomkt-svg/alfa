@@ -5,6 +5,8 @@ import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import ScrollReveal from "@/components/ScrollReveal";
+import AnimatedCounter from "@/components/AnimatedCounter";
 
 const services = [
   {
@@ -62,7 +64,7 @@ const featuredCities = [
   "Boylston", "West Boylston", "Holden", "Sterling", "Lancaster", "Harvard",
   "Princeton", "Paxton", "Rutland", "Leicester", "Spencer", "Charlton",
   "Dudley", "Leominster", "Fitchburg", "Lunenburg", "Shirley", "Carlisle",
-  "Belmont", "Randolph",
+  "Belmont", "Randolph", "Auburn", "Millbury", "Oxford", "Sutton", "Webster",
 ];
 
 export default function HomePage() {
@@ -97,7 +99,7 @@ export default function HomePage() {
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Expert Painting &amp; Carpentry<br />
-            <span className="text-alfa-gold">Across Massachusetts</span>
+            <span className="text-gold-gradient">Across Massachusetts</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
             Transform your home with Alfa Construction Inc. From interior painting to complete remodeling, our {company.experience}-year legacy of craftsmanship delivers results that exceed expectations.
@@ -174,8 +176,10 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <ServiceCard key={service.slug} {...service} />
+            {services.map((service, i) => (
+              <ScrollReveal key={service.slug} delay={i * 100}>
+                <ServiceCard {...service} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -283,6 +287,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== STATS SECTION ===== */}
+      <section className="py-20 bg-black border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <ScrollReveal delay={0}>
+              <div className="glass-card rounded-2xl p-8">
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
+                  <AnimatedCounter target={18} suffix="+" />
+                </p>
+                <p className="text-gray-400 mt-2 text-sm">Years Experience</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <div className="glass-card rounded-2xl p-8">
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
+                  <AnimatedCounter target={109} suffix="+" />
+                </p>
+                <p className="text-gray-400 mt-2 text-sm">Cities Served</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="glass-card rounded-2xl p-8">
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
+                  <AnimatedCounter target={500} suffix="+" />
+                </p>
+                <p className="text-gray-400 mt-2 text-sm">Projects Completed</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={300}>
+              <div className="glass-card rounded-2xl p-8">
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
+                  <AnimatedCounter target={5} suffix=".0" />
+                </p>
+                <p className="text-gray-400 mt-2 text-sm">Google Rating</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ===== REVIEWS SECTION ===== */}
       <section className="py-20 bg-black border-t border-white/5" id="reviews">
         <div className="max-w-7xl mx-auto px-4">
@@ -345,7 +389,7 @@ export default function HomePage() {
               Our Service Area
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Based in Bellingham, MA, we proudly serve 100+ cities across Massachusetts and Southern New Hampshire.
+              Based in Bellingham, MA, we proudly serve 109 cities across Massachusetts and Southern New Hampshire.
             </p>
           </div>
           <GoogleMap />
@@ -433,7 +477,7 @@ export default function HomePage() {
               Cities We Serve in Massachusetts
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Alfa Construction Inc provides painting, carpentry, siding, window &amp; door installation, and remodeling services across 100+ Massachusetts communities.
+              Alfa Construction Inc provides painting, carpentry, siding, window &amp; door installation, and remodeling services across 109 Massachusetts communities.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-2">

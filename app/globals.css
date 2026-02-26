@@ -149,6 +149,50 @@ body {
 .prose ul, .prose ol { color: #a3a3a3; }
 .prose li::marker { color: #B8963E; }
 
+/* ─── Glassmorphism card (enhanced) ────────────────── */
+.glass-card {
+  background: rgba(17, 17, 17, 0.4);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Enhanced card hover with gold glow ──────────── */
+.card-hover-glow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-hover-glow:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(184, 150, 62, 0.2), 0 0 40px rgba(184, 150, 62, 0.05);
+  border-color: rgba(184, 150, 62, 0.3);
+}
+
+/* ─── Slow floating animation ──────────────────────── */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+.animate-float-slow { animation: float-slow 5s ease-in-out infinite; }
+
+/* ─── Section divider with gold gradient ───────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 150, 62, 0.3), transparent);
+}
+
+/* ─── FAQ details animation ────────────────────────── */
+details[open] summary ~ * {
+  animation: fade-in-up 0.3s ease-out;
+}
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 /* ─── Selection color ───────────────────────────────── */
 ::selection {
   background: rgba(184, 150, 62, 0.3);

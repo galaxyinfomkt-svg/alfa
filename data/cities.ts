@@ -1782,8 +1782,93 @@ export const cities: City[] = [
     windowsDoorsNote: "Worcester's large inventory of multi-family buildings creates a major market for commercial-scale window replacement projects, where Alfa Construction's experience with multi-unit installations ensures efficient, tenant-friendly project execution.",
     remodelingNote: "Worcester's urban renaissance is driving residential investment throughout the city, with homeowners in neighborhoods like the Canal District and College Hill remodeling older properties to match the city's exciting new energy.",
     uniqueFact: "Worcester is home to the first public park in America (Elm Park), the first Valentine's Day card, and the birth of the smiley face, making it a surprisingly significant city in American cultural history.",
-    neighboringCities: ["Shrewsbury", "Holden", "Leicester", "Auburn"],
+    neighboringCities: ["Shrewsbury", "Holden", "Leicester", "Auburn", "Millbury"],
     category: "urban"
+  },
+  {
+    slug: "auburn",
+    name: "Auburn",
+    state: "Massachusetts",
+    county: "Worcester",
+    description: "Auburn is a well-established suburban town directly south of Worcester, serving as a residential gateway to central Massachusetts. The town's convenient access to major highways including I-90, I-290, and Route 20 makes it a popular choice for commuters.",
+    population: "16,889",
+    homeStyle: "Colonial, Cape Cod, ranch, and split-level homes with newer subdivisions in the southern part of town",
+    paintingNote: "Auburn's proximity to Worcester's urban core exposes homes to higher levels of road salt spray and vehicle emissions, requiring exterior paint systems with enhanced corrosion resistance and frequent washing schedules for lasting finishes.",
+    carpentryNote: "Auburn's post-war ranch and split-level homes from the 1950s-1970s frequently need deck additions, porch rebuilds, and trim modernization to update their mid-century designs for contemporary living standards.",
+    sidingNote: "Auburn homeowners upgrading from original aluminum or vinyl siding installed during the town's mid-century building boom increasingly choose fiber cement for its durability and ability to replicate the look of traditional New England clapboard.",
+    windowsDoorsNote: "Auburn's highway-adjacent neighborhoods benefit from triple-pane or acoustic-rated windows that reduce road noise from I-90 and Route 20 while improving energy efficiency during harsh Massachusetts winters.",
+    remodelingNote: "Auburn's affordable housing prices relative to Worcester attract first-time buyers who invest in kitchen and bathroom remodels to personalize older homes, creating consistent demand for quality renovation contractors.",
+    uniqueFact: "Auburn is the birthplace of Robert Goddard's liquid-fueled rocketry experiments, with the first successful launch occurring at his Aunt Effie's farm in Auburn in 1926, earning the town a place in aerospace history.",
+    neighboringCities: ["Worcester", "Millbury", "Oxford", "Leicester", "Charlton"],
+    category: "suburban"
+  },
+  {
+    slug: "millbury",
+    name: "Millbury",
+    state: "Massachusetts",
+    county: "Worcester",
+    description: "Millbury is a compact, family-oriented community nestled between Worcester and the Blackstone Valley, known for its excellent school system and convenient access to both urban amenities and rural landscapes along the Blackstone River.",
+    population: "14,108",
+    homeStyle: "Cape Cod, Colonial, ranch, and Victorian homes with mill-era worker housing near the town center",
+    paintingNote: "Millbury's Blackstone River corridor creates elevated humidity that challenges exterior paint longevity, requiring contractors to use moisture-resistant primers and paints specifically formulated for New England's damp riverside microclimates.",
+    carpentryNote: "Millbury's historic mill-town architecture features distinctive worker housing with detailed porch work, window casings, and eave brackets that require skilled carpentry restoration to maintain the town's unique architectural heritage.",
+    sidingNote: "Millbury homeowners along the Blackstone River corridor should prioritize moisture-resistant siding options like fiber cement or engineered wood with robust water management systems to combat the persistent river valley humidity.",
+    windowsDoorsNote: "Millbury's older homes near the town center often retain original wood-framed windows that, while charming, allow significant energy loss; replacing them with historically styled vinyl or fiberglass units preserves character while cutting heating costs.",
+    remodelingNote: "Millbury's growing popularity among young families relocating from Worcester drives demand for family-focused remodels including playroom conversions, mudroom additions, and open-concept kitchen-family room layouts.",
+    uniqueFact: "Millbury was the birthplace of Asa Waters, a prominent early American arms manufacturer whose mansion on Elm Street is now a community arts center and one of the finest Greek Revival buildings in New England.",
+    neighboringCities: ["Auburn", "Worcester", "Sutton", "Grafton"],
+    category: "suburban"
+  },
+  {
+    slug: "oxford",
+    name: "Oxford",
+    state: "Massachusetts",
+    county: "Worcester",
+    description: "Oxford is a scenic town in southern Worcester County centered around beautiful Lake Chaubunagungamaug (also known as Webster Lake). The town offers an appealing mix of lakefront living and rural New England charm with convenient access to I-395 and the Mass Pike.",
+    population: "14,004",
+    homeStyle: "Cape Cod, ranch, Colonial homes with lakefront properties and rural farmsteads on larger lots",
+    paintingNote: "Oxford's lakefront properties near Lake Chaubunagungamaug experience elevated moisture and seasonal weather extremes that require marine-grade exterior paint systems and thorough prep work to prevent premature peeling and blistering.",
+    carpentryNote: "Oxford's lakeside cottages and homes often need specialized carpentry including dock-adjacent deck construction, waterfront retaining structures, and elevated foundations designed to withstand seasonal water level changes.",
+    sidingNote: "Oxford homeowners near the lake invest in premium siding materials like Hardie plank fiber cement that resist the constant moisture, wind, and sun exposure inherent to lakefront living in central Massachusetts.",
+    windowsDoorsNote: "Oxford's lakefront homes benefit from impact-resistant windows and sliding glass doors that maximize water views while standing up to the wind and storm exposure common in the open terrain around Webster Lake.",
+    remodelingNote: "Oxford's lakefront properties command premium prices when renovated, driving homeowners to invest in upscale kitchen remodels, spa-like bathrooms, and sunroom additions that capitalize on scenic water views.",
+    uniqueFact: "Oxford borders Lake Chaubunagungamaug, famously known as having one of the longest place names in the United States, and the town was originally part of the Nipmuc territory before being settled in 1713.",
+    neighboringCities: ["Auburn", "Charlton", "Dudley", "Webster", "Sutton"],
+    category: "rural"
+  },
+  {
+    slug: "sutton",
+    name: "Sutton",
+    state: "Massachusetts",
+    county: "Worcester",
+    description: "Sutton is a picturesque, predominantly rural community known for its rolling hills, conservation land, and the scenic Purgatory Chasm State Reservation. The town's commitment to preserving its agricultural heritage while accommodating thoughtful residential growth makes it a desirable destination for families.",
+    population: "9,700",
+    homeStyle: "Historic farmhouses, Colonial homes, Cape Cod styles, and upscale new construction in wooded subdivisions",
+    paintingNote: "Sutton's heavily wooded properties and rolling terrain create unique painting challenges including limited sunlight exposure, persistent moisture in shaded areas, and difficult access for equipment on hilly properties.",
+    carpentryNote: "Sutton's upscale new construction homes feature complex architectural details including custom timber frame entries, coffered ceilings, and built-in cabinetry that require finish carpentry of the highest caliber.",
+    sidingNote: "Sutton's commitment to preserving its rural character means many homeowners choose natural-looking siding options like cedar shingles or Hardie plank in earth tones that blend harmoniously with the town's wooded landscape.",
+    windowsDoorsNote: "Sutton's newer executive homes demand premium window packages including oversized picture windows, custom transoms, and French doors that flood interiors with natural light while maintaining energy efficiency.",
+    remodelingNote: "Sutton homeowners frequently commission barn-to-living-space conversions and historic farmhouse renovations that honor the town's agricultural heritage while creating modern, comfortable family homes.",
+    uniqueFact: "Purgatory Chasm State Reservation in Sutton features a dramatic 70-foot-deep rock chasm whose mysterious geological origins have fascinated visitors since the 1700s, making it one of Massachusetts' most unique natural attractions.",
+    neighboringCities: ["Millbury", "Oxford", "Douglas", "Northbridge", "Grafton"],
+    category: "rural"
+  },
+  {
+    slug: "webster",
+    name: "Webster",
+    state: "Massachusetts",
+    county: "Worcester",
+    description: "Webster is a vibrant, diverse community in southern Worcester County, centered around the spectacular Lake Chargoggagoggmanchauggagoggchaubunagungamaugg — the lake with the longest name in America. The town's strong Polish-American heritage and lakefront lifestyle create a uniquely welcoming community.",
+    population: "17,227",
+    homeStyle: "Victorian, Cape Cod, ranch homes with lakefront cottages, multi-family properties, and mill-era housing",
+    paintingNote: "Webster's large lakefront community requires exterior painting contractors experienced with waterfront properties, understanding how lake-effect moisture, reflected UV light, and wind exposure affect paint selection and application timing.",
+    carpentryNote: "Webster's Victorian-era homes near the town center feature ornate architectural details including wraparound porches, gingerbread trim, and decorative brackets that demand historically accurate carpentry restoration skills.",
+    sidingNote: "Webster's mill-era multi-family buildings present large-scale siding projects requiring efficient crews experienced with scaffolding work and commercial-grade materials that provide decades of weather protection for investment properties.",
+    windowsDoorsNote: "Webster's lakefront homes prioritize large, energy-efficient windows that frame stunning lake views, with homeowners choosing between casement windows for maximum ventilation and picture windows for unobstructed panoramic views.",
+    remodelingNote: "Webster's waterfront properties see strong demand for remodeling projects that maximize lake views, including open-concept kitchen-living areas, screened porches, and master suite additions with water-facing windows.",
+    uniqueFact: "Webster is home to Lake Chargoggagoggmanchauggagoggchaubunagungamaugg, officially recognized as the longest place name in the United States at 45 letters, which is said to translate from Nipmuc as 'you fish your side, I fish mine.'",
+    neighboringCities: ["Oxford", "Dudley", "Douglas"],
+    category: "suburban"
   }
 ];
 
@@ -1799,4 +1884,29 @@ export function getCitiesByCategory(category: City["category"]): City[] {
 
 export function getAllCitySlugs(): string[] {
   return cities.map((city) => city.slug);
+}
+
+export function getExtendedNearbyCities(citySlug: string, limit: number = 8): City[] {
+  const city = getCityBySlug(citySlug);
+  if (!city) return [];
+
+  const directNeighborSlugs = city.neighboringCities.map((n) =>
+    n.toLowerCase().replace(/\s+/g, "-")
+  );
+
+  const secondDegree = new Set<string>();
+  directNeighborSlugs.forEach((slug) => {
+    const neighbor = getCityBySlug(slug);
+    if (neighbor) {
+      neighbor.neighboringCities.forEach((nn) => {
+        const nnSlug = nn.toLowerCase().replace(/\s+/g, "-");
+        if (nnSlug !== citySlug && !directNeighborSlugs.includes(nnSlug)) {
+          secondDegree.add(nnSlug);
+        }
+      });
+    }
+  });
+
+  const allSlugs = [...directNeighborSlugs, ...Array.from(secondDegree)].slice(0, limit);
+  return allSlugs.map((s) => getCityBySlug(s)).filter(Boolean) as City[];
 }

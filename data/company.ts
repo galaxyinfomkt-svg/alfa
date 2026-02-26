@@ -114,6 +114,8 @@ export const localBusinessSchema = {
   founder: {
     "@type": "Person",
     name: "Fabio",
+    jobTitle: "Owner & Lead Contractor",
+    worksFor: { "@id": `${BASE_URL}/#organization` },
   },
   numberOfEmployees: {
     "@type": "QuantitativeValue",
@@ -194,6 +196,14 @@ export const localBusinessSchema = {
       },
     ],
   },
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Massachusetts Construction License",
+      identifier: "#192348",
+      validUntil: "2027-04-30",
+    },
+  ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",

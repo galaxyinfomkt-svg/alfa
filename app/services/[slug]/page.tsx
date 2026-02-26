@@ -6,6 +6,7 @@ import { company, breadcrumbSchema, faqSchema, serviceSchema } from "@/data/comp
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import { getAllCitySlugs, getCityBySlug } from "@/data/cities";
 
 const servicesData: Record<string, {
   name: string;
@@ -408,6 +409,36 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-10">{service.shortName} Service Area</h2>
           <GoogleMap />
+        </div>
+      </section>
+
+      {/* Cities We Serve - Hub & Spoke Internal Linking */}
+      <section className="py-20 bg-alfa-dark border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Service Area</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+              {service.shortName} Services Across Massachusetts
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              We provide professional {service.shortName.toLowerCase()} services in 109 cities across Massachusetts. Click your city for local details and a free estimate.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-2">
+            {getAllCitySlugs().map((citySlug) => {
+              const city = getCityBySlug(citySlug);
+              if (!city) return null;
+              return (
+                <Link
+                  key={citySlug}
+                  href={`/cities/${citySlug}/${slug}`}
+                  className="inline-block bg-alfa-card hover:bg-alfa-gold hover:text-black text-gray-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10 hover:border-alfa-gold transition-all duration-200"
+                >
+                  {city.name}, MA
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 
