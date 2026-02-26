@@ -25,8 +25,8 @@ export async function generateMetadata({
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `Painting & Carpentry Services in ${city.name}, MA | Alfa Construction Inc`;
-  const description = `Professional painting, carpentry, siding, window & door installation, and home remodeling in ${city.name}, Massachusetts. Licensed & insured. ${company.experience} years experience. Free estimates. Call ${company.phone}.`;
+  const title = `Home Improvement Contractor ${city.name} MA | Painting, Carpentry, Siding | Alfa Construction`;
+  const description = `Top-rated painting, carpentry, siding, window & door installation, and home remodeling contractor in ${city.name}, Massachusetts. Licensed & insured. ${company.experience} years experience. ${city.county} County. Free estimates. Call ${company.phone}.`;
 
   return {
     title,
@@ -134,7 +134,7 @@ export default async function CityPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
           { name: "Home", url: "https://alfapaintingcarpentry.com" },
-          { name: "Service Areas", url: "https://alfapaintingcarpentry.com" },
+          { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/services" },
           { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/cities/${city.slug}` },
         ])) }}
       />
@@ -166,9 +166,9 @@ export default async function CityPage({
             All Service Areas
           </Link>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Painting &amp; Carpentry Services
+            Professional Home Improvement Contractor
             <br />
-            <span className="text-alfa-gold">in {city.name}, MA</span>
+            <span className="text-alfa-gold">in {city.name}, Massachusetts</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
             Alfa Construction Inc provides expert painting, carpentry, siding,

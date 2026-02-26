@@ -72,8 +72,8 @@ export async function generateMetadata({
   const service = getServiceBySlug(serviceSlug);
   if (!city || !service) return {};
 
-  const title = `${service.name} in ${city.name}, MA | Alfa Construction Inc`;
-  const description = `Professional ${service.name.toLowerCase()} services in ${city.name}, Massachusetts. Licensed & insured contractor with ${company.experience} years experience. Free estimates. Call ${company.phone}.`;
+  const title = `${service.name} ${city.name} MA | Licensed ${service.shortName} Contractor | Alfa Construction`;
+  const description = `Professional ${service.name.toLowerCase()} services in ${city.name}, Massachusetts. Licensed & insured contractor with ${company.experience} years experience. ${city.county} County expert. Free estimates. Call ${company.phone}.`;
 
   return {
     title,
@@ -167,6 +167,25 @@ export default async function CityServicePage({
     })),
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to Get ${service.name} in ${city.name}, Massachusetts`,
+    description: `Step-by-step process for getting professional ${service.name.toLowerCase()} services in ${city.name}, MA from Alfa Construction Inc.`,
+    step: service.process.map((step) => ({
+      "@type": "HowToStep",
+      position: step.step,
+      name: step.title,
+      text: step.description.replace(/\{cityName\}/g, city.name),
+    })),
+    totalTime: "P7D",
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "USD",
+      value: "Free Estimate",
+    },
+  };
+
   return (
     <>
       {/* JSON-LD Schemas */}
@@ -174,8 +193,9 @@ export default async function CityServicePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
           { name: "Home", url: "https://alfapaintingcarpentry.com" },
-          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/cities/${city.slug}` },
-          { name: service.name, url: `https://alfapaintingcarpentry.com/cities/${city.slug}/${service.slug}` },
+          { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/services" },
+          { name: service.name, url: `https://alfapaintingcarpentry.com/services/${service.slug}` },
+          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/cities/${city.slug}/${service.slug}` },
         ])) }}
       />
       <script
@@ -186,6 +206,10 @@ export default async function CityServicePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
 
       {/* ===== HERO ===== */}
       <section className="pt-32 pb-16 bg-black relative overflow-hidden">
@@ -195,49 +219,26 @@ export default async function CityServicePage({
         </div>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           {/* Breadcrumb */}
-          <nav className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-4">
+          <nav className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-4 flex-wrap">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
-            <svg
-              className="w-3 h-3"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-            <Link
-              href={`/cities/${city.slug}`}
-              className="hover:text-white transition-colors"
-            >
-              {city.name}
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            <Link href="/services" className="hover:text-white transition-colors">
+              Massachusetts
             </Link>
-            <svg
-              className="w-3 h-3"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-            <span className="text-alfa-gold">{service.shortName}</span>
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            <Link href={`/services/${service.slug}`} className="hover:text-white transition-colors">
+              {service.shortName}
+            </Link>
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            <span className="text-alfa-gold">{city.name}, MA</span>
           </nav>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            {service.name}
+            Professional {service.name}
             <br />
-            <span className="text-alfa-gold">in {city.name}, MA</span>
+            <span className="text-alfa-gold">in {city.name}, Massachusetts</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
             {service.description.replace(/\{cityName\}/g, city.name)}
@@ -357,7 +358,7 @@ export default async function CityServicePage({
               {service.name} in {city.name}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
-              Professional {service.shortName} for {city.name} Homeowners
+              Expert {service.shortName} Services in {city.name}, Massachusetts
             </h2>
 
             {/* Category-based unique intro paragraph */}
@@ -393,7 +394,7 @@ export default async function CityServicePage({
               Common Challenges
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              {service.shortName} Challenges We Solve in {city.name}
+              Common {service.shortName} Challenges in {city.name}, MA
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -472,7 +473,7 @@ export default async function CityServicePage({
               How It Works
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Our {service.shortName} Process in {city.name}
+              Our {service.shortName} Process in {city.name}, MA
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               We follow a proven step-by-step process to deliver outstanding{" "}
@@ -512,7 +513,7 @@ export default async function CityServicePage({
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Benefits of Our {service.shortName} in {city.name}
+              Why {city.name} Homeowners Choose Our {service.shortName}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -551,7 +552,7 @@ export default async function CityServicePage({
               FAQ
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              {service.shortName} Questions from {city.name} Homeowners
+              Frequently Asked Questions About {service.shortName} in {city.name}, MA
             </h2>
           </div>
           <div className="space-y-4">
@@ -658,6 +659,36 @@ export default async function CityServicePage({
         </div>
       </section>
 
+      {/* ===== NEIGHBORING CITIES ===== */}
+      {city.neighboringCities.length > 0 && (
+        <section className="py-16 bg-black border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                {service.shortName} Services Near {city.name}, Massachusetts
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                We also provide professional {service.name.toLowerCase()} in cities near {city.name}, MA. Serving all of {city.county} County and surrounding areas.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {city.neighboringCities.map((neighbor) => {
+                const neighborSlug = neighbor.toLowerCase().replace(/\s+/g, "-");
+                return (
+                  <Link
+                    key={neighbor}
+                    href={`/cities/${neighborSlug}/${service.slug}`}
+                    className="inline-block bg-alfa-card hover:bg-alfa-gold hover:text-black text-gray-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10 hover:border-alfa-gold transition-all duration-200"
+                  >
+                    {service.shortName} in {neighbor}, MA
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ===== REVIEWS ===== */}
       <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
@@ -695,7 +726,7 @@ export default async function CityServicePage({
               Service Area
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              {service.shortName} Services Near {city.name}
+              Service Area: {city.name}, Massachusetts
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Based in Bellingham, MA, Alfa Construction Inc provides{" "}
