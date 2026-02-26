@@ -1,29 +1,40 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function FormEmbed() {
-  const ref = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState(false);
+  const loaded = useRef(false);
 
   useEffect(() => {
-    if (!ref.current) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShow(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "300px" }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
+    if (loaded.current) return;
+
+    const load = () => {
+      if (loaded.current) return;
+      loaded.current = true;
+      setShow(true);
+      cleanup();
+    };
+
+    // Load iframe on first user interaction — defers ~5MB of third-party JS
+    // (reCAPTCHA, LeadConnector, Facebook Pixel) from blocking main thread
+    const events = ["scroll", "click", "touchstart", "mousemove", "keydown"];
+    events.forEach(e => window.addEventListener(e, load, { passive: true }));
+
+    // Fallback: load after 15s even without interaction
+    const timer = setTimeout(load, 15000);
+
+    const cleanup = () => {
+      events.forEach(e => window.removeEventListener(e, load));
+      clearTimeout(timer);
+    };
+
+    return cleanup;
   }, []);
 
   return (
-    <div ref={ref} className="w-full" style={{ minHeight: 457 }}>
-      {show && (
+    <div className="w-full" style={{ minHeight: 457 }}>
+      {show ? (
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/1wwHwfROj84YUZqwCqpV"
           style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
@@ -42,6 +53,17 @@ export default function FormEmbed() {
           title="Contact Form"
           loading="lazy"
         />
+      ) : (
+        <div className="animate-pulse space-y-4 p-6" role="status" aria-label="Loading contact form">
+          <div className="h-6 bg-white/10 rounded w-2/3" />
+          <div className="space-y-3">
+            <div className="h-11 bg-white/[0.06] rounded" />
+            <div className="h-11 bg-white/[0.06] rounded" />
+            <div className="h-11 bg-white/[0.06] rounded" />
+            <div className="h-11 bg-white/[0.06] rounded" />
+          </div>
+          <div className="h-12 bg-alfa-gold/20 rounded" />
+        </div>
       )}
     </div>
   );

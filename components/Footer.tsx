@@ -34,7 +34,7 @@ export default function Footer() {
                 className="h-12 w-auto"
               />
             </Link>
-            <p className="text-gray-500 text-sm mb-5 leading-relaxed">
+            <p className="text-gray-400 text-sm mb-5 leading-relaxed">
               Professional painting, carpentry, siding, window &amp; door installation, and home remodeling services across Massachusetts. Licensed, insured, and trusted for over 18 years.
             </p>
             <div className="space-y-2.5 text-sm">
@@ -42,15 +42,15 @@ export default function Footer() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 {company.phone}
               </a>
-              <p className="flex items-center gap-2 text-gray-500">
+              <p className="flex items-center gap-2 text-gray-400">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 {company.address.full}
               </p>
-              <p className="flex items-center gap-2 text-gray-500">
+              <p className="flex items-center gap-2 text-gray-400">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 {company.hours}
               </p>
-              <p className="flex items-center gap-2 text-gray-500">
+              <p className="flex items-center gap-2 text-gray-400">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                 MA License {company.license}
               </p>
@@ -75,7 +75,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-white transition-colors duration-300">
+                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors duration-300">
                     {link.label}
                   </Link>
                 </li>
@@ -87,11 +87,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-alfa-gold mb-5">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Home</Link></li>
-              <li><Link href="/about" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">About Us</Link></li>
-              <li><Link href="/projects" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Projects</Link></li>
-              <li><Link href="/contact" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Contact</Link></li>
-              <li><Link href="/blog" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Blog</Link></li>
+              <li><Link href="/" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Home</Link></li>
+              <li><Link href="/about" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Projects</Link></li>
+              <li><Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Contact</Link></li>
+              <li><Link href="/blog" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Blog</Link></li>
             </ul>
           </div>
 
@@ -101,7 +101,7 @@ export default function Footer() {
             <ul className="space-y-3 mb-6">
               {blogLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-white transition-colors duration-300">
+                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors duration-300">
                     {link.label}
                   </Link>
                 </li>
@@ -128,7 +128,7 @@ export default function Footer() {
               Service Areas – 109+ Cities Across Massachusetts
             </span>
           </div>
-          <p className="text-center text-gray-500 text-sm leading-relaxed">
+          <p className="text-center text-gray-400 text-sm leading-relaxed">
             {cities.map((city, i) => (
               <span key={city.slug}>
                 <Link
@@ -146,7 +146,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <p>© {new Date().getFullYear()} Alfa Construction Inc. All rights reserved. MA License {company.license}</p>
           <p>
             Developed by{" "}

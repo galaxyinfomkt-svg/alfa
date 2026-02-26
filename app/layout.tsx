@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
-import Script from "next/script";
+import DeferredScripts from "@/components/DeferredScripts";
 import { localBusinessSchema, websiteSchema, contractorSchema, imageGallerySchema } from "@/data/company";
 
 const inter = Inter({
@@ -161,30 +161,15 @@ export default function RootLayout({
         <Footer />
         <PhoneButton />
 
-        {/* Chat Widget */}
+        {/* Chat Widget mount point */}
         <div
           data-chat-widget=""
           data-widget-id="6763359a5436802950cda164"
           data-location-id="BlgWjOKxk32P6dyUTDjY"
         />
-        <Script
-          src="https://beta.leadconnectorhq.com/loader.js"
-          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6763359a5436802950cda164"
-          strategy="lazyOnload"
-        />
 
-        {/* Reviews widget script */}
-        <Script
-          src="https://reputationhub.site/reputation/assets/review-widget.js"
-          strategy="lazyOnload"
-        />
-
-        {/* Form embed script */}
-        <Script
-          src="https://link.msgsndr.com/js/form_embed.js"
-          strategy="lazyOnload"
-        />
+        {/* Defer all heavy third-party scripts until user interaction */}
+        <DeferredScripts />
       </body>
     </html>
   );
