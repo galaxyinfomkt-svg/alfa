@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { company } from "@/data/company";
+import { cities } from "@/data/cities";
 
 const serviceLinks = [
   { href: "/services/painting", label: "Interior & Exterior Painting" },
@@ -8,17 +9,6 @@ const serviceLinks = [
   { href: "/services/siding", label: "Siding Installation & Repair" },
   { href: "/services/windows-doors", label: "Window & Door Installation" },
   { href: "/services/remodeling", label: "Home Remodeling & Renovation" },
-];
-
-const cityLinks = [
-  { href: "/cities/framingham", label: "Framingham" },
-  { href: "/cities/newton", label: "Newton" },
-  { href: "/cities/brookline", label: "Brookline" },
-  { href: "/cities/natick", label: "Natick" },
-  { href: "/cities/wellesley", label: "Wellesley" },
-  { href: "/cities/cambridge", label: "Cambridge" },
-  { href: "/cities/worcester", label: "Worcester" },
-  { href: "/cities/quincy", label: "Quincy" },
 ];
 
 const blogLinks = [
@@ -93,22 +83,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Cities */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-alfa-gold mb-5">Service Areas</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-alfa-gold mb-5">Quick Links</h3>
             <ul className="space-y-3">
-              {cityLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-white transition-colors duration-300">
-                    {link.label}, MA
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link href="/cities/framingham" className="text-sm text-alfa-gold hover:text-alfa-gold-light transition-colors font-medium">
-                  View All 109 Cities →
-                </Link>
-              </li>
+              <li><Link href="/" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Home</Link></li>
+              <li><Link href="/about" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/projects" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Projects</Link></li>
+              <li><Link href="/contact" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Contact</Link></li>
+              <li><Link href="/blog" className="text-sm text-gray-500 hover:text-white transition-colors duration-300">Blog</Link></li>
             </ul>
           </div>
 
@@ -131,6 +114,33 @@ export default function Footer() {
               Get Free Estimate
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Service Areas — All Cities (compact inline like RS Development) */}
+      <div className="border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 py-10">
+          <div className="text-center mb-5">
+            <span className="inline-flex items-center gap-2 text-alfa-gold font-semibold text-sm">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
+              Service Areas – 109+ Cities Across Massachusetts
+            </span>
+          </div>
+          <p className="text-center text-gray-500 text-sm leading-relaxed">
+            {cities.map((city, i) => (
+              <span key={city.slug}>
+                <Link
+                  href={`/cities/${city.slug}`}
+                  className="hover:text-alfa-gold transition-colors"
+                >
+                  {city.name}
+                </Link>
+                {i < cities.length - 1 && <span className="mx-1.5">•</span>}
+              </span>
+            ))}
+          </p>
         </div>
       </div>
 

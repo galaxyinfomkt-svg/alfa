@@ -47,27 +47,6 @@ const services = [
   },
 ];
 
-const featuredCities = [
-  "Framingham", "Newton", "Brookline", "Natick", "Wellesley", "Cambridge",
-  "Shrewsbury", "Worcester", "Quincy", "Concord", "Lexington", "Waltham",
-  "Marlborough", "Hudson", "Milford", "Westborough", "Hopkinton", "Sudbury",
-  "Needham", "Dedham", "Norwood", "Franklin", "Bellingham", "Medway",
-  "Holliston", "Grafton", "Acton", "Chelmsford", "Burlington", "Woburn",
-  "Arlington", "Watertown", "Braintree", "Weymouth", "Milton", "Canton",
-  "Stoughton", "Sharon", "Walpole", "Foxborough", "Medfield", "Dover",
-  "Wayland", "Lincoln", "Weston", "Bedford", "Winchester", "Melrose",
-  "Reading", "Stoneham", "Wakefield", "Malden", "Medford", "Somerville",
-  "Peabody", "Salem", "Beverly", "Danvers", "Lynn", "Saugus",
-  "Westford", "Littleton", "Groton", "Ayer", "Maynard", "Stow",
-  "Bolton", "Berlin", "Clinton", "Northborough", "Southborough", "Ashland",
-  "Sherborn", "Millis", "Norfolk", "Wrentham", "Blackstone", "Uxbridge",
-  "Northbridge", "Douglas", "Upton", "Mendon", "Hopedale", "Boxborough",
-  "Boylston", "West Boylston", "Holden", "Sterling", "Lancaster", "Harvard",
-  "Princeton", "Paxton", "Rutland", "Leicester", "Spencer", "Charlton",
-  "Dudley", "Leominster", "Fitchburg", "Lunenburg", "Shirley", "Carlisle",
-  "Belmont", "Randolph", "Auburn", "Millbury", "Oxford", "Sutton", "Webster",
-];
-
 export default function HomePage() {
   return (
     <>
@@ -495,32 +474,6 @@ export default function HomePage() {
               View All Blog Posts
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== CITIES SECTION ===== */}
-      <section className="py-20 bg-alfa-dark border-t border-white/5" id="cities">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Service Areas</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Cities We Serve in Massachusetts
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Alfa Construction Inc provides painting, carpentry, siding, window &amp; door installation, and remodeling services across 109 Massachusetts communities.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-2">
-            {featuredCities.map((city) => (
-              <Link
-                key={city}
-                href={`/cities/${city.toLowerCase().replace(/\s+/g, "-")}`}
-                className="inline-block bg-alfa-card hover:bg-alfa-gold hover:text-black text-gray-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10 hover:border-alfa-gold transition-all duration-200"
-              >
-                {city}, MA
-              </Link>
-            ))}
           </div>
         </div>
       </section>
