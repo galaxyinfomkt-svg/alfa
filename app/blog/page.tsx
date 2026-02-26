@@ -50,7 +50,7 @@ export default function BlogPage() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-2">
+                    <div className="flex items-center gap-3 text-sm text-gray-400 mb-2">
                       <span>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
                       <span>·</span>
                       <span>{post.readTime}</span>

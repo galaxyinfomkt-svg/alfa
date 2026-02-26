@@ -40,7 +40,7 @@ export default function ServiceCard({ slug, name, description, icon, cta, citySl
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-alfa-gold transition-colors duration-300">
           {name}
         </h3>
-        <p className="text-gray-500 text-sm leading-relaxed mb-4">{description}</p>
+        <p className="text-gray-400 text-sm leading-relaxed mb-4">{description}</p>
         <span className="inline-flex items-center gap-1 text-alfa-gold font-semibold text-sm group-hover:gap-2 transition-all">
           {cta}
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>

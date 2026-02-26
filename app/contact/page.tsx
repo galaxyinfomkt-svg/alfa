@@ -46,7 +46,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-white">Phone</p>
                     <p className="text-alfa-gold font-bold text-lg">{company.phone}</p>
-                    <p className="text-gray-500 text-sm">Call us for a free estimate</p>
+                    <p className="text-gray-400 text-sm">Call us for a free estimate</p>
                   </div>
                 </a>
                 <div className="flex items-start gap-4">
@@ -56,7 +56,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-white">Location</p>
                     <p className="text-gray-300">{company.address.full}</p>
-                    <p className="text-gray-500 text-sm">Serving all of Massachusetts</p>
+                    <p className="text-gray-400 text-sm">Serving all of Massachusetts</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-white">Hours</p>
                     <p className="text-gray-300">{company.hours}</p>
-                    <p className="text-gray-500 text-sm">Sunday: Closed</p>
+                    <p className="text-gray-400 text-sm">Sunday: Closed</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-white">License</p>
                     <p className="text-gray-300">MA License {company.license}</p>
-                    <p className="text-gray-500 text-sm">Valid through {company.licenseExpiry}</p>
+                    <p className="text-gray-400 text-sm">Valid through {company.licenseExpiry}</p>
                   </div>
                 </div>
               </div>

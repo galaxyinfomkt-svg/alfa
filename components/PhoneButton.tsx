@@ -1,5 +1,3 @@
-"use client";
-
 import { company } from "@/data/company";
 
 export default function PhoneButton() {

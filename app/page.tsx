@@ -6,7 +6,6 @@ import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
-import AnimatedCounter from "@/components/AnimatedCounter";
 import FormEmbed from "@/components/FormEmbed";
 
 const services = [
@@ -302,33 +301,25 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <ScrollReveal delay={0}>
               <div className="glass-card rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
-                  <AnimatedCounter target={18} suffix="+" />
-                </p>
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">18+</p>
                 <p className="text-gray-400 mt-2 text-sm">Years Experience</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <div className="glass-card rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
-                  <AnimatedCounter target={109} suffix="+" />
-                </p>
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">109+</p>
                 <p className="text-gray-400 mt-2 text-sm">Cities Served</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="glass-card rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
-                  <AnimatedCounter target={500} suffix="+" />
-                </p>
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">500+</p>
                 <p className="text-gray-400 mt-2 text-sm">Projects Completed</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={300}>
               <div className="glass-card rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">
-                  <AnimatedCounter target={5} suffix=".0" />
-                </p>
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">5.0</p>
                 <p className="text-gray-400 mt-2 text-sm">Google Rating</p>
               </div>
             </ScrollReveal>
@@ -365,7 +356,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-semibold text-white text-sm">{review.author}</p>
-                    <p className="text-xs text-gray-500">{review.service}</p>
+                    <p className="text-xs text-gray-400">{review.service}</p>
                   </div>
                 </div>
               </div>
@@ -457,7 +448,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+                    <p className="text-sm text-gray-400 mb-2">{post.date}</p>
                     <h3 className="text-lg font-bold text-white mb-2 group-hover:text-alfa-gold transition-colors">
                       {post.title}
                     </h3>

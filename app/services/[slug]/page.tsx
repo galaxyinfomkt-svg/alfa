@@ -449,7 +449,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <details key={i} className="bg-alfa-card rounded-xl border border-white/5 group">
                 <summary className="p-6 cursor-pointer font-semibold text-white flex justify-between items-center">
                   {faq.question}
-                  <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </summary>
                 <div className="px-6 pb-6 text-gray-400 leading-relaxed">{faq.answer}</div>
               </details>

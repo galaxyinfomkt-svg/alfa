@@ -165,7 +165,7 @@ export default function Header() {
                         <span className="text-sm font-medium text-white group-hover:text-alfa-gold transition-colors">
                           {item.name}
                         </span>
-                        <span className="text-xs text-gray-500">{item.desc}</span>
+                        <span className="text-xs text-gray-400">{item.desc}</span>
                       </Link>
                     ))}
                     <div className="border-t border-white/10 mt-1 pt-1">
@@ -236,6 +236,7 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-alfa-gold transition-colors"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen ? "true" : "false"}
             >
               {isMobileMenuOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>

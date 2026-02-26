@@ -209,6 +209,39 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
+/* ─── CSS-only scroll reveal (progressive enhancement) ── */
+/* Content is always visible by default (SEO + perf friendly) */
+/* Browsers supporting scroll-driven animations get the effect */
+@supports (animation-timeline: view()) {
+  .sr.sr-up {
+    animation: sr-up 0.5s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+  .sr.sr-left {
+    animation: sr-left 0.5s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+  .sr.sr-right {
+    animation: sr-right 0.5s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+  @keyframes sr-up {
+    from { opacity: 0; transform: translateY(2rem); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes sr-left {
+    from { opacity: 0; transform: translateX(-2rem); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes sr-right {
+    from { opacity: 0; transform: translateX(2rem); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+}
+
 /* ─── Selection color ───────────────────────────────── */
 ::selection {
   background: rgba(184, 150, 62, 0.3);
