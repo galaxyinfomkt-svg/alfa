@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { company } from "@/data/company";
 
 const navLinks = [
-  { href: "/services", label: "Services" },
   { href: "/cities/framingham", label: "Cities" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
@@ -14,9 +13,20 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+const serviceItems = [
+  { slug: "painting", name: "Painting Services", desc: "Interior & exterior painting for homes..." },
+  { slug: "carpentry", name: "Carpentry & Trim", desc: "Fine carpentry, trim work, and door install..." },
+  { slug: "siding", name: "Siding Installation", desc: "Professional siding installation and rep..." },
+  { slug: "windows-doors", name: "Windows & Doors", desc: "Energy-efficient window and door install..." },
+  { slug: "remodeling", name: "Home Remodeling", desc: "Kitchen, bathroom, and whole house remod..." },
+];
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +34,17 @@ export default function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close services dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -106,6 +127,62 @@ export default function Header() {
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-7">
+              {/* Services Dropdown */}
+              <div ref={servicesRef} className="relative">
+                <button
+                  type="button"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-alfa-gold transition-colors duration-300"
+                >
+                  Services
+                  <svg
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {/* Dropdown Panel */}
+                <div
+                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 transition-all duration-200 ${
+                    isServicesOpen
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <div className="bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl shadow-black/50 p-2">
+                    {serviceItems.map((item) => (
+                      <Link
+                        key={item.slug}
+                        href={`/services/${item.slug}`}
+                        onClick={() => setIsServicesOpen(false)}
+                        className="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors group"
+                      >
+                        <span className="text-sm font-medium text-white group-hover:text-alfa-gold transition-colors">
+                          {item.name}
+                        </span>
+                        <span className="text-xs text-gray-500">{item.desc}</span>
+                      </Link>
+                    ))}
+                    <div className="border-t border-white/10 mt-1 pt-1">
+                      <Link
+                        href="/services"
+                        onClick={() => setIsServicesOpen(false)}
+                        className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors group"
+                      >
+                        <span className="text-sm font-medium text-alfa-gold">All Services</span>
+                        <svg className="w-4 h-4 text-alfa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -176,6 +253,50 @@ export default function Header() {
         } bg-black/95 backdrop-blur-xl border-t border-white/5`}
       >
         <nav className="px-4 py-4 space-y-1">
+          {/* Mobile Services Accordion */}
+          <div>
+            <button
+              type="button"
+              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+              className="flex items-center justify-between w-full px-4 py-3 text-gray-300 font-medium rounded-lg hover:bg-white/5 hover:text-alfa-gold transition-colors"
+            >
+              Services
+              <svg
+                className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                isMobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              <div className="pl-4 space-y-0.5 pb-1">
+                {serviceItems.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={`/services/${item.slug}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-2.5 text-sm text-gray-400 rounded-lg hover:bg-white/5 hover:text-alfa-gold transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/services"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-2.5 text-sm text-alfa-gold font-medium rounded-lg hover:bg-white/5 transition-colors"
+                >
+                  All Services
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {navLinks.map((link) => (
             <Link
               key={link.href}
