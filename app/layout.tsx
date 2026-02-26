@@ -126,14 +126,11 @@ export default function RootLayout({
         {/* LLMs.txt for AI search engines */}
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM documentation" />
 
-        {/* Preconnect for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* Preconnect for form/widget resources (loaded lazily via IntersectionObserver) */}
+        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://appcdn.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://stcdn.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
-        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
-        <link rel="dns-prefetch" href="https://reputationhub.site" />
 
         {/* Organization + LocalBusiness Schema */}
         <script

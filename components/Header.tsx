@@ -118,8 +118,9 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="Alfa Construction Inc"
-                width={180}
-                height={50}
+                width={140}
+                height={39}
+                sizes="140px"
                 className="h-10 md:h-12 w-auto"
                 priority
               />

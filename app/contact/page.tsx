@@ -96,13 +96,7 @@ export default function ContactPage() {
             </div>
 
             {/* Form */}
-            <div className="bg-alfa-card rounded-2xl p-8 border border-white/5">
-              <h2 className="text-2xl font-bold text-white mb-4 text-center">
-                Request Your Free Estimate
-              </h2>
-              <p className="text-gray-400 text-center mb-6 text-sm">
-                Fill out the form below and we&apos;ll get back to you within 24 hours.
-              </p>
+            <div>
               <FormEmbed />
             </div>
           </div>

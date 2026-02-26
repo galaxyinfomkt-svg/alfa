@@ -256,9 +256,10 @@ export default async function CityServicePage({
             src={heroImg.src}
             alt={`${heroImg.alt} in ${city.name}, MA`}
             fill
+            sizes="100vw"
             className="object-cover"
             priority
-            quality={80}
+            quality={75}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
         </div>
@@ -328,11 +329,7 @@ export default async function CityServicePage({
             </div>
 
             {/* Right Side — Contact Form */}
-            <div className="bg-[#111111]/90 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl shadow-black/50">
-              <h2 className="text-xl font-bold text-white mb-1 text-center">
-                Get a Free {service.shortName} Estimate
-              </h2>
-              <p className="text-sm text-gray-400 mb-4 text-center">in {city.name}, MA</p>
+            <div>
               <FormEmbed />
             </div>
           </div>

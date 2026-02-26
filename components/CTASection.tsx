@@ -61,10 +61,7 @@ export default function CTASection({ title, subtitle, cityName }: CTASectionProp
               </span>
             </div>
           </div>
-          <div className="bg-alfa-card rounded-2xl p-6 border border-white/5 shadow-2xl shadow-black/50">
-            <h3 className="text-xl font-bold text-white mb-4 text-center">
-              Request Your Free Estimate
-            </h3>
+          <div>
             <FormEmbed />
           </div>
         </div>

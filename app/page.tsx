@@ -87,9 +87,10 @@ export default function HomePage() {
             src="/images/siding-window-installation-after-massachusetts.jpg"
             alt="Professional siding and window installation by Alfa Construction Inc in Massachusetts"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
-            quality={85}
+            quality={75}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
         </div>
@@ -144,11 +145,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Side — Contact Form */}
-            <div className="bg-[#111111]/90 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl shadow-black/50">
-              <h2 className="text-xl font-bold text-white mb-1 text-center">
-                Get Your Free Estimate
-              </h2>
-              <p className="text-sm text-gray-400 mb-4 text-center">Fill out the form and we&apos;ll contact you within 24 hours</p>
+            <div>
               <FormEmbed />
             </div>
           </div>
@@ -251,7 +248,9 @@ export default function HomePage() {
                   alt="Alfa Construction Inc carpentry work - custom deck staircase and railing in Massachusetts"
                   width={600}
                   height={500}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-alfa-gold text-black p-6 rounded-2xl shadow-xl">
@@ -290,7 +289,9 @@ export default function HomePage() {
                     src={project.img}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -467,7 +468,9 @@ export default function HomePage() {
                       src={post.img}
                       alt={post.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <span className="absolute top-4 left-4 bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full">
                       {post.category}
