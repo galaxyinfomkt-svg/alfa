@@ -292,7 +292,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(service.faqs)) }} />
 
       {/* Hero (split layout with form) */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      <section className="relative pt-40 pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={service.heroImage}
@@ -493,7 +493,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               return (
                 <Link
                   key={citySlug}
-                  href={`/cities/${citySlug}/${slug}`}
+                  href={`/massachusetts/${citySlug}/${slug}`}
                   className="inline-block bg-alfa-card hover:bg-alfa-gold hover:text-black text-gray-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10 hover:border-alfa-gold transition-all duration-200"
                 >
                   {city.name}, MA

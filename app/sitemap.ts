@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ─── City Landing Pages (local SEO) ───
   const cityPages: MetadataRoute.Sitemap = citySlugs.map((slug) => ({
-    url: `${BASE_URL}/cities/${slug}`,
+    url: `${BASE_URL}/massachusetts/${slug}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.85,
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ─── City + Service Pages (long-tail keywords) ───
   const cityServicePages: MetadataRoute.Sitemap = citySlugs.flatMap((city) =>
     serviceSlugs.map((service) => ({
-      url: `${BASE_URL}/cities/${city}/${service}`,
+      url: `${BASE_URL}/massachusetts/${city}/${service}`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.8,

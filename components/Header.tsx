@@ -6,7 +6,7 @@ import Image from "next/image";
 import { company } from "@/data/company";
 
 const navLinks = [
-  { href: "/cities/framingham", label: "Cities" },
+  { href: "/massachusetts/framingham", label: "Cities" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },

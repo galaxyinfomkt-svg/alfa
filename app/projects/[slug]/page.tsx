@@ -30,7 +30,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <section className="pt-32 pb-16 bg-black">
+      <section className="pt-40 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <Link href="/projects" className="inline-flex items-center gap-1 text-alfa-gold hover:text-alfa-gold-light transition-colors text-sm mb-4">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>

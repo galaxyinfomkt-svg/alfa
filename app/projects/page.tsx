@@ -20,7 +20,7 @@ export default function ProjectsPage() {
         { name: "Projects", url: "https://alfapaintingcarpentry.com/projects" },
       ])) }} />
 
-      <section className="pt-32 pb-16 bg-black">
+      <section className="pt-40 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Our Work</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">

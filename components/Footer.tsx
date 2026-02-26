@@ -132,7 +132,7 @@ export default function Footer() {
             {cities.map((city, i) => (
               <span key={city.slug}>
                 <Link
-                  href={`/cities/${city.slug}`}
+                  href={`/massachusetts/${city.slug}`}
                   className="hover:text-alfa-gold transition-colors"
                 >
                   {city.name}

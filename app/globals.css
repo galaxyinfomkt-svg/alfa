@@ -21,6 +21,14 @@
   --color-alfa-white: #ffffff;
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Slightly larger font sizes for better readability */
+  --font-size-xs: 0.8125rem; /* 13px (default: 12px) */
+  --font-size-xs--line-height: 1.25rem;
+  --font-size-sm: 0.9375rem; /* 15px (default: 14px) */
+  --font-size-sm--line-height: 1.375rem;
+  --font-size-base: 1.0625rem; /* 17px (default: 16px) */
+  --font-size-base--line-height: 1.625rem;
 }
 
 html {

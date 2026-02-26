@@ -73,7 +73,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-44 pb-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left Side — Badges + Heading */}
             <div>

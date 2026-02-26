@@ -61,6 +61,11 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/cities/:path*",
+        destination: "/massachusetts/:path*",
+        permanent: true,
+      },
     ];
   },
 };

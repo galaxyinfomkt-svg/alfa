@@ -62,10 +62,10 @@ export async function generateMetadata({
       title,
       description,
       type: "website",
-      url: `https://alfapaintingcarpentry.com/cities/${city.slug}`,
+      url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
     },
     alternates: {
-      canonical: `https://alfapaintingcarpentry.com/cities/${city.slug}`,
+      canonical: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
     },
   };
 }
@@ -133,7 +133,7 @@ export default async function CityPage({
     name: company.name,
     description: `Professional painting, carpentry, siding, window & door installation, and home remodeling services in ${city.name}, MA.`,
     telephone: company.phoneRaw,
-    url: `https://alfapaintingcarpentry.com/cities/${city.slug}`,
+    url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
     areaServed: {
       "@type": "City",
       name: city.name,
@@ -162,7 +162,7 @@ export default async function CityPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
           { name: "Home", url: "https://alfapaintingcarpentry.com" },
           { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/services" },
-          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/cities/${city.slug}` },
+          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}` },
         ])) }}
       />
 
@@ -170,7 +170,7 @@ export default async function CityPage({
       {(() => {
         const heroImg = getCityHeroImage(city.slug);
         return (
-          <section className="relative pt-32 pb-16 overflow-hidden">
+          <section className="relative pt-40 pb-16 overflow-hidden">
             <div className="absolute inset-0">
               <Image
                 src={heroImg.src}
@@ -396,7 +396,7 @@ export default async function CityPage({
                   {city.neighboringCities.map((neighbor) => (
                     <Link
                       key={neighbor}
-                      href={`/cities/${neighbor
+                      href={`/massachusetts/${neighbor
                         .toLowerCase()
                         .replace(/\s+/g, "-")}`}
                       className="inline-block bg-white/5 border border-white/10 text-gray-300 hover:border-alfa-gold/30 hover:text-alfa-gold text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-200"

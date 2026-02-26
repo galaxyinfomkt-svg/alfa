@@ -116,10 +116,10 @@ export async function generateMetadata({
       title,
       description,
       type: "website",
-      url: `https://alfapaintingcarpentry.com/cities/${city.slug}/${service.slug}`,
+      url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}/${service.slug}`,
     },
     alternates: {
-      canonical: `https://alfapaintingcarpentry.com/cities/${city.slug}/${service.slug}`,
+      canonical: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}/${service.slug}`,
     },
   };
 }
@@ -189,7 +189,7 @@ export default async function CityServicePage({
         name: "Massachusetts",
       },
     },
-    url: `https://alfapaintingcarpentry.com/cities/${city.slug}/${service.slug}`,
+    url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}/${service.slug}`,
   };
 
   const faqSchema = {
@@ -233,7 +233,7 @@ export default async function CityServicePage({
           { name: "Home", url: "https://alfapaintingcarpentry.com" },
           { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/services" },
           { name: service.name, url: `https://alfapaintingcarpentry.com/services/${service.slug}` },
-          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/cities/${city.slug}/${service.slug}` },
+          { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}/${service.slug}` },
         ])) }}
       />
       <script
@@ -250,7 +250,7 @@ export default async function CityServicePage({
       />
 
       {/* ===== HERO (split layout with background image + form) ===== */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      <section className="relative pt-40 pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={heroImg.src}
@@ -601,7 +601,7 @@ export default async function CityServicePage({
               .map((s) => (
                 <Link
                   key={s.slug}
-                  href={`/cities/${city.slug}/${s.slug}`}
+                  href={`/massachusetts/${city.slug}/${s.slug}`}
                   className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-gray-300 hover:border-alfa-gold/30 hover:text-alfa-gold font-medium px-5 py-3 rounded-lg transition-all duration-200 shadow-md shadow-black/10"
                 >
                   {s.name}
@@ -623,7 +623,7 @@ export default async function CityServicePage({
           </div>
           <div className="text-center mt-6">
             <Link
-              href={`/cities/${city.slug}`}
+              href={`/massachusetts/${city.slug}`}
               className="inline-flex items-center gap-1 text-alfa-gold font-semibold hover:text-white transition-colors"
             >
               <svg
@@ -673,7 +673,7 @@ export default async function CityServicePage({
                 {nearbyCities.map((nearbyCity) => (
                   <Link
                     key={nearbyCity.slug}
-                    href={`/cities/${nearbyCity.slug}/${service.slug}`}
+                    href={`/massachusetts/${nearbyCity.slug}/${service.slug}`}
                     className="inline-block bg-alfa-card hover:bg-alfa-gold hover:text-black text-gray-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10 hover:border-alfa-gold transition-all duration-200"
                   >
                     {service.shortName} in {nearbyCity.name}, MA
