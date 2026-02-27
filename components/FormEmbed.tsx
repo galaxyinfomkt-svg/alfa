@@ -16,8 +16,7 @@ export default function FormEmbed() {
       cleanup();
     };
 
-    // Load iframe on first user interaction — defers ~5MB of third-party JS
-    // (reCAPTCHA, LeadConnector, Facebook Pixel) from blocking main thread
+    // Load iframe on first user interaction — defers third-party JS
     const events = ["scroll", "click", "touchstart", "mousemove", "keydown"];
     events.forEach(e => window.addEventListener(e, load, { passive: true }));
 
@@ -31,6 +30,18 @@ export default function FormEmbed() {
 
     return cleanup;
   }, []);
+
+  // Load the GHL form_embed.js script once the form is visible
+  useEffect(() => {
+    if (!show) return;
+    const scriptId = "ghl-form-embed";
+    if (document.getElementById(scriptId)) return;
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, [show]);
 
   return (
     <div className="w-full">
