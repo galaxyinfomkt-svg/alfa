@@ -37,7 +37,9 @@ export default function FormEmbed() {
       {show ? (
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/1wwHwfROj84YUZqwCqpV"
-          style={{ width: "100%", height: 457, border: "none", borderRadius: "3px" }}
+          style={{ width: "100%", height: 457, border: "none", borderRadius: "3px", background: "transparent" }}
+          // @ts-expect-error — legacy attribute still needed for some browsers
+          allowTransparency="true"
           id="inline-1wwHwfROj84YUZqwCqpV"
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
