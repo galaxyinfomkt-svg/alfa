@@ -156,6 +156,12 @@ body {
 /* ─── Review widget ─────────────────────────────────── */
 .review-widget-container iframe { min-height: 400px; }
 
+/* ─── GHL form iframe — force transparent background ── */
+iframe[id^="inline-PiFH0ELuOmHS9iZhGQ5F"],
+iframe[data-form-id] {
+  background: transparent !important;
+}
+
 /* ─── Prose overrides for dark theme (blog content) ─── */
 .prose { color: #a3a3a3; }
 .prose h2, .prose h3, .prose h4 { color: #ffffff; }

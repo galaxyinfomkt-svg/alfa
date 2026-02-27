@@ -20,8 +20,8 @@ export default function FormEmbed() {
     const events = ["scroll", "click", "touchstart", "mousemove", "keydown"];
     events.forEach(e => window.addEventListener(e, load, { passive: true }));
 
-    // Fallback: load after 15s even without interaction
-    const timer = setTimeout(load, 15000);
+    // Fallback: load after 3s even without interaction
+    const timer = setTimeout(load, 3000);
 
     const cleanup = () => {
       events.forEach(e => window.removeEventListener(e, load));
@@ -48,7 +48,8 @@ export default function FormEmbed() {
       {show ? (
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
-          style={{ width: "100%", height: 449, border: "none", borderRadius: "3px" }}
+          style={{ width: "100%", height: 449, border: "none", borderRadius: "3px", background: "transparent" }}
+          allowTransparency={true}
           id="inline-PiFH0ELuOmHS9iZhGQ5F"
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
