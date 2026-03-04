@@ -44,11 +44,11 @@ export default function FormEmbed() {
   }, [show]);
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       {show ? (
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
-          style={{ width: "100%", height: 700, border: "none", borderRadius: "3px", background: "transparent", overflow: "hidden" }}
+          style={{ width: "calc(100% + 20px)", height: 700, border: "none", background: "transparent", colorScheme: "normal" }}
           allowTransparency={true}
           scrolling="no"
           id="inline-PiFH0ELuOmHS9iZhGQ5F"
