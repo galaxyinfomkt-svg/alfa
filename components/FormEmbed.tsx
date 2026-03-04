@@ -48,8 +48,9 @@ export default function FormEmbed() {
       {show ? (
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
-          style={{ width: "100%", height: 449, border: "none", borderRadius: "3px", background: "transparent" }}
+          style={{ width: "100%", height: 700, border: "none", borderRadius: "3px", background: "transparent", overflow: "hidden" }}
           allowTransparency={true}
+          scrolling="no"
           id="inline-PiFH0ELuOmHS9iZhGQ5F"
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
@@ -59,7 +60,7 @@ export default function FormEmbed() {
           data-deactivation-type="neverDeactivate"
           data-deactivation-value=""
           data-form-name="FORM SITE ALFA"
-          data-height="449"
+          data-height="700"
           data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
           data-form-id="PiFH0ELuOmHS9iZhGQ5F"
           title="FORM SITE ALFA"
