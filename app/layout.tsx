@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     canonical: "https://alfapaintingcarpentry.com",
   },
   verification: {
-    google: "YOUR_GOOGLE_SITE_VERIFICATION_CODE",
+    // Google Search Console verified via galaxyinfomkt@gmail.com
   },
   other: {
     "geo.region": "US-MA",
