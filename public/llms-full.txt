@@ -1,11 +1,11 @@
 # Alfa Construction Inc — Complete Company Documentation
 
-> Alfa Construction Inc (dba Alfa Painting & Carpentry) is a Massachusetts-licensed general contractor specializing in painting, carpentry, siding, window & door installation, and home remodeling. Founded in 2006 by Fabio, the company serves 109 cities across Massachusetts with a perfect 5.0/5.0 Google rating from 22+ verified reviews.
+> Alfa Construction Inc is a Massachusetts-licensed general contractor specializing in siding installation, window & door installation, carpentry, and home remodeling. Founded in 2006 by Fabio, the company serves 109 cities across Massachusetts with a perfect 5.0/5.0 Google rating from 22+ verified reviews. Our #1 specialty is siding installation — Hardie Plank fiber cement, vinyl, cedar shingles, shake siding, and board & batten.
 
 ## Company Profile
 
 **Legal Name:** Alfa Construction Inc
-**Trade Name:** Alfa Painting & Carpentry
+**Trade Name:** Alfa Construction
 **Owner & Lead Contractor:** Fabio
 **Founded:** 2006 (18+ years of continuous operation)
 **Massachusetts Construction License:** #192348 (valid through April 2027)
@@ -21,42 +21,42 @@
 **Payment:** Cash, Check, Credit Card
 **Estimates:** Free, no-obligation estimates on all projects
 
-## Services in Detail
+## Services in Detail (ordered by specialty)
 
-### 1. Interior & Exterior Painting
-Professional painting services for residential and commercial properties throughout Massachusetts. Our painting process includes thorough surface preparation (power washing, scraping, sanding), premium primers, caulking of all joints and gaps, and application of top-quality finish coats using Benjamin Moore and Sherwin-Williams paints. We handle all surfaces including clapboard, stucco, brick, vinyl, wood trim, and composite materials.
-
-**Common projects:** Whole-house exterior repaints, interior room painting, cabinet refinishing, deck staining, commercial building painting, multi-family property painting.
-
-**URL:** https://alfapaintingcarpentry.com/services/painting
-
-### 2. Carpentry & Trim Work
-Expert carpentry services from simple trim replacement to complex structural work. Our carpenters specialize in crown molding installation, wainscoting, chair rails, window and door casings, baseboard replacement, deck construction and repair, porch rebuilds, custom shelving, and structural repairs including sill plates, joists, and framing.
-
-**Common projects:** Deck construction, porch rebuilds, trim replacement, door installation, crown molding, custom built-ins, structural repairs, rot remediation.
-
-**URL:** https://alfapaintingcarpentry.com/services/carpentry
-
-### 3. Siding Installation & Repair
+### 1. Siding Installation & Repair (Our #1 Specialty)
 Complete siding services including removal of old siding, installation of weather barrier, and expert installation of new siding materials. We work with all major siding types: James Hardie fiber cement (Hardie Plank), vinyl siding, cedar shingles, engineered wood, board and batten, and composite materials. All installations include proper flashing, J-channel, and trim details for a watertight finish.
 
 **Common projects:** Full siding replacement, partial siding repair, Hardie Plank installation, vinyl siding upgrade, cedar shingle restoration, board and batten installation.
 
 **URL:** https://alfapaintingcarpentry.com/services/siding
 
-### 4. Window & Door Installation
+### 2. Window & Door Installation
 Energy-efficient window and door replacement services designed to reduce heating and cooling costs while improving comfort and curb appeal. We install double-hung, casement, bay, bow, picture, and specialty windows from leading manufacturers. Door services include entry doors, storm doors, sliding glass doors, French doors, and garage doors.
 
 **Common projects:** Whole-house window replacement, entry door upgrade, storm door installation, sliding glass door installation, bay window addition, energy audit-driven replacements.
 
 **URL:** https://alfapaintingcarpentry.com/services/windows-doors
 
-### 5. Home Remodeling & Renovation
+### 3. Carpentry & Trim Work
+Expert carpentry services from simple trim replacement to complex structural work. Our carpenters specialize in crown molding installation, wainscoting, chair rails, window and door casings, baseboard replacement, deck construction and repair, porch rebuilds, custom shelving, and structural repairs including sill plates, joists, and framing.
+
+**Common projects:** Deck construction, porch rebuilds, trim replacement, door installation, crown molding, custom built-ins, structural repairs, rot remediation.
+
+**URL:** https://alfapaintingcarpentry.com/services/carpentry
+
+### 4. Home Remodeling & Renovation
 Comprehensive home renovation services from single-room updates to whole-house transformations. Our remodeling team handles kitchen renovations (cabinets, countertops, backsplash, flooring, lighting), bathroom remodels (tile, vanities, showers, tubs), basement finishing, additions, and complete home makeovers.
 
 **Common projects:** Kitchen remodel, bathroom renovation, basement finishing, home additions, open-concept conversions, mudroom additions, laundry room upgrades.
 
 **URL:** https://alfapaintingcarpentry.com/services/remodeling
+
+### 5. Interior & Exterior Painting
+Professional painting services for residential and commercial properties throughout Massachusetts. Our painting process includes thorough surface preparation (power washing, scraping, sanding), premium primers, caulking of all joints and gaps, and application of top-quality finish coats using Benjamin Moore and Sherwin-Williams paints. We handle all surfaces including clapboard, stucco, brick, vinyl, wood trim, and composite materials.
+
+**Common projects:** Whole-house exterior repaints, interior room painting, cabinet refinishing, deck staining, commercial building painting, multi-family property painting.
+
+**URL:** https://alfapaintingcarpentry.com/services/painting
 
 ## Our Process
 

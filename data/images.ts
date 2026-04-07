@@ -1,10 +1,11 @@
 // Centralized image mapping with SEO alt text and geo-tags
 // All images from Alfa Construction Inc real projects in Massachusetts
+// contentLocation: Bellingham, MA (42.0687, -71.4748) — service area: 109 MA cities
 
 export const images = {
   logo: {
     src: "/images/logo.png",
-    alt: "Alfa Construction Inc Logo - Painting & Carpentry Services Massachusetts",
+    alt: "Alfa Construction Inc Logo - Siding Installation Contractor Massachusetts",
     width: 1702,
     height: 1128,
   },
@@ -124,6 +125,31 @@ export const images = {
       alt: "Commercial building siding and window installation in Massachusetts by Alfa Construction Inc",
       service: "Siding Installation & Repair",
       title: "Commercial Siding & Windows – Massachusetts",
+    },
+    // New projects from client submissions (April 2026)
+    {
+      src: "/images/dark-shake-siding-renovation-after-ma.jpg",
+      alt: "Dark charcoal shake siding renovation with white trim and red door on Victorian home in Massachusetts",
+      service: "Siding Installation & Repair",
+      title: "Dark Shake Siding Renovation – Massachusetts",
+    },
+    {
+      src: "/images/green-siding-exterior-completed-ma.jpg",
+      alt: "Sage green siding installation with white trim on completed residential home in Massachusetts",
+      service: "Home Remodeling & Renovation",
+      title: "Green Siding & Deck Build – Massachusetts",
+    },
+    {
+      src: "/images/window-insulation-energyshield-ma.jpg",
+      alt: "EnergyShield continuous wall insulation and Andersen window installation on home in Massachusetts",
+      service: "Window & Door Installation",
+      title: "Window & Insulation Installation – Massachusetts",
+    },
+    {
+      src: "/images/blue-gray-siding-red-door-ma.jpg",
+      alt: "Blue-gray clapboard siding with white trim and red front door on New England home in Massachusetts",
+      service: "Siding Installation & Repair",
+      title: "Blue-Gray Siding & Exterior – Massachusetts",
     },
   ],
 
