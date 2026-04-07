@@ -43,14 +43,6 @@ const services = [
     icon: "remodeling",
     cta: "Start Your Remodeling Project",
   },
-  {
-    slug: "painting",
-    name: "Interior & Exterior Painting",
-    description:
-      "From single rooms to complete exterior makeovers, our painting team delivers flawless results. We handle all prep work, use premium paints, and ensure a finish that lasts through New England's toughest seasons. Whether your walls are faded, peeling, or you simply want a fresh new look, we have you covered.",
-    icon: "painting",
-    cta: "Get Your Free Painting Estimate",
-  },
 ];
 
 export default function ServicesPage() {

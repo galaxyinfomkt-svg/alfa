@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Blog | Home Improvement Tips for Massachusetts Homeowners",
   description:
-    "Expert advice on painting, carpentry, siding, and home remodeling for Massachusetts homeowners. Tips from Alfa Construction Inc's 18+ years of experience.",
+    "Expert advice on siding installation, window & door installation, carpentry, and home remodeling for Massachusetts homeowners. Tips from Alfa Construction Inc's 18+ years of experience.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/blog" },
 };
 
@@ -27,7 +27,7 @@ export default function BlogPage() {
             Homeowner Tips &amp; Insights
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Expert advice on painting, carpentry, siding, and home remodeling from Alfa Construction Inc. Helping Massachusetts homeowners make informed decisions.
+            Expert advice on siding installation, window &amp; door installation, carpentry, and home remodeling from Alfa Construction Inc. Helping Massachusetts homeowners make informed decisions.
           </p>
         </div>
       </section>

@@ -8,11 +8,9 @@ const serviceLinks = [
   { href: "/services/windows-doors", label: "Window & Door Installation" },
   { href: "/services/carpentry", label: "Carpentry & Trim Work" },
   { href: "/services/remodeling", label: "Home Remodeling & Renovation" },
-  { href: "/services/painting", label: "Interior & Exterior Painting" },
 ];
 
 const blogLinks = [
-  { href: "/blog/signs-exterior-paint-needs-replacing-spring-massachusetts", label: "Signs Your Paint Needs Replacing" },
   { href: "/blog/hardie-plank-vs-vinyl-siding-new-england", label: "Hardie Plank vs Vinyl Siding" },
   { href: "/blog/why-licensed-contractor-massachusetts-matters", label: "Why Hire a Licensed Contractor" },
 ];

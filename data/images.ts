@@ -12,14 +12,14 @@ export const images = {
 
   // Hero & general
   hero: {
-    src: "/images/siding-window-installation-after-massachusetts.jpg",
-    alt: "Professional siding and window installation by Alfa Construction Inc in Massachusetts",
+    src: "/images/dark-shake-siding-renovation-after-ma.jpg",
+    alt: "Professional dark shake siding renovation by Alfa Construction Inc in Massachusetts",
     width: 1200,
     height: 800,
   },
   aboutTeam: {
-    src: "/images/deck-carpentry-staircase-railing-massachusetts.png",
-    alt: "Alfa Construction Inc carpentry work - custom deck staircase and railing in Massachusetts",
+    src: "/images/green-siding-exterior-completed-ma.jpg",
+    alt: "Alfa Construction Inc siding project - green siding and deck build in Massachusetts",
     width: 1080,
     height: 1350,
   },
@@ -31,12 +31,6 @@ export const images = {
   },
 
   // Service heroes
-  paintingHero: {
-    src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
-    alt: "Exterior painting and siding on Cape Cod style home in Bellingham, MA by Alfa Construction",
-    width: 1200,
-    height: 800,
-  },
   carpentryHero: {
     src: "/images/deck-carpentry-staircase-railing-massachusetts.png",
     alt: "Custom deck carpentry with staircase and white railing by Alfa Construction in Massachusetts",
@@ -44,14 +38,14 @@ export const images = {
     height: 1350,
   },
   sidingHero: {
-    src: "/images/commercial-siding-installation-massachusetts.png",
-    alt: "Commercial siding installation in progress by Alfa Construction Inc in Massachusetts",
-    width: 1080,
-    height: 1350,
+    src: "/images/dark-shake-siding-side-view-ma.jpg",
+    alt: "Dark shake siding renovation side view by Alfa Construction Inc in Massachusetts",
+    width: 1200,
+    height: 800,
   },
   windowsDoorsHero: {
-    src: "/images/siding-window-installation-before-massachusetts.jpg",
-    alt: "Window and siding installation project in Massachusetts by Alfa Construction Inc",
+    src: "/images/window-insulation-energyshield-ma.jpg",
+    alt: "EnergyShield insulation and window installation by Alfa Construction Inc in Massachusetts",
     width: 1200,
     height: 800,
   },

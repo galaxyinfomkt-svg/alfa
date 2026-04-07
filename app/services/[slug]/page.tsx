@@ -211,7 +211,7 @@ const servicesData: Record<string, {
     subheadline: "Transform your living spaces with Alfa Construction's full-service remodeling. From kitchens to bathrooms, we handle every detail to increase your home's value and livability.",
     description: [
       "Your home should reflect your lifestyle and grow with your family's needs. Alfa Construction Inc provides comprehensive home remodeling services across Massachusetts — from kitchen and bathroom renovations to full-home transformations that breathe new life into outdated spaces.",
-      "What sets us apart is our ability to handle multiple trades under one roof. Painting, carpentry, drywall, trim work, door installation — we coordinate every element of your renovation seamlessly, saving you the hassle of managing multiple contractors.",
+      "What sets us apart is our ability to handle multiple trades under one roof. Carpentry, drywall, trim work, door installation — we coordinate every element of your renovation seamlessly, saving you the hassle of managing multiple contractors.",
       "Whether you're updating a tired kitchen, converting unused space into functional rooms, or preparing your home for sale with a strategic renovation, our experienced team delivers results that exceed expectations. Every project is managed with attention to detail, clear communication, and respect for your home.",
     ],
     painPoints: [
@@ -228,7 +228,7 @@ const servicesData: Record<string, {
       { step: 5, title: "Final Walkthrough", description: "We do a detailed walkthrough together, address any touch-ups, and ensure you're 100% satisfied with every detail." },
     ],
     benefits: [
-      "Full-service renovation — painting, carpentry, drywall, and more under one roof",
+      "Full-service renovation — carpentry, siding, drywall, and more under one roof",
       "Kitchen and bathroom expertise that adds real value to your home",
       "Experienced project management for smooth, on-time completion",
       "High-quality materials and finishes that stand the test of time",

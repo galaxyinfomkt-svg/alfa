@@ -1,6 +1,6 @@
 export const company = {
   name: "Alfa Construction Inc",
-  tradeName: "Alfa Painting & Carpentry",
+  tradeName: "Alfa Construction",
   phone: "(508) 596-3750",
   phoneRaw: "+15085963750",
   phoneTel: "tel:+15085963750",
@@ -44,7 +44,7 @@ export const company = {
       text: "Alfa Painting & Carpentry did a great job assisting us with our remodeling. They painted and installed a wide variety of doors. The painting was very well done in a high-end home. Would highly recommend Fabio and his team.",
       author: "John S.",
       rating: 5,
-      service: "Remodeling & Painting",
+      service: "Remodeling & Construction",
     },
     {
       text: "Real good results always come from really good professionals. They did a very good job replacing rotten trims inside and out of my property.",
@@ -185,15 +185,6 @@ export const localBusinessSchema = {
           description: "Complete home renovation from kitchens to bathrooms.",
         },
       },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Interior & Exterior Painting",
-          url: `${BASE_URL}/services/painting`,
-          description: "Professional interior and exterior painting services across Massachusetts.",
-        },
-      },
     ],
   },
   hasCredential: [
@@ -286,8 +277,6 @@ export const contractorSchema = {
     "Kitchen Remodeling",
     "Bathroom Remodeling",
     "Deck Construction",
-    "Exterior Painting",
-    "Interior Painting",
   ],
   hasCredential: {
     "@type": "EducationalOccupationalCredential",

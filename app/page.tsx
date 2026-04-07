@@ -10,13 +10,6 @@ import FormEmbed from "@/components/FormEmbed";
 
 const services = [
   {
-    slug: "painting",
-    name: "Interior & Exterior Painting",
-    description: "Transform your home with premium interior and exterior painting. Expert prep, flawless finish, and lasting results that boost your curb appeal.",
-    icon: "painting",
-    cta: "Get Your Free Painting Estimate",
-  },
-  {
     slug: "carpentry",
     name: "Carpentry & Trim Work",
     description: "Fine carpentry, trim replacement, and door installation. Precision craftsmanship to restore and enhance your home's woodwork and details.",
@@ -62,8 +55,8 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/siding-window-installation-after-massachusetts.jpg"
-            alt="Professional siding and window installation by Alfa Construction Inc in Massachusetts"
+            src="/images/dark-shake-siding-renovation-after-ma.jpg"
+            alt="Professional dark shake siding renovation by Alfa Construction Inc in Massachusetts"
             fill
             sizes="100vw"
             className="object-cover"
@@ -175,7 +168,7 @@ export default function HomePage() {
               Our Professional Services
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              From painting to complete home renovation, Alfa Construction Inc delivers quality craftsmanship backed by {company.experience} years of experience across Massachusetts.
+              From siding installation to complete home renovation, Alfa Construction Inc delivers quality craftsmanship backed by {company.experience} years of experience across Massachusetts.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -222,8 +215,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
                 <Image
-                  src="/images/deck-carpentry-staircase-railing-massachusetts.png"
-                  alt="Alfa Construction Inc carpentry work - custom deck staircase and railing in Massachusetts"
+                  src="/images/green-siding-exterior-completed-ma.jpg"
+                  alt="Alfa Construction Inc siding project - green siding and deck build in Massachusetts"
                   width={600}
                   height={500}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -407,14 +400,6 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                slug: "signs-exterior-paint-needs-replacing-spring-massachusetts",
-                title: "Signs Your Home's Exterior Paint Needs Replacing This Spring",
-                excerpt: "Learn the key warning signs that your Massachusetts home's exterior paint is past its prime and needs professional attention.",
-                date: "March 15, 2025",
-                category: "Painting",
-                img: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
-              },
               {
                 slug: "hardie-plank-vs-vinyl-siding-new-england",
                 title: "Hardie Plank vs Vinyl Siding: Which is Better for New England?",

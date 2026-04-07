@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "About Us | 18+ Years of Construction Excellence in Massachusetts",
   description:
-    "Learn about Alfa Construction Inc. Founded by Fabio, we bring 18+ years of painting, carpentry, and remodeling expertise to Massachusetts homeowners. Licensed & insured.",
+    "Learn about Alfa Construction Inc. Founded by Fabio, we bring 18+ years of siding installation, carpentry, and remodeling expertise to Massachusetts homeowners. Licensed & insured.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/about" },
 };
 
@@ -55,13 +55,13 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Alfa Construction Inc was founded by Fabio with a simple vision: deliver exceptional quality construction services with integrity and respect. Starting with residential painting projects in the MetroWest area, the company quickly earned a reputation for meticulous attention to detail and outstanding results.
+                Alfa Construction Inc was founded by Fabio with a simple vision: deliver exceptional quality construction services with integrity and respect. Starting with residential construction projects in the MetroWest area, the company quickly earned a reputation for meticulous attention to detail and outstanding results.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Over 18 years later, Alfa Construction has grown into a full-service home improvement company offering painting, carpentry, siding, window and door installation, and complete home remodeling. We now serve over 100 cities across Massachusetts and Southern New Hampshire.
+                Over 18 years later, Alfa Construction has grown into a full-service home improvement company offering siding installation, carpentry, window and door installation, and complete home remodeling. We now serve over 100 cities across Massachusetts and Southern New Hampshire.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                What hasn&apos;t changed is our commitment to treating every home as if it were our own. Our bilingual team (English &amp; Portuguese) brings professionalism, craftsmanship, and a personal touch to every project — from a single room repaint to a full home renovation.
+                What hasn&apos;t changed is our commitment to treating every home as if it were our own. Our bilingual team (English &amp; Portuguese) brings professionalism, craftsmanship, and a personal touch to every project — from a single siding repair to a full home renovation.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">

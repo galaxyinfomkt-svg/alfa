@@ -13,11 +13,6 @@ import FormEmbed from "@/components/FormEmbed";
 /* ---------- hero image rotation by service + city ---------- */
 
 const serviceHeroImages: Record<string, { src: string; alt: string }[]> = {
-  painting: [
-    { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Exterior painting and siding on Cape Cod home" },
-    { src: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg", alt: "Porch soffit and beadboard painting on modern home" },
-    { src: "/images/siding-window-installation-before-massachusetts.jpg", alt: "Home exterior before professional painting" },
-  ],
   carpentry: [
     { src: "/images/deck-carpentry-staircase-railing-massachusetts.png", alt: "Custom deck carpentry with staircase and railing" },
     { src: "/images/deck-construction-siding-installation-ma.png", alt: "Deck construction and carpentry project" },
@@ -72,10 +67,9 @@ function fillCity(text: string, cityName: string): string {
 
 /* ---------- service note key map ---------- */
 
-type CityNoteKey = "paintingNote" | "carpentryNote" | "sidingNote" | "windowsDoorsNote" | "remodelingNote";
+type CityNoteKey = "carpentryNote" | "sidingNote" | "windowsDoorsNote" | "remodelingNote";
 
 const serviceNoteMap: Record<string, CityNoteKey> = {
-  painting: "paintingNote",
   carpentry: "carpentryNote",
   siding: "sidingNote",
   "windows-doors": "windowsDoorsNote",
@@ -161,7 +155,7 @@ export default async function CityServicePage({
   const cityNote = noteKey ? city[noteKey] : null;
 
   /* ---- hero image (varied by service + city) ---- */
-  const heroImgs = serviceHeroImages[service.slug] || serviceHeroImages.painting;
+  const heroImgs = serviceHeroImages[service.slug] || serviceHeroImages.siding;
   const heroImg = heroImgs[hashString(city.slug) % heroImgs.length];
 
   /* ---- JSON-LD schemas ---- */
@@ -591,7 +585,6 @@ export default async function CityServicePage({
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              { slug: "painting", name: "Interior & Exterior Painting" },
               { slug: "carpentry", name: "Carpentry & Trim Work" },
               { slug: "siding", name: "Siding Installation & Repair" },
               { slug: "windows-doors", name: "Window & Door Installation" },

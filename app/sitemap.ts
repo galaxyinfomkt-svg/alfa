@@ -4,7 +4,7 @@ import { getAllProjectSlugs } from "@/data/projects";
 import { getAllBlogSlugs } from "@/data/blog";
 
 const BASE_URL = "https://alfapaintingcarpentry.com";
-const serviceSlugs = ["painting", "carpentry", "siding", "windows-doors", "remodeling"];
+const serviceSlugs = ["carpentry", "siding", "windows-doors", "remodeling"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const citySlugs = getAllCitySlugs();
