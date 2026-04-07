@@ -22,413 +22,8 @@ export interface Service {
   cityClosings: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
 }
 
-const services: Service[] = [
-  // ─────────────────────────────────────────────────────────────
-  // 1. INTERIOR & EXTERIOR PAINTING
-  // ─────────────────────────────────────────────────────────────
-  {
-    slug: "painting",
-    name: "Interior & Exterior Painting",
-    shortName: "Painting",
-    description:
-      "Professional interior and exterior painting services across Massachusetts. From single-room refreshes to full-home transformations, Alfa Construction delivers flawless results with premium paints and meticulous preparation.",
-    longDescription:
-      "A fresh coat of paint is one of the fastest and most cost-effective ways to transform any home. At Alfa Construction, we go far beyond just rolling paint onto a wall. Our painting process begins with thorough surface preparation — filling nail holes, sanding rough spots, caulking gaps, and priming bare surfaces — so the finished product looks seamless and lasts for years. We use only premium-grade paints from trusted brands like Benjamin Moore and Sherwin-Williams, offering an extensive palette so you can find the exact color and finish that matches your vision. Whether you need a bright, modern refresh for your living room, a protective exterior coat to shield your home from New England winters, or a complete color overhaul before listing your property, our experienced painters deliver clean lines, even coverage, and zero mess. We protect your furniture, floors, and landscaping throughout the project, and we always leave your home cleaner than we found it.",
-    icon: "PaintBrush",
-    heroImage: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
-    keywords: [
-      "interior painting Massachusetts",
-      "exterior house painting MA",
-      "residential painters near me",
-      "house painting services Massachusetts",
-      "professional painters MA",
-      "home painting contractor near me",
-      "best painters in Massachusetts",
-      "exterior painting New England",
-      "cabinet painting MA",
-      "trim painting Massachusetts",
-    ],
-    painPoints: [
-      "Walls that look dull, faded, or discolored from years of wear and sun exposure",
-      "Peeling, bubbling, or cracking paint on interior walls or exterior surfaces",
-      "Outdated color schemes that make your home feel dark or dated",
-      "Preparing your home for sale and needing a fast, high-impact upgrade",
-      "Inconsistent, streaky, or sloppy results from a previous painter or DIY attempt",
-    ],
-    solutions: [
-      "Full-service interior painting including walls, ceilings, trim, and doors with meticulous prep work",
-      "Exterior painting that protects your home from Massachusetts weather — rain, snow, ice, and UV rays",
-      "Expert color consultation to help you choose modern palettes that increase appeal and home value",
-      "Complete surface preparation: hole filling, sanding, caulking, priming, and taping for a flawless finish",
-      "Premium paints from Benjamin Moore and Sherwin-Williams for lasting durability and vibrant color",
-    ],
-    process: [
-      {
-        step: 1,
-        title: "Free In-Home Estimate",
-        description:
-          "We visit your home, discuss your vision, take measurements, and provide a detailed written estimate with no hidden fees. We bring color samples and offer honest recommendations.",
-      },
-      {
-        step: 2,
-        title: "Surface Preparation",
-        description:
-          "Our crew fills nail holes, sands rough patches, caulks gaps around trim and windows, and primes any bare or stained surfaces. We cover furniture, protect floors with drop cloths, and tape edges for sharp lines.",
-      },
-      {
-        step: 3,
-        title: "Priming & First Coat",
-        description:
-          "We apply a high-quality primer where needed, followed by the first coat of your chosen paint. We use brushes for detail areas and rollers for large surfaces, ensuring even coverage throughout.",
-      },
-      {
-        step: 4,
-        title: "Final Coat & Detail Work",
-        description:
-          "A second (or third, if needed) coat is applied for rich, uniform color. We cut in around trim, outlets, and fixtures with precision, then inspect every surface under multiple lighting conditions.",
-      },
-      {
-        step: 5,
-        title: "Walkthrough & Cleanup",
-        description:
-          "We walk through every painted area with you, touching up any spots on the spot. All tape, plastic, and drop cloths are removed, and we leave your home spotless — ready to enjoy immediately.",
-      },
-    ],
-    benefits: [
-      "Instant visual transformation that makes any room or exterior feel brand new",
-      "Increased property value — fresh paint is the highest-ROI home improvement",
-      "Protection against moisture, mold, mildew, and weather damage on exterior surfaces",
-      "Healthier indoor air quality with low-VOC and zero-VOC paint options",
-      "Professional results that last 7-10 years with proper prep and premium products",
-    ],
-    cta: "Get Your Free Painting Estimate",
-    ctaDescription:
-      "Ready to transform your home with fresh, beautiful paint? Contact Alfa Construction today for a free, no-obligation in-home estimate. We serve communities across Massachusetts with professional painting services you can trust.",
-    faqs: [
-      {
-        question: "How long does it take to paint the interior of a house?",
-        answer:
-          "Most interior painting projects take between 2 and 5 days depending on the size of your home, the number of rooms, and the amount of prep work required. A single room can often be completed in one day, while a full-home repaint typically takes 3 to 5 days. We always provide a clear timeline before starting work.",
-      },
-      {
-        question: "What kind of paint do you use?",
-        answer:
-          "We use premium paints from Benjamin Moore and Sherwin-Williams. For interiors, we typically recommend their low-VOC or zero-VOC lines for healthier indoor air quality. For exteriors, we use weather-resistant formulas designed to withstand the harsh Massachusetts climate — freezing winters, humid summers, and everything in between.",
-      },
-      {
-        question: "Do I need to move my furniture before you paint?",
-        answer:
-          "No. Our crew handles all the prep work. We carefully move furniture to the center of the room and cover everything with drop cloths and plastic sheeting. Floors, fixtures, and hardware are all protected. When we finish, we move everything back and clean up completely.",
-      },
-      {
-        question: "How often should the exterior of my home be repainted?",
-        answer:
-          "In Massachusetts, most exterior paint jobs last between 5 and 10 years depending on the material (wood, vinyl, stucco), the quality of the paint, and exposure to the elements. Homes facing south or west tend to fade faster due to sun exposure. We recommend inspecting your exterior every spring and addressing any peeling or cracking early to prevent moisture damage.",
-      },
-      {
-        question: "Can you help me choose the right colors for my home?",
-        answer:
-          "Absolutely. We offer a free color consultation as part of every estimate. We bring physical color samples so you can see how different shades look against your existing trim, flooring, and furnishings. We also stay up to date on trending palettes and can recommend colors that increase curb appeal and resale value.",
-      },
-    ],
-    metaTitle:
-      "Interior & Exterior Painting Services | Alfa Construction | Massachusetts",
-    metaDescription:
-      "Professional interior and exterior painting across Massachusetts. Premium paints, expert prep, flawless results. Free estimates from Alfa Construction. Call today.",
-    cityIntros: {
-      historic: [
-        "In {cityName}, where colonial-era homes and tree-lined streets define the local character, a quality paint job does more than refresh a surface — it honors a legacy. Alfa Construction understands the architectural heritage of {cityName} and brings the craftsmanship and attention to detail that historic neighborhoods deserve. Whether your antique clapboard needs a protective exterior coat or your plaster walls are ready for a modern color update, we deliver results that respect the past while preparing your home for decades ahead.",
-        "Few things bring a {cityName} home back to life like professional painting tailored to its era. From Federal-style mansions to Victorian-era row houses, the homes in {cityName} carry stories in every layer of paint. Our team at Alfa Construction specializes in the careful preparation and premium finishes that older homes demand — sealing original woodwork, matching period-appropriate colors, and ensuring every coat bonds properly to surfaces that may be a century old.",
-        "Homeowners in {cityName} know that painting a historic property is not the same as painting a new build. Lead paint concerns, multiple layers of old coatings, delicate plaster, and irreplaceable trim all require specialized knowledge. Alfa Construction has years of experience working on homes throughout {cityName}, and we bring the patience, skill, and premium materials needed to make your historic property shine while keeping it safe and structurally sound.",
-      ],
-      suburban: [
-        "For homeowners in {cityName}, maintaining a fresh, polished exterior is part of what makes the neighborhood inviting. Whether you have just moved into a new subdivision or your home is showing its first signs of wear after a few New England winters, Alfa Construction provides professional painting services that keep your {cityName} property looking its best. We handle everything — prep, paint, and cleanup — so you can spend your weekends enjoying your home instead of working on it.",
-        "Life in {cityName} means taking pride in your property. Your home is likely your biggest investment, and a professional paint job is the most effective way to protect it from the freeze-thaw cycles, summer humidity, and coastal moisture that Massachusetts throws at it year after year. Alfa Construction serves {cityName} families with interior and exterior painting that delivers lasting beauty and real protection.",
-        "In a {cityName} neighborhood where well-kept homes line every cul-de-sac and sidewalk, a dull or peeling exterior stands out for the wrong reasons. Alfa Construction helps {cityName} homeowners stay ahead of the curve with efficient, high-quality painting services. We work around your schedule, minimize disruption to your daily routine, and leave you with a result that makes you proud to pull into your driveway.",
-      ],
-      rural: [
-        "Out in {cityName}, homes face the full force of Massachusetts weather with little shelter from neighboring structures. Harsh winter winds, heavy snowfall, and summer storms all take a toll on exterior paint. Alfa Construction provides durable painting solutions designed for the unique demands of {cityName} properties — from farmhouses and cottages to ranch-style homes on sprawling lots. We use weather-resistant coatings that hold up against the elements season after season.",
-        "Maintaining a home in {cityName} means dealing with conditions that suburban homeowners rarely face — long gravel driveways that kick up dust, barns and outbuildings that need coordinated color schemes, and exteriors battered by open-field winds. Alfa Construction travels to {cityName} and surrounding areas to deliver the same professional painting results we bring to every community we serve. Your remote location never means compromised quality.",
-        "For {cityName} homeowners surrounded by the natural beauty of the Massachusetts countryside, the color and condition of your home matters. A beautifully painted farmhouse or Cape Cod cottage becomes the centerpiece of the landscape. Alfa Construction brings premium paints and thorough preparation to every {cityName} project, ensuring your home not only looks stunning but withstands the unique weather patterns of rural New England.",
-      ],
-      urban: [
-        "In {cityName}, where homes sit close together and street-facing facades define the neighborhood character, the quality of your paint job is on full display. Alfa Construction provides professional painting services to {cityName} homeowners who want sharp, clean, modern results. From triple-deckers and townhouses to condos and brownstones, we handle the tight-space logistics, parking considerations, and multi-surface challenges that come with urban painting work.",
-        "Keeping a {cityName} home looking sharp takes more than a weekend DIY project. Urban properties deal with road salt spray, exhaust residue, moisture from nearby buildings, and constant UV exposure on sun-facing walls. Alfa Construction brings professional-grade preparation and premium coatings to every {cityName} project, ensuring your home not only looks great but stays protected in a demanding urban environment.",
-        "Whether you own a condo in downtown {cityName} or a multi-family home on a busy avenue, Alfa Construction delivers painting results that make your property stand out. We understand the challenges of working in dense {cityName} neighborhoods — limited staging areas, shared walls, HOA color requirements — and we navigate them all with professionalism. The result is a flawless finish that elevates your home and your block.",
-      ],
-    },
-    cityPainPoints: {
-      historic: [
-        "Many older homes in {cityName} have layers upon layers of paint — some dating back generations. Over time, this buildup cracks, peels, and bubbles, exposing the wood beneath to moisture and rot. If your {cityName} home has paint that is failing, ignoring it risks structural damage to irreplaceable trim, siding, and window casings that would be extremely costly to replicate today.",
-        "Homeowners in {cityName} frequently tell us they are frustrated by painters who do not understand older homes. Standard prep techniques are not enough when you are dealing with plaster that crumbles, woodwork with intricate profiles, or exterior surfaces that have been coated a dozen times. The wrong approach can cause more damage than it fixes, and many {cityName} residents have experienced exactly that.",
-        "In {cityName}, historic homes face a unique challenge: balancing preservation with modernization. You want your home to look fresh and current, but you do not want to lose the character that makes it special. Choosing the wrong sheen, applying paint over unstable surfaces, or ignoring lead paint protocols can create costly problems that diminish both the beauty and the value of your {cityName} property.",
-      ],
-      suburban: [
-        "After several Massachusetts winters, even newer homes in {cityName} start to show wear. Sun-facing walls fade unevenly, trim paint chips around windows and doors, and that once-bright exterior looks tired. Many {cityName} homeowners put off repainting because they dread the disruption, only to find that the longer they wait, the more prep work — and expense — the project requires.",
-        "If you have lived in {cityName} for a few years, you have probably noticed that interior walls accumulate scuffs, crayon marks, nail holes, and general wear faster than you expected. Builder-grade paint fades and stains easily, and the flat finish many developers use shows every imperfection. It is a frustrating cycle that makes even a well-kept {cityName} home feel run-down.",
-        "In {cityName} neighborhoods, curb appeal directly affects property values. A home with peeling trim, faded siding paint, or mismatched touch-ups drags down the look of the entire street. Suburban homeowners in {cityName} often feel pressure to keep up appearances, but between work, family, and weekend obligations, finding time to tackle a painting project feels impossible.",
-      ],
-      rural: [
-        "Homes in {cityName} take a beating from the weather. Without neighboring structures to block the wind, exterior paint wears down faster — fading on the south side, peeling on the windward side, and bubbling wherever moisture gets trapped. Many {cityName} homeowners are shocked at how quickly their exterior deteriorates compared to homes in more sheltered locations.",
-        "Finding a reliable painter willing to travel to {cityName} can be a real challenge. Many contractors focus on higher-density areas, leaving rural homeowners with limited options — often settling for handymen who lack the equipment, materials, or expertise for a lasting paint job. The result is work that looks decent for a season and then starts failing again.",
-        "Properties in {cityName} often include more than just the main house. Barns, sheds, detached garages, and fence lines all need attention, and coordinating colors and finishes across multiple structures adds complexity. Many {cityName} homeowners feel overwhelmed by the scope of what needs painting and are unsure where to start or how to budget for it all.",
-      ],
-      urban: [
-        "In {cityName}, homes are exposed to more airborne grime, vehicle exhaust, and road salt than properties in quieter areas. This contamination bonds to painted surfaces, causing discoloration and accelerating breakdown. Many {cityName} homeowners notice their exterior paint looking dingy within just a few years, especially on street-facing walls and around entryways.",
-        "Urban homes in {cityName} often present logistical headaches for painting. Limited driveway space, narrow side yards, shared walls with adjacent properties, and city permit requirements can make even a straightforward project feel complicated. Homeowners often delay painting because they are not sure how to navigate these obstacles.",
-        "If you own a multi-family property in {cityName}, you know that keeping common areas and exterior surfaces well-painted is essential for attracting and retaining tenants. But coordinating schedules, managing access, and maintaining consistency across units adds layers of complexity that many painters are not equipped to handle, leaving {cityName} landlords frustrated with incomplete or inconsistent work.",
-      ],
-    },
-    citySolutions: {
-      historic: [
-        "Alfa Construction brings a preservation-minded approach to every painting project in {cityName}. We carefully inspect existing surfaces, identify lead paint when present, and follow all Massachusetts regulations for safe removal or encapsulation. Our prep process preserves original woodwork and trim details while creating a stable foundation for paint that will protect your {cityName} home for years to come.",
-        "For {cityName} homeowners who want historically appropriate results, we offer period-accurate color palettes and finishes that complement the architectural style of your property. Whether you prefer authentic colonial tones or a tasteful modern update, our team has the knowledge and materials to deliver a finish that honors your home's heritage while meeting today's performance standards.",
-        "Our team has worked on numerous historic properties throughout {cityName} and the surrounding region. We understand that every home has unique challenges — from hand-carved balusters to original horsehair plaster — and we tailor our approach accordingly. With Alfa Construction, your {cityName} home receives the individualized care it deserves, not a one-size-fits-all treatment.",
-      ],
-      suburban: [
-        "Alfa Construction makes painting easy for busy {cityName} families. We handle every detail from start to finish — moving furniture, protecting floors, prepping surfaces, applying premium paint, and cleaning up thoroughly. You do not need to take time off work or rearrange your life. We work efficiently and respect your home as if it were our own.",
-        "For {cityName} homeowners preparing to sell, we offer fast-turnaround painting packages designed to maximize curb appeal and interior appeal on a timeline. We know which colors and finishes attract buyers in the {cityName} market, and we can transform your home in days, not weeks, giving you the competitive edge you need in today's real estate environment.",
-        "We help {cityName} homeowners choose durable, washable paint finishes that stand up to the demands of family life — eggshell and satin for high-traffic hallways, semi-gloss for kitchens and bathrooms, and flat for ceilings. Combined with our thorough prep work and premium Benjamin Moore and Sherwin-Williams products, the result is a paint job that looks beautiful and lasts.",
-      ],
-      rural: [
-        "Alfa Construction proudly serves {cityName} and the surrounding rural communities. We bring all the equipment, materials, and manpower needed to complete your project efficiently — no matter how far off the main road your property sits. Our team arrives on time, works steadily, and delivers the same high-quality results we bring to every job across Massachusetts.",
-        "For {cityName} properties that include outbuildings, we offer coordinated painting packages that ensure a unified look across your entire homestead. We help you choose complementary colors and durable exterior formulas that withstand the open-field exposure rural properties face, so everything from your front door to your barn looks cohesive and well-maintained.",
-        "We use specially formulated exterior coatings for {cityName} homes that resist the extreme temperature swings of rural New England — from sub-zero January nights to humid August afternoons. Our prep process includes sealing every crack and gap to block moisture infiltration, and we apply multiple coats for maximum protection and longevity.",
-      ],
-      urban: [
-        "Alfa Construction is experienced with the unique logistics of painting in {cityName}. We coordinate parking, manage access to tight spaces, work within city noise ordinances, and handle any permit requirements. Our crews are efficient and organized, minimizing disruption to your neighbors and completing your project on schedule.",
-        "For {cityName} condo owners and multi-family landlords, we offer flexible scheduling that works around tenants and building regulations. We can paint unit by unit, floor by floor, or tackle common areas during low-traffic hours. Our team communicates clearly with property managers and residents throughout the process to keep everything running smoothly.",
-        "We use quick-drying, low-odor, low-VOC paints that are ideal for the close quarters of urban {cityName} homes. These premium formulas deliver rich color and excellent coverage without filling your home — or your neighbor's home — with fumes. Combined with our meticulous taping and edge work, you get a crisp, professional result that elevates your property's look and value.",
-      ],
-    },
-    cityClosings: {
-      historic: [
-        "Your {cityName} home has stood for generations — it deserves a painter who treats it with the same care and respect as the craftsmen who originally built it. Alfa Construction is proud to serve the historic neighborhoods of {cityName} with painting services that protect, preserve, and beautify. Contact us today for your free estimate.",
-        "Do not trust your {cityName} historic home to just any painting company. Alfa Construction brings the experience, materials, and attention to detail that older properties demand. From proper lead paint handling to color-matched period finishes, we do it right. Reach out today and let us show you the difference quality craftsmanship makes.",
-        "Whether your {cityName} home needs a subtle refresh or a full exterior restoration, Alfa Construction is ready to help. We have the skills, the patience, and the premium products to deliver a result you will be proud of for years to come. Call us or fill out our online form to schedule your free, no-obligation painting estimate in {cityName}.",
-      ],
-      suburban: [
-        "Your {cityName} home is your haven — keep it looking its best with professional painting from Alfa Construction. We make the process easy, the results stunning, and the price fair. Get in touch today to schedule your free in-home estimate and see why families across {cityName} trust us with their homes.",
-        "Stop putting off that painting project. Alfa Construction serves {cityName} homeowners with fast, clean, professional painting that fits your schedule and your budget. Whether it is one accent wall or every room in the house, we are ready to help. Contact us today for a free estimate.",
-        "From your front door to your back fence, Alfa Construction has {cityName} covered. Our painting services are designed to deliver maximum impact with minimum hassle. Thousands of Massachusetts homeowners have trusted us with their biggest investment — let us earn your trust too. Request your free estimate today.",
-      ],
-      rural: [
-        "Just because you live in {cityName} does not mean you should settle for less. Alfa Construction brings city-quality painting services to every corner of Massachusetts, including rural communities like yours. Call us today to schedule a free on-site estimate — we will come to you, no matter where you are.",
-        "Your {cityName} property deserves a painting team that understands rural living. Alfa Construction has the experience, the equipment, and the commitment to deliver exceptional results on homes, barns, and outbuildings throughout the {cityName} area. Reach out today and let us put together a plan that fits your property and your budget.",
-        "Protect your {cityName} home from the full force of New England weather with professional painting from Alfa Construction. We use the most durable exterior products on the market and back our work with a satisfaction guarantee. Get your free estimate today and give your property the care it deserves.",
-      ],
-      urban: [
-        "In a {cityName} neighborhood where every detail is on display, trust Alfa Construction to deliver a paint job that sets your home apart. We handle the logistics, navigate the challenges, and leave you with a flawless finish. Contact us today for your free painting estimate in {cityName}.",
-        "Alfa Construction makes urban painting stress-free for {cityName} homeowners, landlords, and property managers. From single condos to multi-unit buildings, we bring professionalism, efficiency, and outstanding results to every project. Get in touch today to discuss your {cityName} painting needs.",
-        "Your {cityName} property is too important to trust to amateurs. Alfa Construction delivers the clean lines, rich color, and lasting durability your urban home demands. Schedule your free estimate today and discover why we are one of the most trusted painting contractors in Massachusetts.",
-      ],
-    },
-  },
-
-  // ─────────────────────────────────────────────────────────────
-  // 2. CARPENTRY & TRIM WORK
-  // ─────────────────────────────────────────────────────────────
-  {
-    slug: "carpentry",
-    name: "Carpentry & Trim Work",
-    shortName: "Carpentry",
-    description:
-      "Expert carpentry and trim work services across Massachusetts. From rotten trim replacement to custom door installations, Alfa Construction delivers precise craftsmanship that transforms your home's interior and exterior.",
-    longDescription:
-      "Quality carpentry is the backbone of a beautiful home. At Alfa Construction, our skilled carpenters handle everything from replacing rotted exterior trim and installing crown molding to hanging new interior doors and building custom shelving. We understand that the details matter — a perfectly mitered corner, a door that swings silently on balanced hinges, trim that transitions seamlessly between rooms. Our carpentry team brings years of hands-on experience working on Massachusetts homes of every age and style, from centuries-old colonials to brand-new construction. We source quality lumber and materials, measure with precision, and finish every piece to match your home's existing aesthetic. Whether you need a single door replaced or an entire floor of trim and millwork updated, Alfa Construction delivers craftsmanship you can see and feel every time you walk through your home.",
-    icon: "Hammer",
-    heroImage: "/images/deck-carpentry-staircase-railing-massachusetts.png",
-    keywords: [
-      "carpentry services Massachusetts",
-      "trim work MA",
-      "door installation near me",
-      "crown molding installation Massachusetts",
-      "baseboard replacement MA",
-      "finish carpentry near me",
-      "interior door installation Massachusetts",
-      "exterior trim repair MA",
-      "custom carpentry near me",
-      "wood rot repair Massachusetts",
-    ],
-    painPoints: [
-      "Rotten, split, or deteriorating exterior trim that exposes your home to water damage and pests",
-      "Damaged or worn interior woodwork — scratched baseboards, dented door casings, chipped crown molding",
-      "Outdated interior doors that are hollow, warped, or no longer match your home's style",
-      "Poor craftsmanship from a previous contractor — gaps in trim joints, uneven baseboards, doors that do not close properly",
-      "Missing or incomplete trim work that leaves your rooms looking unfinished and reduces your home's value",
-    ],
-    solutions: [
-      "Complete exterior trim replacement using rot-resistant materials like PVC, composite, and treated lumber built to withstand Massachusetts weather",
-      "Fine interior finish carpentry including crown molding, baseboards, chair rails, wainscoting, and window casings installed with precision",
-      "Interior and exterior door installation with proper shimming, leveling, and hardware mounting so every door operates flawlessly",
-      "Custom millwork and built-in shelving designed and crafted to match your home's architectural style and your personal taste",
-      "Detailed repair and restoration of existing woodwork — patching, filling, sanding, and refinishing to bring damaged trim back to life",
-    ],
-    process: [
-      {
-        step: 1,
-        title: "Consultation & Assessment",
-        description:
-          "We visit your home to inspect the areas that need carpentry work. We assess the condition of existing trim, doors, and woodwork, discuss your goals and preferences, and provide a detailed written estimate covering materials, labor, and timeline.",
-      },
-      {
-        step: 2,
-        title: "Material Selection & Ordering",
-        description:
-          "Based on your preferences and budget, we source the right materials — whether that is solid hardwood for interior trim, PVC or composite for rot-proof exteriors, or pre-hung door units from top manufacturers. We match profiles to your existing woodwork whenever possible.",
-      },
-      {
-        step: 3,
-        title: "Removal & Preparation",
-        description:
-          "Our crew carefully removes old trim, doors, or damaged woodwork. We inspect the underlying structure for hidden issues like water damage, mold, or insect activity. Any structural concerns are addressed before new materials go in, ensuring a solid foundation.",
-      },
-      {
-        step: 4,
-        title: "Installation & Fitting",
-        description:
-          "New trim, doors, and woodwork are measured, cut, and installed with precision. Every miter joint is tight, every baseboard is level, and every door is shimmed and adjusted for smooth operation. We use finish nails, construction adhesive, and proper fastening techniques for a secure, lasting fit.",
-      },
-      {
-        step: 5,
-        title: "Finishing & Final Inspection",
-        description:
-          "All nail holes are filled, joints are caulked, and surfaces are sanded smooth. If painting or staining is part of the project, we apply finishes to match your home. We walk through the completed work with you, making any adjustments on the spot until you are completely satisfied.",
-      },
-    ],
-    benefits: [
-      "Dramatically improved interior aesthetics — clean trim lines and quality doors make every room feel polished and complete",
-      "Protection against water infiltration, rot, and pest damage with properly sealed exterior trim and weather-resistant materials",
-      "Increased home value — updated trim, doors, and woodwork are among the most noticed features by buyers and appraisers",
-      "Better energy efficiency when doors are properly fitted and sealed, eliminating drafts and air leaks",
-      "A home that reflects quality craftsmanship in every detail, from the baseboards to the crown molding",
-    ],
-    cta: "Schedule Your Carpentry Consultation",
-    ctaDescription:
-      "Ready to upgrade your home with expert carpentry and trim work? Alfa Construction offers free consultations for homeowners across Massachusetts. Let us show you what precision craftsmanship looks like.",
-    faqs: [
-      {
-        question: "What types of trim and molding can you install?",
-        answer:
-          "We install all types of interior and exterior trim including crown molding, baseboards, chair rails, wainscoting, window and door casings, shoe molding, and custom profiles. We work with solid wood, MDF, PVC, and composite materials depending on the application and your preferences. We can also match existing trim profiles in older homes.",
-      },
-      {
-        question: "Can you replace just one door, or do I need to do them all at once?",
-        answer:
-          "Absolutely — we are happy to replace a single door or as many as you need. We can match new doors to your existing style so a single replacement blends seamlessly. That said, many homeowners choose to update all their interior doors at once for a consistent look throughout the home, and we offer competitive pricing for multi-door projects.",
-      },
-      {
-        question: "How do you handle rotten exterior trim?",
-        answer:
-          "We remove all damaged material down to solid wood, inspect the underlying sheathing and framing for hidden damage, treat any mold or moisture issues, and install new trim using rot-resistant materials like PVC, composite, or pressure-treated lumber. We seal all joints and paint or prime the new trim for maximum weather protection.",
-      },
-      {
-        question: "Do you build custom shelving and built-ins?",
-        answer:
-          "Yes. We design and build custom built-in bookshelves, entertainment centers, closet systems, mudroom cubbies, and other storage solutions tailored to your space and style. We handle everything from design and material selection to installation and finishing, creating pieces that look like they were always part of your home.",
-      },
-      {
-        question: "Will new trim and doors match my older home's style?",
-        answer:
-          "Matching existing woodwork in older homes is one of our specialties. We carefully profile your current trim to find matching or compatible molding, and we can custom-mill pieces when a standard match is not available. Our goal is always a seamless transition between old and new so nothing looks out of place.",
-      },
-    ],
-    metaTitle:
-      "Carpentry & Trim Work Services | Alfa Construction | Massachusetts",
-    metaDescription:
-      "Expert carpentry and trim work across Massachusetts. Door installation, crown molding, baseboard replacement, rot repair, and custom woodwork. Free estimates from Alfa Construction.",
-    cityIntros: {
-      historic: [
-        "The homes of {cityName} are architectural treasures, and their woodwork tells the story of the craftsmen who built them. Alfa Construction provides carpentry and trim services that honor that tradition. Whether your {cityName} home needs rotten clapboard trim replaced, original crown molding restored, or period-appropriate doors hung with care, our team brings the skills and materials to do the job right.",
-        "In {cityName}, original woodwork is often one of the most valued features of a historic home. Hand-carved balusters, wide plank casings, and detailed cornice moldings give these properties their unmistakable character. When time and weather take their toll, Alfa Construction steps in with restoration-quality carpentry that preserves what makes your {cityName} home irreplaceable.",
-        "Owning a historic home in {cityName} means accepting the responsibility of maintaining craftsmanship that modern builders rarely replicate. Alfa Construction serves {cityName} homeowners with carpentry services rooted in respect for traditional techniques while incorporating modern materials where they make sense — like rot-proof PVC for exterior trim that holds a historic profile without the maintenance headaches.",
-      ],
-      suburban: [
-        "In {cityName}, the details define a home. Clean baseboards, properly hung doors, and crisp window casings are the finishing touches that separate a house that feels complete from one that feels like a work in progress. Alfa Construction provides professional carpentry and trim services to {cityName} homeowners who want their home to look and feel polished from every angle.",
-        "If your {cityName} home still has the builder-grade trim and hollow-core doors it came with, you are missing an easy upgrade that transforms the look and feel of your entire house. Alfa Construction helps {cityName} families replace generic woodwork with quality materials and expert installation that make your home feel custom-built.",
-        "Whether you are updating a single room or renovating your entire {cityName} home, Alfa Construction delivers carpentry work that elevates the space. From adding crown molding in a formal dining room to installing solid-core doors throughout the house, our team handles projects of every size with the same attention to detail and commitment to quality.",
-      ],
-      rural: [
-        "Homes in {cityName} endure some of the toughest conditions in Massachusetts — driving rain, heavy snow loads, and temperature swings that cause wood to expand and contract constantly. Alfa Construction provides carpentry services built for rural durability, using materials and techniques that hold up season after season in the {cityName} climate.",
-        "For {cityName} homeowners with older farmhouses, Cape Cods, or country cottages, maintaining exterior trim is an ongoing battle against the elements. Alfa Construction takes that burden off your shoulders with comprehensive trim replacement and repair services that use rot-resistant materials designed for exposed rural locations. We come to {cityName} fully equipped and ready to work.",
-        "Living in {cityName} often means your home has unique carpentry needs — wide plank trim from an earlier era, barn-style doors, or hand-built features that require a craftsman's touch to repair or replace. Alfa Construction has the experience and versatility to handle the distinctive carpentry challenges that {cityName} properties present.",
-      ],
-      urban: [
-        "In the dense neighborhoods of {cityName}, the interior finish of your home is where quality shows. Alfa Construction provides expert carpentry and trim work for {cityName} townhouses, condos, and multi-family homes — tight-tolerance work in tight spaces, delivered with the precision and professionalism that urban homeowners expect.",
-        "Urban homes in {cityName} often have unique carpentry challenges — non-square walls in older buildings, limited access for material delivery, and shared-wall considerations. Alfa Construction navigates these complexities every day, delivering crisp trim work, smooth-operating doors, and custom solutions that make the most of your {cityName} home's layout.",
-        "Whether you are finishing a newly purchased {cityName} condo or updating a multi-family property, Alfa Construction delivers carpentry work that adds value and visual impact. We install quality trim, solid doors, and custom built-ins that transform urban spaces from generic to exceptional, all while respecting the schedules and shared spaces of city living.",
-      ],
-    },
-    cityPainPoints: {
-      historic: [
-        "Historic homes in {cityName} often have exterior trim that has been patched and repainted so many times it no longer sheds water properly. Once moisture gets behind the trim, rot spreads quickly — and in an older {cityName} home, that rot can reach structural framing before anyone notices. Ignoring deteriorating trim is a gamble with your home's integrity.",
-        "Finding a carpenter in {cityName} who understands historic millwork profiles can feel impossible. Generic trim from the hardware store does not match the detailed casings and cornices in older homes, and a sloppy installation is immediately obvious. Many {cityName} homeowners have been burned by contractors who promised historic-quality work and delivered anything but.",
-        "Interior doors in many {cityName} historic homes have been replaced over the decades with cheaper, ill-fitting alternatives. Doors that do not match the original style, stick in their frames, or swing unevenly detract from the character that makes a historic {cityName} home special. It is a frustrating compromise that diminishes daily life in your own home.",
-      ],
-      suburban: [
-        "Builder-grade trim and hollow-core doors are the norm in many {cityName} subdivisions, and they start showing their limitations fast. Baseboards dent from vacuum cleaners, door casings crack where they were nailed with too few fasteners, and hollow doors offer zero sound insulation between rooms. For {cityName} families, these shortcuts add up to a home that feels cheaply made.",
-        "After a few Massachusetts winters, exterior trim on {cityName} homes starts to show stress — paint cracks along joints, caulk pulls away, and wood begins to soften in areas that trap moisture. Many homeowners notice water stains on interior walls before they realize the exterior trim is the source of the problem. By then, the repair is more extensive and more expensive.",
-        "Many {cityName} homeowners have tried to update their trim or install new doors themselves, only to end up with uneven baseboards, doors that do not latch, and miters that gap. DIY carpentry looks easy online but requires precision tools and experience to execute well. The result of a failed attempt is often worse than the original problem.",
-      ],
-      rural: [
-        "In {cityName}, wind-driven rain and heavy snow hit exterior trim from every angle, and properties without the wind shelter of neighboring homes take the worst of it. Trim joints open up, paint fails early, and water finds its way behind siding. Many {cityName} homeowners have replaced the same trim boards multiple times because the underlying issue was never properly addressed.",
-        "Older homes in {cityName} often have original woodwork that is showing its age — baseboards with deep gouges, door casings that have separated from the wall, and window trim so paint-caked it no longer looks clean. Replacing these elements is straightforward for a skilled carpenter, but finding one willing to travel to {cityName} is the real challenge.",
-        "For {cityName} homeowners, a damaged exterior door is more than a cosmetic issue — it is a security and energy concern. Warped frames, broken weatherstripping, and doors that no longer seal properly let cold air pour in during winter and make your heating system work overtime. In a rural location where heating costs are already a concern, this waste adds up fast.",
-      ],
-      urban: [
-        "In older {cityName} row houses and triple-deckers, walls are rarely perfectly plumb and floors are seldom level. That means trim installation requires constant adjustment — scribing baseboards to uneven floors, shimming casings to out-of-square openings, and custom-cutting pieces to fit angles that are anything but standard. Inexperienced carpenters struggle in these conditions, and the results show.",
-        "Space is at a premium in {cityName} homes, and poor carpentry wastes it. Doors that swing the wrong way, built-ins that do not maximize awkward corners, and trim that is too bulky for small rooms all make urban spaces feel more cramped than they need to be. Smart carpentry solutions can reclaim usable space in even the tightest {cityName} floor plans.",
-        "Multi-family property owners in {cityName} face constant wear on doors, trim, and common-area woodwork. Tenants move furniture in and out, heavy foot traffic scuffs baseboards, and doors get slammed thousands of times a year. Keeping these elements in good repair is essential for maintaining property value and tenant satisfaction, but finding a reliable carpenter for ongoing work is a persistent challenge.",
-      ],
-    },
-    citySolutions: {
-      historic: [
-        "Alfa Construction specializes in matching historic trim profiles found in {cityName} homes. We use a combination of stock moldings and custom milling to replicate the exact shapes and proportions of your original woodwork. The result is seamless repairs and replacements that preserve your home's historic character while providing modern durability.",
-        "For exterior trim on {cityName} historic homes, we offer PVC and composite options that hold traditional profiles but never rot, split, or need scraping. These materials accept paint beautifully and are virtually maintenance-free — giving your {cityName} home the historic look you love without the constant upkeep original wood demands in the New England climate.",
-        "Our carpenters have extensive experience installing and restoring doors in {cityName} historic properties. We source period-appropriate panel doors, fit them precisely to existing openings (even when those openings are no longer square), and install quality hardware that complements your home's era. The result is doors that look original and operate perfectly.",
-      ],
-      suburban: [
-        "Alfa Construction helps {cityName} homeowners upgrade from builder-grade to custom-quality. We replace flimsy MDF baseboards with solid wood or high-density alternatives, swap hollow-core doors for solid-core models that block sound and feel substantial, and install crown molding that gives rooms a finished, elegant look — all at prices that make the upgrade worthwhile.",
-        "For {cityName} homes showing exterior trim damage, we provide a comprehensive repair approach: remove the failed material, inspect and repair the substrate, install new rot-resistant trim, seal every joint, and apply a protective finish. This method eliminates the cycle of patchwork repairs and gives you trim that will outlast the next decade of Massachusetts weather.",
-        "Our team works efficiently in occupied {cityName} homes, completing most trim and door projects in one to two days per room. We contain dust, protect your flooring, and clean up completely at the end of every work day. You get professional-quality carpentry without the disruption of a long, drawn-out renovation.",
-      ],
-      rural: [
-        "Alfa Construction brings everything we need to {cityName} — tools, materials, and skilled carpenters ready to work. We do not make you wait for multiple trips or incomplete days. Our crews plan {cityName} projects for efficient completion, often finishing exterior trim replacements and door installations in fewer days than homeowners expect.",
-        "For {cityName} properties exposed to extreme weather, we use advanced exterior trim systems with integrated drainage channels and hidden fasteners that prevent water from pooling at joints. Combined with factory-primed surfaces and professional caulking, these systems dramatically outperform traditional wood trim in rural New England conditions.",
-        "We understand that {cityName} homeowners often want their carpentry work to complement the natural, rustic character of their property. We offer a range of finishes and styles — from clean and contemporary to traditional farmhouse — and we work with you to select materials and details that feel authentic to your {cityName} home and the surrounding landscape.",
-      ],
-      urban: [
-        "Alfa Construction excels at the precision carpentry that {cityName} urban homes demand. We custom-fit every piece of trim to your walls, floors, and openings — no matter how far out of square they are. The result is tight joints, clean lines, and a finished look that would be impossible with off-the-shelf, cut-to-fit approaches.",
-        "For {cityName} condo and townhouse owners, we offer space-maximizing carpentry solutions: pocket doors that eliminate swing clearance, built-in shelving that turns dead corners into storage, and slim-profile trim that adds elegance without eating into room dimensions. Every detail is designed for the realities of urban living.",
-        "Our team understands the protocols of working in {cityName} multi-unit buildings — coordinating with building management, using service entrances, containing noise during appropriate hours, and keeping common areas clean. We make the process easy for property managers and invisible to other residents, delivering quality carpentry work with zero drama.",
-      ],
-    },
-    cityClosings: {
-      historic: [
-        "Your {cityName} historic home deserves a carpenter who appreciates its heritage. Alfa Construction brings the skill, the materials, and the respect for craftsmanship that older properties require. Contact us today for a free consultation and let us help you preserve and enhance the woodwork that makes your home exceptional.",
-        "Do not let deteriorating trim or ill-fitting doors diminish your {cityName} home's beauty and value. Alfa Construction provides expert carpentry services tailored to historic properties — from faithful restorations to thoughtful upgrades. Schedule your free estimate today and experience the difference that true craftsmanship makes.",
-        "Whether you need a single piece of trim replaced or a complete woodwork overhaul in your {cityName} home, Alfa Construction is ready to help. We combine old-world skill with modern materials to deliver results that last. Call us today or fill out our online form to get started.",
-      ],
-      suburban: [
-        "Upgrade your {cityName} home with carpentry work that makes every room feel finished, polished, and built to last. Alfa Construction delivers expert trim installation, door replacement, and custom woodwork with the quality and attention to detail your home deserves. Get your free estimate today.",
-        "From crown molding to front doors, Alfa Construction handles every carpentry need for {cityName} homeowners. Our work is precise, our pricing is fair, and our results speak for themselves. Contact us today to schedule your free consultation and take the next step toward the home you have always wanted.",
-        "Stop settling for builder-grade finishes. Alfa Construction helps {cityName} families transform their homes with quality carpentry that looks and feels custom. Reach out today for a free, no-obligation estimate and discover how affordable a real upgrade can be.",
-      ],
-      rural: [
-        "Alfa Construction is proud to serve {cityName} and the surrounding rural communities with professional carpentry services. Distance is never a barrier to quality — we bring our full capabilities to every project, every time. Contact us today for your free estimate.",
-        "Protect your {cityName} home from the elements with expert exterior trim work, and transform your interior with quality doors and moldings. Alfa Construction makes it easy with a single point of contact, transparent pricing, and results that exceed expectations. Get in touch today.",
-        "Your {cityName} property deserves carpentry work that lasts. Alfa Construction uses premium materials and proven techniques to deliver durable, beautiful results in even the most demanding rural conditions. Schedule your free consultation today and let us show you what we can do.",
-      ],
-      urban: [
-        "In the close quarters of {cityName}, every detail matters. Alfa Construction delivers the precision carpentry and custom trim work that makes urban homes feel thoughtfully crafted, not cookie-cutter. Contact us today for your free estimate and experience the difference quality carpentry makes.",
-        "Whether you own a {cityName} condo, townhouse, or multi-family property, Alfa Construction has the skills and experience to handle your carpentry needs with professionalism and precision. Get in touch today to schedule your free consultation.",
-        "Transform your {cityName} home with expert carpentry from Alfa Construction. From solid-core doors to custom built-ins, we deliver work that adds value, beauty, and functionality to urban spaces. Request your free estimate today and let us get started.",
-      ],
-    },
-  },
-
-  // ─────────────────────────────────────────────────────────────
-  // 3. SIDING INSTALLATION & REPAIR
+const services: Service[] = [  // ─────────────────────────────────────────────────────────────
+  // 1. SIDING INSTALLATION & REPAIR
   // ─────────────────────────────────────────────────────────────
   {
     slug: "siding",
@@ -630,7 +225,7 @@ const services: Service[] = [
   },
 
   // ─────────────────────────────────────────────────────────────
-  // 4. WINDOW & DOOR INSTALLATION
+  // 2. WINDOW & DOOR INSTALLATION
   // ─────────────────────────────────────────────────────────────
   {
     slug: "windows-doors",
@@ -832,7 +427,209 @@ const services: Service[] = [
   },
 
   // ─────────────────────────────────────────────────────────────
-  // 5. HOME REMODELING & RENOVATION
+  // 3. CARPENTRY & TRIM WORK
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "carpentry",
+    name: "Carpentry & Trim Work",
+    shortName: "Carpentry",
+    description:
+      "Expert carpentry and trim work services across Massachusetts. From rotten trim replacement to custom door installations, Alfa Construction delivers precise craftsmanship that transforms your home's interior and exterior.",
+    longDescription:
+      "Quality carpentry is the backbone of a beautiful home. At Alfa Construction, our skilled carpenters handle everything from replacing rotted exterior trim and installing crown molding to hanging new interior doors and building custom shelving. We understand that the details matter — a perfectly mitered corner, a door that swings silently on balanced hinges, trim that transitions seamlessly between rooms. Our carpentry team brings years of hands-on experience working on Massachusetts homes of every age and style, from centuries-old colonials to brand-new construction. We source quality lumber and materials, measure with precision, and finish every piece to match your home's existing aesthetic. Whether you need a single door replaced or an entire floor of trim and millwork updated, Alfa Construction delivers craftsmanship you can see and feel every time you walk through your home.",
+    icon: "Hammer",
+    heroImage: "/images/deck-carpentry-staircase-railing-massachusetts.png",
+    keywords: [
+      "carpentry services Massachusetts",
+      "trim work MA",
+      "door installation near me",
+      "crown molding installation Massachusetts",
+      "baseboard replacement MA",
+      "finish carpentry near me",
+      "interior door installation Massachusetts",
+      "exterior trim repair MA",
+      "custom carpentry near me",
+      "wood rot repair Massachusetts",
+    ],
+    painPoints: [
+      "Rotten, split, or deteriorating exterior trim that exposes your home to water damage and pests",
+      "Damaged or worn interior woodwork — scratched baseboards, dented door casings, chipped crown molding",
+      "Outdated interior doors that are hollow, warped, or no longer match your home's style",
+      "Poor craftsmanship from a previous contractor — gaps in trim joints, uneven baseboards, doors that do not close properly",
+      "Missing or incomplete trim work that leaves your rooms looking unfinished and reduces your home's value",
+    ],
+    solutions: [
+      "Complete exterior trim replacement using rot-resistant materials like PVC, composite, and treated lumber built to withstand Massachusetts weather",
+      "Fine interior finish carpentry including crown molding, baseboards, chair rails, wainscoting, and window casings installed with precision",
+      "Interior and exterior door installation with proper shimming, leveling, and hardware mounting so every door operates flawlessly",
+      "Custom millwork and built-in shelving designed and crafted to match your home's architectural style and your personal taste",
+      "Detailed repair and restoration of existing woodwork — patching, filling, sanding, and refinishing to bring damaged trim back to life",
+    ],
+    process: [
+      {
+        step: 1,
+        title: "Consultation & Assessment",
+        description:
+          "We visit your home to inspect the areas that need carpentry work. We assess the condition of existing trim, doors, and woodwork, discuss your goals and preferences, and provide a detailed written estimate covering materials, labor, and timeline.",
+      },
+      {
+        step: 2,
+        title: "Material Selection & Ordering",
+        description:
+          "Based on your preferences and budget, we source the right materials — whether that is solid hardwood for interior trim, PVC or composite for rot-proof exteriors, or pre-hung door units from top manufacturers. We match profiles to your existing woodwork whenever possible.",
+      },
+      {
+        step: 3,
+        title: "Removal & Preparation",
+        description:
+          "Our crew carefully removes old trim, doors, or damaged woodwork. We inspect the underlying structure for hidden issues like water damage, mold, or insect activity. Any structural concerns are addressed before new materials go in, ensuring a solid foundation.",
+      },
+      {
+        step: 4,
+        title: "Installation & Fitting",
+        description:
+          "New trim, doors, and woodwork are measured, cut, and installed with precision. Every miter joint is tight, every baseboard is level, and every door is shimmed and adjusted for smooth operation. We use finish nails, construction adhesive, and proper fastening techniques for a secure, lasting fit.",
+      },
+      {
+        step: 5,
+        title: "Finishing & Final Inspection",
+        description:
+          "All nail holes are filled, joints are caulked, and surfaces are sanded smooth. If painting or staining is part of the project, we apply finishes to match your home. We walk through the completed work with you, making any adjustments on the spot until you are completely satisfied.",
+      },
+    ],
+    benefits: [
+      "Dramatically improved interior aesthetics — clean trim lines and quality doors make every room feel polished and complete",
+      "Protection against water infiltration, rot, and pest damage with properly sealed exterior trim and weather-resistant materials",
+      "Increased home value — updated trim, doors, and woodwork are among the most noticed features by buyers and appraisers",
+      "Better energy efficiency when doors are properly fitted and sealed, eliminating drafts and air leaks",
+      "A home that reflects quality craftsmanship in every detail, from the baseboards to the crown molding",
+    ],
+    cta: "Schedule Your Carpentry Consultation",
+    ctaDescription:
+      "Ready to upgrade your home with expert carpentry and trim work? Alfa Construction offers free consultations for homeowners across Massachusetts. Let us show you what precision craftsmanship looks like.",
+    faqs: [
+      {
+        question: "What types of trim and molding can you install?",
+        answer:
+          "We install all types of interior and exterior trim including crown molding, baseboards, chair rails, wainscoting, window and door casings, shoe molding, and custom profiles. We work with solid wood, MDF, PVC, and composite materials depending on the application and your preferences. We can also match existing trim profiles in older homes.",
+      },
+      {
+        question: "Can you replace just one door, or do I need to do them all at once?",
+        answer:
+          "Absolutely — we are happy to replace a single door or as many as you need. We can match new doors to your existing style so a single replacement blends seamlessly. That said, many homeowners choose to update all their interior doors at once for a consistent look throughout the home, and we offer competitive pricing for multi-door projects.",
+      },
+      {
+        question: "How do you handle rotten exterior trim?",
+        answer:
+          "We remove all damaged material down to solid wood, inspect the underlying sheathing and framing for hidden damage, treat any mold or moisture issues, and install new trim using rot-resistant materials like PVC, composite, or pressure-treated lumber. We seal all joints and paint or prime the new trim for maximum weather protection.",
+      },
+      {
+        question: "Do you build custom shelving and built-ins?",
+        answer:
+          "Yes. We design and build custom built-in bookshelves, entertainment centers, closet systems, mudroom cubbies, and other storage solutions tailored to your space and style. We handle everything from design and material selection to installation and finishing, creating pieces that look like they were always part of your home.",
+      },
+      {
+        question: "Will new trim and doors match my older home's style?",
+        answer:
+          "Matching existing woodwork in older homes is one of our specialties. We carefully profile your current trim to find matching or compatible molding, and we can custom-mill pieces when a standard match is not available. Our goal is always a seamless transition between old and new so nothing looks out of place.",
+      },
+    ],
+    metaTitle:
+      "Carpentry & Trim Work Services | Alfa Construction | Massachusetts",
+    metaDescription:
+      "Expert carpentry and trim work across Massachusetts. Door installation, crown molding, baseboard replacement, rot repair, and custom woodwork. Free estimates from Alfa Construction.",
+    cityIntros: {
+      historic: [
+        "The homes of {cityName} are architectural treasures, and their woodwork tells the story of the craftsmen who built them. Alfa Construction provides carpentry and trim services that honor that tradition. Whether your {cityName} home needs rotten clapboard trim replaced, original crown molding restored, or period-appropriate doors hung with care, our team brings the skills and materials to do the job right.",
+        "In {cityName}, original woodwork is often one of the most valued features of a historic home. Hand-carved balusters, wide plank casings, and detailed cornice moldings give these properties their unmistakable character. When time and weather take their toll, Alfa Construction steps in with restoration-quality carpentry that preserves what makes your {cityName} home irreplaceable.",
+        "Owning a historic home in {cityName} means accepting the responsibility of maintaining craftsmanship that modern builders rarely replicate. Alfa Construction serves {cityName} homeowners with carpentry services rooted in respect for traditional techniques while incorporating modern materials where they make sense — like rot-proof PVC for exterior trim that holds a historic profile without the maintenance headaches.",
+      ],
+      suburban: [
+        "In {cityName}, the details define a home. Clean baseboards, properly hung doors, and crisp window casings are the finishing touches that separate a house that feels complete from one that feels like a work in progress. Alfa Construction provides professional carpentry and trim services to {cityName} homeowners who want their home to look and feel polished from every angle.",
+        "If your {cityName} home still has the builder-grade trim and hollow-core doors it came with, you are missing an easy upgrade that transforms the look and feel of your entire house. Alfa Construction helps {cityName} families replace generic woodwork with quality materials and expert installation that make your home feel custom-built.",
+        "Whether you are updating a single room or renovating your entire {cityName} home, Alfa Construction delivers carpentry work that elevates the space. From adding crown molding in a formal dining room to installing solid-core doors throughout the house, our team handles projects of every size with the same attention to detail and commitment to quality.",
+      ],
+      rural: [
+        "Homes in {cityName} endure some of the toughest conditions in Massachusetts — driving rain, heavy snow loads, and temperature swings that cause wood to expand and contract constantly. Alfa Construction provides carpentry services built for rural durability, using materials and techniques that hold up season after season in the {cityName} climate.",
+        "For {cityName} homeowners with older farmhouses, Cape Cods, or country cottages, maintaining exterior trim is an ongoing battle against the elements. Alfa Construction takes that burden off your shoulders with comprehensive trim replacement and repair services that use rot-resistant materials designed for exposed rural locations. We come to {cityName} fully equipped and ready to work.",
+        "Living in {cityName} often means your home has unique carpentry needs — wide plank trim from an earlier era, barn-style doors, or hand-built features that require a craftsman's touch to repair or replace. Alfa Construction has the experience and versatility to handle the distinctive carpentry challenges that {cityName} properties present.",
+      ],
+      urban: [
+        "In the dense neighborhoods of {cityName}, the interior finish of your home is where quality shows. Alfa Construction provides expert carpentry and trim work for {cityName} townhouses, condos, and multi-family homes — tight-tolerance work in tight spaces, delivered with the precision and professionalism that urban homeowners expect.",
+        "Urban homes in {cityName} often have unique carpentry challenges — non-square walls in older buildings, limited access for material delivery, and shared-wall considerations. Alfa Construction navigates these complexities every day, delivering crisp trim work, smooth-operating doors, and custom solutions that make the most of your {cityName} home's layout.",
+        "Whether you are finishing a newly purchased {cityName} condo or updating a multi-family property, Alfa Construction delivers carpentry work that adds value and visual impact. We install quality trim, solid doors, and custom built-ins that transform urban spaces from generic to exceptional, all while respecting the schedules and shared spaces of city living.",
+      ],
+    },
+    cityPainPoints: {
+      historic: [
+        "Historic homes in {cityName} often have exterior trim that has been patched and repainted so many times it no longer sheds water properly. Once moisture gets behind the trim, rot spreads quickly — and in an older {cityName} home, that rot can reach structural framing before anyone notices. Ignoring deteriorating trim is a gamble with your home's integrity.",
+        "Finding a carpenter in {cityName} who understands historic millwork profiles can feel impossible. Generic trim from the hardware store does not match the detailed casings and cornices in older homes, and a sloppy installation is immediately obvious. Many {cityName} homeowners have been burned by contractors who promised historic-quality work and delivered anything but.",
+        "Interior doors in many {cityName} historic homes have been replaced over the decades with cheaper, ill-fitting alternatives. Doors that do not match the original style, stick in their frames, or swing unevenly detract from the character that makes a historic {cityName} home special. It is a frustrating compromise that diminishes daily life in your own home.",
+      ],
+      suburban: [
+        "Builder-grade trim and hollow-core doors are the norm in many {cityName} subdivisions, and they start showing their limitations fast. Baseboards dent from vacuum cleaners, door casings crack where they were nailed with too few fasteners, and hollow doors offer zero sound insulation between rooms. For {cityName} families, these shortcuts add up to a home that feels cheaply made.",
+        "After a few Massachusetts winters, exterior trim on {cityName} homes starts to show stress — paint cracks along joints, caulk pulls away, and wood begins to soften in areas that trap moisture. Many homeowners notice water stains on interior walls before they realize the exterior trim is the source of the problem. By then, the repair is more extensive and more expensive.",
+        "Many {cityName} homeowners have tried to update their trim or install new doors themselves, only to end up with uneven baseboards, doors that do not latch, and miters that gap. DIY carpentry looks easy online but requires precision tools and experience to execute well. The result of a failed attempt is often worse than the original problem.",
+      ],
+      rural: [
+        "In {cityName}, wind-driven rain and heavy snow hit exterior trim from every angle, and properties without the wind shelter of neighboring homes take the worst of it. Trim joints open up, paint fails early, and water finds its way behind siding. Many {cityName} homeowners have replaced the same trim boards multiple times because the underlying issue was never properly addressed.",
+        "Older homes in {cityName} often have original woodwork that is showing its age — baseboards with deep gouges, door casings that have separated from the wall, and window trim so paint-caked it no longer looks clean. Replacing these elements is straightforward for a skilled carpenter, but finding one willing to travel to {cityName} is the real challenge.",
+        "For {cityName} homeowners, a damaged exterior door is more than a cosmetic issue — it is a security and energy concern. Warped frames, broken weatherstripping, and doors that no longer seal properly let cold air pour in during winter and make your heating system work overtime. In a rural location where heating costs are already a concern, this waste adds up fast.",
+      ],
+      urban: [
+        "In older {cityName} row houses and triple-deckers, walls are rarely perfectly plumb and floors are seldom level. That means trim installation requires constant adjustment — scribing baseboards to uneven floors, shimming casings to out-of-square openings, and custom-cutting pieces to fit angles that are anything but standard. Inexperienced carpenters struggle in these conditions, and the results show.",
+        "Space is at a premium in {cityName} homes, and poor carpentry wastes it. Doors that swing the wrong way, built-ins that do not maximize awkward corners, and trim that is too bulky for small rooms all make urban spaces feel more cramped than they need to be. Smart carpentry solutions can reclaim usable space in even the tightest {cityName} floor plans.",
+        "Multi-family property owners in {cityName} face constant wear on doors, trim, and common-area woodwork. Tenants move furniture in and out, heavy foot traffic scuffs baseboards, and doors get slammed thousands of times a year. Keeping these elements in good repair is essential for maintaining property value and tenant satisfaction, but finding a reliable carpenter for ongoing work is a persistent challenge.",
+      ],
+    },
+    citySolutions: {
+      historic: [
+        "Alfa Construction specializes in matching historic trim profiles found in {cityName} homes. We use a combination of stock moldings and custom milling to replicate the exact shapes and proportions of your original woodwork. The result is seamless repairs and replacements that preserve your home's historic character while providing modern durability.",
+        "For exterior trim on {cityName} historic homes, we offer PVC and composite options that hold traditional profiles but never rot, split, or need scraping. These materials accept paint beautifully and are virtually maintenance-free — giving your {cityName} home the historic look you love without the constant upkeep original wood demands in the New England climate.",
+        "Our carpenters have extensive experience installing and restoring doors in {cityName} historic properties. We source period-appropriate panel doors, fit them precisely to existing openings (even when those openings are no longer square), and install quality hardware that complements your home's era. The result is doors that look original and operate perfectly.",
+      ],
+      suburban: [
+        "Alfa Construction helps {cityName} homeowners upgrade from builder-grade to custom-quality. We replace flimsy MDF baseboards with solid wood or high-density alternatives, swap hollow-core doors for solid-core models that block sound and feel substantial, and install crown molding that gives rooms a finished, elegant look — all at prices that make the upgrade worthwhile.",
+        "For {cityName} homes showing exterior trim damage, we provide a comprehensive repair approach: remove the failed material, inspect and repair the substrate, install new rot-resistant trim, seal every joint, and apply a protective finish. This method eliminates the cycle of patchwork repairs and gives you trim that will outlast the next decade of Massachusetts weather.",
+        "Our team works efficiently in occupied {cityName} homes, completing most trim and door projects in one to two days per room. We contain dust, protect your flooring, and clean up completely at the end of every work day. You get professional-quality carpentry without the disruption of a long, drawn-out renovation.",
+      ],
+      rural: [
+        "Alfa Construction brings everything we need to {cityName} — tools, materials, and skilled carpenters ready to work. We do not make you wait for multiple trips or incomplete days. Our crews plan {cityName} projects for efficient completion, often finishing exterior trim replacements and door installations in fewer days than homeowners expect.",
+        "For {cityName} properties exposed to extreme weather, we use advanced exterior trim systems with integrated drainage channels and hidden fasteners that prevent water from pooling at joints. Combined with factory-primed surfaces and professional caulking, these systems dramatically outperform traditional wood trim in rural New England conditions.",
+        "We understand that {cityName} homeowners often want their carpentry work to complement the natural, rustic character of their property. We offer a range of finishes and styles — from clean and contemporary to traditional farmhouse — and we work with you to select materials and details that feel authentic to your {cityName} home and the surrounding landscape.",
+      ],
+      urban: [
+        "Alfa Construction excels at the precision carpentry that {cityName} urban homes demand. We custom-fit every piece of trim to your walls, floors, and openings — no matter how far out of square they are. The result is tight joints, clean lines, and a finished look that would be impossible with off-the-shelf, cut-to-fit approaches.",
+        "For {cityName} condo and townhouse owners, we offer space-maximizing carpentry solutions: pocket doors that eliminate swing clearance, built-in shelving that turns dead corners into storage, and slim-profile trim that adds elegance without eating into room dimensions. Every detail is designed for the realities of urban living.",
+        "Our team understands the protocols of working in {cityName} multi-unit buildings — coordinating with building management, using service entrances, containing noise during appropriate hours, and keeping common areas clean. We make the process easy for property managers and invisible to other residents, delivering quality carpentry work with zero drama.",
+      ],
+    },
+    cityClosings: {
+      historic: [
+        "Your {cityName} historic home deserves a carpenter who appreciates its heritage. Alfa Construction brings the skill, the materials, and the respect for craftsmanship that older properties require. Contact us today for a free consultation and let us help you preserve and enhance the woodwork that makes your home exceptional.",
+        "Do not let deteriorating trim or ill-fitting doors diminish your {cityName} home's beauty and value. Alfa Construction provides expert carpentry services tailored to historic properties — from faithful restorations to thoughtful upgrades. Schedule your free estimate today and experience the difference that true craftsmanship makes.",
+        "Whether you need a single piece of trim replaced or a complete woodwork overhaul in your {cityName} home, Alfa Construction is ready to help. We combine old-world skill with modern materials to deliver results that last. Call us today or fill out our online form to get started.",
+      ],
+      suburban: [
+        "Upgrade your {cityName} home with carpentry work that makes every room feel finished, polished, and built to last. Alfa Construction delivers expert trim installation, door replacement, and custom woodwork with the quality and attention to detail your home deserves. Get your free estimate today.",
+        "From crown molding to front doors, Alfa Construction handles every carpentry need for {cityName} homeowners. Our work is precise, our pricing is fair, and our results speak for themselves. Contact us today to schedule your free consultation and take the next step toward the home you have always wanted.",
+        "Stop settling for builder-grade finishes. Alfa Construction helps {cityName} families transform their homes with quality carpentry that looks and feels custom. Reach out today for a free, no-obligation estimate and discover how affordable a real upgrade can be.",
+      ],
+      rural: [
+        "Alfa Construction is proud to serve {cityName} and the surrounding rural communities with professional carpentry services. Distance is never a barrier to quality — we bring our full capabilities to every project, every time. Contact us today for your free estimate.",
+        "Protect your {cityName} home from the elements with expert exterior trim work, and transform your interior with quality doors and moldings. Alfa Construction makes it easy with a single point of contact, transparent pricing, and results that exceed expectations. Get in touch today.",
+        "Your {cityName} property deserves carpentry work that lasts. Alfa Construction uses premium materials and proven techniques to deliver durable, beautiful results in even the most demanding rural conditions. Schedule your free consultation today and let us show you what we can do.",
+      ],
+      urban: [
+        "In the close quarters of {cityName}, every detail matters. Alfa Construction delivers the precision carpentry and custom trim work that makes urban homes feel thoughtfully crafted, not cookie-cutter. Contact us today for your free estimate and experience the difference quality carpentry makes.",
+        "Whether you own a {cityName} condo, townhouse, or multi-family property, Alfa Construction has the skills and experience to handle your carpentry needs with professionalism and precision. Get in touch today to schedule your free consultation.",
+        "Transform your {cityName} home with expert carpentry from Alfa Construction. From solid-core doors to custom built-ins, we deliver work that adds value, beauty, and functionality to urban spaces. Request your free estimate today and let us get started.",
+      ],
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 4. HOME REMODELING & RENOVATION
   // ─────────────────────────────────────────────────────────────
   {
     slug: "remodeling",
@@ -1032,6 +829,208 @@ const services: Service[] = [
       ],
     },
   },
+  // ─────────────────────────────────────────────────────────────
+  // 5. INTERIOR & EXTERIOR PAINTING
+  // ─────────────────────────────────────────────────────────────
+  {
+    slug: "painting",
+    name: "Interior & Exterior Painting",
+    shortName: "Painting",
+    description:
+      "Professional interior and exterior painting services across Massachusetts. From single-room refreshes to full-home transformations, Alfa Construction delivers flawless results with premium paints and meticulous preparation.",
+    longDescription:
+      "A fresh coat of paint is one of the fastest and most cost-effective ways to transform any home. At Alfa Construction, we go far beyond just rolling paint onto a wall. Our painting process begins with thorough surface preparation — filling nail holes, sanding rough spots, caulking gaps, and priming bare surfaces — so the finished product looks seamless and lasts for years. We use only premium-grade paints from trusted brands like Benjamin Moore and Sherwin-Williams, offering an extensive palette so you can find the exact color and finish that matches your vision. Whether you need a bright, modern refresh for your living room, a protective exterior coat to shield your home from New England winters, or a complete color overhaul before listing your property, our experienced painters deliver clean lines, even coverage, and zero mess. We protect your furniture, floors, and landscaping throughout the project, and we always leave your home cleaner than we found it.",
+    icon: "PaintBrush",
+    heroImage: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg",
+    keywords: [
+      "interior painting Massachusetts",
+      "exterior house painting MA",
+      "residential painters near me",
+      "house painting services Massachusetts",
+      "professional painters MA",
+      "home painting contractor near me",
+      "best painters in Massachusetts",
+      "exterior painting New England",
+      "cabinet painting MA",
+      "trim painting Massachusetts",
+    ],
+    painPoints: [
+      "Walls that look dull, faded, or discolored from years of wear and sun exposure",
+      "Peeling, bubbling, or cracking paint on interior walls or exterior surfaces",
+      "Outdated color schemes that make your home feel dark or dated",
+      "Preparing your home for sale and needing a fast, high-impact upgrade",
+      "Inconsistent, streaky, or sloppy results from a previous painter or DIY attempt",
+    ],
+    solutions: [
+      "Full-service interior painting including walls, ceilings, trim, and doors with meticulous prep work",
+      "Exterior painting that protects your home from Massachusetts weather — rain, snow, ice, and UV rays",
+      "Expert color consultation to help you choose modern palettes that increase appeal and home value",
+      "Complete surface preparation: hole filling, sanding, caulking, priming, and taping for a flawless finish",
+      "Premium paints from Benjamin Moore and Sherwin-Williams for lasting durability and vibrant color",
+    ],
+    process: [
+      {
+        step: 1,
+        title: "Free In-Home Estimate",
+        description:
+          "We visit your home, discuss your vision, take measurements, and provide a detailed written estimate with no hidden fees. We bring color samples and offer honest recommendations.",
+      },
+      {
+        step: 2,
+        title: "Surface Preparation",
+        description:
+          "Our crew fills nail holes, sands rough patches, caulks gaps around trim and windows, and primes any bare or stained surfaces. We cover furniture, protect floors with drop cloths, and tape edges for sharp lines.",
+      },
+      {
+        step: 3,
+        title: "Priming & First Coat",
+        description:
+          "We apply a high-quality primer where needed, followed by the first coat of your chosen paint. We use brushes for detail areas and rollers for large surfaces, ensuring even coverage throughout.",
+      },
+      {
+        step: 4,
+        title: "Final Coat & Detail Work",
+        description:
+          "A second (or third, if needed) coat is applied for rich, uniform color. We cut in around trim, outlets, and fixtures with precision, then inspect every surface under multiple lighting conditions.",
+      },
+      {
+        step: 5,
+        title: "Walkthrough & Cleanup",
+        description:
+          "We walk through every painted area with you, touching up any spots on the spot. All tape, plastic, and drop cloths are removed, and we leave your home spotless — ready to enjoy immediately.",
+      },
+    ],
+    benefits: [
+      "Instant visual transformation that makes any room or exterior feel brand new",
+      "Increased property value — fresh paint is the highest-ROI home improvement",
+      "Protection against moisture, mold, mildew, and weather damage on exterior surfaces",
+      "Healthier indoor air quality with low-VOC and zero-VOC paint options",
+      "Professional results that last 7-10 years with proper prep and premium products",
+    ],
+    cta: "Get Your Free Painting Estimate",
+    ctaDescription:
+      "Ready to transform your home with fresh, beautiful paint? Contact Alfa Construction today for a free, no-obligation in-home estimate. We serve communities across Massachusetts with professional painting services you can trust.",
+    faqs: [
+      {
+        question: "How long does it take to paint the interior of a house?",
+        answer:
+          "Most interior painting projects take between 2 and 5 days depending on the size of your home, the number of rooms, and the amount of prep work required. A single room can often be completed in one day, while a full-home repaint typically takes 3 to 5 days. We always provide a clear timeline before starting work.",
+      },
+      {
+        question: "What kind of paint do you use?",
+        answer:
+          "We use premium paints from Benjamin Moore and Sherwin-Williams. For interiors, we typically recommend their low-VOC or zero-VOC lines for healthier indoor air quality. For exteriors, we use weather-resistant formulas designed to withstand the harsh Massachusetts climate — freezing winters, humid summers, and everything in between.",
+      },
+      {
+        question: "Do I need to move my furniture before you paint?",
+        answer:
+          "No. Our crew handles all the prep work. We carefully move furniture to the center of the room and cover everything with drop cloths and plastic sheeting. Floors, fixtures, and hardware are all protected. When we finish, we move everything back and clean up completely.",
+      },
+      {
+        question: "How often should the exterior of my home be repainted?",
+        answer:
+          "In Massachusetts, most exterior paint jobs last between 5 and 10 years depending on the material (wood, vinyl, stucco), the quality of the paint, and exposure to the elements. Homes facing south or west tend to fade faster due to sun exposure. We recommend inspecting your exterior every spring and addressing any peeling or cracking early to prevent moisture damage.",
+      },
+      {
+        question: "Can you help me choose the right colors for my home?",
+        answer:
+          "Absolutely. We offer a free color consultation as part of every estimate. We bring physical color samples so you can see how different shades look against your existing trim, flooring, and furnishings. We also stay up to date on trending palettes and can recommend colors that increase curb appeal and resale value.",
+      },
+    ],
+    metaTitle:
+      "Interior & Exterior Painting Services | Alfa Construction | Massachusetts",
+    metaDescription:
+      "Professional interior and exterior painting across Massachusetts. Premium paints, expert prep, flawless results. Free estimates from Alfa Construction. Call today.",
+    cityIntros: {
+      historic: [
+        "In {cityName}, where colonial-era homes and tree-lined streets define the local character, a quality paint job does more than refresh a surface — it honors a legacy. Alfa Construction understands the architectural heritage of {cityName} and brings the craftsmanship and attention to detail that historic neighborhoods deserve. Whether your antique clapboard needs a protective exterior coat or your plaster walls are ready for a modern color update, we deliver results that respect the past while preparing your home for decades ahead.",
+        "Few things bring a {cityName} home back to life like professional painting tailored to its era. From Federal-style mansions to Victorian-era row houses, the homes in {cityName} carry stories in every layer of paint. Our team at Alfa Construction specializes in the careful preparation and premium finishes that older homes demand — sealing original woodwork, matching period-appropriate colors, and ensuring every coat bonds properly to surfaces that may be a century old.",
+        "Homeowners in {cityName} know that painting a historic property is not the same as painting a new build. Lead paint concerns, multiple layers of old coatings, delicate plaster, and irreplaceable trim all require specialized knowledge. Alfa Construction has years of experience working on homes throughout {cityName}, and we bring the patience, skill, and premium materials needed to make your historic property shine while keeping it safe and structurally sound.",
+      ],
+      suburban: [
+        "For homeowners in {cityName}, maintaining a fresh, polished exterior is part of what makes the neighborhood inviting. Whether you have just moved into a new subdivision or your home is showing its first signs of wear after a few New England winters, Alfa Construction provides professional painting services that keep your {cityName} property looking its best. We handle everything — prep, paint, and cleanup — so you can spend your weekends enjoying your home instead of working on it.",
+        "Life in {cityName} means taking pride in your property. Your home is likely your biggest investment, and a professional paint job is the most effective way to protect it from the freeze-thaw cycles, summer humidity, and coastal moisture that Massachusetts throws at it year after year. Alfa Construction serves {cityName} families with interior and exterior painting that delivers lasting beauty and real protection.",
+        "In a {cityName} neighborhood where well-kept homes line every cul-de-sac and sidewalk, a dull or peeling exterior stands out for the wrong reasons. Alfa Construction helps {cityName} homeowners stay ahead of the curve with efficient, high-quality painting services. We work around your schedule, minimize disruption to your daily routine, and leave you with a result that makes you proud to pull into your driveway.",
+      ],
+      rural: [
+        "Out in {cityName}, homes face the full force of Massachusetts weather with little shelter from neighboring structures. Harsh winter winds, heavy snowfall, and summer storms all take a toll on exterior paint. Alfa Construction provides durable painting solutions designed for the unique demands of {cityName} properties — from farmhouses and cottages to ranch-style homes on sprawling lots. We use weather-resistant coatings that hold up against the elements season after season.",
+        "Maintaining a home in {cityName} means dealing with conditions that suburban homeowners rarely face — long gravel driveways that kick up dust, barns and outbuildings that need coordinated color schemes, and exteriors battered by open-field winds. Alfa Construction travels to {cityName} and surrounding areas to deliver the same professional painting results we bring to every community we serve. Your remote location never means compromised quality.",
+        "For {cityName} homeowners surrounded by the natural beauty of the Massachusetts countryside, the color and condition of your home matters. A beautifully painted farmhouse or Cape Cod cottage becomes the centerpiece of the landscape. Alfa Construction brings premium paints and thorough preparation to every {cityName} project, ensuring your home not only looks stunning but withstands the unique weather patterns of rural New England.",
+      ],
+      urban: [
+        "In {cityName}, where homes sit close together and street-facing facades define the neighborhood character, the quality of your paint job is on full display. Alfa Construction provides professional painting services to {cityName} homeowners who want sharp, clean, modern results. From triple-deckers and townhouses to condos and brownstones, we handle the tight-space logistics, parking considerations, and multi-surface challenges that come with urban painting work.",
+        "Keeping a {cityName} home looking sharp takes more than a weekend DIY project. Urban properties deal with road salt spray, exhaust residue, moisture from nearby buildings, and constant UV exposure on sun-facing walls. Alfa Construction brings professional-grade preparation and premium coatings to every {cityName} project, ensuring your home not only looks great but stays protected in a demanding urban environment.",
+        "Whether you own a condo in downtown {cityName} or a multi-family home on a busy avenue, Alfa Construction delivers painting results that make your property stand out. We understand the challenges of working in dense {cityName} neighborhoods — limited staging areas, shared walls, HOA color requirements — and we navigate them all with professionalism. The result is a flawless finish that elevates your home and your block.",
+      ],
+    },
+    cityPainPoints: {
+      historic: [
+        "Many older homes in {cityName} have layers upon layers of paint — some dating back generations. Over time, this buildup cracks, peels, and bubbles, exposing the wood beneath to moisture and rot. If your {cityName} home has paint that is failing, ignoring it risks structural damage to irreplaceable trim, siding, and window casings that would be extremely costly to replicate today.",
+        "Homeowners in {cityName} frequently tell us they are frustrated by painters who do not understand older homes. Standard prep techniques are not enough when you are dealing with plaster that crumbles, woodwork with intricate profiles, or exterior surfaces that have been coated a dozen times. The wrong approach can cause more damage than it fixes, and many {cityName} residents have experienced exactly that.",
+        "In {cityName}, historic homes face a unique challenge: balancing preservation with modernization. You want your home to look fresh and current, but you do not want to lose the character that makes it special. Choosing the wrong sheen, applying paint over unstable surfaces, or ignoring lead paint protocols can create costly problems that diminish both the beauty and the value of your {cityName} property.",
+      ],
+      suburban: [
+        "After several Massachusetts winters, even newer homes in {cityName} start to show wear. Sun-facing walls fade unevenly, trim paint chips around windows and doors, and that once-bright exterior looks tired. Many {cityName} homeowners put off repainting because they dread the disruption, only to find that the longer they wait, the more prep work — and expense — the project requires.",
+        "If you have lived in {cityName} for a few years, you have probably noticed that interior walls accumulate scuffs, crayon marks, nail holes, and general wear faster than you expected. Builder-grade paint fades and stains easily, and the flat finish many developers use shows every imperfection. It is a frustrating cycle that makes even a well-kept {cityName} home feel run-down.",
+        "In {cityName} neighborhoods, curb appeal directly affects property values. A home with peeling trim, faded siding paint, or mismatched touch-ups drags down the look of the entire street. Suburban homeowners in {cityName} often feel pressure to keep up appearances, but between work, family, and weekend obligations, finding time to tackle a painting project feels impossible.",
+      ],
+      rural: [
+        "Homes in {cityName} take a beating from the weather. Without neighboring structures to block the wind, exterior paint wears down faster — fading on the south side, peeling on the windward side, and bubbling wherever moisture gets trapped. Many {cityName} homeowners are shocked at how quickly their exterior deteriorates compared to homes in more sheltered locations.",
+        "Finding a reliable painter willing to travel to {cityName} can be a real challenge. Many contractors focus on higher-density areas, leaving rural homeowners with limited options — often settling for handymen who lack the equipment, materials, or expertise for a lasting paint job. The result is work that looks decent for a season and then starts failing again.",
+        "Properties in {cityName} often include more than just the main house. Barns, sheds, detached garages, and fence lines all need attention, and coordinating colors and finishes across multiple structures adds complexity. Many {cityName} homeowners feel overwhelmed by the scope of what needs painting and are unsure where to start or how to budget for it all.",
+      ],
+      urban: [
+        "In {cityName}, homes are exposed to more airborne grime, vehicle exhaust, and road salt than properties in quieter areas. This contamination bonds to painted surfaces, causing discoloration and accelerating breakdown. Many {cityName} homeowners notice their exterior paint looking dingy within just a few years, especially on street-facing walls and around entryways.",
+        "Urban homes in {cityName} often present logistical headaches for painting. Limited driveway space, narrow side yards, shared walls with adjacent properties, and city permit requirements can make even a straightforward project feel complicated. Homeowners often delay painting because they are not sure how to navigate these obstacles.",
+        "If you own a multi-family property in {cityName}, you know that keeping common areas and exterior surfaces well-painted is essential for attracting and retaining tenants. But coordinating schedules, managing access, and maintaining consistency across units adds layers of complexity that many painters are not equipped to handle, leaving {cityName} landlords frustrated with incomplete or inconsistent work.",
+      ],
+    },
+    citySolutions: {
+      historic: [
+        "Alfa Construction brings a preservation-minded approach to every painting project in {cityName}. We carefully inspect existing surfaces, identify lead paint when present, and follow all Massachusetts regulations for safe removal or encapsulation. Our prep process preserves original woodwork and trim details while creating a stable foundation for paint that will protect your {cityName} home for years to come.",
+        "For {cityName} homeowners who want historically appropriate results, we offer period-accurate color palettes and finishes that complement the architectural style of your property. Whether you prefer authentic colonial tones or a tasteful modern update, our team has the knowledge and materials to deliver a finish that honors your home's heritage while meeting today's performance standards.",
+        "Our team has worked on numerous historic properties throughout {cityName} and the surrounding region. We understand that every home has unique challenges — from hand-carved balusters to original horsehair plaster — and we tailor our approach accordingly. With Alfa Construction, your {cityName} home receives the individualized care it deserves, not a one-size-fits-all treatment.",
+      ],
+      suburban: [
+        "Alfa Construction makes painting easy for busy {cityName} families. We handle every detail from start to finish — moving furniture, protecting floors, prepping surfaces, applying premium paint, and cleaning up thoroughly. You do not need to take time off work or rearrange your life. We work efficiently and respect your home as if it were our own.",
+        "For {cityName} homeowners preparing to sell, we offer fast-turnaround painting packages designed to maximize curb appeal and interior appeal on a timeline. We know which colors and finishes attract buyers in the {cityName} market, and we can transform your home in days, not weeks, giving you the competitive edge you need in today's real estate environment.",
+        "We help {cityName} homeowners choose durable, washable paint finishes that stand up to the demands of family life — eggshell and satin for high-traffic hallways, semi-gloss for kitchens and bathrooms, and flat for ceilings. Combined with our thorough prep work and premium Benjamin Moore and Sherwin-Williams products, the result is a paint job that looks beautiful and lasts.",
+      ],
+      rural: [
+        "Alfa Construction proudly serves {cityName} and the surrounding rural communities. We bring all the equipment, materials, and manpower needed to complete your project efficiently — no matter how far off the main road your property sits. Our team arrives on time, works steadily, and delivers the same high-quality results we bring to every job across Massachusetts.",
+        "For {cityName} properties that include outbuildings, we offer coordinated painting packages that ensure a unified look across your entire homestead. We help you choose complementary colors and durable exterior formulas that withstand the open-field exposure rural properties face, so everything from your front door to your barn looks cohesive and well-maintained.",
+        "We use specially formulated exterior coatings for {cityName} homes that resist the extreme temperature swings of rural New England — from sub-zero January nights to humid August afternoons. Our prep process includes sealing every crack and gap to block moisture infiltration, and we apply multiple coats for maximum protection and longevity.",
+      ],
+      urban: [
+        "Alfa Construction is experienced with the unique logistics of painting in {cityName}. We coordinate parking, manage access to tight spaces, work within city noise ordinances, and handle any permit requirements. Our crews are efficient and organized, minimizing disruption to your neighbors and completing your project on schedule.",
+        "For {cityName} condo owners and multi-family landlords, we offer flexible scheduling that works around tenants and building regulations. We can paint unit by unit, floor by floor, or tackle common areas during low-traffic hours. Our team communicates clearly with property managers and residents throughout the process to keep everything running smoothly.",
+        "We use quick-drying, low-odor, low-VOC paints that are ideal for the close quarters of urban {cityName} homes. These premium formulas deliver rich color and excellent coverage without filling your home — or your neighbor's home — with fumes. Combined with our meticulous taping and edge work, you get a crisp, professional result that elevates your property's look and value.",
+      ],
+    },
+    cityClosings: {
+      historic: [
+        "Your {cityName} home has stood for generations — it deserves a painter who treats it with the same care and respect as the craftsmen who originally built it. Alfa Construction is proud to serve the historic neighborhoods of {cityName} with painting services that protect, preserve, and beautify. Contact us today for your free estimate.",
+        "Do not trust your {cityName} historic home to just any painting company. Alfa Construction brings the experience, materials, and attention to detail that older properties demand. From proper lead paint handling to color-matched period finishes, we do it right. Reach out today and let us show you the difference quality craftsmanship makes.",
+        "Whether your {cityName} home needs a subtle refresh or a full exterior restoration, Alfa Construction is ready to help. We have the skills, the patience, and the premium products to deliver a result you will be proud of for years to come. Call us or fill out our online form to schedule your free, no-obligation painting estimate in {cityName}.",
+      ],
+      suburban: [
+        "Your {cityName} home is your haven — keep it looking its best with professional painting from Alfa Construction. We make the process easy, the results stunning, and the price fair. Get in touch today to schedule your free in-home estimate and see why families across {cityName} trust us with their homes.",
+        "Stop putting off that painting project. Alfa Construction serves {cityName} homeowners with fast, clean, professional painting that fits your schedule and your budget. Whether it is one accent wall or every room in the house, we are ready to help. Contact us today for a free estimate.",
+        "From your front door to your back fence, Alfa Construction has {cityName} covered. Our painting services are designed to deliver maximum impact with minimum hassle. Thousands of Massachusetts homeowners have trusted us with their biggest investment — let us earn your trust too. Request your free estimate today.",
+      ],
+      rural: [
+        "Just because you live in {cityName} does not mean you should settle for less. Alfa Construction brings city-quality painting services to every corner of Massachusetts, including rural communities like yours. Call us today to schedule a free on-site estimate — we will come to you, no matter where you are.",
+        "Your {cityName} property deserves a painting team that understands rural living. Alfa Construction has the experience, the equipment, and the commitment to deliver exceptional results on homes, barns, and outbuildings throughout the {cityName} area. Reach out today and let us put together a plan that fits your property and your budget.",
+        "Protect your {cityName} home from the full force of New England weather with professional painting from Alfa Construction. We use the most durable exterior products on the market and back our work with a satisfaction guarantee. Get your free estimate today and give your property the care it deserves.",
+      ],
+      urban: [
+        "In a {cityName} neighborhood where every detail is on display, trust Alfa Construction to deliver a paint job that sets your home apart. We handle the logistics, navigate the challenges, and leave you with a flawless finish. Contact us today for your free painting estimate in {cityName}.",
+        "Alfa Construction makes urban painting stress-free for {cityName} homeowners, landlords, and property managers. From single condos to multi-unit buildings, we bring professionalism, efficiency, and outstanding results to every project. Get in touch today to discuss your {cityName} painting needs.",
+        "Your {cityName} property is too important to trust to amateurs. Alfa Construction delivers the clean lines, rich color, and lasting durability your urban home demands. Schedule your free estimate today and discover why we are one of the most trusted painting contractors in Massachusetts.",
+      ],
+    },
+  },
+
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {

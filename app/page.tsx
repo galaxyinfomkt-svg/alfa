@@ -97,12 +97,12 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Professional{" "}
-                <span className="text-alfa-gold">Painting</span> &amp;
-                Construction Contractor in Massachusetts
+                #1{" "}
+                <span className="text-alfa-gold">Siding Installation</span>{" "}
+                Contractor in Massachusetts
               </h1>
               <p className="text-lg text-gray-400 mb-8 leading-relaxed max-w-xl">
-                Expert <strong className="text-white">interior &amp; exterior painting</strong>, carpentry, siding installation, window &amp; door replacement, and complete home remodeling. Our {company.experience}-year legacy of craftsmanship delivers results that exceed expectations.
+                Expert <strong className="text-white">siding installation</strong>, window &amp; door replacement, carpentry, and complete home remodeling across Massachusetts. Our {company.experience}-year legacy of craftsmanship delivers results that exceed expectations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -198,10 +198,10 @@ export default function HomePage() {
                 {company.experience} Years of Construction Excellence in Massachusetts
               </h2>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Founded by Fabio, Alfa Construction Inc has been serving Massachusetts homeowners for over 18 years. What started as a passion for quality craftsmanship has grown into one of the most trusted painting and carpentry companies in the state.
+                Founded by Fabio, Alfa Construction Inc has been serving Massachusetts homeowners for over 18 years. What started as a passion for quality craftsmanship has grown into one of the most trusted siding and construction companies in the state.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                We specialize in interior and exterior painting, carpentry and trim work, siding installation, window and door replacement, and complete home remodeling. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
+                We specialize in siding installation, window and door replacement, carpentry and trim work, and complete home remodeling. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
               </p>
               <ul className="space-y-3 mb-8">
                 {company.differentials.map((item, i) => (

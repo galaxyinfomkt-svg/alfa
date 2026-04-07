@@ -4,11 +4,11 @@ import { company } from "@/data/company";
 import { cities } from "@/data/cities";
 
 const serviceLinks = [
-  { href: "/services/painting", label: "Interior & Exterior Painting" },
-  { href: "/services/carpentry", label: "Carpentry & Trim Work" },
   { href: "/services/siding", label: "Siding Installation & Repair" },
   { href: "/services/windows-doors", label: "Window & Door Installation" },
+  { href: "/services/carpentry", label: "Carpentry & Trim Work" },
   { href: "/services/remodeling", label: "Home Remodeling & Renovation" },
+  { href: "/services/painting", label: "Interior & Exterior Painting" },
 ];
 
 const blogLinks = [
@@ -35,7 +35,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-400 text-sm mb-5 leading-relaxed">
-              Professional painting, carpentry, siding, window &amp; door installation, and home remodeling services across Massachusetts. Licensed, insured, and trusted for over 18 years.
+              Professional siding installation, window &amp; door installation, carpentry, and home remodeling services across Massachusetts. Licensed, insured, and trusted for over 18 years.
             </p>
             <div className="space-y-2.5 text-sm">
               <a href={company.phoneTel} className="flex items-center gap-2 text-alfa-gold hover:text-alfa-gold-light transition-colors">

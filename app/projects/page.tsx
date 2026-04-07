@@ -6,9 +6,9 @@ import { breadcrumbSchema } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Our Projects | Portfolio of Painting, Carpentry & Remodeling Work",
+  title: "Our Projects | Siding Installation, Carpentry & Remodeling Portfolio",
   description:
-    "View Alfa Construction Inc's portfolio of completed projects across Massachusetts. Painting, carpentry, siding, window installation, and home remodeling.",
+    "View Alfa Construction Inc's portfolio of completed projects across Massachusetts. Siding installation, window installation, carpentry, and home remodeling.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/projects" },
 };
 

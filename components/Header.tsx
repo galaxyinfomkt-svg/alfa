@@ -14,11 +14,11 @@ const navLinks = [
 ];
 
 const serviceItems = [
-  { slug: "painting", name: "Painting Services", desc: "Interior & exterior painting for homes..." },
-  { slug: "carpentry", name: "Carpentry & Trim", desc: "Fine carpentry, trim work, and door install..." },
   { slug: "siding", name: "Siding Installation", desc: "Professional siding installation and rep..." },
   { slug: "windows-doors", name: "Windows & Doors", desc: "Energy-efficient window and door install..." },
+  { slug: "carpentry", name: "Carpentry & Trim", desc: "Fine carpentry, trim work, and door install..." },
   { slug: "remodeling", name: "Home Remodeling", desc: "Kitchen, bathroom, and whole house remod..." },
+  { slug: "painting", name: "Painting Services", desc: "Interior & exterior painting for homes..." },
 ];
 
 export default function Header() {

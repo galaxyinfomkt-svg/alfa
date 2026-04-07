@@ -52,8 +52,8 @@ export async function generateMetadata({
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `Home Improvement Contractor ${city.name} MA | Painting, Carpentry, Siding | Alfa Construction`;
-  const description = `Top-rated painting, carpentry, siding, window & door installation, and home remodeling contractor in ${city.name}, Massachusetts. Licensed & insured. ${company.experience} years experience. ${city.county} County. Free estimates. Call ${company.phone}.`;
+  const title = `Siding Installation Contractor ${city.name} MA | Windows, Carpentry | Alfa Construction`;
+  const description = `Top-rated siding installation, window & door installation, carpentry, and home remodeling contractor in ${city.name}, Massachusetts. Licensed & insured. ${company.experience} years experience. ${city.county} County. Free estimates. Call ${company.phone}.`;
 
   return {
     title,
@@ -74,22 +74,6 @@ export async function generateMetadata({
 
 const servicesList = [
   {
-    slug: "painting",
-    name: "Interior & Exterior Painting",
-    description:
-      "Transform your home with premium interior and exterior painting. Expert prep work, flawless finish, and lasting results that boost your curb appeal.",
-    icon: "painting",
-    cta: "Get Your Free Painting Estimate",
-  },
-  {
-    slug: "carpentry",
-    name: "Carpentry & Trim Work",
-    description:
-      "Fine carpentry, trim replacement, and door installation. Precision craftsmanship to restore and enhance your home's woodwork and details.",
-    icon: "carpentry",
-    cta: "Schedule Your Carpentry Consultation",
-  },
-  {
     slug: "siding",
     name: "Siding Installation & Repair",
     description:
@@ -106,12 +90,28 @@ const servicesList = [
     cta: "Get a Free Window & Door Estimate",
   },
   {
+    slug: "carpentry",
+    name: "Carpentry & Trim Work",
+    description:
+      "Fine carpentry, trim replacement, and door installation. Precision craftsmanship to restore and enhance your home's woodwork and details.",
+    icon: "carpentry",
+    cta: "Schedule Your Carpentry Consultation",
+  },
+  {
     slug: "remodeling",
     name: "Home Remodeling & Renovation",
     description:
       "Complete home renovation from kitchens to bathrooms. Increase your home's value and livability with our full-service remodeling team.",
     icon: "remodeling",
     cta: "Start Your Remodeling Project",
+  },
+  {
+    slug: "painting",
+    name: "Interior & Exterior Painting",
+    description:
+      "Transform your home with premium interior and exterior painting. Expert prep work, flawless finish, and lasting results that boost your curb appeal.",
+    icon: "painting",
+    cta: "Get Your Free Painting Estimate",
   },
 ];
 
@@ -131,7 +131,7 @@ export default async function CityPage({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: company.name,
-    description: `Professional painting, carpentry, siding, window & door installation, and home remodeling services in ${city.name}, MA.`,
+    description: `Professional siding installation, window & door installation, carpentry, and home remodeling services in ${city.name}, MA.`,
     telephone: company.phoneRaw,
     url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
     areaServed: {
@@ -221,8 +221,8 @@ export default async function CityPage({
                     <span className="text-alfa-gold">in {city.name}, Massachusetts</span>
                   </h1>
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    Alfa Construction Inc provides expert painting, carpentry, siding,
-                    window &amp; door installation, and home remodeling services to
+                    Alfa Construction Inc provides expert siding installation,
+                    window &amp; door installation, carpentry, and home remodeling services to
                     homeowners in {city.name}, Massachusetts. Licensed, insured, and
                     backed by {company.experience} years of experience.
                   </p>
@@ -269,7 +269,7 @@ export default async function CityPage({
               Our Services in {city.name}, MA
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              From painting to complete home renovation, Alfa Construction Inc
+              From siding installation to complete home renovation, Alfa Construction Inc
               delivers quality craftsmanship to {city.name} homeowners. Explore
               our full range of services below.
             </p>
@@ -302,8 +302,8 @@ export default async function CityPage({
               </p>
               <p className="text-gray-400 leading-relaxed mb-4">
                 Homes in {city.name} are predominantly characterized by{" "}
-                {city.homeStyle}. Whether you need a fresh coat of paint, trim
-                repair, new siding, replacement windows, or a full remodel, our
+                {city.homeStyle}. Whether you need new siding, replacement windows,
+                trim repair, or a full remodel, our
                 team understands the unique architectural needs of{" "}
                 {city.name}&apos;s housing stock.
               </p>

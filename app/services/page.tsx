@@ -4,29 +4,13 @@ import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Our Services | Professional Painting, Carpentry & Remodeling in MA",
+  title: "Our Services | Siding Installation, Carpentry & Remodeling in MA",
   description:
-    "Explore Alfa Construction's full range of services: painting, carpentry, siding, window & door installation, and home remodeling across Massachusetts. Licensed & insured. Free estimates.",
+    "Explore Alfa Construction's full range of services: siding installation, window & door installation, carpentry, and home remodeling across Massachusetts. Licensed & insured. Free estimates.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
 };
 
 const services = [
-  {
-    slug: "painting",
-    name: "Interior & Exterior Painting",
-    description:
-      "From single rooms to complete exterior makeovers, our painting team delivers flawless results. We handle all prep work, use premium paints, and ensure a finish that lasts through New England's toughest seasons. Whether your walls are faded, peeling, or you simply want a fresh new look, we have you covered.",
-    icon: "painting",
-    cta: "Get Your Free Painting Estimate",
-  },
-  {
-    slug: "carpentry",
-    name: "Carpentry & Trim Work",
-    description:
-      "Expert carpentry services including trim replacement, door installation, and custom woodwork. We restore rotten trim, install new interior and exterior doors with precision, and deliver the detailed finish work that transforms your home. Quality craftsmanship you can see and feel.",
-    icon: "carpentry",
-    cta: "Schedule Your Carpentry Consultation",
-  },
   {
     slug: "siding",
     name: "Siding Installation & Repair",
@@ -44,12 +28,28 @@ const services = [
     cta: "Get a Free Window & Door Estimate",
   },
   {
+    slug: "carpentry",
+    name: "Carpentry & Trim Work",
+    description:
+      "Expert carpentry services including trim replacement, door installation, and custom woodwork. We restore rotten trim, install new interior and exterior doors with precision, and deliver the detailed finish work that transforms your home. Quality craftsmanship you can see and feel.",
+    icon: "carpentry",
+    cta: "Schedule Your Carpentry Consultation",
+  },
+  {
     slug: "remodeling",
     name: "Home Remodeling & Renovation",
     description:
-      "Transform your living spaces with our comprehensive remodeling services. From kitchen and bathroom updates to full-home renovations, we handle drywall, painting, carpentry, and finishing — all under one roof. Increase your home's value and enjoy the spaces you've always envisioned.",
+      "Transform your living spaces with our comprehensive remodeling services. From kitchen and bathroom updates to full-home renovations, we handle drywall, carpentry, and finishing — all under one roof. Increase your home's value and enjoy the spaces you've always envisioned.",
     icon: "remodeling",
     cta: "Start Your Remodeling Project",
+  },
+  {
+    slug: "painting",
+    name: "Interior & Exterior Painting",
+    description:
+      "From single rooms to complete exterior makeovers, our painting team delivers flawless results. We handle all prep work, use premium paints, and ensure a finish that lasts through New England's toughest seasons. Whether your walls are faded, peeling, or you simply want a fresh new look, we have you covered.",
+    icon: "painting",
+    cta: "Get Your Free Painting Estimate",
   },
 ];
 

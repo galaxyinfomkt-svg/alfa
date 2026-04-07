@@ -6,7 +6,7 @@ import GoogleMap from "@/components/GoogleMap";
 export const metadata: Metadata = {
   title: "Contact Us | Get a Free Estimate",
   description:
-    "Contact Alfa Construction Inc for a free estimate on painting, carpentry, siding, windows, or remodeling in Massachusetts. Call (508) 596-3750 or fill out our form.",
+    "Contact Alfa Construction Inc for a free estimate on siding installation, windows, carpentry, or remodeling in Massachusetts. Call (508) 596-3750 or fill out our form.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/contact" },
 };
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
             Get Your Free Estimate
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Ready to start your project? Contact Alfa Construction Inc today. We provide free, no-obligation estimates for all painting, carpentry, siding, window, and remodeling projects across Massachusetts.
+            Ready to start your project? Contact Alfa Construction Inc today. We provide free, no-obligation estimates for all siding, window, carpentry, and remodeling projects across Massachusetts.
           </p>
         </div>
       </section>
