@@ -409,6 +409,14 @@ export default function HomePage() {
                 img: "/images/siding-window-installation-after-massachusetts.jpg",
               },
               {
+                slug: "how-much-does-siding-installation-cost-massachusetts",
+                title: "How Much Does Siding Installation Cost in Massachusetts?",
+                excerpt: "Complete cost breakdown for vinyl, Hardie Plank, and cedar siding installation in Massachusetts.",
+                date: "March 15, 2025",
+                category: "Siding",
+                img: "/images/commercial-siding-installation-massachusetts.png",
+              },
+              {
                 slug: "why-licensed-contractor-massachusetts-matters",
                 title: "Why Hiring a Licensed Contractor in MA Matters",
                 excerpt: "Understanding the importance of working with licensed and insured contractors for your Massachusetts home project.",
