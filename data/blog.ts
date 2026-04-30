@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Our Recommendation for Massachusetts Homeowners</h2>
       <p>Both products are solid choices, but our team at Alfa Construction Inc generally recommends Hardie Plank for homeowners who plan to stay in their homes long-term and want the highest level of durability and curb appeal. For homeowners seeking a budget-friendly upgrade that still provides excellent protection against New England weather, quality vinyl <a href="/services/siding">siding installed properly</a> is a reliable choice. We serve homeowners across Massachusetts including <a href="/massachusetts/framingham/siding">Framingham</a>, <a href="/massachusetts/natick/siding">Natick</a>, <a href="/massachusetts/newton/siding">Newton</a>, and <a href="/massachusetts/worcester/siding">Worcester</a>.</p>
 
-      <p>The most important factor in either case is professional installation. Improperly installed siding, regardless of the material, will fail prematurely. Many homeowners also pair their siding project with <a href="/services/windows-doors">window and door upgrades</a> or <a href="/services/carpentry">carpentry repairs</a> for a complete home transformation. Call Alfa Construction Inc at <strong>(508) 596-3750</strong> for a free consultation on siding options for your home. As a licensed Massachusetts contractor (#192348), we stand behind every installation with a comprehensive warranty.</p>
+      <p>The most important factor in either case is professional installation. Improperly installed siding, regardless of the material, will fail prematurely. Many homeowners also pair their siding project with <a href="/services/windows-doors">window and door upgrades</a> or <a href="/services/carpentry">carpentry repairs</a> for a complete home transformation. Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free consultation on siding options for your home. As a licensed Massachusetts contractor (#192348), we stand behind every installation with a comprehensive warranty.</p>
     `,
     date: "2025-02-10",
     author: "Alfa Construction Team",
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Professional Carpentry Repair from Alfa Construction Inc</h2>
       <p>At Alfa Construction Inc, we don't just patch over problems. Our <a href="/services/carpentry">expert carpenters</a> carefully remove damaged trim, inspect the underlying structure for hidden damage, and install new trim using materials chosen to withstand New England's demanding climate. We offer both traditional wood trim and modern composite alternatives like Azek and PVC that resist rot and insects entirely. We serve homeowners across Massachusetts including <a href="/massachusetts/framingham/carpentry">Framingham</a>, <a href="/massachusetts/natick/carpentry">Natick</a>, <a href="/massachusetts/wellesley/carpentry">Wellesley</a>, and <a href="/massachusetts/worcester/carpentry">Worcester</a>.</p>
 
-      <p>Many homeowners combine trim repair with <a href="/services/siding">siding upgrades</a> for a complete exterior refresh. Don't wait until winter storms expose your home's vulnerabilities. Call Alfa Construction Inc at <strong>(508) 596-3750</strong> to schedule a pre-winter trim inspection. As a licensed Massachusetts contractor (#192348), we provide honest assessments and quality craftsmanship that protects your home for years to come.</p>
+      <p>Many homeowners combine trim repair with <a href="/services/siding">siding upgrades</a> for a complete exterior refresh. Don't wait until winter storms expose your home's vulnerabilities. Call Alfa Construction Inc at <strong>(508) 590-9193</strong> to schedule a pre-winter trim inspection. As a licensed Massachusetts contractor (#192348), we provide honest assessments and quality craftsmanship that protects your home for years to come.</p>
     `,
     date: "2024-11-05",
     author: "Alfa Construction Team",
@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Choose a Contractor You Can Trust</h2>
       <p>At Alfa Construction Inc, we are proud to be a fully licensed and insured Massachusetts contractor. Our team brings years of experience in <a href="/services/siding">siding installation</a>, <a href="/services/carpentry">carpentry repair</a>, and <a href="/services/remodeling">remodeling</a> to every project, and we are committed to transparency, quality, and customer satisfaction. We serve homeowners in <a href="/massachusetts/framingham">Framingham</a>, <a href="/massachusetts/natick">Natick</a>, <a href="/massachusetts/worcester">Worcester</a>, <a href="/massachusetts/brookline">Brookline</a>, and <a href="/massachusetts/cambridge">Cambridge</a> — plus 100+ other Massachusetts communities. New England weather demands quality workmanship, and our clients throughout MetroWest trust us to deliver exactly that.</p>
 
-      <p>Ready to start your <a href="/services/remodeling">home improvement project</a> the right way? Call Alfa Construction Inc at <strong>(508) 596-3750</strong> for a free estimate. We'll provide proof of our licensing and insurance upfront, so you can move forward with confidence.</p>
+      <p>Ready to start your <a href="/services/remodeling">home improvement project</a> the right way? Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free estimate. We'll provide proof of our licensing and insurance upfront, so you can move forward with confidence.</p>
     `,
     date: "2024-10-15",
     author: "Alfa Construction Team",
@@ -249,7 +249,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Get a Free Siding Estimate from Alfa Construction Inc</h2>
       <p>At Alfa Construction Inc, we provide detailed, transparent estimates for every <a href="/services/siding">siding installation project</a>. We walk you through the material options, explain the scope of work, and give you an honest price with no hidden fees. Our team has completed hundreds of siding projects across Massachusetts, and we take pride in delivering quality craftsmanship that stands up to New England weather year after year. Check out our <a href="/projects">completed projects</a> to see our work firsthand.</p>
 
-      <p>Ready to find out what your siding project will cost? <a href="/contact">Contact Alfa Construction Inc</a> today or call us at <strong>(508) 596-3750</strong> for a free, no-obligation estimate. As a licensed Massachusetts contractor (#192348), we are committed to fair pricing and exceptional results.</p>
+      <p>Ready to find out what your siding project will cost? <a href="/contact">Contact Alfa Construction Inc</a> today or call us at <strong>(508) 590-9193</strong> for a free, no-obligation estimate. As a licensed Massachusetts contractor (#192348), we are committed to fair pricing and exceptional results.</p>
     `,
     date: "2025-03-15",
     author: "Alfa Construction Inc",
@@ -312,7 +312,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Protect Your Massachusetts Home with New Siding</h2>
       <p>If you have noticed any of these warning signs on your home, do not wait for the problem to worsen. Water damage behind siding can escalate quickly, especially during Massachusetts winters. <a href="/contact">Contact Alfa Construction Inc</a> today for a thorough siding inspection and a free estimate on <a href="/services/siding">professional siding replacement</a>. Our experienced crew handles every step of the process, from removing old siding to installing a proper weather barrier and finishing with your choice of premium siding materials. View our <a href="/projects">past projects</a> to see the transformations we have delivered for homeowners across Massachusetts.</p>
 
-      <p>Call us at <strong>(508) 596-3750</strong> to schedule your free inspection. As a licensed Massachusetts contractor (#192348), we stand behind every project with quality you can trust.</p>
+      <p>Call us at <strong>(508) 590-9193</strong> to schedule your free inspection. As a licensed Massachusetts contractor (#192348), we stand behind every project with quality you can trust.</p>
     `,
     date: "2025-02-28",
     author: "Alfa Construction Inc",
@@ -440,7 +440,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Making Your Decision</h2>
       <p>The best siding material for your Massachusetts home depends on your budget, aesthetic preferences, maintenance tolerance, and how long you plan to stay in the home. At Alfa Construction Inc, our <a href="/services/siding">siding installation team</a> works with every material listed here and can help you evaluate the best fit for your specific situation. We are happy to show you samples, discuss the pros and cons in detail, and provide a comprehensive estimate.</p>
 
-      <p>Browse our <a href="/projects">completed projects gallery</a> to see examples of each material installed on Massachusetts homes. When you are ready to move forward, <a href="/contact">contact us</a> or call <strong>(508) 596-3750</strong> for a free consultation. As a licensed Massachusetts contractor (#192348), Alfa Construction Inc delivers expert installation that maximizes the performance and lifespan of whatever siding material you choose.</p>
+      <p>Browse our <a href="/projects">completed projects gallery</a> to see examples of each material installed on Massachusetts homes. When you are ready to move forward, <a href="/contact">contact us</a> or call <strong>(508) 590-9193</strong> for a free consultation. As a licensed Massachusetts contractor (#192348), Alfa Construction Inc delivers expert installation that maximizes the performance and lifespan of whatever siding material you choose.</p>
     `,
     date: "2025-02-10",
     author: "Alfa Construction Inc",
@@ -523,7 +523,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Get Started on Your Commercial Siding Project</h2>
       <p>If your commercial property in Massachusetts needs new siding, Alfa Construction Inc is ready to help. We offer free on-site evaluations, detailed proposals, and flexible scheduling to work around your business operations. Explore our <a href="/services/siding">siding installation services</a> and view examples of our work in the <a href="/projects">projects gallery</a>.</p>
 
-      <p><a href="/contact">Contact us today</a> or call <strong>(508) 596-3750</strong> to discuss your commercial siding project. We serve businesses throughout Massachusetts and are committed to delivering professional-grade results on every project.</p>
+      <p><a href="/contact">Contact us today</a> or call <strong>(508) 590-9193</strong> to discuss your commercial siding project. We serve businesses throughout Massachusetts and are committed to delivering professional-grade results on every project.</p>
     `,
     date: "2025-01-20",
     author: "Alfa Construction Inc",
@@ -598,7 +598,7 @@ export const blogPosts: BlogPost[] = [
       <p>For a typical 2,000-square-foot Massachusetts home, the entire siding installation process takes approximately <strong>10 to 20 working days</strong> from start to finish. This includes removal, preparation, installation, trim work, and cleanup. Weather delays can extend the timeline, particularly during the spring and fall rainy seasons. We keep homeowners informed throughout the process and adjust the schedule as needed to ensure quality is never compromised for speed.</p>
 
       <h2>Ready to Start Your Siding Project?</h2>
-      <p>Now that you understand what goes into a professional siding installation, you can appreciate the importance of hiring experienced, licensed contractors who follow a disciplined process. At Alfa Construction Inc, every project follows the steps outlined above, ensuring your new <a href="/services/siding">siding is installed correctly</a> and built to last. Browse our <a href="/projects">project gallery</a> to see our completed work, then <a href="/contact">contact us</a> or call <strong>(508) 596-3750</strong> for a free estimate on your Massachusetts siding project.</p>
+      <p>Now that you understand what goes into a professional siding installation, you can appreciate the importance of hiring experienced, licensed contractors who follow a disciplined process. At Alfa Construction Inc, every project follows the steps outlined above, ensuring your new <a href="/services/siding">siding is installed correctly</a> and built to last. Browse our <a href="/projects">project gallery</a> to see our completed work, then <a href="/contact">contact us</a> or call <strong>(508) 590-9193</strong> for a free estimate on your Massachusetts siding project.</p>
     `,
     date: "2025-01-05",
     author: "Alfa Construction Inc",

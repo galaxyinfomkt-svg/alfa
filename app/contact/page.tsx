@@ -6,7 +6,7 @@ import GoogleMap from "@/components/GoogleMap";
 export const metadata: Metadata = {
   title: "Contact Us | Get a Free Estimate",
   description:
-    "Contact Alfa Construction Inc for a free estimate on siding installation, windows, carpentry, or remodeling in Massachusetts. Call (508) 596-3750 or fill out our form.",
+    "Contact Alfa Construction Inc for a free estimate on siding installation, windows, carpentry, or remodeling in Massachusetts. Call (508) 590-9193 or fill out our form.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/contact" },
 };
 

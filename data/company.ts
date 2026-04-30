@@ -1,9 +1,9 @@
 export const company = {
   name: "Alfa Construction Inc",
   tradeName: "Alfa Construction",
-  phone: "(508) 596-3750",
-  phoneRaw: "+15085963750",
-  phoneTel: "tel:+15085963750",
+  phone: "(508) 590-9193",
+  phoneRaw: "+15085909193",
+  phoneTel: "tel:+15085909193",
   email: "info@alfapaintingcarpentry.com",
   website: "https://alfapaintingcarpentry.com",
   address: {
@@ -72,7 +72,7 @@ export const localBusinessSchema = {
   alternateName: ["Alfa Construction", "Alfa Siding", "Alfa Painting & Carpentry", "Alfa Construction Inc"],
   description:
     "Expert siding installation, window & door installation, carpentry and home remodeling services in Massachusetts. Licensed & insured contractor with 18+ years of experience serving 100+ cities.",
-  telephone: "+15085963750",
+  telephone: "+15085909193",
   email: "info@alfapaintingcarpentry.com",
   url: BASE_URL,
   logo: {
@@ -241,7 +241,7 @@ export const contractorSchema = {
   description:
     "Licensed siding installation, window & door installation, carpentry and home remodeling contractor serving Massachusetts. Expert craftsmanship with 18+ years of experience.",
   url: BASE_URL,
-  telephone: "+15085963750",
+  telephone: "+15085909193",
   email: "info@alfapaintingcarpentry.com",
   address: {
     "@type": "PostalAddress",

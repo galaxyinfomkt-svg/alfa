@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Alfa Construction Inc",
   },
   description:
-    "Top-rated siding installation, window & door installation, carpentry and home remodeling in Massachusetts. Licensed & insured. 18+ years experience. 5-star rated. Free estimates. Call (508) 596-3750.",
+    "Top-rated siding installation, window & door installation, carpentry and home remodeling in Massachusetts. Licensed & insured. 18+ years experience. 5-star rated. Free estimates. Call (508) 590-9193.",
   keywords: [
     "siding installation Massachusetts",
     "siding contractor near me MA",

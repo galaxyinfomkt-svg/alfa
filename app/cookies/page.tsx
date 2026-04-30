@@ -318,7 +318,7 @@ export default function CookiePolicyPage() {
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   50 Mechanic St, Bellingham, MA 02019<br />
-                  Local Phone: (508) 596-3750<br />
+                  Local Phone: (508) 590-9193<br />
                   Email: info@alfapaintingcarpentry.com<br />
                   Website: alfapaintingcarpentry.com
                 </p>

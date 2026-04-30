@@ -133,7 +133,7 @@ export default function TermsPage() {
               <ul className="list-disc list-outside ml-6 space-y-2 mt-2">
                 <li>
                   You may receive SMS related to your project (estimates,
-                  scheduling, updates) from <strong>(508) 596-3750</strong>.
+                  scheduling, updates) from <strong>(508) 590-9193</strong>.
                 </li>
                 <li>
                   Message frequency varies. Typical volume is a few messages
@@ -271,9 +271,9 @@ export default function TermsPage() {
                   📞 <strong>Phone:</strong>{" "}
                   <a
                     className="text-alfa-gold-light hover:text-alfa-gold"
-                    href="tel:+15085963750"
+                    href="tel:+15085909193"
                   >
-                    (508) 596-3750
+                    (508) 590-9193
                   </a>
                 </li>
                 <li>
@@ -287,7 +287,7 @@ export default function TermsPage() {
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   50 Mechanic St, Bellingham, MA 02019<br />
-                  Local Phone: (508) 596-3750<br />
+                  Local Phone: (508) 590-9193<br />
                   Email: info@alfapaintingcarpentry.com<br />
                   Website: alfapaintingcarpentry.com
                 </p>

@@ -259,7 +259,7 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Reply HELP</strong> for assistance, or contact us
-                  directly at (508) 596-3750 or info@alfapaintingcarpentry.com.
+                  directly at (508) 590-9193 or info@alfapaintingcarpentry.com.
                 </li>
                 <li>
                   <strong>Mobile information will not be shared</strong> with
@@ -443,9 +443,9 @@ export default function PrivacyPolicyPage() {
                   📞 <strong>Phone:</strong>{" "}
                   <a
                     className="text-alfa-gold-light hover:text-alfa-gold"
-                    href="tel:+15085963750"
+                    href="tel:+15085909193"
                   >
-                    (508) 596-3750
+                    (508) 590-9193
                   </a>
                 </li>
               </ul>
@@ -454,7 +454,7 @@ export default function PrivacyPolicyPage() {
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   50 Mechanic St, Bellingham, MA 02019<br />
-                  Local Phone: (508) 596-3750<br />
+                  Local Phone: (508) 590-9193<br />
                   Email: info@alfapaintingcarpentry.com<br />
                   Website: alfapaintingcarpentry.com
                 </p>

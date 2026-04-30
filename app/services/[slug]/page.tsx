@@ -30,7 +30,7 @@ const servicesData: Record<string, {
     shortName: "Carpentry",
     heroImage: "/images/deck-carpentry-staircase-railing-massachusetts.png",
     metaTitle: "Carpentry & Trim Work Services in Massachusetts",
-    metaDescription: "Expert carpentry and trim work in Massachusetts. Trim replacement, door installation, fine woodwork. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
+    metaDescription: "Expert carpentry and trim work in Massachusetts. Trim replacement, door installation, fine woodwork. Licensed & insured. 18+ years experience. Free estimates. Call (508) 590-9193.",
     headline: "Expert Carpentry & Trim Work in Massachusetts",
     subheadline: "From rotten trim replacement to precision door installation, Alfa Construction's carpenters deliver meticulous craftsmanship that restores and enhances your home's character.",
     description: [
@@ -74,7 +74,7 @@ const servicesData: Record<string, {
     shortName: "Siding",
     heroImage: "/images/commercial-siding-installation-massachusetts.png",
     metaTitle: "Siding Installation & Repair in Massachusetts | Hardie Plank Experts",
-    metaDescription: "Professional siding installation and repair in Massachusetts. Hardie Plank, vinyl siding specialists. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
+    metaDescription: "Professional siding installation and repair in Massachusetts. Hardie Plank, vinyl siding specialists. Licensed & insured. 18+ years experience. Free estimates. Call (508) 590-9193.",
     headline: "Professional Siding Installation & Repair in Massachusetts",
     subheadline: "Protect your home from New England's harshest weather with premium siding from Alfa Construction. Specializing in Hardie Plank fiber cement and vinyl siding installation.",
     description: [
@@ -118,7 +118,7 @@ const servicesData: Record<string, {
     shortName: "Windows & Doors",
     heroImage: "/images/siding-window-installation-before-massachusetts.jpg",
     metaTitle: "Window & Door Installation in Massachusetts",
-    metaDescription: "Professional window and door installation in Massachusetts. Energy-efficient upgrades, precise fitting. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
+    metaDescription: "Professional window and door installation in Massachusetts. Energy-efficient upgrades, precise fitting. Licensed & insured. 18+ years experience. Free estimates. Call (508) 590-9193.",
     headline: "Professional Window & Door Installation in Massachusetts",
     subheadline: "Upgrade your home's comfort, security, and energy efficiency with precision window and door installation from Alfa Construction.",
     description: [
@@ -162,7 +162,7 @@ const servicesData: Record<string, {
     shortName: "Remodeling",
     heroImage: "/images/new-construction-framing-zip-system-massachusetts.jpg",
     metaTitle: "Home Remodeling & Renovation in Massachusetts",
-    metaDescription: "Complete home remodeling and renovation in Massachusetts. Kitchen, bathroom, full-home renovations. Licensed & insured. 18+ years experience. Free estimates. Call (508) 596-3750.",
+    metaDescription: "Complete home remodeling and renovation in Massachusetts. Kitchen, bathroom, full-home renovations. Licensed & insured. 18+ years experience. Free estimates. Call (508) 590-9193.",
     headline: "Complete Home Remodeling & Renovation in Massachusetts",
     subheadline: "Transform your living spaces with Alfa Construction's full-service remodeling. From kitchens to bathrooms, we handle every detail to increase your home's value and livability.",
     description: [
@@ -206,7 +206,7 @@ const servicesData: Record<string, {
     shortName: "Hardie Plank",
     heroImage: "/images/dark-shake-siding-side-view-ma.jpg",
     metaTitle: "Hardie Plank Siding Installation Massachusetts | Alfa Construction",
-    metaDescription: "Professional James Hardie fiber cement siding installation in Massachusetts. Durable, fire-resistant Hardie Plank siding with 30-year warranty. Licensed & insured. Free estimates. Call (508) 596-3750.",
+    metaDescription: "Professional James Hardie fiber cement siding installation in Massachusetts. Durable, fire-resistant Hardie Plank siding with 30-year warranty. Licensed & insured. Free estimates. Call (508) 590-9193.",
     headline: "James Hardie Fiber Cement Siding Installation in Massachusetts",
     subheadline: "Upgrade to the gold standard in siding. James Hardie fiber cement siding delivers unmatched durability, beauty, and protection for New England homes.",
     description: [
@@ -250,7 +250,7 @@ const servicesData: Record<string, {
     shortName: "Vinyl Siding",
     heroImage: "/images/green-siding-exterior-completed-ma.jpg",
     metaTitle: "Vinyl Siding Installation Massachusetts | Alfa Construction",
-    metaDescription: "Professional vinyl siding installation in Massachusetts. Affordable, low-maintenance vinyl siding in a wide variety of colors and styles. Licensed & insured. Free estimates. Call (508) 596-3750.",
+    metaDescription: "Professional vinyl siding installation in Massachusetts. Affordable, low-maintenance vinyl siding in a wide variety of colors and styles. Licensed & insured. Free estimates. Call (508) 590-9193.",
     headline: "Professional Vinyl Siding Installation in Massachusetts",
     subheadline: "Get a fresh, beautiful exterior at an affordable price. Vinyl siding offers outstanding value, low maintenance, and endless style options for Massachusetts homeowners.",
     description: [
@@ -294,7 +294,7 @@ const servicesData: Record<string, {
     shortName: "Cedar Shake",
     heroImage: "/images/dark-shake-siding-renovation-after-ma.jpg",
     metaTitle: "Cedar Shake Siding Installation Massachusetts | Alfa Construction",
-    metaDescription: "Expert cedar shake and shingle siding installation in Massachusetts. Authentic natural beauty with timeless New England curb appeal. Licensed & insured. Free estimates. Call (508) 596-3750.",
+    metaDescription: "Expert cedar shake and shingle siding installation in Massachusetts. Authentic natural beauty with timeless New England curb appeal. Licensed & insured. Free estimates. Call (508) 590-9193.",
     headline: "Cedar Shake & Shingle Siding Installation in Massachusetts",
     subheadline: "Nothing matches the warmth and character of real cedar. Bring timeless New England charm to your home with hand-selected cedar shake and shingle siding from Alfa Construction.",
     description: [
