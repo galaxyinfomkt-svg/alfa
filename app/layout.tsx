@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LegalStrip from "@/components/LegalStrip";
 import PhoneButton from "@/components/PhoneButton";
 import DeferredScripts from "@/components/DeferredScripts";
 import { localBusinessSchema, websiteSchema, contractorSchema, imageGallerySchema } from "@/data/company";
@@ -160,6 +161,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-black text-gray-300">
         <Header />
         <main className="min-h-screen">{children}</main>
+        <LegalStrip />
         <Footer />
         <PhoneButton />
 
