@@ -94,6 +94,8 @@ export default function Footer() {
               <li><Link href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Projects</Link></li>
               <li><Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Contact</Link></li>
               <li><Link href="/blog" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Blog</Link></li>
+              <li><Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Terms &amp; Conditions</Link></li>
             </ul>
           </div>
 
@@ -161,10 +163,11 @@ export default function Footer() {
               Galaxy IT MKT
             </a>
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-wrap justify-center">
             <Link href="/about" className="hover:text-alfa-gold transition-colors">About</Link>
             <Link href="/contact" className="hover:text-alfa-gold transition-colors">Contact</Link>
-            <Link href="/blog" className="hover:text-alfa-gold transition-colors">Blog</Link>
+            <Link href="/privacy" className="hover:text-alfa-gold transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-alfa-gold transition-colors">Terms</Link>
           </div>
         </div>
       </div>
