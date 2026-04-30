@@ -291,6 +291,21 @@ export default function TermsPage() {
                   Email: info@alfapaintingcarpentry.com<br />
                   Website: alfapaintingcarpentry.com
                 </p>
+                <p className="mt-3 flex gap-4 justify-center">
+                  <a
+                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    href="/privacy"
+                  >
+                    PRIVACY POLICY
+                  </a>
+                  <span>·</span>
+                  <a
+                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    href="/cookies"
+                  >
+                    COOKIE POLICY
+                  </a>
+                </p>
               </div>
             </Section>
           </div>

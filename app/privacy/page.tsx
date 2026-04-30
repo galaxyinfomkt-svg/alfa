@@ -77,6 +77,23 @@ export default function PrivacyPolicyPage() {
                 changes, so please check the Privacy Policy periodically for
                 updates.
               </p>
+              <p>
+                This Privacy Policy is subject to our{" "}
+                <a
+                  className="text-alfa-gold-light hover:text-alfa-gold underline"
+                  href="/terms"
+                >
+                  Terms and Conditions
+                </a>
+                . For information on cookies and tracking technologies, see our{" "}
+                <a
+                  className="text-alfa-gold-light hover:text-alfa-gold underline"
+                  href="/cookies"
+                >
+                  Cookie Policy
+                </a>
+                .
+              </p>
             </Section>
 
             <Section title="2. Interpretation and Definitions">
@@ -198,6 +215,16 @@ export default function PrivacyPolicyPage() {
                 We do <strong>NOT</strong> retain Personal Information to
                 develop, improve, or train generalized AI or machine learning
                 models, including user data provided via third-party APIs.
+              </p>
+              <p>
+                For more details on the cookies we use, see our{" "}
+                <a
+                  className="text-alfa-gold-light hover:text-alfa-gold underline"
+                  href="/cookies"
+                >
+                  Cookie Policy
+                </a>
+                .
               </p>
             </Section>
 
@@ -430,6 +457,21 @@ export default function PrivacyPolicyPage() {
                   Local Phone: (508) 596-3750<br />
                   Email: info@alfapaintingcarpentry.com<br />
                   Website: alfapaintingcarpentry.com
+                </p>
+                <p className="mt-3 flex gap-4 justify-center">
+                  <a
+                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    href="/terms"
+                  >
+                    TERMS AND CONDITIONS
+                  </a>
+                  <span>·</span>
+                  <a
+                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    href="/cookies"
+                  >
+                    COOKIE POLICY
+                  </a>
                 </p>
               </div>
             </Section>

@@ -106,6 +106,12 @@ export default function Footer() {
                   Terms &amp; Conditions
                 </Link>
               </li>
+              <li>
+                <Link href="/cookies" className="text-sm text-alfa-gold hover:text-alfa-gold-light font-semibold transition-colors duration-300 flex items-center gap-2">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9a9 9 0 016.94-8.78c.42-.1.84.26.74.68a3.5 3.5 0 003.39 4.32 3.5 3.5 0 003.5-2.32c.1-.42.59-.62.95-.38A8.97 8.97 0 0121 12z" /><circle cx="9" cy="13" r=".8" fill="currentColor"/><circle cx="13" cy="9" r=".8" fill="currentColor"/><circle cx="15" cy="14" r=".8" fill="currentColor"/></svg>
+                  Cookie Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -190,6 +196,13 @@ export default function Footer() {
               className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
             >
               Terms &amp; Conditions
+            </Link>
+            <span className="text-gray-700">|</span>
+            <Link
+              href="/cookies"
+              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
+            >
+              Cookie Policy
             </Link>
           </div>
         </div>
