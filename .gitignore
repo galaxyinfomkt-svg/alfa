@@ -40,3 +40,11 @@ next-env.d.ts
 
 .vercel
 .env*.local
+
+# Working artifacts (not deployed)
+/.agents/
+/.claude/
+/.continue/
+/social/
+skills-lock.json
+**/Fotos enviadas no Whats*/
