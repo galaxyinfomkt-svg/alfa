@@ -163,10 +163,10 @@ export default function RootLayout({
         <Footer />
         <PhoneButton />
 
-        {/* Chat Widget mount point */}
+        {/* Chat Widget mount point — A2P 10DLC registered widget */}
         <div
           data-chat-widget=""
-          data-widget-id="6763359a5436802950cda164"
+          data-widget-id="69f3784d509a853ee1db8690"
           data-location-id="BlgWjOKxk32P6dyUTDjY"
         />
 

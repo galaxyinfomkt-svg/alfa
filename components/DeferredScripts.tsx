@@ -17,11 +17,12 @@ export default function DeferredScripts() {
       if (loaded.current) return;
       loaded.current = true;
 
-      // Chat widget loader
+      // Chat widget loader (A2P 10DLC registered widget — Trust Center)
       const chat = document.createElement("script");
-      chat.src = "https://beta.leadconnectorhq.com/loader.js";
-      chat.setAttribute("data-resources-url", "https://beta.leadconnectorhq.com/chat-widget/loader.js");
-      chat.setAttribute("data-widget-id", "6763359a5436802950cda164");
+      chat.src = "https://widgets.leadconnectorhq.com/loader.js";
+      chat.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
+      chat.setAttribute("data-widget-id", "69f3784d509a853ee1db8690");
+      chat.setAttribute("data-source", "WEB_USER");
       document.body.appendChild(chat);
 
       // Reviews widget script (handles iframe auto-resize)
