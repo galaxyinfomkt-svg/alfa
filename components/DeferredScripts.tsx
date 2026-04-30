@@ -21,7 +21,7 @@ export default function DeferredScripts() {
       const chat = document.createElement("script");
       chat.src = "https://widgets.leadconnectorhq.com/loader.js";
       chat.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
-      chat.setAttribute("data-widget-id", "69f3784d509a853ee1db8690");
+      chat.setAttribute("data-widget-id", "69f3d1374a590d6534115bf3");
       chat.setAttribute("data-source", "WEB_USER");
       document.body.appendChild(chat);
 
