@@ -94,8 +94,18 @@ export default function Footer() {
               <li><Link href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Projects</Link></li>
               <li><Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Contact</Link></li>
               <li><Link href="/blog" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Blog</Link></li>
-              <li><Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors duration-300">Terms &amp; Conditions</Link></li>
+              <li className="pt-3 mt-2 border-t border-white/10">
+                <Link href="/privacy" className="text-sm text-alfa-gold hover:text-alfa-gold-light font-semibold transition-colors duration-300 flex items-center gap-2">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-sm text-alfa-gold hover:text-alfa-gold-light font-semibold transition-colors duration-300 flex items-center gap-2">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                  Terms &amp; Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -163,11 +173,24 @@ export default function Footer() {
               Galaxy IT MKT
             </a>
           </p>
-          <div className="flex gap-6 flex-wrap justify-center">
+          <div className="flex gap-5 flex-wrap justify-center items-center">
             <Link href="/about" className="hover:text-alfa-gold transition-colors">About</Link>
+            <span className="text-gray-700">|</span>
             <Link href="/contact" className="hover:text-alfa-gold transition-colors">Contact</Link>
-            <Link href="/privacy" className="hover:text-alfa-gold transition-colors">Privacy</Link>
-            <Link href="/terms" className="hover:text-alfa-gold transition-colors">Terms</Link>
+            <span className="text-gray-700">|</span>
+            <Link
+              href="/privacy"
+              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-gray-700">|</span>
+            <Link
+              href="/terms"
+              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
+            >
+              Terms &amp; Conditions
+            </Link>
           </div>
         </div>
       </div>
