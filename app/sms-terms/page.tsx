@@ -148,7 +148,7 @@ export default function SmsTermsPage() {
                 <li>Replying <strong className="text-alfa-gold">STOP</strong> to any SMS we send</li>
                 <li>Replying UNSUBSCRIBE, CANCEL, QUIT, END, or OPT OUT (also accepted)</li>
                 <li>Calling (508) 590-9193 and asking to be removed</li>
-                <li>Emailing info@alfapaintingcarpentry.com with subject line "UNSUBSCRIBE"</li>
+                <li>Emailing info@alfapaintingcarpentry.com with subject line &ldquo;UNSUBSCRIBE&rdquo;</li>
               </ul>
               <p className="mt-3">
                 You will receive one final confirmation SMS confirming the
