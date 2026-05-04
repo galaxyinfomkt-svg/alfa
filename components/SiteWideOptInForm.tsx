@@ -3,12 +3,14 @@
 import { usePathname } from "next/navigation";
 import FormEmbed from "./FormEmbed";
 
-const HIDE_ON = ["/contact", "/sms-opt-in"];
+const HIDE_EXACT = ["/", "/contact", "/sms-opt-in"];
+const HIDE_PREFIXES = ["/contact", "/sms-opt-in", "/services", "/massachusetts"];
 
 export default function SiteWideOptInForm() {
   const pathname = usePathname();
-  if (pathname && HIDE_ON.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
-    return null;
+  if (pathname) {
+    if (HIDE_EXACT.includes(pathname)) return null;
+    if (HIDE_PREFIXES.some((p) => pathname.startsWith(p + "/"))) return null;
   }
 
   return (
