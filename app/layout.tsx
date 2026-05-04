@@ -170,7 +170,7 @@ export default function RootLayout({
         {/* Chat Widget mount point — A2P 10DLC registered widget */}
         <div
           data-chat-widget=""
-          data-widget-id="69f3d1374a590d6534115bf3"
+          data-widget-id="69f8e9cad86c7d56cea2f255"
           data-location-id="BlgWjOKxk32P6dyUTDjY"
         />
 

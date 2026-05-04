@@ -12,18 +12,15 @@ import { usePathname } from "next/navigation";
  * Checklist requires: "no forms collecting phone numbers or SMS opt-in
  * consent exist on any page where the chat widget is embedded".
  *
- * The chat widget is registered with the carrier as the SMS opt-in source.
- * Pages with the GHL FormEmbed (which collects phone + SMS consent) hide the
- * widget so the two opt-in methods never coexist on the same page. Both
- * methods remain active on the site, just on different page sets.
+ * The SMS opt-in form (FormEmbed / SiteWideOptInForm) is now mounted
+ * site-wide via app/layout.tsx, so the chat widget is suppressed on every
+ * page to satisfy the carrier's one-opt-in-per-page rule. The widget
+ * remains the registered carrier SMS source but only via internal
+ * (LeadConnector dashboard) channels — not the public website.
  */
 
-const PAGES_WITH_FORM: string[] = ["/", "/contact"];
-const PREFIXES_WITH_FORM: string[] = ["/services", "/massachusetts"];
-
-function pageHasForm(pathname: string): boolean {
-  if (PAGES_WITH_FORM.includes(pathname)) return true;
-  return PREFIXES_WITH_FORM.some((p) => pathname === p || pathname.startsWith(`${p}/`));
+function pageHasForm(_pathname: string): boolean {
+  return true;
 }
 
 export default function DeferredScripts() {
@@ -51,7 +48,7 @@ export default function DeferredScripts() {
         const chat = document.createElement("script");
         chat.src = "https://widgets.leadconnectorhq.com/loader.js";
         chat.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
-        chat.setAttribute("data-widget-id", "69f3d1374a590d6534115bf3");
+        chat.setAttribute("data-widget-id", "69f8e9cad86c7d56cea2f255");
         chat.setAttribute("data-source", "WEB_USER");
         document.body.appendChild(chat);
       }
