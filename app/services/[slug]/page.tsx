@@ -6,7 +6,7 @@ import { company, breadcrumbSchema, faqSchema, serviceSchema } from "@/data/comp
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
-import FormEmbed from "@/components/FormEmbed";
+import ChatPromptCard from "@/components/ChatPromptCard";
 import { getAllCitySlugs, getCityBySlug } from "@/data/cities";
 
 const servicesData: Record<string, {
@@ -454,7 +454,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             {/* Right Side — Form */}
             <div>
-              <FormEmbed />
+              <ChatPromptCard />
             </div>
           </div>
         </div>

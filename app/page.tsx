@@ -6,7 +6,7 @@ import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
-import FormEmbed from "@/components/FormEmbed";
+import ChatPromptCard from "@/components/ChatPromptCard";
 
 const services = [
   {
@@ -117,7 +117,7 @@ export default function HomePage() {
 
             {/* Right Side — Contact Form */}
             <div>
-              <FormEmbed />
+              <ChatPromptCard />
             </div>
           </div>
         </div>

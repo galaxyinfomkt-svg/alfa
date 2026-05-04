@@ -12,15 +12,13 @@ import { usePathname } from "next/navigation";
  * Checklist requires: "no forms collecting phone numbers or SMS opt-in
  * consent exist on any page where the chat widget is embedded".
  *
- * The SMS opt-in form (FormEmbed / SiteWideOptInForm) is now mounted
- * site-wide via app/layout.tsx, so the chat widget is suppressed on every
- * page to satisfy the carrier's one-opt-in-per-page rule. The widget
- * remains the registered carrier SMS source but only via internal
- * (LeadConnector dashboard) channels — not the public website.
+ * The site no longer renders any SMS opt-in form — the chat widget is the
+ * sole public opt-in mechanism, registered as the carrier SMS source.
+ * Therefore the widget is allowed on every page.
  */
 
 function pageHasForm(_pathname: string): boolean {
-  return true;
+  return false;
 }
 
 export default function DeferredScripts() {

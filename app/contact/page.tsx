@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { company, breadcrumbSchema } from "@/data/company";
-import FormEmbed from "@/components/FormEmbed";
+import ChatPromptCard from "@/components/ChatPromptCard";
 import GoogleMap from "@/components/GoogleMap";
 
 export const metadata: Metadata = {
@@ -97,7 +97,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div>
-              <FormEmbed />
+              <ChatPromptCard />
             </div>
           </div>
         </div>

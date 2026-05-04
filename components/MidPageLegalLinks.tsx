@@ -7,7 +7,6 @@ const LINKS = [
   { href: "/terms", label: "Terms & Conditions" },
   { href: "/cookies", label: "Cookie Policy" },
   { href: "/sms-terms", label: "SMS Terms" },
-  { href: "/sms-opt-in", label: "SMS Opt-In" },
 ];
 
 export default function MidPageLegalLinks() {

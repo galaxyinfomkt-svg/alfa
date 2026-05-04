@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import LegalStrip from "@/components/LegalStrip";
 import PhoneButton from "@/components/PhoneButton";
 import DeferredScripts from "@/components/DeferredScripts";
-import SiteWideOptInForm from "@/components/SiteWideOptInForm";
 import MidPageLegalLinks from "@/components/MidPageLegalLinks";
 import { localBusinessSchema, websiteSchema, contractorSchema, imageGallerySchema } from "@/data/company";
 
@@ -164,7 +163,6 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <MidPageLegalLinks />
-        <SiteWideOptInForm />
         <LegalStrip />
         <Footer />
         <PhoneButton />
