@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbSchema } from "@/data/company";
-import A2POptInForm from "@/components/A2POptInForm";
+import FormEmbed from "@/components/FormEmbed";
 
 export const metadata: Metadata = {
   title: "SMS Opt-In | Alfa Construction and Cleaning Service Inc",
@@ -43,7 +43,7 @@ export default function SmsOptInPage() {
           </header>
 
           <div className="bg-alfa-card border border-alfa-border rounded-xl p-2 md:p-4">
-            <A2POptInForm />
+            <FormEmbed />
           </div>
 
           <div className="mt-10 text-sm text-gray-400 leading-relaxed space-y-3">

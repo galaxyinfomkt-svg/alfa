@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import LegalStrip from "@/components/LegalStrip";
 import PhoneButton from "@/components/PhoneButton";
 import DeferredScripts from "@/components/DeferredScripts";
+import SiteWideOptInForm from "@/components/SiteWideOptInForm";
 import { localBusinessSchema, websiteSchema, contractorSchema, imageGallerySchema } from "@/data/company";
 
 const inter = Inter({
@@ -161,6 +162,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-black text-gray-300">
         <Header />
         <main className="min-h-screen">{children}</main>
+        <SiteWideOptInForm />
         <LegalStrip />
         <Footer />
         <PhoneButton />

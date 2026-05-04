@@ -1,12 +1,26 @@
+"use client";
+
+import { useEffect } from "react";
+
 export default function FormEmbed() {
+  useEffect(() => {
+    const existing = document.querySelector(
+      'script[src="https://link.msgsndr.com/js/form_embed.js"]'
+    );
+    if (existing) return;
+
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden rounded-lg bg-white">
       <iframe
-        src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
-        style={{ width: "calc(100% + 20px)", height: 700, border: "none", background: "transparent", colorScheme: "normal" }}
-        allowTransparency={true}
-        scrolling="no"
-        id="inline-PiFH0ELuOmHS9iZhGQ5F"
+        src="https://api.leadconnectorhq.com/widget/form/BJIoAvMzAwM89UYA4woP"
+        style={{ width: "100%", height: 972, border: "none", borderRadius: 8 }}
+        id="inline-BJIoAvMzAwM89UYA4woP"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -14,11 +28,11 @@ export default function FormEmbed() {
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="FORM SITE ALFA"
-        data-height="700"
-        data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
-        data-form-id="PiFH0ELuOmHS9iZhGQ5F"
-        title="FORM SITE ALFA"
+        data-form-name="A2P "
+        data-height="972"
+        data-layout-iframe-id="inline-BJIoAvMzAwM89UYA4woP"
+        data-form-id="BJIoAvMzAwM89UYA4woP"
+        title="A2P SMS Opt-In Consent Form"
       />
     </div>
   );
