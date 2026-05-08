@@ -1,46 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-/**
- * Lead-capture form embed (GHL FORM SITE ALFA · PiFH0ELuOmHS9iZhGQ5F).
- *
- * Wraps the GHL iframe in a premium "estimate card" with gold accent border,
- * soft glow, and a small badge row reinforcing trust signals (Free · Licensed
- * · 18+ Years). The iframe loads on first user interaction (scroll/click/etc)
- * with a shimmer skeleton in the meantime to keep first-paint fast.
- *
- * To style the FORM FIELDS themselves (inside the iframe), paste the custom
- * CSS from social/GHL-FORM-CSS.md into the GHL form editor → Style → Custom
- * CSS.
- */
 export default function FormEmbed() {
-  const [show, setShow] = useState(false);
-  const loaded = useRef(false);
-
   useEffect(() => {
-    if (loaded.current) return;
-
-    const load = () => {
-      if (loaded.current) return;
-      loaded.current = true;
-      setShow(true);
-      cleanup();
-    };
-
-    const events = ["scroll", "click", "touchstart", "mousemove", "keydown"];
-    events.forEach((e) => window.addEventListener(e, load, { passive: true }));
-    const timer = setTimeout(load, 3000);
-
-    const cleanup = () => {
-      events.forEach((e) => window.removeEventListener(e, load));
-      clearTimeout(timer);
-    };
-    return cleanup;
-  }, []);
-
-  useEffect(() => {
-    if (!show) return;
     const scriptId = "ghl-form-embed";
     if (document.getElementById(scriptId)) return;
     const script = document.createElement("script");
@@ -48,7 +11,7 @@ export default function FormEmbed() {
     script.src = "https://link.msgsndr.com/js/form_embed.js";
     script.async = true;
     document.body.appendChild(script);
-  }, [show]);
+  }, []);
 
   return (
     <div className="alfa-form-card relative">
@@ -120,38 +83,33 @@ export default function FormEmbed() {
           </div>
         </div>
 
-        {/* Form / Skeleton */}
+        {/* Form */}
         <div className="relative px-2 pb-2">
-          {show ? (
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
-              style={{
-                width: "calc(100% + 20px)",
-                height: 700,
-                border: "none",
-                background: "transparent",
-                colorScheme: "normal",
-              }}
-              allowTransparency
-              scrolling="no"
-              id="inline-PiFH0ELuOmHS9iZhGQ5F"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="FORM SITE ALFA"
-              data-height="700"
-              data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
-              data-form-id="PiFH0ELuOmHS9iZhGQ5F"
-              title="FORM SITE ALFA"
-              loading="lazy"
-            />
-          ) : (
-            <FormSkeleton />
-          )}
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
+            style={{
+              width: "calc(100% + 20px)",
+              height: 700,
+              border: "none",
+              background: "transparent",
+              colorScheme: "normal",
+            }}
+            allowTransparency
+            scrolling="no"
+            id="inline-PiFH0ELuOmHS9iZhGQ5F"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="FORM SITE ALFA"
+            data-height="700"
+            data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
+            data-form-id="PiFH0ELuOmHS9iZhGQ5F"
+            title="FORM SITE ALFA"
+          />
         </div>
 
         {/* Footer disclaimer */}
@@ -169,45 +127,3 @@ export default function FormEmbed() {
   );
 }
 
-function FormSkeleton() {
-  return (
-    <div
-      className="space-y-4 px-4 py-6"
-      role="status"
-      aria-label="Loading contact form"
-    >
-      <SkelLine width="65%" />
-      <SkelInput />
-      <SkelInput />
-      <div className="grid grid-cols-2 gap-3">
-        <SkelInput />
-        <SkelInput />
-      </div>
-      <SkelInput tall />
-      <div className="h-12 rounded-lg bg-gradient-to-r from-alfa-gold/30 via-alfa-gold/40 to-alfa-gold/30 relative overflow-hidden">
-        <div className="absolute inset-0 alfa-shimmer" />
-      </div>
-    </div>
-  );
-}
-
-function SkelLine({ width = "100%" }: { width?: string }) {
-  return (
-    <div
-      className="h-3.5 rounded bg-white/[0.06] relative overflow-hidden"
-      style={{ width }}
-    >
-      <div className="absolute inset-0 alfa-shimmer" />
-    </div>
-  );
-}
-
-function SkelInput({ tall = false }: { tall?: boolean }) {
-  return (
-    <div
-      className={`${tall ? "h-24" : "h-11"} rounded-lg bg-white/[0.04] border border-white/[0.06] relative overflow-hidden`}
-    >
-      <div className="absolute inset-0 alfa-shimmer" />
-    </div>
-  );
-}
