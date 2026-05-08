@@ -167,6 +167,29 @@ iframe[data-form-id] {
   background: transparent !important;
 }
 
+/* ─── Form skeleton shimmer (estimate card placeholder) ── */
+.alfa-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(184, 150, 62, 0.12) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
+
+/* ─── Form card subtle entrance + hover lift ────────── */
+.alfa-form-card {
+  animation: fade-in-up 0.45s ease-out both;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.alfa-form-card:hover > div:nth-child(2) {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(184, 150, 62, 0.35),
+    0 0 60px rgba(184, 150, 62, 0.08);
+}
+
 /* ─── Prose overrides for dark theme (blog content) ─── */
 .prose { color: #a3a3a3; }
 .prose h2, .prose h3, .prose h4 { color: #ffffff; }

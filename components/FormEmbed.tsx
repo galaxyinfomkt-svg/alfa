@@ -2,6 +2,18 @@
 
 import { useState, useEffect, useRef } from "react";
 
+/**
+ * Lead-capture form embed (GHL FORM SITE ALFA · PiFH0ELuOmHS9iZhGQ5F).
+ *
+ * Wraps the GHL iframe in a premium "estimate card" with gold accent border,
+ * soft glow, and a small badge row reinforcing trust signals (Free · Licensed
+ * · 18+ Years). The iframe loads on first user interaction (scroll/click/etc)
+ * with a shimmer skeleton in the meantime to keep first-paint fast.
+ *
+ * To style the FORM FIELDS themselves (inside the iframe), paste the custom
+ * CSS from social/GHL-FORM-CSS.md into the GHL form editor → Style → Custom
+ * CSS.
+ */
 export default function FormEmbed() {
   const [show, setShow] = useState(false);
   const loaded = useRef(false);
@@ -16,22 +28,17 @@ export default function FormEmbed() {
       cleanup();
     };
 
-    // Load iframe on first user interaction — defers third-party JS
     const events = ["scroll", "click", "touchstart", "mousemove", "keydown"];
-    events.forEach(e => window.addEventListener(e, load, { passive: true }));
-
-    // Fallback: load after 3s even without interaction
+    events.forEach((e) => window.addEventListener(e, load, { passive: true }));
     const timer = setTimeout(load, 3000);
 
     const cleanup = () => {
-      events.forEach(e => window.removeEventListener(e, load));
+      events.forEach((e) => window.removeEventListener(e, load));
       clearTimeout(timer);
     };
-
     return cleanup;
   }, []);
 
-  // Load the GHL form_embed.js script once the form is visible
   useEffect(() => {
     if (!show) return;
     const scriptId = "ghl-form-embed";
@@ -44,40 +51,163 @@ export default function FormEmbed() {
   }, [show]);
 
   return (
-    <div className="w-full overflow-hidden">
-      {show ? (
-        <iframe
-          src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
-          style={{ width: "calc(100% + 20px)", height: 700, border: "none", background: "transparent", colorScheme: "normal" }}
-          allowTransparency={true}
-          scrolling="no"
-          id="inline-PiFH0ELuOmHS9iZhGQ5F"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="FORM SITE ALFA"
-          data-height="700"
-          data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
-          data-form-id="PiFH0ELuOmHS9iZhGQ5F"
-          title="FORM SITE ALFA"
-          loading="lazy"
-        />
-      ) : (
-        <div className="animate-pulse space-y-4 p-6" role="status" aria-label="Loading contact form">
-          <div className="h-6 bg-white/10 rounded w-2/3" />
-          <div className="space-y-3">
-            <div className="h-11 bg-white/[0.06] rounded" />
-            <div className="h-11 bg-white/[0.06] rounded" />
-            <div className="h-11 bg-white/[0.06] rounded" />
-            <div className="h-11 bg-white/[0.06] rounded" />
+    <div className="alfa-form-card relative">
+      {/* Soft gold glow behind the card */}
+      <div
+        aria-hidden
+        className="absolute -inset-1 rounded-2xl opacity-40 blur-xl pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 20%, rgba(184,150,62,.35), transparent 55%), radial-gradient(circle at 80% 90%, rgba(212,170,80,.18), transparent 55%)",
+        }}
+      />
+
+      {/* Card */}
+      <div
+        className="relative rounded-2xl overflow-hidden border border-alfa-gold/25 shadow-2xl shadow-black/50"
+        style={{
+          background:
+            "linear-gradient(160deg, rgba(20,20,20,0.92) 0%, rgba(11,11,11,0.95) 100%)",
+        }}
+      >
+        {/* Gold accent bar at top */}
+        <div className="h-1 w-full bg-gradient-to-r from-alfa-gold-dark via-alfa-gold to-alfa-gold-light" />
+
+        {/* Header */}
+        <div className="px-6 pt-6 pb-2">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-alfa-gold/15 ring-1 ring-alfa-gold/30">
+              <svg className="h-4 w-4 text-alfa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </span>
+            <div>
+              <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-alfa-gold">
+                Free Estimate
+              </p>
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
+                Get your project quoted
+              </h3>
+            </div>
           </div>
-          <div className="h-12 bg-alfa-gold/20 rounded" />
+
+          {/* Trust signals row */}
+          <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-[12px] text-gray-400 mt-3">
+            <span className="inline-flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clipRule="evenodd" />
+              </svg>
+              No pressure
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clipRule="evenodd" />
+              </svg>
+              Licensed &amp; Insured
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clipRule="evenodd" />
+              </svg>
+              18+ Years
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.07 3.29a1 1 0 00.95.69h3.46c.97 0 1.37 1.24.59 1.81l-2.8 2.03a1 1 0 00-.36 1.12l1.07 3.29c.3.92-.76 1.69-1.54 1.12l-2.8-2.03a1 1 0 00-1.18 0l-2.8 2.03c-.78.57-1.84-.2-1.54-1.12l1.07-3.29a1 1 0 00-.36-1.12L2.98 8.72c-.78-.57-.38-1.81.59-1.81h3.46a1 1 0 00.95-.69l1.07-3.29z" />
+              </svg>
+              5.0 · 22 reviews
+            </span>
+          </div>
         </div>
-      )}
+
+        {/* Form / Skeleton */}
+        <div className="relative px-2 pb-2">
+          {show ? (
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
+              style={{
+                width: "calc(100% + 20px)",
+                height: 700,
+                border: "none",
+                background: "transparent",
+                colorScheme: "normal",
+              }}
+              allowTransparency
+              scrolling="no"
+              id="inline-PiFH0ELuOmHS9iZhGQ5F"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="FORM SITE ALFA"
+              data-height="700"
+              data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
+              data-form-id="PiFH0ELuOmHS9iZhGQ5F"
+              title="FORM SITE ALFA"
+              loading="lazy"
+            />
+          ) : (
+            <FormSkeleton />
+          )}
+        </div>
+
+        {/* Footer disclaimer */}
+        <div className="border-t border-white/5 px-6 py-3 text-[11px] text-gray-500 flex items-center justify-between gap-3">
+          <span>By submitting, you agree to our <a className="text-alfa-gold hover:text-alfa-gold-light underline-offset-2 hover:underline" href="/terms">Terms</a> &amp; <a className="text-alfa-gold hover:text-alfa-gold-light underline-offset-2 hover:underline" href="/privacy">Privacy</a>.</span>
+          <span className="hidden sm:inline-flex items-center gap-1 text-gray-500">
+            <svg className="w-3 h-3 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+            </svg>
+            SSL secured
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FormSkeleton() {
+  return (
+    <div
+      className="space-y-4 px-4 py-6"
+      role="status"
+      aria-label="Loading contact form"
+    >
+      <SkelLine width="65%" />
+      <SkelInput />
+      <SkelInput />
+      <div className="grid grid-cols-2 gap-3">
+        <SkelInput />
+        <SkelInput />
+      </div>
+      <SkelInput tall />
+      <div className="h-12 rounded-lg bg-gradient-to-r from-alfa-gold/30 via-alfa-gold/40 to-alfa-gold/30 relative overflow-hidden">
+        <div className="absolute inset-0 alfa-shimmer" />
+      </div>
+    </div>
+  );
+}
+
+function SkelLine({ width = "100%" }: { width?: string }) {
+  return (
+    <div
+      className="h-3.5 rounded bg-white/[0.06] relative overflow-hidden"
+      style={{ width }}
+    >
+      <div className="absolute inset-0 alfa-shimmer" />
+    </div>
+  );
+}
+
+function SkelInput({ tall = false }: { tall?: boolean }) {
+  return (
+    <div
+      className={`${tall ? "h-24" : "h-11"} rounded-lg bg-white/[0.04] border border-white/[0.06] relative overflow-hidden`}
+    >
+      <div className="absolute inset-0 alfa-shimmer" />
     </div>
   );
 }
