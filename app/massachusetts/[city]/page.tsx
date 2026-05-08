@@ -8,7 +8,7 @@ import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
-import ChatPromptCard from "@/components/ChatPromptCard";
+import FormEmbed from "@/components/FormEmbed";
 
 /* ---------- hero image rotation (10 images, varied by city) ---------- */
 
@@ -242,7 +242,7 @@ export default async function CityPage({
 
                 {/* Right Side — Form */}
                 <div>
-                  <ChatPromptCard />
+                  <FormEmbed />
                 </div>
               </div>
             </div>
