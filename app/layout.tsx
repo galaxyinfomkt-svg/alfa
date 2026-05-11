@@ -128,13 +128,14 @@ export default function RootLayout({
         {/* LLMs.txt for AI search engines */}
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM documentation" />
 
-        {/* Preconnect for form/widget resources (resolves DNS + TCP + TLS early) */}
+        {/* Preconnect — max 4 most-critical origins (Lighthouse rule).
+            Form iframe is now lazy-loaded so we only preconnect to the
+            first-paint critical domains. LeadConnector sub-origins resolve
+            via the lazy DNS at iframe-load time. */}
         <link rel="preconnect" href="https://api.leadconnectorhq.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://appcdn.leadconnectorhq.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://stcdn.leadconnectorhq.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://beta.leadconnectorhq.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
-        <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://appcdn.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://stcdn.leadconnectorhq.com" />
+        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
 
         {/* Organization + LocalBusiness Schema */}
         <script

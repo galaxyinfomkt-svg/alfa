@@ -94,7 +94,8 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover"
             priority
-            quality={75}
+            fetchPriority="high"
+            quality={60}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
         </div>
