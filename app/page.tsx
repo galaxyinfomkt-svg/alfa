@@ -192,15 +192,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== SERVICES SECTION ===== */}
-      <section className="py-20 bg-alfa-dark" id="services">
+      {/* ===== SERVICES SECTION (light) ===== */}
+      <section className="py-20 bg-alfa-cream" id="services">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">What We Do</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+            <span className="text-alfa-gold-dark font-semibold text-sm uppercase tracking-wider">What We Do</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-alfa-ink mt-2 mb-4">
               Our Professional Services
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-alfa-ink-muted max-w-2xl mx-auto">
               From siding installation to complete home renovation, Alfa Construction Inc delivers quality craftsmanship backed by {company.experience} years of experience across Massachusetts.
             </p>
           </div>
@@ -209,6 +209,77 @@ export default function HomePage() {
               <ScrollReveal key={service.slug} delay={i * 100}>
                 <ServiceCard {...service} />
               </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== OUR PROCESS (RS-style light section with ghosted numerals) ===== */}
+      <section className="py-20 bg-alfa-cream-soft border-t border-alfa-cream-border" id="process">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <span className="text-alfa-gold-dark font-semibold text-sm uppercase tracking-wider">How We Work</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-alfa-ink mt-2 mb-4">
+              From Free Estimate to <span className="text-alfa-gold">Finished Home</span>
+            </h2>
+            <p className="text-alfa-ink-muted max-w-2xl mx-auto">
+              Every Alfa project follows the same four-step process — no surprises, no hidden change orders.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                num: "01",
+                title: "Free Consultation",
+                body: "Call (508) 590-9193 or fill out the form. Fabio personally walks the project, takes measurements, and discusses material options in English or Portuguese.",
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />),
+              },
+              {
+                num: "02",
+                title: "Detailed Estimate",
+                body: "Within 24 hours, you receive a written estimate itemizing every line — permits, materials, labor, disposal, cleanup. No bundled mystery costs.",
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />),
+              },
+              {
+                num: "03",
+                title: "Expert Installation",
+                body: "Our 18-year crew handles the work — Hardie Plank, vinyl, cedar, windows, carpentry — to manufacturer spec on a 5-7 day timeline for typical exteriors.",
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />),
+              },
+              {
+                num: "04",
+                title: "Final Walkthrough",
+                body: "We walk every detail with you — flashings, trim joints, paint touch-ups, cleanup. Sign-off only when you're satisfied. 1-year workmanship warranty starts here.",
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />),
+              },
+            ].map((step) => (
+              <article
+                key={step.num}
+                className="relative bg-white border border-alfa-cream-border rounded-2xl p-7 hover:border-alfa-gold/40 transition-colors overflow-hidden"
+              >
+                {/* Ghosted numeral — RS signature */}
+                <span
+                  aria-hidden
+                  className="absolute top-2 right-4 text-7xl font-black text-alfa-gold/15 leading-none select-none pointer-events-none"
+                  style={{ fontFeatureSettings: '"tnum"' }}
+                >
+                  {step.num}
+                </span>
+
+                <div className="w-12 h-12 bg-alfa-gold rounded-full flex items-center justify-center mb-5 relative z-10">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {step.icon}
+                  </svg>
+                </div>
+
+                <h3 className="text-lg font-bold text-alfa-ink mb-3 leading-tight relative z-10">
+                  {step.title}
+                </h3>
+                <p className="text-alfa-ink-muted text-sm leading-relaxed relative z-10">
+                  {step.body}
+                </p>
+              </article>
             ))}
           </div>
         </div>
@@ -449,32 +520,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== STATS SECTION ===== */}
-      <section className="py-20 bg-black border-t border-white/5">
+      {/* ===== STATS SECTION (light) ===== */}
+      <section className="py-20 bg-alfa-cream border-t border-alfa-cream-border">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <ScrollReveal delay={0}>
-              <div className="glass-card rounded-2xl p-8">
+              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
                 <p className="text-4xl md:text-5xl font-bold text-gold-gradient">18+</p>
-                <p className="text-gray-400 mt-2 text-sm">Years Experience</p>
+                <p className="text-alfa-ink-muted mt-2 text-sm">Years Experience</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <div className="glass-card rounded-2xl p-8">
+              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
                 <p className="text-4xl md:text-5xl font-bold text-gold-gradient">109+</p>
-                <p className="text-gray-400 mt-2 text-sm">Cities Served</p>
+                <p className="text-alfa-ink-muted mt-2 text-sm">Cities Served</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="glass-card rounded-2xl p-8">
+              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
                 <p className="text-4xl md:text-5xl font-bold text-gold-gradient">500+</p>
-                <p className="text-gray-400 mt-2 text-sm">Projects Completed</p>
+                <p className="text-alfa-ink-muted mt-2 text-sm">Projects Completed</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={300}>
-              <div className="glass-card rounded-2xl p-8">
+              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
                 <p className="text-4xl md:text-5xl font-bold text-gold-gradient">5.0</p>
-                <p className="text-gray-400 mt-2 text-sm">Google Rating</p>
+                <p className="text-alfa-ink-muted mt-2 text-sm">Google Rating</p>
               </div>
             </ScrollReveal>
           </div>
@@ -527,12 +598,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== BLOG SECTION ===== */}
-      <section className="py-20 bg-black border-t border-white/5" id="blog">
+      {/* ===== BLOG SECTION (light) ===== */}
+      <section className="py-20 bg-alfa-cream-soft border-t border-alfa-cream-border" id="blog">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">From Our Blog</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+            <span className="text-alfa-gold-dark font-semibold text-sm uppercase tracking-wider">From Our Blog</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-alfa-ink mt-2 mb-4">
               Homeowner Tips &amp; Insights
             </h2>
           </div>
@@ -592,7 +663,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-white font-semibold hover:text-alfa-gold transition-colors"
+              className="inline-flex items-center gap-2 text-alfa-ink font-semibold hover:text-alfa-gold-dark transition-colors"
             >
               View All Blog Posts
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>

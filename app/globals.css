@@ -12,6 +12,13 @@
   --color-alfa-surface: #161616;
   --color-alfa-border: #1C1C1C;
 
+  /* Light palette (RS-style warm cream — alternating section rhythm) */
+  --color-alfa-cream: #F5EFE0;
+  --color-alfa-cream-soft: #FAF6EB;
+  --color-alfa-cream-border: #E8DEC9;
+  --color-alfa-ink: #0A0908;
+  --color-alfa-ink-muted: #5C5650;
+
   /* Legacy aliases (for city/service pages not fully rewritten) */
   --color-alfa-blue: #B8963E;
   --color-alfa-blue-light: #D4AA50;
