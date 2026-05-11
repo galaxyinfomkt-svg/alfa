@@ -11,14 +11,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Reduce JS bundle: drop unused polyfills + tree-shake imports
-  experimental: {
-    optimizePackageImports: ["lucide-react"],
-  },
-  // Modern JS target — drop Array.at/flat/flatMap polyfills (saves ~12 KiB)
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
-  },
   async headers() {
     return [
       {
