@@ -62,11 +62,8 @@ export default function DeferredScripts() {
         document.body.appendChild(chat);
       }
 
-      // Reviews widget script (handles iframe auto-resize)
-      const reviews = document.createElement("script");
-      reviews.src =
-        "https://reputationhub.site/reputation/assets/review-widget.js";
-      document.body.appendChild(reviews);
+      // ReviewsWidget component owns its own resize-script load now —
+      // it injects via IntersectionObserver when the widget enters view.
 
       cleanup();
     };
