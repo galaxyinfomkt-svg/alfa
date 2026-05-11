@@ -11,8 +11,12 @@ import { localBusinessSchema, websiteSchema, contractorSchema, imageGallerySchem
 
 const inter = Inter({
   subsets: ["latin"],
-  display: "swap",
+  // "optional" gives the browser a 100ms budget to load the font.
+  // After that it falls back to the system font and never swaps in
+  // — eliminates FOIT/FOUT and the layout shift Lighthouse measures.
+  display: "optional",
   variable: "--font-inter",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -168,14 +172,10 @@ export default function RootLayout({
         <Footer />
         <PhoneButton />
 
-        {/* Chat Widget mount point — A2P 10DLC registered widget */}
-        <div
-          data-chat-widget=""
-          data-widget-id="69f8e9cad86c7d56cea2f255"
-          data-location-id="BlgWjOKxk32P6dyUTDjY"
-        />
-
-        {/* Defer all heavy third-party scripts until user interaction */}
+        {/* Defer all heavy third-party scripts until user interaction.
+            Chat widget mount-point is now injected inside DeferredScripts
+            on first pointerdown/touchstart/keydown — keeps initial paint
+            free of LeadConnector preconnects + Facebook Pixel x4. */}
         <DeferredScripts />
       </body>
     </html>
