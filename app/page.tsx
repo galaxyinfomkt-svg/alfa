@@ -7,6 +7,7 @@ import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
 import FormEmbed from "@/components/FormEmbed";
+import BeforeAfter from "@/components/BeforeAfter";
 
 const services = [
   {
@@ -380,14 +381,48 @@ export default function HomePage() {
               See the quality of our work across Massachusetts. Each project reflects our commitment to excellence and attention to detail.
             </p>
           </div>
+          {/* Featured Before/After hero — drag to compare */}
+          <div className="bg-alfa-card border border-white/5 rounded-2xl overflow-hidden mb-10">
+            <div className="grid lg:grid-cols-5 gap-0">
+              <div className="lg:col-span-3 relative aspect-[4/3] lg:aspect-auto lg:min-h-[480px]">
+                <BeforeAfter
+                  beforeSrc="/images/siding-renovation-before-housewrap-ma.jpg"
+                  afterSrc="/images/dark-shake-siding-renovation-after-ma.jpg"
+                  beforeAlt="Before — house wrap and scaffolding"
+                  afterAlt="After — dark charcoal shake siding with white trim and red door"
+                />
+              </div>
+              <div className="lg:col-span-2 p-8 md:p-10 flex flex-col justify-center">
+                <div className="flex gap-2 mb-4">
+                  <span className="bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full">Siding Installation</span>
+                  <span className="bg-white/5 border border-white/10 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">7-day install</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                  Victorian Charcoal Shake Renovation
+                </h3>
+                <p className="text-gray-400 leading-relaxed mb-6 text-sm md:text-base">
+                  Full exterior strip-and-replace: 1980s clapboard → modern charcoal shake siding on DuPont Tyvek with Z-flashing. 18% sheathing replacement found during teardown, all itemized in the original bid. Drag the slider to compare.
+                </p>
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center gap-2 text-alfa-gold font-semibold hover:gap-3 transition-all"
+                >
+                  See more projects
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Project grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Exterior Siding – Bellingham, MA", service: "Siding", img: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg" },
               { title: "Commercial Siding – Massachusetts", service: "Siding", img: "/images/commercial-siding-installation-massachusetts.png" },
               { title: "Deck Carpentry – Massachusetts", service: "Carpentry", img: "/images/deck-carpentry-staircase-railing-massachusetts.png" },
               { title: "Deck & Siding Remodel – Massachusetts", service: "Remodeling", img: "/images/deck-construction-siding-installation-ma.png" },
-              { title: "Siding & Windows – Massachusetts", service: "Siding", img: "/images/siding-window-installation-after-massachusetts.jpg" },
-              { title: "Board & Batten Siding – MA", service: "Siding", img: "/images/new-construction-siding-windows-board-batten-ma.jpg" },
+              { title: "Andersen Window Installation – MA", service: "Windows", img: "/images/andersen-window-installation-ma.jpg" },
+              { title: "Green Siding & Deck – Massachusetts", service: "Remodeling", img: "/images/green-siding-exterior-completed-ma.jpg" },
             ].map((project, i) => (
               <Link key={i} href="/projects" className="group relative block rounded-xl overflow-hidden shadow-lg shadow-black/20 border border-white/5">
                 <div className="aspect-[4/3] relative">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getCityBySlug, cities } from "@/data/cities";
+import { getFeaturedProjects } from "@/data/projects";
 import { company, breadcrumbSchema } from "@/data/company";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
@@ -669,6 +670,68 @@ export default async function CityPage({
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== LOCAL PROJECTS (real work near {city.name}) ===== */}
+      <section className="py-20 bg-black border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
+              Recent Projects
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+              Work We&apos;ve Done Near {city.name}
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Browse a few of our featured Massachusetts projects — siding, windows, carpentry &amp; remodeling. {city.name} is part of our {city.county} County service area.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {getFeaturedProjects().slice(0, 6).map((project) => (
+              <Link
+                key={project.slug}
+                href={`/projects/${project.slug}`}
+                className="group block"
+              >
+                <article className="card-hover bg-alfa-card rounded-2xl border border-white/5 overflow-hidden shadow-lg shadow-black/20">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <span className="absolute top-4 left-4 bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full">
+                      {project.service}
+                    </span>
+                    {project.beforeImage && project.afterImage && (
+                      <span className="absolute top-4 right-4 bg-black/60 backdrop-blur text-white text-xs font-semibold px-3 py-1 rounded-full border border-alfa-gold/40">
+                        Before / After
+                      </span>
+                    )}
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h3 className="text-white font-bold text-lg leading-snug">{project.title}</h3>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-alfa-gold/30"
+            >
+              See all {company.experience}-year project portfolio
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
           </div>
         </div>
       </section>

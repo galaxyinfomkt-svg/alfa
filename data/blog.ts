@@ -620,6 +620,108 @@ export const blogPosts: BlogPost[] = [
       "home improvement",
     ],
   },
+  {
+    slug: "best-siding-for-new-england-homes",
+    title: "The Best Siding for New England Homes (2026 Guide)",
+    excerpt:
+      "After installing siding on 500+ Massachusetts homes over 18 years, here is the honest answer to what works best in New England's climate — by material, by budget, and by home age.",
+    content: `
+      <h2>The Short Answer</h2>
+      <p>For most New England homes, the best siding is <strong>James Hardie fiber cement (HardiePlank)</strong>. It survives freeze-thaw cycles that crack vinyl, lasts 50+ years versus vinyl's 20-30, carries a 30-year manufacturer warranty, and meets Class A fire ratings. Vinyl wins on upfront cost (30-40% cheaper). Cedar shake wins on traditional New England curb appeal but costs the most over time. Below: the full reasoning, with material-by-material breakdown.</p>
+
+      <h2>What Makes New England Different</h2>
+      <p>New England exteriors face four climate stressors that siding from milder regions can't handle:</p>
+      <ul>
+        <li><strong>Freeze-thaw cycles.</strong> Massachusetts averages 60-90 freeze-thaw cycles per year (per the <a href="https://www.weather.gov/box/" target="_blank" rel="noopener noreferrer">National Weather Service Boston/Norton office</a>). Each cycle expands and contracts every material on your home. Vinyl becomes brittle below 20°F.</li>
+        <li><strong>Nor'easter wet snow.</strong> A single nor'easter can dump 18-24 inches of wet, heavy snow against a wall. Siding fastening systems rated for dry snow fail under wet New England loads.</li>
+        <li><strong>Summer humidity.</strong> Coastal Massachusetts averages 70-85% relative humidity June-September. Without proper rear-ventilated installation, any wood-based siding will rot from the back side first.</li>
+        <li><strong>Salt air (coastal).</strong> Homes within 5 miles of the Atlantic experience accelerated metal corrosion. Fastener choice matters — stainless steel screws cost 4x more but last 4x longer in coastal MA.</li>
+      </ul>
+
+      <h2>Material-by-Material Comparison</h2>
+
+      <h3>1. James Hardie Fiber Cement (HardiePlank) — Best Overall</h3>
+      <p><strong>Cost:</strong> $8-12 per square foot installed. <strong>Lifespan:</strong> 50+ years. <strong>Warranty:</strong> 30-year limited transferable.</p>
+      <p>Fiber cement is roughly 90% cement and sand with cellulose fibers — it doesn't burn, doesn't rot, and doesn't get eaten by carpenter ants. The 30-year manufacturer warranty from <a href="https://www.jameshardie.com/products/hardieplank-lap-siding" target="_blank" rel="noopener noreferrer">James Hardie</a> is the longest in the residential siding industry, and it transfers to the next homeowner — a real resale advantage in the Massachusetts real estate market. Hardie is also ASTM C1186 Type A Grade II rated with a Class A fire rating (ASTM E84), which carries weight with home insurance underwriters.</p>
+      <p><strong>Best for:</strong> Forever-homes, homes in MetroWest and Worcester County where freeze-thaw is severe, homes selling within 5 years (Hardie listings appraise 2-4% higher in MA per local appraiser data).</p>
+
+      <h3>2. LP SmartSide Engineered Wood — Best Middle Ground</h3>
+      <p><strong>Cost:</strong> $6-9 per square foot installed. <strong>Lifespan:</strong> 30-50 years. <strong>Warranty:</strong> 5-year SureStart + 50-year substrate limited.</p>
+      <p>Most homeowners and even some contractors skip LP SmartSide entirely. That's a mistake. It looks closer to Hardie than vinyl, costs less than Hardie, and weighs significantly less — which means lower labor cost (fewer crew-hours on the install). It's engineered wood treated with zinc borate to resist rot, fungus, and insects. The catch: it does not have Hardie's 30-year track record yet (introduced 1997), so resale narrative is weaker.</p>
+      <p><strong>Best for:</strong> Homeowners who want the Hardie look at a vinyl-adjacent price point.</p>
+
+      <h3>3. Premium Vinyl Siding — Best Budget</h3>
+      <p><strong>Cost:</strong> $4-7 per square foot installed. <strong>Lifespan:</strong> 20-30 years. <strong>Warranty:</strong> 25-year limited (most manufacturers).</p>
+      <p>Modern premium vinyl (0.046" thick or greater) is far better than the budget vinyl from the 1990s that gave the category a bad name. ASTM D3679 certified, available in 40+ colors, and installation goes fast — a typical 2,000 sqft home can be sided in 5-7 days. The drawbacks remain: brittle below 20°F, can crack from a stray ladder or branch in winter, and once a panel is damaged it must be replaced (cannot be repaired). Color fade is the other long-term issue — dark vinyls fade fastest in MA sun.</p>
+      <p><strong>Best for:</strong> Investors flipping in 5 years, rental properties, homeowners with strict budgets.</p>
+
+      <h3>4. Cedar Shake / Shingle — Best Traditional Look</h3>
+      <p><strong>Cost:</strong> $10-15 per square foot installed (hand-installed). <strong>Lifespan:</strong> 30-50 years with maintenance. <strong>Warranty:</strong> material only, typically 5-25 years.</p>
+      <p>Authentic Western Red Cedar shake is the most traditionally "New England" siding — think Nantucket, Cape Cod, and the older Boston suburbs. It weathers to a silver-gray over 3-5 years, which most homeowners love. The catch: it requires the most maintenance of any option. Annual inspections, periodic re-staining if you want to maintain color, and replacement of damaged shakes every few years. Without maintenance, cedar fails fastest. With it, it can outlast vinyl.</p>
+      <p><strong>Best for:</strong> Historic homes (pre-1930), Cape Cod and waterfront properties, homeowners committed to maintenance.</p>
+
+      <h3>5. What to Avoid in New England</h3>
+      <ul>
+        <li><strong>Aluminum siding</strong> — dent-prone, fades hard, mostly removed from MA homes since 2000.</li>
+        <li><strong>Stucco (traditional, not synthetic)</strong> — cracks from freeze-thaw within 5-7 years on most MA installs. EIFS synthetic stucco is better but has its own moisture issues.</li>
+        <li><strong>Steel siding</strong> — fine in dry climates, prone to corrosion within 5 miles of the Atlantic.</li>
+        <li><strong>Pressure-treated wood lap</strong> — looks cheap, warps within 8-10 years.</li>
+      </ul>
+
+      <h2>The Hidden Factor: Installation Quality</h2>
+      <p>Material choice matters less than installation quality. We've seen $14,000 vinyl jobs outperform $32,000 Hardie jobs because of how the wall system was built behind the siding. The order matters:</p>
+      <ol>
+        <li><strong>Sheathing inspection.</strong> Strip the old siding and inspect every board. Roughly 3 out of 4 Massachusetts homes built before 1990 show some rot. Cheap bids skip this step and invoice it later as a "change order."</li>
+        <li><strong>Weather-resistant barrier.</strong> <a href="https://www.dupont.com/brands/tyvek.html" target="_blank" rel="noopener noreferrer">DuPont Tyvek HouseWrap</a> or similar applied with seams taped and overlapped 6+ inches. Skip this and water reaches the framing within 5 years.</li>
+        <li><strong>Z-flashing at every penetration.</strong> Windows, doors, electrical boxes, dryer vents. Z-flashing routes water out of the wall instead of into it.</li>
+        <li><strong>Furring strips (rear-ventilated installs).</strong> Strongly recommended for cedar and Hardie — creates an air gap behind the siding so any moisture can dry out.</li>
+        <li><strong>Manufacturer-specified fasteners.</strong> Hardie requires hot-dipped galvanized or stainless nails. Wrong fastener voids the 30-year warranty.</li>
+      </ol>
+
+      <h2>What This Costs on a Real Massachusetts Home</h2>
+      <p>For a typical 2,000 square foot Massachusetts home with rotted sheathing replacement, full house wrap, Z-flashing, trim, and proper cleanup, expect:</p>
+      <ul>
+        <li><strong>Premium vinyl:</strong> $14,000-$22,000</li>
+        <li><strong>LP SmartSide:</strong> $18,000-$28,000</li>
+        <li><strong>HardiePlank fiber cement:</strong> $22,000-$36,000</li>
+        <li><strong>Cedar shake (hand-installed):</strong> $28,000-$45,000</li>
+      </ul>
+      <p>Bids significantly below these ranges typically exclude permits, disposal, sheathing repair, house wrap, or cleanup. Every Alfa Construction estimate itemizes every line item before work starts — see our <a href="/blog/hardie-plank-vs-vinyl-siding-new-england">Hardie vs Vinyl deep dive</a> for a full bid checklist.</p>
+
+      <h2>Our Recommendation by Homeowner Type</h2>
+      <ul>
+        <li><strong>Selling in under 3 years?</strong> Premium vinyl. Cheapest path to "new exterior" appearance for the photos.</li>
+        <li><strong>Forever home in MetroWest, Worcester County, or Cape Cod?</strong> HardiePlank. The 30-year warranty pays back.</li>
+        <li><strong>Historic home (pre-1930) or waterfront?</strong> Cedar shake. Maintains property character and aligns with neighborhood comps.</li>
+        <li><strong>Tight budget but want longevity?</strong> LP SmartSide. The honest middle ground most contractors don't quote.</li>
+      </ul>
+
+      <h2>About This Recommendation</h2>
+      <p>Alfa Construction Inc has installed all five materials across 109+ Massachusetts cities over 18 years. We hold Massachusetts Home Improvement Contractor (HIC) license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>, valid through April 2027, and carry full general liability and workers' compensation insurance. Our team is bilingual (English and Portuguese) and serves homeowners across MetroWest, Worcester County, the South Shore, and Cape Cod.</p>
+
+      <p>For a free, itemized estimate on your siding project, call Fabio directly at <strong>(508) 590-9193</strong> or visit our <a href="/contact">contact page</a>. We respond to all estimate requests within 24 hours.</p>
+    `,
+    date: "2026-05-11",
+    author: "Fabio",
+    category: "Siding",
+    readTime: "9 min read",
+    image: "/images/dark-shake-siding-renovation-after-ma.jpg",
+    metaTitle: "Best Siding for New England Homes (2026 Guide) — MA Expert",
+    metaDescription:
+      "After 500+ MA installs over 18 years, here's the honest answer on Hardie vs vinyl vs cedar vs LP SmartSide for New England — cost, lifespan, install quality. (508) 590-9193.",
+    tags: [
+      "best siding new england",
+      "siding comparison massachusetts",
+      "hardie plank",
+      "vinyl siding",
+      "cedar shake",
+      "LP SmartSide",
+      "freeze-thaw",
+      "new england climate",
+      "siding cost massachusetts",
+      "fiber cement",
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
