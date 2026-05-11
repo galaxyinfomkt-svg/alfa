@@ -621,6 +621,88 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
+    slug: "renovating-older-homes-in-milton-ma",
+    title: "Renovating Older Homes in Milton, MA — An 18-Year Contractor's Honest Guide",
+    excerpt:
+      "Milton has more pre-1950 homes than most of Eastern Massachusetts. They renovate differently. After 18 years of working on older Milton-area properties, here's what every homeowner should know before signing a renovation contract.",
+    content: `
+      <h2>Why Milton's Older Homes Are Different</h2>
+      <p>About 62% of Milton's housing stock predates 1950 — significantly higher than the Massachusetts state average. That means most Milton renovation projects deal with original cedar lath-and-plaster walls, knob-and-tube remnants, balloon framing, settled foundations, and exterior trim that's been painted over 40+ times. None of those things appear on a typical contractor's bid. They all show up after the work starts.</p>
+
+      <p>After 18 years of renovating older homes across Milton, East Milton, and the surrounding South Shore communities, our team at Alfa Construction Inc (Massachusetts HIC license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>) has learned to bid older Milton homes with every probable surprise itemized upfront. This guide explains why most older-home renovations cost more than first quoted — and how to choose a contractor who tells you that before you sign.</p>
+
+      <h2>The 7 Things Every Milton Older-Home Renovation Will Find</h2>
+
+      <h3>1. Rotted Sheathing Behind the Siding (3 out of 4 homes)</h3>
+      <p>Strip the old siding off a Milton home built before 1970 and roughly 75% of them show some level of sheathing rot. The original boards — often 1-inch nominal pine — have absorbed decades of moisture through failing flashing, gutter overflow, and ice dam damming. We've never finished a full exterior on a pre-1950 Milton home without replacing at least some sheathing. The honest bid prices a sheathing repair range upfront ($800–$3,500 typical), not as a "change order."</p>
+
+      <h3>2. Knob-and-Tube Wiring Hidden in the Walls</h3>
+      <p>Massachusetts banned new knob-and-tube installations in 1985, but pre-1950 Milton homes still have it running through wall cavities and attic spaces. It is generally legal to leave undisturbed if it's in good condition, but most insurance carriers (and any modern home buyer) will require replacement. Renovations that touch the wall cavity expose this — and your contractor needs a licensed electrician on standby. Budget $5,000–$15,000 for full house knob-and-tube replacement during a renovation.</p>
+
+      <h3>3. Lead Paint on Trim, Windows, and Siding</h3>
+      <p>Homes built before 1978 in Milton are presumed to contain lead-based paint. Massachusetts has stricter Lead Law requirements than the federal RRP rule — if a child under six lives or regularly visits the home, deleading is mandatory. Any sanding, scraping, or window replacement triggers EPA RRP-certified protocols. This adds $1,500–$8,000 to a typical exterior renovation. Reputable Milton contractors are <a href="https://www.epa.gov/lead/renovation-repair-and-painting-program" target="_blank" rel="noopener noreferrer">EPA RRP certified</a>; ask for the firm certification number on every older-home bid.</p>
+
+      <h3>4. Original Single-Pane Windows With Lead Glazing</h3>
+      <p>The lovely wavy-glass divided-light windows in many Milton older homes are usually original — and almost always single pane with cracked or hardened glazing. Replacing them with energy-efficient units triggers two questions: keep the original sash and install storm panels, or replace with new wood-clad windows from <a href="https://www.andersenwindows.com/products/windows/" target="_blank" rel="noopener noreferrer">Andersen 400 Series</a> or Marvin Elevate? Each Milton historical district has its own answer. We pull permits with the Milton Historical Commission for any pre-1900 home.</p>
+
+      <h3>5. Asbestos Siding (Common in Milton 1940–1970 Homes)</h3>
+      <p>The cement-asbestos shingle siding that was popular on Milton 1940s–1970s ranch and Cape homes is non-friable and generally safe to leave in place. But once you strip it for a renovation, Massachusetts requires <a href="https://www.mass.gov/asbestos" target="_blank" rel="noopener noreferrer">MA DEP-certified abatement</a> with sealed containment, HEPA filtration, and licensed disposal. Budget $4,000–$12,000 for a full house asbestos siding removal. Skip this and the homeowner faces six-figure DEP fines.</p>
+
+      <h3>6. Balloon Framing Without Fire Stops</h3>
+      <p>Pre-1940 Milton homes are mostly balloon-framed — wall studs run continuous from foundation to roof, creating natural chimneys for fire to spread. Modern code requires fire blocking at every floor level. A serious renovation should add fire stops as part of the wall opening work. Most contractors skip this. We don't — it's a 1-day labor item on an open-wall renovation and it protects the home for the next century.</p>
+
+      <h3>7. Original Plaster Walls Behind New Drywall</h3>
+      <p>If a previous owner drywalled over the original plaster, you'll find it during the renovation. Sometimes the plaster is fine; sometimes it's full of horsehair and crumbling. Either way, you need to decide: leave it sandwiched, demo it out to add insulation, or restore. Closed-cell spray foam in the cavity is the standard upgrade — but only after asbestos and lead surveys clear the work area.</p>
+
+      <h2>What a Real Milton Older-Home Renovation Bid Looks Like</h2>
+      <p>An honest renovation bid on a 1920s Milton Colonial includes line items for each of the above, plus permits, debris disposal, lead-safe work practices, and cleanup. A 2,000-square-foot full exterior renovation on a pre-1950 Milton home typically runs $35,000–$60,000 with these contingencies priced. A bid significantly lower than that range is leaving them out — they reappear as change orders during the work.</p>
+
+      <p>We've seen Milton homeowners hand contractors $14,000 deposits on a "$22,000" exterior renovation, only to receive an invoice for $48,000 once the wall opens up and the surprises start invoicing. The deposit becomes leverage; the homeowner pays the marked-up change orders because demoing the walls back closed isn't an option. The fix: every probable surprise gets priced in writing before work begins.</p>
+
+      <h2>Permits and Milton Historical Commission</h2>
+      <p>The Town of Milton requires building permits for any structural, electrical, plumbing, or major exterior work. Properties in the historic districts (Brush Hill, East Milton Square, Milton Village) need <a href="https://www.townofmilton.org/historical-commission" target="_blank" rel="noopener noreferrer">Historical Commission</a> sign-off on visible exterior changes. Reputable contractors pull permits and walk you through Commission review when applicable. Permit fees are typically 0.5–1% of project value in Milton.</p>
+
+      <p>The Building Department uses the <a href="https://www.mass.gov/info-details/massachusetts-state-building-code-780-cmr" target="_blank" rel="noopener noreferrer">Massachusetts State Building Code (780 CMR)</a>. Any contractor working in Milton must hold a Massachusetts Construction Supervisor License (CSL) and a Home Improvement Contractor (HIC) registration. Verify both at the <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA Division of Professional Licensure</a> before signing anything.</p>
+
+      <h2>How to Vet a Milton Older-Home Renovator (5 Questions)</h2>
+      <ol>
+        <li><strong>"Are you EPA RRP certified for lead-safe work, and what's your firm certification number?"</strong> Pre-1978 Milton homes require it. A contractor who can't produce the number on the spot is not the right one.</li>
+        <li><strong>"Will your written bid itemize sheathing repair, lead-safe practices, knob-and-tube replacement, and asbestos abatement separately?"</strong> Anyone bundling these as "miscellaneous" is hiding them.</li>
+        <li><strong>"Can you pull the Milton Historical Commission permit if my home is in a historic district?"</strong> Many contractors avoid Commission work because it slows the timeline. Find one comfortable with the process.</li>
+        <li><strong>"How many pre-1950 Milton homes have you renovated in the last 5 years, and can you give me three local references?"</strong> Names, addresses, phone numbers. Real ones call back.</li>
+        <li><strong>"What's your Massachusetts HIC license number and current insurance certificate?"</strong> Ours is <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>. Yours should have one — verifiable independently.</li>
+      </ol>
+
+      <h2>Areas We Serve Around Milton</h2>
+      <p>Alfa Construction serves Milton, East Milton, Lower Mills, Hyde Park, Quincy, Braintree, Randolph, Canton, Dedham, Norwood, Westwood, Hingham, and the rest of the South Shore. Our 18-year team handles siding, window and door replacement, carpentry, rotted trim repair, and full older-home renovations across this Norfolk County corridor.</p>
+
+      <h2>The Honest Pitch</h2>
+      <p>Renovating an older Milton home well costs more than a generic siding bid implies — but the difference between a $22,000 surprise and a $48,000 nightmare is whether the bid was written by someone who'd seen Milton older homes before. Our crew has worked on Milton homes for 18 years. We're bilingual (English and Portuguese), licensed (<a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA HIC #192348</a>, valid through April 2027), fully insured, EPA RRP-certified, and we itemize every line item before work begins.</p>
+
+      <p>For a free, on-site assessment of your Milton home renovation — including a written estimate with every probable surprise priced upfront — call Fabio directly at <strong>(508) 590-9193</strong>. We respond to all estimate requests within 24 hours. English or Portuguese.</p>
+    `,
+    date: "2026-05-11",
+    author: "Fabio",
+    category: "Renovation",
+    readTime: "10 min read",
+    image: "/images/dark-shake-siding-renovation-after-ma.jpg",
+    metaTitle: "Renovating Older Homes in Milton MA · 18-Year Honest Guide",
+    metaDescription:
+      "Pre-1950 Milton homes need different bids. After 18 years renovating Milton area, here are the 7 surprises every older-home job finds — and how to vet a contractor. (508) 590-9193.",
+    tags: [
+      "milton ma contractor",
+      "renovating older home milton",
+      "older home renovation massachusetts",
+      "milton ma renovation",
+      "licensed contractor milton ma",
+      "lead paint renovation",
+      "epa rrp certified",
+      "milton historical commission",
+      "knob and tube wiring",
+      "asbestos siding removal",
+    ],
+  },
+  {
     slug: "best-siding-for-new-england-homes",
     title: "The Best Siding for New England Homes (2026 Guide)",
     excerpt:

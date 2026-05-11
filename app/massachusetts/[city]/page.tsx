@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getCityBySlug, cities } from "@/data/cities";
+import { getCityBySlug, cities, getExtendedNearbyCities } from "@/data/cities";
 import { getFeaturedProjects } from "@/data/projects";
 import { company, breadcrumbSchema } from "@/data/company";
 import ServiceCard from "@/components/ServiceCard";
@@ -210,8 +210,8 @@ export default async function CityPage({
                   </div>
 
                   <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white mb-5 leading-tight">
-                    Professional Home Improvement Contractor{" "}
-                    <span className="text-alfa-gold">in {city.name}, Massachusetts</span>
+                    Siding, Windows &amp; Carpentry Contractor{" "}
+                    <span className="text-alfa-gold">in {city.name}, MA</span>
                   </h1>
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
                     Alfa Construction Inc provides expert siding installation,
@@ -762,6 +762,45 @@ export default async function CityPage({
               Leave a Review on Google
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ===== NEIGHBORING CITIES (captures "near me" queries) ===== */}
+      <section className="py-20 bg-alfa-dark border-t border-white/5" aria-labelledby="nearby-heading">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
+              Service Area
+            </span>
+            <h2 id="nearby-heading" className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+              Alfa Construction Near {city.name}, MA
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              We&apos;re a {city.county} County local contractor — our crews regularly drive between {city.name} and these neighboring cities. Free estimate response within 24 hours, regardless of which town you&apos;re in.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-10">
+            {getExtendedNearbyCities(city.slug, 12).map((nearby) => (
+              <Link
+                key={nearby.slug}
+                href={`/massachusetts/${nearby.slug}`}
+                className="bg-alfa-card border border-white/5 rounded-xl p-4 text-center hover:border-alfa-gold/40 transition-colors group"
+              >
+                <svg className="w-4 h-4 text-alfa-gold mx-auto mb-1.5 opacity-70 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <p className="font-semibold text-white text-sm leading-tight">{nearby.name}</p>
+                <p className="text-[10px] text-gray-500 mt-0.5">{nearby.county} County</p>
+              </Link>
+            ))}
+          </div>
+
+          <p className="text-center text-gray-400 text-sm">
+            <Link href="/massachusetts" className="text-alfa-gold hover:text-alfa-gold-light font-semibold">
+              See all 109 Massachusetts cities we serve →
+            </Link>
+          </p>
         </div>
       </section>
 

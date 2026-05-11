@@ -293,9 +293,35 @@ export default async function CityServicePage({
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white mb-5 leading-tight">
-                Professional{" "}
-                <span className="text-alfa-gold">{service.shortName}</span>{" "}
-                Contractor in {city.name}, MA
+                {service.slug === "siding" && (
+                  <>
+                    <span className="text-alfa-gold">Hardie Plank, Vinyl &amp; Cedar Siding</span>
+                    {" "}in {city.name}, MA
+                  </>
+                )}
+                {service.slug === "windows-doors" && (
+                  <>
+                    <span className="text-alfa-gold">Andersen Windows &amp; Door Installation</span>
+                    {" "}in {city.name}, MA
+                  </>
+                )}
+                {service.slug === "carpentry" && (
+                  <>
+                    <span className="text-alfa-gold">Carpentry, Trim &amp; Rot Repair</span>
+                    {" "}in {city.name}, MA
+                  </>
+                )}
+                {service.slug === "remodeling" && (
+                  <>
+                    <span className="text-alfa-gold">Kitchen, Bath &amp; Home Remodeling</span>
+                    {" "}in {city.name}, MA
+                  </>
+                )}
+                {!["siding", "windows-doors", "carpentry", "remodeling"].includes(service.slug) && (
+                  <>
+                    Professional <span className="text-alfa-gold">{service.shortName}</span> Contractor in {city.name}, MA
+                  </>
+                )}
               </h1>
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
                 {service.description.replace(/\{cityName\}/g, city.name)}

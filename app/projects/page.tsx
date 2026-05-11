@@ -348,10 +348,6 @@ export default function ProjectsPage() {
                 The transformation is documented in the before/after slider on this page. The final invoice came in at the original quoted price — every line item (permits, disposal, sheathing repair, wrap, flashing, siding, trim, paint, cleanup) listed before work began, no change orders. The home now carries Alfa&apos;s standard 1-year workmanship warranty alongside the 30-year manufacturer warranty on the shake siding.
               </p>
 
-              <blockquote className="border-l-4 border-alfa-gold pl-6 py-2 my-6 italic text-gray-300">
-                &ldquo;Fabio was very thorough and cordial. All members of his team were pleasant and respectful. The price was very reasonable.&rdquo;
-                <footer className="mt-3 text-sm text-gray-400 not-italic">— Joann Polakoff, Google review · Massachusetts</footer>
-              </blockquote>
 
               <h3 className="text-xl font-bold text-white mb-3">Why This Matters For Massachusetts Homeowners</h3>
               <p className="text-gray-300 leading-relaxed">

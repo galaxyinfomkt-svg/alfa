@@ -571,15 +571,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
 
-          {/* Inline customer quote — Princeton GEO Method 3 */}
-          <figure className="max-w-3xl mx-auto text-center">
-            <blockquote className="text-lg md:text-xl text-gray-300 italic leading-relaxed">
-              &ldquo;Fabio was very thorough and cordial. All members of his team were pleasant and respectful. The price was very reasonable.&rdquo;
-            </blockquote>
-            <figcaption className="mt-3 text-sm text-gray-400">
-              — <cite className="not-italic text-alfa-gold-light font-semibold">Joann Polakoff</cite>, verified Google review · Massachusetts
-            </figcaption>
-          </figure>
         </div>
       </section>
 

@@ -39,26 +39,7 @@ export const company = {
     "Attention to detail and quality craftsmanship",
     "Proven track record with real client reviews",
   ],
-  reviews: [
-    {
-      text: "Alfa Painting & Carpentry did a great job assisting us with our remodeling. They painted and installed a wide variety of doors. The painting was very well done in a high-end home. Would highly recommend Fabio and his team.",
-      author: "John S.",
-      rating: 5,
-      service: "Remodeling & Construction",
-    },
-    {
-      text: "Real good results always come from really good professionals. They did a very good job replacing rotten trims inside and out of my property.",
-      author: "Mark Conti",
-      rating: 5,
-      service: "Carpentry & Trim Work",
-    },
-    {
-      text: "I give them a 5 star rating. Fabio was very thorough and cordial. All members of his team were pleasant and respectful. The price was very reasonable.",
-      author: "Joann Polakoff",
-      rating: 5,
-      service: "General Construction",
-    },
-  ],
+  reviews: [],
 } as const;
 
 const BASE_URL = "https://alfapaintingcarpentry.com";
@@ -203,32 +184,6 @@ export const localBusinessSchema = {
     ratingCount: "22",
     reviewCount: "22",
   },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "John S." },
-      datePublished: "2024-06-15",
-      reviewBody:
-        "Alfa Painting & Carpentry did a great job assisting us with our remodeling. They painted and installed a wide variety of doors. The painting was very well done in a high-end home. Would highly recommend Fabio and his team.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Mark Conti" },
-      datePublished: "2024-04-20",
-      reviewBody:
-        "Real good results always come from really good professionals. They did a very good job replacing rotten trims inside and out of my property.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Joann Polakoff" },
-      datePublished: "2024-02-10",
-      reviewBody:
-        "I give them a 5 star rating. Fabio was very thorough and cordial. All members of his team were pleasant and respectful. The price was very reasonable.",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    },
-  ],
 };
 
 // ─── Contractor Schema (like RS Development) ───
@@ -489,22 +444,6 @@ export function serviceSchema(service: {
       ratingCount: "22",
       reviewCount: "22",
     },
-    review: [
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "John S." },
-        reviewBody:
-          "Alfa Painting & Carpentry did a great job assisting us with our remodeling. They painted and installed a wide variety of doors. The painting was very well done in a high-end home. Would highly recommend Fabio and his team.",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Mark Conti" },
-        reviewBody:
-          "Real good results always come from really good professionals. They did a very good job replacing rotten trims inside and out of my property.",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      },
-    ],
   };
 }
 
