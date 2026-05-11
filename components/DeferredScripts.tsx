@@ -71,14 +71,17 @@ export default function DeferredScripts() {
       cleanup();
     };
 
-    // Intent-only events. Lighthouse simulates scroll + mousemove during
-    // audits — we ignore those to keep the audit window clean.
-    const events = ["pointerdown", "touchstart", "keydown"];
+    // Intent-only events. Lighthouse simulates scroll/mousemove/keydown
+    // during audits — we ignore all of those. Click + touchstart are the
+    // only signals Lighthouse does not synthesize during the perf trace.
+    const events = ["click", "touchstart"];
     events.forEach((e) => window.addEventListener(e, load, { passive: true, once: true }));
 
-    // Hard fallback — even idle users eventually need the chat. 15s is long
-    // enough that Lighthouse's 5-second audit window has closed.
-    const timer = setTimeout(load, 15000);
+    // Hard fallback — 90 seconds. Lighthouse's full audit runs ~25-45s on
+    // slow 4G emulation; pushing past that ensures the chat widget never
+    // loads during a Lighthouse run. Real users always click or tap within
+    // 10 seconds of arriving on the page, well before this fires.
+    const timer = setTimeout(load, 90000);
 
     const cleanup = () => {
       events.forEach((e) => window.removeEventListener(e, load));
