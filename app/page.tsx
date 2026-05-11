@@ -265,6 +265,109 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== INDUSTRY PARTNERS & CREDENTIALS (GEO — citations + dl stats) ===== */}
+      <section className="py-16 bg-black border-t border-white/5" id="credentials" aria-labelledby="credentials-heading">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Verified Credentials</span>
+            <h2 id="credentials-heading" className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+              Materials, Licensing &amp; Industry Partners
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Every Alfa project uses materials and certifications you can independently verify.
+            </p>
+          </div>
+
+          {/* External authoritative citations — Princeton GEO Method 1 (+40% AI citation lift) */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+            <a
+              href="https://www.jameshardie.com/products/hardieplank-lap-siding"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
+            >
+              <p className="text-alfa-gold font-bold text-sm">James Hardie</p>
+              <p className="text-xs text-gray-400 mt-1">HardiePlank fiber cement</p>
+            </a>
+            <a
+              href="https://www.andersenwindows.com/products/windows/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
+            >
+              <p className="text-alfa-gold font-bold text-sm">Andersen Windows</p>
+              <p className="text-xs text-gray-400 mt-1">400 Series energy-efficient</p>
+            </a>
+            <a
+              href="https://www.energystar.gov/products/windows_doors_skylights"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
+            >
+              <p className="text-alfa-gold font-bold text-sm">ENERGY STAR</p>
+              <p className="text-xs text-gray-400 mt-1">Certified window installs</p>
+            </a>
+            <a
+              href="https://www.dupont.com/brands/tyvek.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
+            >
+              <p className="text-alfa-gold font-bold text-sm">Tyvek HouseWrap</p>
+              <p className="text-xs text-gray-400 mt-1">Weather-resistant barrier</p>
+            </a>
+            <a
+              href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
+            >
+              <p className="text-alfa-gold font-bold text-sm">MA HIC Verified</p>
+              <p className="text-xs text-gray-400 mt-1">License #{company.license}</p>
+            </a>
+            <a
+              href={company.googleReview}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
+            >
+              <p className="text-alfa-gold font-bold text-sm">Google 5.0★</p>
+              <p className="text-xs text-gray-400 mt-1">22+ verified reviews</p>
+            </a>
+          </div>
+
+          {/* Semantic data list — Princeton GEO Method 2 (+37% stats lift). AI extractors parse <dl> directly */}
+          <dl className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-alfa-card border border-white/5 rounded-2xl p-8">
+            <div className="text-center">
+              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Founded</dt>
+              <dd className="text-3xl font-bold text-white">{company.foundedYear}</dd>
+            </div>
+            <div className="text-center">
+              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">MA Cities Served</dt>
+              <dd className="text-3xl font-bold text-white">109+</dd>
+            </div>
+            <div className="text-center">
+              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Five-Star Reviews</dt>
+              <dd className="text-3xl font-bold text-white">22+</dd>
+            </div>
+            <div className="text-center">
+              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Languages Spoken</dt>
+              <dd className="text-3xl font-bold text-white">EN · PT</dd>
+            </div>
+          </dl>
+
+          {/* Inline customer quote — Princeton GEO Method 3 (+30% quotation lift) */}
+          <figure className="mt-12 max-w-3xl mx-auto text-center">
+            <blockquote className="text-xl md:text-2xl text-gray-300 italic leading-relaxed">
+              &ldquo;Real good results always come from really good professionals. They did a very good job replacing rotten trims inside and out of my property.&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-sm text-gray-400">
+              — <cite className="not-italic text-alfa-gold-light font-semibold">Mark Conti</cite>, Carpentry &amp; Trim customer · Massachusetts
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* ===== PORTFOLIO SECTION ===== */}
       <section className="py-20 bg-alfa-dark border-t border-white/5" id="portfolio">
         <div className="max-w-7xl mx-auto px-4">

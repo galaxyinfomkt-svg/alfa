@@ -528,6 +528,61 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
+      {/* Industry Standards & Materials (GEO — external citations + technical terms) */}
+      <section className="py-20 bg-alfa-dark border-t border-white/5" aria-labelledby="standards-heading">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Verified Standards</span>
+            <h2 id="standards-heading" className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+              Industry Standards &amp; Materials We Use
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Every Alfa install meets manufacturer specs, ENERGY STAR efficiency standards, and Massachusetts building code. Verify each independently.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div className="bg-alfa-card border border-white/5 rounded-xl p-6">
+              <h3 className="text-alfa-gold font-bold text-sm uppercase tracking-wider mb-3">Siding Materials</h3>
+              <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                We install <a href="https://www.jameshardie.com/products/hardieplank-lap-siding" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">James Hardie</a> fiber cement (ASTM C1186 Type A Grade II rated, Class A fire rated), premium vinyl siding (ASTM D3679 certified), and authentic cedar shake on a properly fastened <a href="https://www.dupont.com/brands/tyvek.html" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">DuPont Tyvek HouseWrap</a> weather-resistant barrier with Z-flashing at every penetration.
+              </p>
+            </div>
+            <div className="bg-alfa-card border border-white/5 rounded-xl p-6">
+              <h3 className="text-alfa-gold font-bold text-sm uppercase tracking-wider mb-3">Windows &amp; Energy</h3>
+              <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                <a href="https://www.andersenwindows.com/products/windows/" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">Andersen 400 Series</a> windows with low-E glass (U-factor under 0.30, NFRC certified), <a href="https://www.energystar.gov/products/windows_doors_skylights" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">ENERGY STAR</a> qualified for the Northern climate zone. Continuous-wall EnergyShield insulation pairs with windows to deliver R-13 effective wall R-value.
+              </p>
+            </div>
+            <div className="bg-alfa-card border border-white/5 rounded-xl p-6">
+              <h3 className="text-alfa-gold font-bold text-sm uppercase tracking-wider mb-3">License &amp; Insurance</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Massachusetts Home Improvement Contractor (HIC) license{" "}
+                <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">#{company.license}</a>, valid through {company.licenseExpiry}. Verifiable through the MA Division of Professional Licensure. Full general liability and workers&apos; compensation insurance — Certificate of Insurance issued per project.
+              </p>
+            </div>
+            <div className="bg-alfa-card border border-white/5 rounded-xl p-6">
+              <h3 className="text-alfa-gold font-bold text-sm uppercase tracking-wider mb-3">Code Compliance</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Every project pulled to the local{" "}
+                <a href="https://www.mass.gov/info-details/massachusetts-state-building-code-780-cmr" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">MA State Building Code (780 CMR)</a>{" "}
+                with proper permits, inspections, and final sign-off. Hardie installs follow manufacturer best practices to maintain the 30-year limited transferable product warranty.
+              </p>
+            </div>
+          </div>
+
+          {/* Inline customer quote — Princeton GEO Method 3 */}
+          <figure className="max-w-3xl mx-auto text-center">
+            <blockquote className="text-lg md:text-xl text-gray-300 italic leading-relaxed">
+              &ldquo;Fabio was very thorough and cordial. All members of his team were pleasant and respectful. The price was very reasonable.&rdquo;
+            </blockquote>
+            <figcaption className="mt-3 text-sm text-gray-400">
+              — <cite className="not-italic text-alfa-gold-light font-semibold">Joann Polakoff</cite>, verified Google review · Massachusetts
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* FAQs */}
       <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4">
