@@ -18,11 +18,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://alfapaintingcarpentry.com"),
   title: {
-    default: "Alfa Construction Inc | #1 Siding Installation Contractor in Massachusetts",
-    template: "%s | Alfa Construction Inc",
+    default: "MA Siding Contractor · 5★ · Free Estimate in 24h | Alfa",
+    template: "%s | Alfa Construction",
   },
   description:
-    "Top-rated siding installation, window & door installation, carpentry and home remodeling in Massachusetts. Licensed & insured. 18+ years experience. 5-star rated. Free estimates. Call (508) 590-9193.",
+    "Hardie Plank, vinyl & cedar siding installed by MA's 18-year crew. License #192348. 5.0★ × 22 reviews. Free estimate in 24h. Call (508) 590-9193 — Fabio answers.",
   keywords: [
     "siding installation Massachusetts",
     "siding contractor near me MA",

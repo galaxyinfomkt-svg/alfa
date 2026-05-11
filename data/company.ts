@@ -481,6 +481,30 @@ export function serviceSchema(service: {
         priceCurrency: "USD",
       },
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "22",
+      reviewCount: "22",
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "John S." },
+        reviewBody:
+          "Alfa Painting & Carpentry did a great job assisting us with our remodeling. They painted and installed a wide variety of doors. The painting was very well done in a high-end home. Would highly recommend Fabio and his team.",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Mark Conti" },
+        reviewBody:
+          "Real good results always come from really good professionals. They did a very good job replacing rotten trims inside and out of my property.",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      },
+    ],
   };
 }
 

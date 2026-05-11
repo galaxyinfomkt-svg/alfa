@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { company, localBusinessSchema, breadcrumbSchema } from "@/data/company";
+import { company, breadcrumbSchema, faqSchema } from "@/data/company";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
@@ -42,13 +42,45 @@ const services = [
 export default function HomePage() {
   return (
     <>
-      {/* Schema.org LocalBusiness */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
+      {/* Breadcrumb Schema (LocalBusiness already in layout.tsx) */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
         { name: "Home", url: "https://alfapaintingcarpentry.com" },
+      ])) }} />
+
+      {/* FAQ Schema — drives "People also ask" expansion in SERP, 2-3x CTR */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema([
+        {
+          question: "How much does siding installation cost in Massachusetts?",
+          answer: "Siding installation in Massachusetts typically runs $4-$7 per square foot for vinyl and $8-$12 per square foot for Hardie Plank fiber cement. On a 2,000 sqft home, that's $8,000-$14,000 for vinyl or $16,000-$24,000 for Hardie. Final cost depends on home size, material, and condition of underlying sheathing. Alfa Construction provides free, itemized estimates with every line item shown before work starts. Call (508) 590-9193 for a free estimate in 24 hours.",
+        },
+        {
+          question: "Is Hardie Plank better than vinyl siding for New England weather?",
+          answer: "Hardie Plank fiber cement outperforms vinyl in New England's freeze-thaw cycles. Vinyl gets brittle below 20°F and can crack; Hardie is impact-resistant fiber cement that holds up to ice, snow, and accidental impact. Hardie lasts 50+ years vs vinyl's 20-30. Vinyl wins on upfront cost (~30-40% cheaper) but Hardie wins on lifespan, resale value, and winter durability. Alfa installs both — we recommend based on your home and timeline, not what's in our truck.",
+        },
+        {
+          question: "How long does a full siding installation take in Massachusetts?",
+          answer: "A full siding replacement on a 2,000 sqft Massachusetts home takes 5-7 working days for Alfa's crew under normal weather. Day 1: scaffolding and old siding removal. Day 2: sheathing inspection and house wrap. Days 3-5: new siding installation, flashing at windows and doors. Days 6-7: trim, corner boards, cleanup, and final walkthrough. Weather delays are uncommon but possible Nov-March.",
+        },
+        {
+          question: "Is Alfa Construction licensed and insured in Massachusetts?",
+          answer: "Yes. Alfa Construction Inc holds Massachusetts Construction License #192348, valid through April 2027. We carry full general liability and workers' compensation insurance — Certificate of Insurance available on request with you named as additional insured for the duration of the project. License and insurance information appears on every written estimate.",
+        },
+        {
+          question: "Do you offer free estimates for siding and remodeling?",
+          answer: "Yes. Every estimate from Alfa Construction is free, with no obligation. Fabio personally walks the project, measures the work, and writes a clean, itemized proposal showing permits, materials, labor, disposal, and cleanup as separate line items. Free estimate response within 24 hours of your call to (508) 590-9193 — Fabio answers in English or Portuguese.",
+        },
+        {
+          question: "What Massachusetts cities does Alfa Construction serve?",
+          answer: "Alfa Construction serves 109+ cities across Massachusetts and Southern New Hampshire from our Bellingham, MA base. Our highest-volume areas include Bellingham, Franklin, Milford, Mendon, Hopedale, Hopkinton, Holliston, Medway, Millis, Norfolk, Wrentham, Worcester, Framingham, Marlborough, Hudson, Natick, Newton, Wellesley, Sherborn, Dover, and across MetroWest, Worcester County, and Cape Cod. See our full service area at alfapaintingcarpentry.com/massachusetts.",
+        },
+        {
+          question: "Does Alfa work with Portuguese-speaking homeowners?",
+          answer: "Yes. Alfa Construction is a bilingual contractor — Fabio and the crew speak both English and Portuguese fluently. Estimates, contracts, and on-site walkthroughs are available in either language. We work with Brazilian-American homeowners across MetroWest Massachusetts (Framingham, Marlborough, Hudson, Lowell) and Brazilian community members statewide.",
+        },
+        {
+          question: "Why are some siding bids so much cheaper than others?",
+          answer: "Cheap siding bids typically leave out permits, disposal of old siding (3-4 dumpsters worth), rotted sheathing repair, proper house wrap and flashing, trim and soffit work, and cleanup. These get invoiced later as 'change orders.' On a $18,000 quoted job we've seen final bills hit $34,000 when these line items reappear. A real bid lists every line before work starts. Alfa's estimates itemize permits, disposal, sheathing, wrap, flashing, siding, trim, paint, and cleanup separately.",
+        },
       ])) }} />
 
       {/* ===== HERO SECTION (RS Development split layout) ===== */}

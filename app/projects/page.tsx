@@ -6,9 +6,9 @@ import { breadcrumbSchema } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Our Projects | Siding Installation, Carpentry & Remodeling Portfolio",
+  title: "MA Siding & Remodel Projects · Before/After Gallery · 109 Cities",
   description:
-    "View Alfa Construction Inc's portfolio of completed projects across Massachusetts. Siding installation, window installation, carpentry, and home remodeling.",
+    "Before/after photos from 500+ Alfa projects across Massachusetts. Hardie Plank, vinyl, cedar, carpentry, windows. 18 years, 22 ★★★★★. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/projects" },
 };
 

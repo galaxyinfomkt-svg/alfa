@@ -4,9 +4,9 @@ import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Our Services | Siding Installation, Carpentry & Remodeling in MA",
+  title: "Services in MA · Siding, Windows, Carpentry · 5★ Free Estimate",
   description:
-    "Explore Alfa Construction's full range of services: siding installation, window & door installation, carpentry, and home remodeling across Massachusetts. Licensed & insured. Free estimates.",
+    "Siding, windows, carpentry & remodeling across Massachusetts by Fabio's 18-year crew. License #192348 · 22 ★★★★★ reviews. Free estimate in 24h. Call (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
 };
 

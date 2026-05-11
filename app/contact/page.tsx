@@ -4,9 +4,9 @@ import FormEmbed from "@/components/FormEmbed";
 import GoogleMap from "@/components/GoogleMap";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get a Free Estimate",
+  title: "Free MA Siding Estimate in 24h · Call Fabio · (508) 590-9193",
   description:
-    "Contact Alfa Construction Inc for a free estimate on siding installation, windows, carpentry, or remodeling in Massachusetts. Call (508) 590-9193 or fill out our form.",
+    "Free estimate in 24h on siding, windows or remodeling in Massachusetts. Fabio answers in English or Portuguese. License #192348 · 22 ★★★★★ reviews. (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/contact" },
 };
 

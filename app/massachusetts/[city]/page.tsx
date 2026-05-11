@@ -52,8 +52,8 @@ export async function generateMetadata({
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `Siding Installation Contractor ${city.name} MA | Windows, Carpentry | Alfa Construction`;
-  const description = `Top-rated siding installation, window & door installation, carpentry, and home remodeling contractor in ${city.name}, Massachusetts. Licensed & insured. ${company.experience} years experience. ${city.county} County. Free estimates. Call ${company.phone}.`;
+  const title = `${city.name} MA Siding Contractor · 5★ · Free Estimate in 24h`;
+  const description = `Siding, windows & carpentry in ${city.name}, ${city.county} County. ${company.experience} years, license ${company.license}, 22 ★★★★★ reviews. Free estimate in 24h. Call ${company.phone}.`;
 
   return {
     title,

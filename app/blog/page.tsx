@@ -6,9 +6,9 @@ import { breadcrumbSchema } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Blog | Home Improvement Tips for Massachusetts Homeowners",
+  title: "MA Siding Guides · Hardie vs Vinyl, Cost, Red Flags · Alfa Blog",
   description:
-    "Expert advice on siding installation, window & door installation, carpentry, and home remodeling for Massachusetts homeowners. Tips from Alfa Construction Inc's 18+ years of experience.",
+    "Honest siding & remodel guides from Fabio's 18 years across MA. Hardie vs Vinyl, hidden bid costs, contractor red flags, real estimates. (508) 590-9193 — Free estimate.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/blog" },
 };
 

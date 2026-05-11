@@ -6,9 +6,9 @@ import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Us | 18+ Years of Construction Excellence in Massachusetts",
+  title: "Meet Fabio · 18 Years Siding MA Homes Since 2006 · License #192348",
   description:
-    "Learn about Alfa Construction Inc. Founded by Fabio, we bring 18+ years of siding installation, carpentry, and remodeling expertise to Massachusetts homeowners. Licensed & insured.",
+    "Fabio founded Alfa in 2006. 18 years, 109 MA cities, 22 ★★★★★ reviews, zero complaints. Owner-operator, bilingual EN/PT, license #192348. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/about" },
 };
 
