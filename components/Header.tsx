@@ -13,11 +13,13 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+// PIVOT SIDING-ONLY — Alfa vende exclusivamente siding installation/replacement.
+// Carpentry/windows/doors aparecem só como add-on DENTRO da página de siding.
 const serviceItems = [
-  { slug: "siding", name: "Siding Installation", desc: "Professional siding installation and rep..." },
-  { slug: "windows-doors", name: "Windows & Doors", desc: "Energy-efficient window and door install..." },
-  { slug: "carpentry", name: "Carpentry & Trim", desc: "Fine carpentry, trim work, and door install..." },
-  { slug: "remodeling", name: "Home Remodeling", desc: "Kitchen, bathroom, and whole house remod..." },
+  { slug: "siding", name: "Siding Installation", desc: "Hardie Plank, vinyl, cedar — full-home re-sides" },
+  { slug: "hardie-plank-siding", name: "Hardie Plank Siding", desc: "30-year fiber cement warranty" },
+  { slug: "vinyl-siding", name: "Vinyl Siding", desc: "Premium 25-year vinyl, 40+ colors" },
+  { slug: "cedar-shake-siding", name: "Cedar Shake Siding", desc: "Authentic New England look" },
 ];
 
 export default function Header() {

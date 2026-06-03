@@ -1,0 +1,39 @@
+// data/faqData.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// FAQ da home (EN — público dos EUA), posicionamento SIDING-ONLY.
+// ⚠️ Renderizar este MESMO texto na página (o FAQPage schema precisa bater com
+// a FAQ visível). A pergunta nº 2 é o FILTRO — mantenha-a.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export type Faq = { q: string; a: string };
+
+export const homeFaqs: Faq[] = [
+  {
+    q: "What types of siding do you install?",
+    a: "We install and replace all major siding systems: James Hardie fiber cement (HardiePlank), vinyl, cedar, shake, and board & batten. Every project is a complete installation or full-home replacement built to manufacturer spec for New England weather.",
+  },
+  {
+    q: "Do you do small siding repairs, or only full installations?",
+    a: "We specialize exclusively in complete siding installation and full-home replacements — we do not take on small patch repairs, single-panel fixes, or touch-up work. This focus is how we deliver the quality and warranty our clients expect on full re-sides.",
+  },
+  {
+    q: "How much does a full siding replacement cost in Massachusetts?",
+    a: "Typical full-home siding projects in Massachusetts range from $15,000 to $40,000+, depending on the material, home size, and the amount of sheathing or trim work uncovered during teardown. Every estimate is itemized — materials, labor, permits, disposal, and cleanup — with no bundled mystery costs.",
+  },
+  {
+    q: "What areas do you serve?",
+    a: "We are based in Bellingham, MA and serve 109 cities across MetroWest, Worcester County, Norfolk County, Middlesex County, and the North Shore. Contact us for a free estimate anywhere in our service area.",
+  },
+  {
+    q: "Are you licensed and insured?",
+    a: "Yes. Alfa Construction Inc is a licensed and insured Massachusetts contractor (MA HIC #192348) with 18+ years of experience, owner-operated by Fabio. Our team is bilingual (English & Portuguese).",
+  },
+  {
+    q: "How long does a full siding installation take?",
+    a: "A typical full-home exterior re-side runs 5–7 days, depending on home size, material, and weather. We give you a firm timeline in writing with your estimate, and we walk every detail with you at final sign-off — backed by a 1-year workmanship warranty.",
+  },
+  {
+    q: "Do you replace windows or doors during a re-side?",
+    a: "Yes — as part of a full siding project. Replacing windows and doors while the exterior is open is the most cost-effective time to do it, so we offer it as an add-on to a complete re-side. We do not take on standalone single-window or single-door jobs.",
+  },
+];

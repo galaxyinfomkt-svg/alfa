@@ -9,34 +9,37 @@ import ScrollReveal from "@/components/ScrollReveal";
 import FormEmbed from "@/components/FormEmbed";
 import BeforeAfter from "@/components/BeforeAfter";
 
+// PIVOT SIDING-ONLY: home mostra os 4 materiais de siding como "serviços".
+// Carpintaria/janelas/portas aparecem como add-on DENTRO da página de siding,
+// não como serviços vendidos separadamente.
 const services = [
   {
-    slug: "carpentry",
-    name: "Carpentry & Trim Work",
-    description: "Fine carpentry, trim replacement, and door installation. Precision craftsmanship to restore and enhance your home's woodwork and details.",
-    icon: "carpentry",
-    cta: "Schedule Your Carpentry Consultation",
-  },
-  {
     slug: "siding",
-    name: "Siding Installation & Repair",
-    description: "Hardie Plank, vinyl siding, and full replacement services. Protect your home from New England weather while upgrading its appearance.",
+    name: "Full-Home Siding Installation",
+    description: "Complete exterior re-side in Hardie Plank, vinyl, cedar, shake, or board & batten. Sheathing inspection, weather-resistant barrier, Z-flashing, trim. We do not take small patch repairs.",
     icon: "siding",
-    cta: "Get a Free Siding Quote",
+    cta: "Get a Free Siding Estimate",
   },
   {
-    slug: "windows-doors",
-    name: "Window & Door Installation",
-    description: "Energy-efficient window and door installation. Reduce drafts, lower energy bills, and enhance your home's comfort and security.",
-    icon: "windows-doors",
-    cta: "Get a Free Window & Door Estimate",
+    slug: "hardie-plank-siding",
+    name: "Hardie Plank Fiber Cement",
+    description: "30-year transferable manufacturer warranty. Class A fire rated, freeze-thaw tested, ASTM C1186 Type A Grade II. The Massachusetts long-term forever-home choice.",
+    icon: "siding",
+    cta: "Hardie Plank Details",
   },
   {
-    slug: "remodeling",
-    name: "Home Remodeling & Renovation",
-    description: "Complete home renovation from kitchens to bathrooms. Increase your home's value and livability with our full-service remodeling team.",
-    icon: "remodeling",
-    cta: "Start Your Remodeling Project",
+    slug: "vinyl-siding",
+    name: "Premium Vinyl Siding",
+    description: "Premium 25-year vinyl in 40+ colors, ASTM D3679 certified. The budget-conscious full re-side option — 5-7 day install for a typical 2,000 sqft MA home.",
+    icon: "siding",
+    cta: "Vinyl Siding Details",
+  },
+  {
+    slug: "cedar-shake-siding",
+    name: "Cedar Shake Siding",
+    description: "Authentic Western Red Cedar shake — the traditional New England look. Weathers to silver-gray. Hand-installed on rear-ventilated furring strips for maximum longevity.",
+    icon: "siding",
+    cta: "Cedar Shake Details",
   },
 ];
 
@@ -72,7 +75,7 @@ export default function HomePage() {
         },
         {
           question: "What Massachusetts cities does Alfa Construction serve?",
-          answer: "Alfa Construction serves 109+ cities across Massachusetts and Southern New Hampshire from our Bellingham, MA base. Our highest-volume areas include Bellingham, Franklin, Milford, Mendon, Hopedale, Hopkinton, Holliston, Medway, Millis, Norfolk, Wrentham, Worcester, Framingham, Marlborough, Hudson, Natick, Newton, Wellesley, Sherborn, Dover, and across MetroWest, Worcester County, and Cape Cod. See our full service area at alfapaintingcarpentry.com/massachusetts.",
+          answer: "Alfa Construction serves 109+ cities across Massachusetts from our Bellingham, MA base. Highest-volume areas: Milton, Framingham, Newton, Lexington, Brookline, Foxborough, Wellesley, Sherborn, Worcester, Marlborough, Hudson, and across MetroWest, Worcester County, Norfolk County, and the North Shore. See our full service area at alfapaintingcarpentry.com/massachusetts.",
         },
         {
           question: "Does Alfa work with Portuguese-speaking homeowners?",
@@ -125,12 +128,15 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                #1{" "}
+                Massachusetts&apos; Full-Home{" "}
                 <span className="text-alfa-gold">Siding Installation</span>{" "}
-                Contractor in Massachusetts
+                &amp; Replacement Specialists
               </h1>
-              <p className="text-lg text-gray-400 mb-8 leading-relaxed max-w-xl">
-                Expert <strong className="text-white">siding installation</strong>, window &amp; door replacement, carpentry, and complete home remodeling across Massachusetts. Our {company.experience}-year legacy of craftsmanship delivers results that exceed expectations.
+              <p className="text-lg text-gray-300 mb-3 leading-relaxed max-w-xl">
+                <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small repairs.
+              </p>
+              <p className="text-base text-alfa-gold-light mb-8 leading-relaxed max-w-xl">
+                Typical full-home siding projects in Massachusetts: <strong>$15,000 – $40,000+</strong>. Licensed (MA HIC #192348) · {company.experience} years · Bilingual EN/PT.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -300,7 +306,7 @@ export default function HomePage() {
                 Founded by Fabio, Alfa Construction Inc has been serving Massachusetts homeowners for over 18 years. What started as a passion for quality craftsmanship has grown into one of the most trusted siding and construction companies in the state.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                We specialize in siding installation, window and door replacement, carpentry and trim work, and complete home remodeling. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
+                We specialize <strong className="text-white">exclusively in complete siding installation and full-home replacements</strong> — Hardie Plank, vinyl, cedar, shake. Carpentry, sheathing repair, and window/door work happen only when they&apos;re part of a full re-side. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
               </p>
               <ul className="space-y-3 mb-8">
                 {company.differentials.map((item, i) => (
@@ -593,7 +599,7 @@ export default function HomePage() {
               Our Service Area
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Based in Bellingham, MA, we proudly serve 109 cities across Massachusetts and Southern New Hampshire.
+              Based in Bellingham, MA, we proudly serve 109 cities across MetroWest, Worcester County, Norfolk County, and the North Shore.
             </p>
           </div>
           <GoogleMap />

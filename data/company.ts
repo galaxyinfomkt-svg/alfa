@@ -25,7 +25,7 @@ export const company = {
   owner: "Fabio",
   hours: "Mon–Sat 7:00 AM – 6:00 PM",
   hoursStructured: "Mo-Sa 07:00-18:00",
-  serviceArea: "Massachusetts & Southern New Hampshire",
+  serviceArea: "Massachusetts (MetroWest · Worcester County · Norfolk County · North Shore)",
   instagram: "https://www.instagram.com/alfaconstructioninc/",
   facebook: "https://www.facebook.com/alfacarpentrypainting",
   googleReview: "https://g.page/r/CZ1rhJ3jJReMEAE/review",

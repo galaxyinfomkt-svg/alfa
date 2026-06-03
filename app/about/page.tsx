@@ -58,7 +58,7 @@ export default function AboutPage() {
                 Alfa Construction Inc was founded by Fabio with a simple vision: deliver exceptional quality construction services with integrity and respect. Starting with residential construction projects in the MetroWest area, the company quickly earned a reputation for meticulous attention to detail and outstanding results.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Over 18 years later, Alfa Construction has grown into a full-service home improvement company offering siding installation, carpentry, window and door installation, and complete home remodeling. We now serve over 100 cities across Massachusetts and Southern New Hampshire.
+                Over 18 years later, Alfa Construction has refined its focus to one craft: <strong>complete full-home siding installation and replacement</strong> across Massachusetts. Hardie Plank, vinyl, cedar, shake. We serve 109 cities across MetroWest, Worcester County, Norfolk County, Middlesex County, and the North Shore. Carpentry, window, and door work happen only as add-ons to a full re-side.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 What hasn&apos;t changed is our commitment to treating every home as if it were our own. Our bilingual team (English &amp; Portuguese) brings professionalism, craftsmanship, and a personal touch to every project — from a single siding repair to a full home renovation.

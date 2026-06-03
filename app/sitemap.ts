@@ -4,7 +4,15 @@ import { getAllProjectSlugs } from "@/data/projects";
 import { getAllBlogSlugs } from "@/data/blog";
 
 const BASE_URL = "https://alfapaintingcarpentry.com";
-const serviceSlugs = ["carpentry", "siding", "windows-doors", "remodeling", "hardie-plank-siding", "vinyl-siding", "cedar-shake-siding"];
+
+// PIVOT SIDING-ONLY — só /services/siding (+ sub-tipos hardie/vinyl/cedar
+// que continuam relevantes pra material-specific SEO).
+const serviceSlugs = [
+  "siding",
+  "hardie-plank-siding",
+  "vinyl-siding",
+  "cedar-shake-siding",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const citySlugs = getAllCitySlugs();
@@ -22,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
   ];
 
-  // ─── Service Pages (main conversion pages) ───
+  // ─── Service Pages — siding + 3 sub-tipos ───
   const servicePages: MetadataRoute.Sitemap = serviceSlugs.map((slug) => ({
     url: `${BASE_URL}/services/${slug}`,
     lastModified: now,
@@ -30,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.95,
   }));
 
-  // ─── City Landing Pages (local SEO) ───
+  // ─── City Landing Pages (109) ───
   const cityPages: MetadataRoute.Sitemap = citySlugs.map((slug) => ({
     url: `${BASE_URL}/massachusetts/${slug}`,
     lastModified: now,
@@ -38,15 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // ─── City + Service Pages (long-tail keywords) ───
-  const cityServicePages: MetadataRoute.Sitemap = citySlugs.flatMap((city) =>
-    serviceSlugs.map((service) => ({
-      url: `${BASE_URL}/massachusetts/${city}/${service}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    }))
-  );
+  // ─── City + Siding Pages (109 — sem carpentry/windows/remodeling/painting) ───
+  const cityServicePages: MetadataRoute.Sitemap = citySlugs.map((city) => ({
+    url: `${BASE_URL}/massachusetts/${city}/siding`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
 
   // ─── Project Pages ───
   const projectPages: MetadataRoute.Sitemap = projectSlugs.map((slug) => ({

@@ -124,7 +124,7 @@ export default async function CityPage({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: company.name,
-    description: `Professional siding installation, window & door installation, carpentry, and home remodeling services in ${city.name}, MA.`,
+    description: `Full-home siding installation and replacement services in ${city.name}, MA. Hardie Plank, vinyl, cedar, and shake — complete re-sides only. Licensed MA HIC #192348.`,
     telephone: company.phoneRaw,
     url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
     areaServed: {

@@ -60,23 +60,58 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    return [
-      {
-        source: "/home",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/index",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/cities/:path*",
-        destination: "/massachusetts/:path*",
-        permanent: true,
-      },
+    // ────────────────────────────────────────────────────────────────────
+    // PIVOT SIDING-ONLY — 301 das 109 cidades × 4 serviços descontinuados
+    // + 4 service-pages globais. Tudo aponta pro hub da cidade (que vira
+    // siding-focused) ou pro /services/siding.
+    // ────────────────────────────────────────────────────────────────────
+    const CITY_SLUGS = [
+      "marlborough","hudson","framingham","westborough","northborough","southborough",
+      "shrewsbury","natick","ashland","sudbury","hopkinton","milford","wayland","holliston",
+      "grafton","clinton","maynard","stow","acton","concord","berlin","bolton","lincoln",
+      "weston","wellesley","needham","dover","medfield","millis","sherborn","boxborough",
+      "boylston","west-boylston","holden","sterling","lancaster","harvard","upton","mendon",
+      "hopedale","littleton","westford","carlisle","chelmsford","groton","ayer","shirley",
+      "lunenburg","leominster","fitchburg","princeton","paxton","rutland","leicester","spencer",
+      "charlton","dudley","northbridge","uxbridge","douglas","blackstone","medway","norfolk",
+      "wrentham","lexington","bedford","burlington","waltham","newton","brookline","dedham",
+      "norwood","franklin","bellingham","cambridge","somerville","medford","malden","melrose",
+      "wakefield","reading","stoneham","woburn","winchester","arlington","belmont","watertown",
+      "quincy","braintree","weymouth","milton","canton","randolph","stoughton","sharon","walpole",
+      "foxborough","lynn","saugus","peabody","salem","beverly","danvers","worcester","auburn",
+      "millbury","oxford","sutton","webster",
     ];
+    const DEPRECATED_CITY_SERVICES = ["painting", "carpentry", "remodeling", "windows-doors"];
+
+    const cityServiceRedirects = CITY_SLUGS.flatMap((city) =>
+      DEPRECATED_CITY_SERVICES.map((svc) => ({
+        source: `/massachusetts/${city}/${svc}`,
+        destination: `/massachusetts/${city}`,
+        permanent: true,
+      })),
+    );
+
+    const serviceRedirects = [
+      { source: "/services/painting", destination: "/services/siding", permanent: true },
+      { source: "/services/carpentry", destination: "/services/siding", permanent: true },
+      { source: "/services/remodeling", destination: "/services/siding", permanent: true },
+      { source: "/services/windows-doors", destination: "/services/siding", permanent: true },
+      // Legacy /service/* (singular) — vinham de WordPress velho, ainda no GSC
+      { source: "/service/:path*", destination: "/services/siding", permanent: true },
+      // Painter/window/door specific URLs from old WP
+      { source: "/painter-services/:path*", destination: "/services/siding", permanent: true },
+      { source: "/windows-and-door/:path*", destination: "/services/siding", permanent: true },
+      { source: "/deck-builder/:path*", destination: "/services/siding", permanent: true },
+      { source: "/siding-contractor/:path*", destination: "/services/siding", permanent: true },
+    ];
+
+    const legacyRedirects = [
+      { source: "/home", destination: "/", permanent: true },
+      { source: "/index", destination: "/", permanent: true },
+      { source: "/cities/:path*", destination: "/massachusetts/:path*", permanent: true },
+    ];
+
+    return [...cityServiceRedirects, ...serviceRedirects, ...legacyRedirects];
   },
 };
 

@@ -1,0 +1,84 @@
+// data/siteConfig.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// FONTE ÚNICA DE VERDADE — NAP, posicionamento siding-only, números.
+// Todo o schema e o copy dinâmico leem daqui.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const siteConfig = {
+  name: "Alfa Construction Inc",
+  url: "https://alfapaintingcarpentry.com",
+
+  // ⚠️ TELEFONE CANÔNICO — unificado neste número em 100% do site.
+  // Site/Maps/About já usam este. social/build.mjs e social/CAPTIONS.md
+  // ainda têm o antigo (508) 596-3750 mas são docs internos de IG (não-site).
+  phone: "+15085909193",
+  phoneDisplay: "(508) 590-9193",
+  email: "info@alfapaintingcarpentry.com",
+
+  logo: "https://alfapaintingcarpentry.com/images/logo.png",
+  image:
+    "https://alfapaintingcarpentry.com/images/dark-shake-siding-renovation-after-ma.jpg",
+
+  address: {
+    addressLocality: "Bellingham",
+    addressRegion: "MA",
+    postalCode: "02019",
+    addressCountry: "US",
+  },
+  // ⚠️ Conferir contra o pino do GBP (o embed do Maps fica em ~42.130, -71.443).
+  geo: { latitude: 42.0687, longitude: -71.4748 },
+
+  openingHours: [
+    {
+      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "07:00",
+      closes: "18:00",
+    },
+  ],
+
+  priceRange: "$$$",
+  foundingDate: "2006",
+  yearsExperience: 18,
+  founder: "Fabio",
+  licenseLabel: "MA HIC License",
+  licenseNumber: "192348",
+  languages: ["English", "Portuguese"],
+  citiesServed: 109,
+
+  // Faixa de projeto — usada no copy/FAQ pra ancorar e repelir job pequeno.
+  projectRange: "$15,000–$40,000+",
+
+  // ⚠️ CONFIRMAR no GBP ao vivo antes de publicar. A home afirma 5.0 × 22 e há
+  // link real do Google (g.page). Se não bater, corrija — ou deixe reviewCount
+  // VAZIO ("") para suprimir a nota e nunca publicar review não verificada.
+  rating: "5.0",
+  reviewCount: "22",
+
+  // ── POSICIONAMENTO: SIDING-ONLY ──────────────────────────────────────
+  // Único serviço comercializado. Carpintaria (trim/fascia/soffit/rot/sheathing)
+  // só como PARTE do re-side. Janelas/portas só como add-on dentro do projeto.
+  services: [
+    {
+      slug: "siding",
+      name: "Siding Installation & Replacement",
+      description:
+        "Complete full-home siding installation and replacement across Massachusetts — Hardie Plank fiber cement, vinyl, cedar, and shake. Full-exterior re-sides, not patch repairs.",
+    },
+  ],
+
+  sidingMaterials: [
+    "James Hardie fiber cement (HardiePlank)",
+    "Vinyl siding",
+    "Cedar siding",
+    "Shake siding",
+    "Board & batten",
+  ],
+
+  sameAs: [
+    "https://www.instagram.com/alfaconstructioninc/",
+    "https://www.facebook.com/alfacarpentrypainting", // ⚠️ renomear handle/descrição p/ siding
+    "https://g.page/r/CZ1rhJ3jJReMEAE",
+  ],
+} as const;
+
+export type SiteConfig = typeof siteConfig;

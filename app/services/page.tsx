@@ -4,44 +4,46 @@ import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Services in MA · Siding, Windows, Carpentry · 5★ Free Estimate",
+  title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
   description:
-    "Siding, windows, carpentry & remodeling across Massachusetts by Fabio's 18-year crew. License #192348 · 22 ★★★★★ reviews. Free estimate in 24h. Call (508) 590-9193.",
+    "Full-home siding installation & replacement across Massachusetts. Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides — not patch repairs. Licensed (MA HIC #192348). Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
 };
 
+// PIVOT SIDING-ONLY — Alfa vende um único serviço: siding installation & replacement.
+// As 4 cards abaixo são os 4 materiais (escolha do cliente), todos sob a mesma família.
 const services = [
   {
     slug: "siding",
-    name: "Siding Installation & Repair",
+    name: "Full-Home Siding Installation",
     description:
-      "Protect and beautify your home with professional siding services. We specialize in Hardie Plank fiber cement siding — the gold standard for New England homes — as well as vinyl siding installation and repair. Full replacement or targeted repairs, built to withstand harsh Massachusetts weather.",
+      "Complete exterior re-side across Massachusetts. Sheathing inspection, weather-resistant barrier (DuPont Tyvek), Z-flashing at every penetration, manufacturer-spec fastening. Hardie Plank, vinyl, cedar, shake, or board & batten — your choice. We do not take patch jobs or single-panel repairs.",
     icon: "siding",
-    cta: "Get a Free Siding Quote",
+    cta: "Get a Free Siding Estimate",
   },
   {
-    slug: "windows-doors",
-    name: "Window & Door Installation",
+    slug: "hardie-plank-siding",
+    name: "Hardie Plank Fiber Cement",
     description:
-      "Upgrade your comfort and energy efficiency with professional window and door installation. We install energy-efficient windows that reduce drafts and lower utility bills, plus exterior and interior doors that enhance security and curb appeal. Precise fitting, clean installation, lasting results.",
-    icon: "windows-doors",
-    cta: "Get a Free Window & Door Estimate",
+      "30-year transferable manufacturer warranty. ASTM C1186 Type A Grade II, Class A fire rated. Handles MA freeze-thaw cycles, won't rot, won't burn. The long-term forever-home choice — most New England homeowners' best resale move.",
+    icon: "siding",
+    cta: "Hardie Plank Details",
   },
   {
-    slug: "carpentry",
-    name: "Carpentry & Trim Work",
+    slug: "vinyl-siding",
+    name: "Premium Vinyl Siding",
     description:
-      "Expert carpentry services including trim replacement, door installation, and custom woodwork. We restore rotten trim, install new interior and exterior doors with precision, and deliver the detailed finish work that transforms your home. Quality craftsmanship you can see and feel.",
-    icon: "carpentry",
-    cta: "Schedule Your Carpentry Consultation",
+      "Premium 25-year vinyl in 40+ colors, ASTM D3679 certified. The budget-conscious full re-side option. 5-7 day install for a typical 2,000 sqft Massachusetts home. Faster install, lower upfront cost, 20-30 year lifespan.",
+    icon: "siding",
+    cta: "Vinyl Siding Details",
   },
   {
-    slug: "remodeling",
-    name: "Home Remodeling & Renovation",
+    slug: "cedar-shake-siding",
+    name: "Cedar Shake Siding",
     description:
-      "Transform your living spaces with our comprehensive remodeling services. From kitchen and bathroom updates to full-home renovations, we handle drywall, carpentry, and finishing — all under one roof. Increase your home's value and enjoy the spaces you've always envisioned.",
-    icon: "remodeling",
-    cta: "Start Your Remodeling Project",
+      "Authentic Western Red Cedar shake — the traditional New England look. Weathers to silver-gray over 3-5 years. Hand-installed on rear-ventilated furring strips for maximum longevity. Best for Cape Cod, historic homes, and waterfront properties.",
+    icon: "siding",
+    cta: "Cedar Shake Details",
   },
 ];
 

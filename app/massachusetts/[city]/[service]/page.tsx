@@ -79,13 +79,13 @@ const serviceNoteMap: Record<string, CityNoteKey> = {
 /* ---------- static params: 100 cities x 5 services = 500 pages ---------- */
 
 export async function generateStaticParams() {
-  const serviceSlugs = getAllServiceSlugs();
-  return cities.flatMap((city) =>
-    serviceSlugs.map((serviceSlug) => ({
-      city: city.slug,
-      service: serviceSlug,
-    }))
-  );
+  // PIVOT SIDING-ONLY: gerar SÓ /massachusetts/{city}/siding (109 páginas).
+  // As outras combinações (carpentry, windows-doors, remodeling, painting)
+  // são interceptadas por 301 em next.config.ts → /massachusetts/{city}.
+  return cities.map((city) => ({
+    city: city.slug,
+    service: "siding",
+  }));
 }
 
 /* ---------- dynamic SEO metadata ---------- */

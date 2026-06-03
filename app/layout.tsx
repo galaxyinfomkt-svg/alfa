@@ -22,11 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://alfapaintingcarpentry.com"),
   title: {
-    default: "MA Siding Contractor · 5★ · Free Estimate in 24h | Alfa",
+    default: "Massachusetts Siding Installation & Replacement | Alfa Construction",
     template: "%s | Alfa Construction",
   },
   description:
-    "Hardie Plank, vinyl & cedar siding installed by MA's 18-year crew. License #192348. 5.0★ × 22 reviews. Free estimate in 24h. Call (508) 590-9193 — Fabio answers.",
+    "Full-home siding installation & replacement in Massachusetts — Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides, not patch repairs. Licensed (MA HIC #192348) · 18+ years · Bilingual EN/PT · Free estimate: (508) 590-9193.",
   keywords: [
     "siding installation Massachusetts",
     "siding contractor near me MA",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Alfa Construction Inc",
-    title: "Alfa Construction Inc | #1 Siding Installation Contractor in Massachusetts",
+    title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
     description:
-      "Top-rated siding installation, carpentry & home remodeling across Massachusetts. 18+ years. 5-star rated. Free estimates.",
+      "Full-home siding installation & replacement across Massachusetts. Hardie Plank · vinyl · cedar · shake. We specialize in complete re-sides, not patch repairs. Licensed (MA HIC #192348) · 18+ years.",
     url: "https://alfapaintingcarpentry.com",
     images: [
       {
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alfa Construction Inc | #1 Siding Installation in Massachusetts",
+    title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
     description:
-      "Expert siding installation, carpentry & remodeling across Massachusetts. 18+ years. 5-star rated. Free estimates.",
+      "Full-home siding installation & replacement across Massachusetts. Hardie Plank · vinyl · cedar · shake. License #192348 · 18+ years.",
     images: ["/images/new-construction-siding-windows-board-batten-ma.jpg"],
   },
   robots: {
