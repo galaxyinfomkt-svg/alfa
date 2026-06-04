@@ -8,7 +8,7 @@ import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
-import QualifyingFormCard from "@/components/QualifyingFormCard";
+import FormEmbed from "@/components/FormEmbed";
 import BeforeAfter from "@/components/BeforeAfter";
 
 // PIVOT SIDING-ONLY: home mostra os 4 materiais de siding como "serviços".
@@ -130,9 +130,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Side — Qualifying Form (Tier A/B routing) */}
+            {/* Right Side — Contact Form (GHL embed) */}
             <div>
-              <QualifyingFormCard />
+              <FormEmbed />
             </div>
           </div>
         </div>

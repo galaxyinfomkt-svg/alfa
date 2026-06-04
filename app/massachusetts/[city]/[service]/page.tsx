@@ -8,7 +8,7 @@ import { company, breadcrumbSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
-import QualifyingFormCard from "@/components/QualifyingFormCard";
+import FormEmbed from "@/components/FormEmbed";
 
 /* ---------- hero image rotation by service + city ---------- */
 
@@ -350,7 +350,7 @@ export default async function CityServicePage({
 
             {/* Right Side — Contact Form */}
             <div>
-              <QualifyingFormCard />
+              <FormEmbed />
             </div>
           </div>
         </div>

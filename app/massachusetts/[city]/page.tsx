@@ -10,7 +10,7 @@ import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
-import QualifyingFormCard from "@/components/QualifyingFormCard";
+import FormEmbed from "@/components/FormEmbed";
 
 /* ---------- hero image rotation (10 images, varied by city) ---------- */
 
@@ -230,7 +230,7 @@ export default async function CityPage({
 
                 {/* Right Side — Form */}
                 <div>
-                  <QualifyingFormCard />
+                  <FormEmbed />
                 </div>
               </div>
             </div>
