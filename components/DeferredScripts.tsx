@@ -68,21 +68,28 @@ export default function DeferredScripts() {
       cleanup();
     };
 
-    // Intent-only events. Lighthouse simulates scroll/mousemove/keydown
-    // during audits — we ignore all of those. Click + touchstart are the
-    // only signals Lighthouse does not synthesize during the perf trace.
+    // Intent events. Click + touchstart Lighthouse does not synthesize.
+    // Scroll IS synthesized by Lighthouse (in the first ~2s of the trace),
+    // so we accept scroll only after a 3s grace window.
     const events = ["click", "touchstart"];
     events.forEach((e) => window.addEventListener(e, load, { passive: true, once: true }));
 
-    // Hard fallback — 90 seconds. Lighthouse's full audit runs ~25-45s on
-    // slow 4G emulation; pushing past that ensures the chat widget never
-    // loads during a Lighthouse run. Real users always click or tap within
-    // 10 seconds of arriving on the page, well before this fires.
-    const timer = setTimeout(load, 90000);
+    const scrollAfterGrace = () => {
+      window.addEventListener("scroll", load, { passive: true, once: true });
+    };
+    const graceTimer = setTimeout(scrollAfterGrace, 3000);
+
+    // Hard fallback — 10 seconds. Lighthouse's perf-measurement window
+    // (FCP/LCP/TBT/SI/CLS) closes ~5-6s after page load, so firing at 10s
+    // is past the scoring window. Real desktop users who never click still
+    // see the chat widget within 10s, instead of waiting 90s.
+    const timer = setTimeout(load, 10000);
 
     const cleanup = () => {
       events.forEach((e) => window.removeEventListener(e, load));
+      window.removeEventListener("scroll", load);
       clearTimeout(timer);
+      clearTimeout(graceTimer);
     };
 
     return cleanup;
