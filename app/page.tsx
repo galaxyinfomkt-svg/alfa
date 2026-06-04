@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { company, breadcrumbSchema, faqSchema } from "@/data/company";
+import { company, breadcrumbSchema } from "@/data/company";
+import { getFaqPage } from "@/data/schema";
+import { homeFaqs } from "@/data/faqData";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
-import FormEmbed from "@/components/FormEmbed";
+import QualifyingFormCard from "@/components/QualifyingFormCard";
 import BeforeAfter from "@/components/BeforeAfter";
 
 // PIVOT SIDING-ONLY: home mostra os 4 materiais de siding como "serviços".
@@ -51,41 +53,13 @@ export default function HomePage() {
         { name: "Home", url: "https://alfapaintingcarpentry.com" },
       ])) }} />
 
-      {/* FAQ Schema — drives "People also ask" expansion in SERP, 2-3x CTR */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema([
-        {
-          question: "How much does siding installation cost in Massachusetts?",
-          answer: "Siding installation in Massachusetts typically runs $4-$7 per square foot for vinyl and $8-$12 per square foot for Hardie Plank fiber cement. On a 2,000 sqft home, that's $8,000-$14,000 for vinyl or $16,000-$24,000 for Hardie. Final cost depends on home size, material, and condition of underlying sheathing. Alfa Construction provides free, itemized estimates with every line item shown before work starts. Call (508) 590-9193 for a free estimate in 24 hours.",
-        },
-        {
-          question: "Is Hardie Plank better than vinyl siding for New England weather?",
-          answer: "Hardie Plank fiber cement outperforms vinyl in New England's freeze-thaw cycles. Vinyl gets brittle below 20°F and can crack; Hardie is impact-resistant fiber cement that holds up to ice, snow, and accidental impact. Hardie lasts 50+ years vs vinyl's 20-30. Vinyl wins on upfront cost (~30-40% cheaper) but Hardie wins on lifespan, resale value, and winter durability. Alfa installs both — we recommend based on your home and timeline, not what's in our truck.",
-        },
-        {
-          question: "How long does a full siding installation take in Massachusetts?",
-          answer: "A full siding replacement on a 2,000 sqft Massachusetts home takes 5-7 working days for Alfa's crew under normal weather. Day 1: scaffolding and old siding removal. Day 2: sheathing inspection and house wrap. Days 3-5: new siding installation, flashing at windows and doors. Days 6-7: trim, corner boards, cleanup, and final walkthrough. Weather delays are uncommon but possible Nov-March.",
-        },
-        {
-          question: "Is Alfa Construction licensed and insured in Massachusetts?",
-          answer: "Yes. Alfa Construction Inc holds Massachusetts Construction License #192348, valid through April 2027. We carry full general liability and workers' compensation insurance — Certificate of Insurance available on request with you named as additional insured for the duration of the project. License and insurance information appears on every written estimate.",
-        },
-        {
-          question: "Do you offer free estimates for siding and remodeling?",
-          answer: "Yes. Every estimate from Alfa Construction is free, with no obligation. Fabio personally walks the project, measures the work, and writes a clean, itemized proposal showing permits, materials, labor, disposal, and cleanup as separate line items. Free estimate response within 24 hours of your call to (508) 590-9193 — Fabio answers in English or Portuguese.",
-        },
-        {
-          question: "What Massachusetts cities does Alfa Construction serve?",
-          answer: "Alfa Construction serves 109+ cities across Massachusetts from our Bellingham, MA base. Highest-volume areas: Milton, Framingham, Newton, Lexington, Brookline, Foxborough, Wellesley, Sherborn, Worcester, Marlborough, Hudson, and across MetroWest, Worcester County, Norfolk County, and the North Shore. See our full service area at alfapaintingcarpentry.com/massachusetts.",
-        },
-        {
-          question: "Does Alfa work with Portuguese-speaking homeowners?",
-          answer: "Yes. Alfa Construction is a bilingual contractor — Fabio and the crew speak both English and Portuguese fluently. Estimates, contracts, and on-site walkthroughs are available in either language. We work with Brazilian-American homeowners across MetroWest Massachusetts (Framingham, Marlborough, Hudson, Lowell) and Brazilian community members statewide.",
-        },
-        {
-          question: "Why are some siding bids so much cheaper than others?",
-          answer: "Cheap siding bids typically leave out permits, disposal of old siding (3-4 dumpsters worth), rotted sheathing repair, proper house wrap and flashing, trim and soffit work, and cleanup. These get invoiced later as 'change orders.' On a $18,000 quoted job we've seen final bills hit $34,000 when these line items reappear. A real bid lists every line before work starts. Alfa's estimates itemize permits, disposal, sheathing, wrap, flashing, siding, trim, paint, and cleanup separately.",
-        },
-      ])) }} />
+      {/* FAQ Schema — siding-only, source: data/faqData.ts. Texto VISÍVEL
+          é renderizado abaixo na FAQ section. Schema + visible text precisam
+          bater pra Google Rich Results validar. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPage(homeFaqs)) }}
+      />
 
       {/* ===== HERO SECTION (RS Development split layout) ===== */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -156,9 +130,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Side — Contact Form */}
+            {/* Right Side — Qualifying Form (Tier A/B routing) */}
             <div>
-              <FormEmbed />
+              <QualifyingFormCard />
             </div>
           </div>
         </div>
@@ -676,6 +650,31 @@ export default function HomePage() {
               View All Blog Posts
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FAQ (siding-only, render the same text as FAQ schema) ===== */}
+      <section className="py-20 bg-black border-t border-white/5" id="faq">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Frequently Asked</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+              Common Questions About Massachusetts Siding
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {homeFaqs.map((faq, i) => (
+              <details key={i} className="bg-alfa-card rounded-xl border border-white/5 group">
+                <summary className="p-6 cursor-pointer font-semibold text-white flex justify-between items-center text-base md:text-lg">
+                  {faq.q}
+                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6 text-gray-400 leading-relaxed">{faq.a}</div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

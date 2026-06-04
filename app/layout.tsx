@@ -7,7 +7,7 @@ import LegalStrip from "@/components/LegalStrip";
 import PhoneButton from "@/components/PhoneButton";
 import DeferredScripts from "@/components/DeferredScripts";
 import MidPageLegalLinks from "@/components/MidPageLegalLinks";
-import { localBusinessSchema, websiteSchema, contractorSchema, imageGallerySchema } from "@/data/company";
+import { getLocalBusiness, getWebSite } from "@/data/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -141,25 +141,18 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://stcdn.leadconnectorhq.com" />
         <link rel="dns-prefetch" href="https://link.msgsndr.com" />
 
-        {/* Organization + LocalBusiness Schema */}
+        {/* GeneralContractor schema (siding-only positioning) — generated
+            from data/siteConfig.ts via data/schema.ts. Replaces the old
+            LocalBusiness/Organization/Contractor/ImageGallery JSON-LD that
+            was telling Google we offered 4 trades. */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusiness()) }}
         />
-        {/* WebSite Schema (for sitelinks search box) */}
+        {/* WebSite (sitelinks search box) */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        {/* GeneralContractor Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(contractorSchema) }}
-        />
-        {/* ImageGallery Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSite()) }}
         />
 
         {/* Reviews widget script - loaded lazily for performance */}

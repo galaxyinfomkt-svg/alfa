@@ -29,11 +29,13 @@ export default function Footer() {
                 alt="Alfa Construction Inc"
                 width={180}
                 height={50}
+                sizes="180px"
                 className="h-12 w-auto"
+                loading="lazy"
               />
             </Link>
             <p className="text-gray-400 text-sm mb-5 leading-relaxed">
-              Professional siding installation, window &amp; door installation, carpentry, and home remodeling services across Massachusetts. Licensed, insured, and trusted for over 18 years.
+              Massachusetts siding specialists. Complete full-home siding installation and replacement in Hardie Plank, vinyl, cedar, and shake. Licensed, insured, 18+ years.
             </p>
             <div className="space-y-2.5 text-sm">
               <a href={company.phoneTel} className="flex items-center gap-2 text-alfa-gold hover:text-alfa-gold-light transition-colors">

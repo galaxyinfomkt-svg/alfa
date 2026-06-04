@@ -5,11 +5,12 @@ import { notFound } from "next/navigation";
 import { getCityBySlug, cities, getExtendedNearbyCities } from "@/data/cities";
 import { getFeaturedProjects } from "@/data/projects";
 import { company, breadcrumbSchema } from "@/data/company";
+import { getLocalBusiness, getService } from "@/data/schema";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
-import FormEmbed from "@/components/FormEmbed";
+import QualifyingFormCard from "@/components/QualifyingFormCard";
 
 /* ---------- hero image rotation (10 images, varied by city) ---------- */
 
@@ -119,36 +120,22 @@ export default async function CityPage({
   const city = getCityBySlug(slug);
   if (!city) notFound();
 
-  /* LocalBusiness + city JSON-LD */
-  const citySchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: company.name,
-    description: `Full-home siding installation and replacement services in ${city.name}, MA. Hardie Plank, vinyl, cedar, and shake — complete re-sides only. Licensed MA HIC #192348.`,
-    telephone: company.phoneRaw,
-    url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
-    areaServed: {
-      "@type": "City",
-      name: city.name,
-      containedInPlace: {
-        "@type": "State",
-        name: "Massachusetts",
-      },
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Bellingham",
-      addressRegion: "MA",
-      addressCountry: "US",
-    },
-  };
+  /* JSON-LD: GeneralContractor scoped to this city + Service (siding) scoped
+     to this city. Source: data/schema.ts (reads from data/siteConfig.ts). */
+  const cityBusinessSchema = getLocalBusiness({ city: city.name, citySlug: city.slug });
+  const citySidingService = getService({ city: city.name, citySlug: city.slug });
 
   return (
     <>
-      {/* Schema.org */}
+      {/* GeneralContractor schema scoped to this city */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityBusinessSchema) }}
+      />
+      {/* Siding Service scoped to this city */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(citySidingService) }}
       />
       <script
         type="application/ld+json"
@@ -243,7 +230,7 @@ export default async function CityPage({
 
                 {/* Right Side — Form */}
                 <div>
-                  <FormEmbed />
+                  <QualifyingFormCard />
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { company } from "@/data/company";
-import FormEmbed from "./FormEmbed";
+import QualifyingFormCard from "./QualifyingFormCard";
 
 interface CTASectionProps {
   title?: string;
@@ -62,7 +62,7 @@ export default function CTASection({ title, subtitle, cityName }: CTASectionProp
             </div>
           </div>
           <div>
-            <FormEmbed />
+            <QualifyingFormCard />
           </div>
         </div>
       </div>
