@@ -1,0 +1,99 @@
+{
+  "$comment": "Alfa Construction Inc · brand config for rs-instagram-posts skill",
+  "brand": {
+    "name": "Alfa Construction",
+    "shortName": "ALFA",
+    "logoPath": "public/images/logo.png",
+    "logoMonoPath": "public/images/logo.png",
+    "tagline": "Built right. Backed by 18 years.",
+    "phone": "(508) 590-9193",
+    "phoneDigits": "+15085909193",
+    "sector": "Siding, Windows & Carpentry",
+    "location": "Massachusetts",
+    "labelPrefix": "ROUND",
+    "stats": [
+      { "value": "22+", "label": "REVIEWS" },
+      { "value": "109+", "label": "MA CITIES" },
+      { "value": "2006", "label": "SINCE" }
+    ],
+    "ratingBadge": {
+      "stars": 5,
+      "text": "22+ FIVE-STAR GOOGLE REVIEWS"
+    }
+  },
+  "design": {
+    "background": "#0A0A0A",
+    "surface": "#111111",
+    "accent": "#B8963E",
+    "accentSoft": "rgba(184, 150, 62, 0.07)",
+    "textPrimary": "#FFFFFF",
+    "textSecondary": "#9CA3AF",
+    "dividerColor": "#B8963E",
+    "fonts": {
+      "display": {
+        "family": "Anton, Impact, 'Arial Narrow Bold', sans-serif",
+        "googleUrl": "https://fonts.googleapis.com/css2?family=Anton&display=swap",
+        "weight": 400,
+        "letterSpacing": "0.02em",
+        "transform": "uppercase"
+      },
+      "eyebrow": {
+        "family": "'Playfair Display', Georgia, serif",
+        "googleUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap",
+        "weight": 500,
+        "italic": true,
+        "letterSpacing": "0.25em",
+        "transform": "uppercase"
+      },
+      "body": {
+        "family": "'Inter', system-ui, -apple-system, sans-serif",
+        "googleUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
+        "weight": 400,
+        "letterSpacing": "0",
+        "transform": "none"
+      },
+      "quote": {
+        "family": "'Playfair Display', Georgia, serif",
+        "weight": 500,
+        "italic": true
+      }
+    },
+    "dividerWidthPx": 60,
+    "dividerHeightPx": 3,
+    "topAccentBarPx": 4,
+    "borderFramePx": 6
+  },
+  "voice": {
+    "tone": "confident, owner-operator, plainspoken. 18 years of evidence speaks louder than slogans. Educates first, sells last. Bilingual EN/PT context for MetroWest MA.",
+    "personSingular": "we",
+    "ctaShort": "Free Estimate — Call Fabio",
+    "ctaLong": "Free on-site estimate. We walk the project, talk timeline, send a clean proposal. English or Portuguese.",
+    "phoneLineFormat": "Call {phone} — Fabio answers."
+  },
+  "hashtags": {
+    "core": [
+      "#AlfaConstruction",
+      "#MassachusettsContractor",
+      "#SidingMA",
+      "#BellinghamMA",
+      "#LicensedContractor"
+    ],
+    "rotating": [
+      "#HardiePlankSiding",
+      "#VinylSiding",
+      "#WindowReplacement",
+      "#CarpentryMA",
+      "#HomeRemodelMA",
+      "#MetroWestMA",
+      "#WorcesterMA",
+      "#FraminghamMA",
+      "#NewtonMA",
+      "#WellesleyMA",
+      "#CapeCod",
+      "#NewEnglandHomes",
+      "#BrazilianContractor",
+      "#MAHomes",
+      "#ContractorTips"
+    ]
+  }
+}

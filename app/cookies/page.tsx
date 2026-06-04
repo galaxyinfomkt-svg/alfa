@@ -309,7 +309,7 @@ export default function CookiePolicyPage() {
                 </li>
                 <li>
                   🏢 <strong>Address:</strong> Alfa Construction and Cleaning
-                  Service Inc, 50 Mechanic St, Bellingham, MA 02019, United
+                  Service Inc, 34 Pearl Street, Bellingham, MA 02019, United
                   States
                 </li>
               </ul>
@@ -317,7 +317,7 @@ export default function CookiePolicyPage() {
               <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-500">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
-                  50 Mechanic St, Bellingham, MA 02019<br />
+                  34 Pearl Street, Bellingham, MA 02019<br />
                   Local Phone: (508) 590-9193<br />
                   Email: info@alfapaintingcarpentry.com<br />
                   Website: alfapaintingcarpentry.com

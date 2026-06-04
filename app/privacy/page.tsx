@@ -117,7 +117,7 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Company:</strong> means Alfa Construction and Cleaning
-                  Service Inc, with registered office at 50 Mechanic St,
+                  Service Inc, with registered office at 34 Pearl Street,
                   Bellingham, MA 02019, United States.
                 </li>
                 <li>
@@ -436,7 +436,7 @@ export default function PrivacyPolicyPage() {
                   </a>
                 </li>
                 <li>
-                  📍 <strong>Address:</strong> 50 Mechanic St, Bellingham,
+                  📍 <strong>Address:</strong> 34 Pearl Street, Bellingham,
                   Massachusetts 02019, United States
                 </li>
                 <li>
@@ -453,7 +453,7 @@ export default function PrivacyPolicyPage() {
               <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-500">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
-                  50 Mechanic St, Bellingham, MA 02019<br />
+                  34 Pearl Street, Bellingham, MA 02019<br />
                   Local Phone: (508) 590-9193<br />
                   Email: info@alfapaintingcarpentry.com<br />
                   Website: alfapaintingcarpentry.com

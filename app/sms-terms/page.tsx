@@ -59,7 +59,7 @@ export default function SmsTermsPage() {
                 <li><strong>Brand:</strong> Alfa Construction and Cleaning Service Inc</li>
                 <li><strong>DBA:</strong> Alfa Construction</li>
                 <li><strong>Sending phone number:</strong> (508) 590-9193</li>
-                <li><strong>Office address:</strong> 50 Mechanic St, Bellingham, MA 02019</li>
+                <li><strong>Office address:</strong> 34 Pearl Street, Bellingham, MA 02019</li>
                 <li><strong>Customer service email:</strong> info@alfapaintingcarpentry.com</li>
                 <li><strong>Website:</strong> <a className="text-alfa-gold underline" href="https://alfapaintingcarpentry.com">alfapaintingcarpentry.com</a></li>
                 <li><strong>License:</strong> Massachusetts Construction License #192348</li>
@@ -269,13 +269,13 @@ export default function SmsTermsPage() {
                     (508) 590-9193
                   </a>
                 </li>
-                <li>📍 <strong>Address:</strong> Alfa Construction and Cleaning Service Inc, 50 Mechanic St, Bellingham, MA 02019</li>
+                <li>📍 <strong>Address:</strong> Alfa Construction and Cleaning Service Inc, 34 Pearl Street, Bellingham, MA 02019</li>
               </ul>
 
               <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-500">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
-                  50 Mechanic St, Bellingham, MA 02019<br />
+                  34 Pearl Street, Bellingham, MA 02019<br />
                   Phone: (508) 590-9193<br />
                   Website: alfapaintingcarpentry.com<br />
                   MA License #192348

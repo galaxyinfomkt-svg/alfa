@@ -7,7 +7,7 @@ export const company = {
   email: "info@alfapaintingcarpentry.com",
   website: "https://alfapaintingcarpentry.com",
   address: {
-    street: "50 Mechanic St",
+    street: "34 Pearl Street",
     locality: "Bellingham",
     region: "MA",
     postalCode: "02019",
@@ -69,7 +69,7 @@ export const localBusinessSchema = {
   ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "50 Mechanic St",
+    streetAddress: "34 Pearl Street",
     addressLocality: "Bellingham",
     addressRegion: "MA",
     postalCode: "02019",
@@ -200,7 +200,7 @@ export const contractorSchema = {
   email: "info@alfapaintingcarpentry.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "50 Mechanic St",
+    streetAddress: "34 Pearl Street",
     addressLocality: "Bellingham",
     addressRegion: "MA",
     postalCode: "02019",
