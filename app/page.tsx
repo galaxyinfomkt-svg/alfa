@@ -110,7 +110,7 @@ export default function HomePage() {
                 <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small repairs.
               </p>
               <p className="text-base text-alfa-gold-light mb-8 leading-relaxed max-w-xl">
-                Typical full-home siding projects in Massachusetts: <strong>$15,000 – $40,000+</strong>. Licensed (MA HIC #192348) · {company.experience} years · Bilingual EN/PT.
+                <strong>Itemized, written estimates</strong> — materials, labor, permits, disposal. Licensed (MA HIC #192348) · {company.experience} years · Bilingual EN/PT.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a

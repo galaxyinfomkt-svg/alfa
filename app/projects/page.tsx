@@ -335,7 +335,7 @@ export default function ProjectsPage() {
 
               <h3 className="text-xl font-bold text-white mb-3">The Problem</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                A Victorian-era home in Massachusetts had developed extensive rot beneath aging clapboard siding. Years of New England freeze-thaw cycles had loosened nails, cracked siding boards, and let moisture penetrate the wall sheathing. The homeowner had received three bids from other contractors ranging from $14,000 to $32,000 — all with vague scopes and no permit pull-through.
+                A Victorian-era home in Massachusetts had developed extensive rot beneath aging clapboard siding. Years of New England freeze-thaw cycles had loosened nails, cracked siding boards, and let moisture penetrate the wall sheathing. The homeowner had received three bids from other contractors — all with vague scopes and no permit pull-through.
               </p>
 
               <h3 className="text-xl font-bold text-white mb-3">The Approach</h3>

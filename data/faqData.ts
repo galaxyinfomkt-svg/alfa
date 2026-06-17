@@ -17,8 +17,8 @@ export const homeFaqs: Faq[] = [
     a: "We specialize exclusively in complete siding installation and full-home replacements — we do not take on small patch repairs, single-panel fixes, or touch-up work. This focus is how we deliver the quality and warranty our clients expect on full re-sides.",
   },
   {
-    q: "How much does a full siding replacement cost in Massachusetts?",
-    a: "Typical full-home siding projects in Massachusetts range from $15,000 to $40,000+, depending on the material, home size, and the amount of sheathing or trim work uncovered during teardown. Every estimate is itemized — materials, labor, permits, disposal, and cleanup — with no bundled mystery costs.",
+    q: "How do you quote a full siding replacement?",
+    a: "Fabio walks every elevation of your home in person before quoting. The written estimate is fully itemized — materials, labor, permits, disposal, and cleanup — with no bundled mystery costs. The number depends on the material chosen, home size, and the condition of the sheathing and trim work uncovered during teardown. We price every probable surprise in writing before work begins, so the number you receive is the number you pay.",
   },
   {
     q: "What areas do you serve?",

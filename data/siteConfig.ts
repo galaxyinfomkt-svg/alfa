@@ -36,6 +36,8 @@ export const siteConfig = {
     },
   ],
 
+  // Schema.org price tier ($ = budget, $$ = mid, $$$ = premium, $$$$ = luxury).
+  // This is a tier indicator, NOT a dollar amount. Standard for GBP / LocalBusiness.
   priceRange: "$$$",
   foundingDate: "2006",
   yearsExperience: 18,
@@ -44,9 +46,6 @@ export const siteConfig = {
   licenseNumber: "192348",
   languages: ["English", "Portuguese"],
   citiesServed: 109,
-
-  // Faixa de projeto — usada no copy/FAQ pra ancorar e repelir job pequeno.
-  projectRange: "$15,000–$40,000+",
 
   // ⚠️ CONFIRMAR no GBP ao vivo antes de publicar. A home afirma 5.0 × 22 e há
   // link real do Google (g.page). Se não bater, corrija — ou deixe reviewCount

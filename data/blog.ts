@@ -203,27 +203,27 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Get a detailed breakdown of siding installation costs in Massachusetts for 2025, including vinyl, Hardie Plank, and cedar options. Learn what factors affect your total project price.",
     content: `
-      <h2>Siding Installation Costs in Massachusetts: What to Expect in 2025</h2>
-      <p>If you are planning a siding project for your Massachusetts home in 2025, one of the first questions on your mind is likely the cost. Siding installation is a significant investment, but it is also one of the best ways to protect your home from New England weather, boost curb appeal, and increase property value. At Alfa Construction Inc (License #192348), we believe in transparent pricing and want to help homeowners understand exactly what goes into the cost of a siding project. Below, we break down material costs, labor, and the factors that influence your final price.</p>
+      <h2>What Drives the Scope of a Siding Project in Massachusetts</h2>
+      <p>If you are planning a siding project for your Massachusetts home, the first question is often about scope and investment. Siding installation is a significant decision, but it is also one of the best ways to protect your home from New England weather, boost curb appeal, and increase property value. At Alfa Construction Inc (License #192348), we believe in transparent, itemized written estimates — every quote walked in person, every line item documented before work begins. Below, we break down the material decisions and the factors that determine your final project scope.</p>
 
-      <h2>Average Siding Costs by Material</h2>
-      <p>The material you choose is the single biggest factor in your overall siding cost. Here are the three most popular options for Massachusetts homes and their typical installed price ranges in 2025:</p>
+      <h2>Material Tiers for Massachusetts Homes</h2>
+      <p>The material you choose is the single biggest factor in your project scope. Here are the three most popular options for Massachusetts homes and their positioning in 2025:</p>
 
-      <h3>Vinyl Siding: $5 to $8 Per Square Foot Installed</h3>
-      <p>Vinyl remains the most affordable siding option and is widely used across Massachusetts. At the lower end of the range, you get standard-thickness panels in basic colors. Higher-end insulated vinyl siding with realistic wood-grain textures falls at the upper end. For an average 2,000-square-foot home, a full vinyl siding installation typically costs between <strong>$10,000 and $16,000</strong>. Vinyl is a great choice for homeowners seeking solid protection and a clean look without breaking the budget.</p>
+      <h3>Vinyl Siding: Budget-Friendly Entry Point</h3>
+      <p>Vinyl remains the most accessible siding option and is widely used across Massachusetts. At the lower end of the range, you get standard-thickness panels in basic colors. Higher-end insulated vinyl siding offers realistic wood-grain textures and improved energy performance. Vinyl is a great choice for homeowners seeking solid protection and a clean look while keeping the project at the entry tier.</p>
 
-      <h3>Hardie Plank (Fiber Cement): $10 to $15 Per Square Foot Installed</h3>
-      <p>James Hardie fiber cement siding is the premium choice for New England homeowners who want maximum durability and curb appeal. Hardie Plank resists cracking, warping, and rot, and it can be painted any color. The ColorPlus factory-finish option adds to the cost but provides a baked-on finish that lasts 15 to 20 years. For a typical Massachusetts home, expect to pay between <strong>$20,000 and $30,000</strong> for a full Hardie Plank installation. The higher labor cost reflects the specialized skills and tools required for proper fiber cement installation.</p>
+      <h3>Hardie Plank (Fiber Cement): Premium Long-Term Choice</h3>
+      <p>James Hardie fiber cement siding is the premium choice for New England homeowners who want maximum durability and curb appeal. Hardie Plank resists cracking, warping, and rot, and it can be painted any color. The ColorPlus factory-finish option provides a baked-on finish that lasts 15 to 20 years. The specialized skills and tools required for proper fiber cement installation reflect in the labor portion of the project.</p>
 
-      <h3>Cedar Siding: $12 to $18 Per Square Foot Installed</h3>
-      <p>Cedar shingles and clapboards are a classic New England look that many homeowners in historic Massachusetts towns prefer. Natural cedar offers unmatched beauty and character, but it comes at a premium price. Cedar requires more maintenance than vinyl or fiber cement, including periodic staining or painting. A full cedar siding project on an average home typically runs between <strong>$24,000 and $36,000</strong>. Despite the higher cost, cedar remains popular in communities like Wellesley, Newton, and Brookline where traditional aesthetics are highly valued.</p>
+      <h3>Cedar Siding: Premium Traditional Aesthetic</h3>
+      <p>Cedar shingles and clapboards are a classic New England look that many homeowners in historic Massachusetts towns prefer. Natural cedar offers unmatched beauty and character. Cedar requires more maintenance than vinyl or fiber cement, including periodic staining or painting. Despite the higher investment, cedar remains popular in communities like Wellesley, Newton, and Brookline where traditional aesthetics are highly valued.</p>
 
       <h2>Factors That Affect Your Siding Installation Cost</h2>
       <p>No two siding projects are exactly alike. Several factors can push your total cost higher or lower than the averages listed above:</p>
       <ul>
         <li><strong>House Size and Layout:</strong> Larger homes require more material and more labor hours. A simple rectangular home is less expensive to side than one with multiple dormers, bump-outs, and complex rooflines.</li>
         <li><strong>Number of Stories:</strong> Two-story and three-story homes require scaffolding or lifts, which adds to the labor cost. Working at height is slower and more complex, so expect a higher per-square-foot price for upper levels.</li>
-        <li><strong>Removal of Old Siding:</strong> If your existing siding needs to be removed before new installation, that adds labor and disposal costs. Some homes have multiple layers of old siding that must be stripped down to the sheathing. Removal typically adds $1,000 to $3,000 or more to the project.</li>
+        <li><strong>Removal of Old Siding:</strong> If your existing siding needs to be removed before new installation, that adds labor and disposal time. Some homes have multiple layers of old siding that must be stripped down to the sheathing — removal is itemized as its own line on every estimate.</li>
         <li><strong>Trim Work and Details:</strong> Window and door trim, corner boards, fascia, soffits, and decorative elements all add to the project cost. Homes with many windows or elaborate trim details will cost more to side than simpler designs.</li>
         <li><strong>Window and Door Flashing:</strong> Proper flashing around windows and doors is critical for preventing water infiltration. If your existing flashing is damaged or inadequate, replacing it during the siding project adds cost but is absolutely essential for long-term performance.</li>
       </ul>
@@ -355,7 +355,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <h3>Cons for New England</h3>
       <ul>
-        <li>Higher upfront cost compared to vinyl, typically $10 to $15 per square foot installed</li>
+        <li>Higher upfront investment than vinyl — sits at the premium tier among siding materials</li>
         <li>Heavier material requires specialized installation skills and equipment</li>
         <li>Must be installed by experienced contractors to avoid moisture problems at joints</li>
         <li>Will eventually need repainting, even with the ColorPlus finish</li>
@@ -366,7 +366,7 @@ export const blogPosts: BlogPost[] = [
       <p>Vinyl siding remains the most widely installed siding material in Massachusetts, largely due to its affordability and low maintenance requirements. Modern vinyl products have improved significantly in both appearance and performance compared to the thin, shiny vinyl panels of decades past.</p>
       <h3>Pros for New England</h3>
       <ul>
-        <li>Most affordable option at $5 to $8 per square foot installed</li>
+        <li>Most accessible option among siding materials — entry-tier project scope</li>
         <li>Very low maintenance with no painting required</li>
         <li>Wide range of colors and styles including insulated options</li>
         <li>Resists moisture, rot, and insect damage</li>
@@ -396,7 +396,7 @@ export const blogPosts: BlogPost[] = [
       <ul>
         <li>Highest maintenance of any siding option, requiring regular staining or painting</li>
         <li>Susceptible to rot, mold, and insect damage if not properly maintained</li>
-        <li>Most expensive option at $12 to $18 per square foot installed</li>
+        <li>Premium tier — highest material investment among common siding options</li>
         <li>Requires vigilant inspection and prompt repair of any damage</li>
       </ul>
       <p>Our assessment: Cedar is ideal for historic homes, upscale neighborhoods, and homeowners who appreciate natural materials and are willing to invest in ongoing maintenance.</p>
@@ -634,19 +634,19 @@ export const blogPosts: BlogPost[] = [
       <h2>The 7 Things Every Milton Older-Home Renovation Will Find</h2>
 
       <h3>1. Rotted Sheathing Behind the Siding (3 out of 4 homes)</h3>
-      <p>Strip the old siding off a Milton home built before 1970 and roughly 75% of them show some level of sheathing rot. The original boards — often 1-inch nominal pine — have absorbed decades of moisture through failing flashing, gutter overflow, and ice dam damming. We've never finished a full exterior on a pre-1950 Milton home without replacing at least some sheathing. The honest bid prices a sheathing repair range upfront ($800–$3,500 typical), not as a "change order."</p>
+      <p>Strip the old siding off a Milton home built before 1970 and roughly 75% of them show some level of sheathing rot. The original boards — often 1-inch nominal pine — have absorbed decades of moisture through failing flashing, gutter overflow, and ice dam damming. We've never finished a full exterior on a pre-1950 Milton home without replacing at least some sheathing. The honest bid lists sheathing repair as its own itemized line upfront, not as a surprise "change order."</p>
 
       <h3>2. Knob-and-Tube Wiring Hidden in the Walls</h3>
-      <p>Massachusetts banned new knob-and-tube installations in 1985, but pre-1950 Milton homes still have it running through wall cavities and attic spaces. It is generally legal to leave undisturbed if it's in good condition, but most insurance carriers (and any modern home buyer) will require replacement. Renovations that touch the wall cavity expose this — and your contractor needs a licensed electrician on standby. Budget $5,000–$15,000 for full house knob-and-tube replacement during a renovation.</p>
+      <p>Massachusetts banned new knob-and-tube installations in 1985, but pre-1950 Milton homes still have it running through wall cavities and attic spaces. It is generally legal to leave undisturbed if it's in good condition, but most insurance carriers (and any modern home buyer) will require replacement. Renovations that touch the wall cavity expose this — and your contractor needs a licensed electrician on standby. Knob-and-tube replacement is itemized separately on the bid so you can see the scope.</p>
 
       <h3>3. Lead Paint on Trim, Windows, and Siding</h3>
-      <p>Homes built before 1978 in Milton are presumed to contain lead-based paint. Massachusetts has stricter Lead Law requirements than the federal RRP rule — if a child under six lives or regularly visits the home, deleading is mandatory. Any sanding, scraping, or window replacement triggers EPA RRP-certified protocols. This adds $1,500–$8,000 to a typical exterior renovation. Reputable Milton contractors are <a href="https://www.epa.gov/lead/renovation-repair-and-painting-program" target="_blank" rel="noopener noreferrer">EPA RRP certified</a>; ask for the firm certification number on every older-home bid.</p>
+      <p>Homes built before 1978 in Milton are presumed to contain lead-based paint. Massachusetts has stricter Lead Law requirements than the federal RRP rule — if a child under six lives or regularly visits the home, deleading is mandatory. Any sanding, scraping, or window replacement triggers EPA RRP-certified protocols, which are itemized as a separate line on the bid. Reputable Milton contractors are <a href="https://www.epa.gov/lead/renovation-repair-and-painting-program" target="_blank" rel="noopener noreferrer">EPA RRP certified</a>; ask for the firm certification number on every older-home bid.</p>
 
       <h3>4. Original Single-Pane Windows With Lead Glazing</h3>
       <p>The lovely wavy-glass divided-light windows in many Milton older homes are usually original — and almost always single pane with cracked or hardened glazing. Replacing them with energy-efficient units triggers two questions: keep the original sash and install storm panels, or replace with new wood-clad windows from <a href="https://www.andersenwindows.com/products/windows/" target="_blank" rel="noopener noreferrer">Andersen 400 Series</a> or Marvin Elevate? Each Milton historical district has its own answer. We pull permits with the Milton Historical Commission for any pre-1900 home.</p>
 
       <h3>5. Asbestos Siding (Common in Milton 1940–1970 Homes)</h3>
-      <p>The cement-asbestos shingle siding that was popular on Milton 1940s–1970s ranch and Cape homes is non-friable and generally safe to leave in place. But once you strip it for a renovation, Massachusetts requires <a href="https://www.mass.gov/asbestos" target="_blank" rel="noopener noreferrer">MA DEP-certified abatement</a> with sealed containment, HEPA filtration, and licensed disposal. Budget $4,000–$12,000 for a full house asbestos siding removal. Skip this and the homeowner faces six-figure DEP fines.</p>
+      <p>The cement-asbestos shingle siding that was popular on Milton 1940s–1970s ranch and Cape homes is non-friable and generally safe to leave in place. But once you strip it for a renovation, Massachusetts requires <a href="https://www.mass.gov/asbestos" target="_blank" rel="noopener noreferrer">MA DEP-certified abatement</a> with sealed containment, HEPA filtration, and licensed disposal. Asbestos siding removal is documented as its own permitted line item on the bid. Skip this step and the homeowner faces six-figure DEP fines.</p>
 
       <h3>6. Balloon Framing Without Fire Stops</h3>
       <p>Pre-1940 Milton homes are mostly balloon-framed — wall studs run continuous from foundation to roof, creating natural chimneys for fire to spread. Modern code requires fire blocking at every floor level. A serious renovation should add fire stops as part of the wall opening work. Most contractors skip this. We don't — it's a 1-day labor item on an open-wall renovation and it protects the home for the next century.</p>
@@ -655,9 +655,9 @@ export const blogPosts: BlogPost[] = [
       <p>If a previous owner drywalled over the original plaster, you'll find it during the renovation. Sometimes the plaster is fine; sometimes it's full of horsehair and crumbling. Either way, you need to decide: leave it sandwiched, demo it out to add insulation, or restore. Closed-cell spray foam in the cavity is the standard upgrade — but only after asbestos and lead surveys clear the work area.</p>
 
       <h2>What a Real Milton Older-Home Renovation Bid Looks Like</h2>
-      <p>An honest renovation bid on a 1920s Milton Colonial includes line items for each of the above, plus permits, debris disposal, lead-safe work practices, and cleanup. A 2,000-square-foot full exterior renovation on a pre-1950 Milton home typically runs $35,000–$60,000 with these contingencies priced. A bid significantly lower than that range is leaving them out — they reappear as change orders during the work.</p>
+      <p>An honest renovation bid on a 1920s Milton Colonial includes line items for each of the above, plus permits, debris disposal, lead-safe work practices, and cleanup. A bid significantly lighter than the scope above is leaving items out — they reappear as change orders during the work, often at marked-up rates.</p>
 
-      <p>We've seen Milton homeowners hand contractors $14,000 deposits on a "$22,000" exterior renovation, only to receive an invoice for $48,000 once the wall opens up and the surprises start invoicing. The deposit becomes leverage; the homeowner pays the marked-up change orders because demoing the walls back closed isn't an option. The fix: every probable surprise gets priced in writing before work begins.</p>
+      <p>We've seen Milton homeowners pay a deposit on a thinly-scoped exterior renovation, only to receive a final invoice several times larger once the wall opens up and the surprises start. The deposit becomes leverage; the homeowner pays the marked-up change orders because demoing the walls back closed isn't an option. The fix: every probable surprise gets itemized in writing before work begins, with the scope walked in person.</p>
 
       <h2>Permits and Milton Historical Commission</h2>
       <p>The Town of Milton requires building permits for any structural, electrical, plumbing, or major exterior work. Properties in the historic districts (Brush Hill, East Milton Square, Milton Village) need <a href="https://www.townofmilton.org/historical-commission" target="_blank" rel="noopener noreferrer">Historical Commission</a> sign-off on visible exterior changes. Reputable contractors pull permits and walk you through Commission review when applicable. Permit fees are typically 0.5–1% of project value in Milton.</p>
@@ -677,7 +677,7 @@ export const blogPosts: BlogPost[] = [
       <p>Alfa Construction serves Milton, East Milton, Lower Mills, Hyde Park, Quincy, Braintree, Randolph, Canton, Dedham, Norwood, Westwood, Hingham, and the rest of the South Shore. Our 18-year team handles siding, window and door replacement, carpentry, rotted trim repair, and full older-home renovations across this Norfolk County corridor.</p>
 
       <h2>The Honest Pitch</h2>
-      <p>Renovating an older Milton home well costs more than a generic siding bid implies — but the difference between a $22,000 surprise and a $48,000 nightmare is whether the bid was written by someone who'd seen Milton older homes before. Our crew has worked on Milton homes for 18 years. We're bilingual (English and Portuguese), licensed (<a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA HIC #192348</a>, valid through April 2027), fully insured, EPA RRP-certified, and we itemize every line item before work begins.</p>
+      <p>Renovating an older Milton home well takes more than a generic siding bid implies — the difference between a clean final invoice and an open-ended nightmare is whether the bid was written by someone who'd seen Milton older homes before. Our crew has worked on Milton homes for 18 years. We're bilingual (English and Portuguese), licensed (<a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA HIC #192348</a>, valid through April 2027), fully insured, EPA RRP-certified, and we itemize every line item before work begins.</p>
 
       <p>For a free, on-site assessment of your Milton home renovation — including a written estimate with every probable surprise priced upfront — call Fabio directly at <strong>(508) 590-9193</strong>. We respond to all estimate requests within 24 hours. English or Portuguese.</p>
     `,
@@ -723,22 +723,22 @@ export const blogPosts: BlogPost[] = [
       <h2>Material-by-Material Comparison</h2>
 
       <h3>1. James Hardie Fiber Cement (HardiePlank) — Best Overall</h3>
-      <p><strong>Cost:</strong> $8-12 per square foot installed. <strong>Lifespan:</strong> 50+ years. <strong>Warranty:</strong> 30-year limited transferable.</p>
+      <p><strong>Tier:</strong> Premium. <strong>Lifespan:</strong> 50+ years. <strong>Warranty:</strong> 30-year limited transferable.</p>
       <p>Fiber cement is roughly 90% cement and sand with cellulose fibers — it doesn't burn, doesn't rot, and doesn't get eaten by carpenter ants. The 30-year manufacturer warranty from <a href="https://www.jameshardie.com/products/hardieplank-lap-siding" target="_blank" rel="noopener noreferrer">James Hardie</a> is the longest in the residential siding industry, and it transfers to the next homeowner — a real resale advantage in the Massachusetts real estate market. Hardie is also ASTM C1186 Type A Grade II rated with a Class A fire rating (ASTM E84), which carries weight with home insurance underwriters.</p>
       <p><strong>Best for:</strong> Forever-homes, homes in MetroWest and Worcester County where freeze-thaw is severe, homes selling within 5 years (Hardie listings appraise 2-4% higher in MA per local appraiser data).</p>
 
       <h3>2. LP SmartSide Engineered Wood — Best Middle Ground</h3>
-      <p><strong>Cost:</strong> $6-9 per square foot installed. <strong>Lifespan:</strong> 30-50 years. <strong>Warranty:</strong> 5-year SureStart + 50-year substrate limited.</p>
-      <p>Most homeowners and even some contractors skip LP SmartSide entirely. That's a mistake. It looks closer to Hardie than vinyl, costs less than Hardie, and weighs significantly less — which means lower labor cost (fewer crew-hours on the install). It's engineered wood treated with zinc borate to resist rot, fungus, and insects. The catch: it does not have Hardie's 30-year track record yet (introduced 1997), so resale narrative is weaker.</p>
-      <p><strong>Best for:</strong> Homeowners who want the Hardie look at a vinyl-adjacent price point.</p>
+      <p><strong>Tier:</strong> Mid. <strong>Lifespan:</strong> 30-50 years. <strong>Warranty:</strong> 5-year SureStart + 50-year substrate limited.</p>
+      <p>Most homeowners and even some contractors skip LP SmartSide entirely. That's a mistake. It looks closer to Hardie than vinyl, sits at a lower tier than Hardie, and weighs significantly less — which means fewer crew-hours on the install. It's engineered wood treated with zinc borate to resist rot, fungus, and insects. The catch: it does not have Hardie's 30-year track record yet (introduced 1997), so resale narrative is weaker.</p>
+      <p><strong>Best for:</strong> Homeowners who want the Hardie look at a vinyl-adjacent positioning.</p>
 
       <h3>3. Premium Vinyl Siding — Best Budget</h3>
-      <p><strong>Cost:</strong> $4-7 per square foot installed. <strong>Lifespan:</strong> 20-30 years. <strong>Warranty:</strong> 25-year limited (most manufacturers).</p>
+      <p><strong>Tier:</strong> Entry. <strong>Lifespan:</strong> 20-30 years. <strong>Warranty:</strong> 25-year limited (most manufacturers).</p>
       <p>Modern premium vinyl (0.046" thick or greater) is far better than the budget vinyl from the 1990s that gave the category a bad name. ASTM D3679 certified, available in 40+ colors, and installation goes fast — a typical 2,000 sqft home can be sided in 5-7 days. The drawbacks remain: brittle below 20°F, can crack from a stray ladder or branch in winter, and once a panel is damaged it must be replaced (cannot be repaired). Color fade is the other long-term issue — dark vinyls fade fastest in MA sun.</p>
       <p><strong>Best for:</strong> Investors flipping in 5 years, rental properties, homeowners with strict budgets.</p>
 
       <h3>4. Cedar Shake / Shingle — Best Traditional Look</h3>
-      <p><strong>Cost:</strong> $10-15 per square foot installed (hand-installed). <strong>Lifespan:</strong> 30-50 years with maintenance. <strong>Warranty:</strong> material only, typically 5-25 years.</p>
+      <p><strong>Tier:</strong> Premium (hand-installed). <strong>Lifespan:</strong> 30-50 years with maintenance. <strong>Warranty:</strong> material only, typically 5-25 years.</p>
       <p>Authentic Western Red Cedar shake is the most traditionally "New England" siding — think Nantucket, Cape Cod, and the older Boston suburbs. It weathers to a silver-gray over 3-5 years, which most homeowners love. The catch: it requires the most maintenance of any option. Annual inspections, periodic re-staining if you want to maintain color, and replacement of damaged shakes every few years. Without maintenance, cedar fails fastest. With it, it can outlast vinyl.</p>
       <p><strong>Best for:</strong> Historic homes (pre-1930), Cape Cod and waterfront properties, homeowners committed to maintenance.</p>
 
@@ -751,7 +751,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>The Hidden Factor: Installation Quality</h2>
-      <p>Material choice matters less than installation quality. We've seen $14,000 vinyl jobs outperform $32,000 Hardie jobs because of how the wall system was built behind the siding. The order matters:</p>
+      <p>Material choice matters less than installation quality. We've seen budget-tier vinyl installs outperform premium Hardie installs because of how the wall system was built behind the siding. The order matters:</p>
       <ol>
         <li><strong>Sheathing inspection.</strong> Strip the old siding and inspect every board. Roughly 3 out of 4 Massachusetts homes built before 1990 show some rot. Cheap bids skip this step and invoice it later as a "change order."</li>
         <li><strong>Weather-resistant barrier.</strong> <a href="https://www.dupont.com/brands/tyvek.html" target="_blank" rel="noopener noreferrer">DuPont Tyvek HouseWrap</a> or similar applied with seams taped and overlapped 6+ inches. Skip this and water reaches the framing within 5 years.</li>
@@ -760,15 +760,19 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Manufacturer-specified fasteners.</strong> Hardie requires hot-dipped galvanized or stainless nails. Wrong fastener voids the 30-year warranty.</li>
       </ol>
 
-      <h2>What This Costs on a Real Massachusetts Home</h2>
-      <p>For a typical 2,000 square foot Massachusetts home with rotted sheathing replacement, full house wrap, Z-flashing, trim, and proper cleanup, expect:</p>
+      <h2>What a Complete Bid Should Include</h2>
+      <p>For a typical 2,000 square foot Massachusetts home, the complete scope should always include — itemized in writing — the following work, regardless of material chosen:</p>
       <ul>
-        <li><strong>Premium vinyl:</strong> $14,000-$22,000</li>
-        <li><strong>LP SmartSide:</strong> $18,000-$28,000</li>
-        <li><strong>HardiePlank fiber cement:</strong> $22,000-$36,000</li>
-        <li><strong>Cedar shake (hand-installed):</strong> $28,000-$45,000</li>
+        <li><strong>Sheathing inspection and replacement</strong> where rot is found (3 out of 4 pre-1990 homes need at least some)</li>
+        <li><strong>Permits</strong> pulled with the local building department</li>
+        <li><strong>Old siding teardown and disposal</strong></li>
+        <li><strong>Full house weather-resistant barrier</strong> (Tyvek HouseWrap or similar)</li>
+        <li><strong>Z-flashing</strong> at every penetration (windows, doors, dryer vents, electrical)</li>
+        <li><strong>Trim, corner boards, and fascia</strong> in matched material</li>
+        <li><strong>Manufacturer-specified fasteners</strong> (warranty depends on it)</li>
+        <li><strong>Site protection and end-of-day cleanup</strong> with magnetic nail sweeps</li>
       </ul>
-      <p>Bids significantly below these ranges typically exclude permits, disposal, sheathing repair, house wrap, or cleanup. Every Alfa Construction estimate itemizes every line item before work starts — see our <a href="/blog/hardie-plank-vs-vinyl-siding-new-england">Hardie vs Vinyl deep dive</a> for a full bid checklist.</p>
+      <p>Bids that omit these line items typically reappear later as "change orders" once the wall is open. Every Alfa Construction estimate itemizes each of the above before work starts — see our <a href="/blog/hardie-plank-vs-vinyl-siding-new-england">Hardie vs Vinyl deep dive</a> for a full bid checklist.</p>
 
       <h2>Our Recommendation by Homeowner Type</h2>
       <ul>
