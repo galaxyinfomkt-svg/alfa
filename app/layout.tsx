@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import LegalStrip from "@/components/LegalStrip";
 import PhoneButton from "@/components/PhoneButton";
 import DeferredScripts from "@/components/DeferredScripts";
-import MidPageLegalLinks from "@/components/MidPageLegalLinks";
 import { getLocalBusiness, getWebSite } from "@/data/schema";
 
 const inter = Inter({
@@ -160,7 +159,6 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-black text-gray-300">
         <Header />
         <main className="min-h-screen">{children}</main>
-        <MidPageLegalLinks />
         <LegalStrip />
         <Footer />
         <PhoneButton />
