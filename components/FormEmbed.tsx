@@ -17,6 +17,20 @@ import { useEffect, useRef, useState } from "react";
  * To style the FORM FIELDS themselves (inside the iframe), paste the custom
  * CSS from social/GHL-FORM-CSS.md into the GHL form editor → Style → Custom
  * CSS.
+ *
+ * ──────────────────────────────────────────────────────────────────────────
+ * TODO(Luiz): LEAD QUALIFICATION — the form is a GHL/LeadConnector iframe
+ * (form id PiFH0ELuOmHS9iZhGQ5F), so the FIELDS live inside GHL, not here.
+ * Add these qualifying fields in the GHL form editor so small-job leads
+ * self-filter BEFORE they reach the inbox:
+ *   1. Project type (required, select): "Full-home re-side / new siding" |
+ *      "Patch repair / single section" | "Single window or door" | "Other"
+ *      → route everything except "Full-home re-side" to a polite "we only
+ *        take complete exterior re-sides" auto-reply.
+ *   2. Home size (select): under 1,500 sqft | 1,500–2,500 | 2,500–3,500 | 3,500+
+ *   3. Budget range (select): under $15k | $15–30k | $30–50k | $50k+
+ *      (align the bands with the real price floor — see hero/contact copy).
+ * ──────────────────────────────────────────────────────────────────────────
  */
 export default function FormEmbed() {
   const [shouldLoad, setShouldLoad] = useState(false);

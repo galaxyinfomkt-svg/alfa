@@ -26,7 +26,11 @@ export default function ContactPage() {
             Get Your Free Estimate
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Ready to start your project? Contact Alfa Construction Inc today. We provide free, no-obligation estimates for all siding, window, carpentry, and remodeling projects across Massachusetts.
+            Ready to start your project? Contact Alfa Construction Inc today. We provide free, no-obligation estimates for complete full-home siding installation and replacement across Massachusetts.
+          </p>
+          {/* Lead qualifier — TODO(Luiz): confirm price floor ($__k). */}
+          <p className="text-gray-300 max-w-2xl mx-auto text-sm mt-4 bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
+            We take <strong className="text-white">complete exterior re-sides only</strong> — projects typically start around <strong className="text-white">${/* TODO(Luiz) */}[__]k</strong>. We do not do patch repairs, single-trim, or single-window jobs.
           </p>
         </div>
       </section>
