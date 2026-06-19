@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getCityBySlug, cities, getExtendedNearbyCities } from "@/data/cities";
-import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
+import { getServiceBySlug } from "@/data/services";
 import { company, breadcrumbSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
@@ -594,33 +594,30 @@ export default async function CityServicePage({
         </div>
       </section>
 
-      {/* ===== OTHER SERVICES IN THIS CITY ===== */}
+      {/* ===== SIDING MATERIALS WE INSTALL ===== */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
-              More Services
+              Siding Materials
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-              Other Services in {city.name}, MA
+              Siding Materials We Install in {city.name}, MA
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Many {city.name} homeowners who invest in {service.name.toLowerCase()} also benefit
-              from our other professional home improvement services. Bundle services for the best value.
+              Every {city.name} re-side is a complete full-home installation. Choose the material
+              that fits your home and budget — we handle the entire exterior.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              { slug: "carpentry", name: "Carpentry & Trim Work" },
-              { slug: "siding", name: "Siding Installation & Repair" },
-              { slug: "windows-doors", name: "Window & Door Installation" },
-              { slug: "remodeling", name: "Home Remodeling & Renovation" },
-            ]
-              .filter((s) => s.slug !== service.slug)
-              .map((s) => (
+              { slug: "hardie-plank-siding", name: "Hardie Plank Fiber Cement" },
+              { slug: "vinyl-siding", name: "Vinyl Siding" },
+              { slug: "cedar-shake-siding", name: "Cedar Shake Siding" },
+            ].map((s) => (
                 <Link
                   key={s.slug}
-                  href={`/massachusetts/${city.slug}/${s.slug}`}
+                  href={`/services/${s.slug}`}
                   className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-gray-300 hover:border-alfa-gold/30 hover:text-alfa-gold font-medium px-5 py-3 rounded-lg transition-all duration-200 shadow-md shadow-black/10"
                 >
                   {s.name}
