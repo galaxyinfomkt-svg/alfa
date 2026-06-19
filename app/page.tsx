@@ -406,7 +406,7 @@ export default function HomePage() {
           </div>
 
           {/* Semantic data list — Princeton GEO Method 2 (+37% stats lift). AI extractors parse <dl> directly */}
-          <dl className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-alfa-card border border-white/5 rounded-2xl p-8">
+          <dl className="grid grid-cols-3 gap-6 bg-alfa-card border border-white/5 rounded-2xl p-8">
             <div className="text-center">
               <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Founded</dt>
               <dd className="text-3xl font-bold text-white">{company.foundedYear}</dd>
@@ -418,10 +418,6 @@ export default function HomePage() {
             <div className="text-center">
               <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Five-Star Reviews</dt>
               <dd className="text-3xl font-bold text-white">22+</dd>
-            </div>
-            <div className="text-center">
-              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Languages Spoken</dt>
-              <dd className="text-3xl font-bold text-white">EN · PT</dd>
             </div>
           </dl>
 
