@@ -120,8 +120,7 @@ export default function HomePage() {
                 <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small repairs.
               </p>
               {/* Lead qualifier — keeps small-job leads out of the funnel.
-                  TODO(Luiz): quando tiver o piso de preço, acrescentar algo como
-                  "projects typically start around $__k." nesta frase. */}
+                  Diretriz do cliente: o site NÃO menciona preço. */}
               <p className="text-sm text-gray-300 mb-3 leading-relaxed max-w-xl bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
                 We take <strong className="text-white">complete exterior re-sides only</strong> — full-home siding installation and replacement. We do not do patch repairs, single-trim, or single-window jobs.
               </p>
@@ -622,10 +621,10 @@ export default function HomePage() {
                 img: "/images/siding-window-installation-after-massachusetts.jpg",
               },
               {
-                slug: "how-much-does-siding-installation-cost-massachusetts",
-                title: "How Much Does Siding Installation Cost in Massachusetts?",
-                excerpt: "Complete cost breakdown for vinyl, Hardie Plank, and cedar siding installation in Massachusetts.",
-                date: "March 15, 2025",
+                slug: "best-siding-for-new-england-homes",
+                title: "The Best Siding for New England Homes (2026 Guide)",
+                excerpt: "Hardie Plank vs vinyl vs cedar vs LP SmartSide — which siding holds up best in New England weather, by material and home age.",
+                date: "January 6, 2026",
                 category: "Siding",
                 img: "/images/commercial-siding-installation-massachusetts.png",
               },

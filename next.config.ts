@@ -117,6 +117,8 @@ const nextConfig: NextConfig = {
     const blogRedirects = [
       { source: "/blog/warning-signs-trim-needs-carpentry-repair-winter", destination: "/services/siding", permanent: true },
       { source: "/blog/renovating-older-homes-in-milton-ma", destination: "/services/siding", permanent: true },
+      // Retired per "site does not mention price" directive (cost guide).
+      { source: "/blog/how-much-does-siding-installation-cost-massachusetts", destination: "/services/siding", permanent: true },
     ];
 
     return [...cityServiceRedirects, ...serviceRedirects, ...legacyRedirects, ...blogRedirects];
