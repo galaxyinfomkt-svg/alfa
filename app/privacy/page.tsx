@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
               Privacy Policy
             </h1>
-            <p className="text-gray-500 text-sm">Last updated: {LAST_UPDATED}</p>
+            <p className="text-gray-400 text-sm">Last updated: {LAST_UPDATED}</p>
           </header>
 
           <div className="prose prose-invert prose-gray max-w-none space-y-8 text-gray-300 leading-relaxed">
@@ -450,7 +450,7 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
 
-              <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-500">
+              <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-400">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   34 Pearl Street, Bellingham, MA 02019<br />

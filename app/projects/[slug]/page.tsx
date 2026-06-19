@@ -139,7 +139,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               )}
             </span>
             {project.geo && (
-              <span className="text-gray-500 text-xs font-mono">
+              <span className="text-gray-400 text-xs font-mono">
                 {project.geo.lat.toFixed(4)}°N · {Math.abs(project.geo.lng).toFixed(4)}°W
               </span>
             )}

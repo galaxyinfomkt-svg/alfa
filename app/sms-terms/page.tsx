@@ -36,7 +36,7 @@ export default function SmsTermsPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
               SMS Terms &amp; Opt-In Methods
             </h1>
-            <p className="text-gray-500 text-sm">Last updated: {LAST_UPDATED}</p>
+            <p className="text-gray-400 text-sm">Last updated: {LAST_UPDATED}</p>
           </header>
 
           <div className="space-y-10 text-gray-300 leading-relaxed">
@@ -249,7 +249,7 @@ export default function SmsTermsPage() {
                   — website tracking technologies
                 </li>
               </ul>
-              <p className="mt-3 text-sm text-gray-500">
+              <p className="mt-3 text-sm text-gray-400">
                 Compliance frameworks observed: Telephone Consumer Protection
                 Act (TCPA), CAN-SPAM Act, CTIA Short Code Monitoring Handbook,
                 A2P 10DLC carrier guidelines (Verizon, AT&amp;T, T-Mobile).
@@ -272,7 +272,7 @@ export default function SmsTermsPage() {
                 <li>📍 <strong>Address:</strong> Alfa Construction and Cleaning Service Inc, 34 Pearl Street, Bellingham, MA 02019</li>
               </ul>
 
-              <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-500">
+              <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-400">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   34 Pearl Street, Bellingham, MA 02019<br />
@@ -330,7 +330,7 @@ function Method({
         Method {num}: {title}
       </h3>
       {url && (
-        <p className="text-sm text-gray-500 mb-3">
+        <p className="text-sm text-gray-400 mb-3">
           Verifiable URL:{" "}
           <a className="text-alfa-gold-light underline" href={url} target="_blank" rel="noopener noreferrer">
             {url}

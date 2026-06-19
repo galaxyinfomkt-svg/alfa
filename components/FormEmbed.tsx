@@ -205,9 +205,9 @@ export default function FormEmbed() {
         </div>
 
         {/* Footer disclaimer */}
-        <div className="border-t border-white/5 px-6 py-3 text-[11px] text-gray-500 flex items-center justify-between gap-3">
+        <div className="border-t border-white/5 px-6 py-3 text-[11px] text-gray-400 flex items-center justify-between gap-3">
           <span>By submitting, you agree to our <a className="text-alfa-gold hover:text-alfa-gold-light underline-offset-2 hover:underline" href="/terms">Terms</a> &amp; <a className="text-alfa-gold hover:text-alfa-gold-light underline-offset-2 hover:underline" href="/privacy">Privacy</a>.</span>
-          <span className="hidden sm:inline-flex items-center gap-1 text-gray-500">
+          <span className="hidden sm:inline-flex items-center gap-1 text-gray-400">
             <svg className="w-3 h-3 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
             </svg>
