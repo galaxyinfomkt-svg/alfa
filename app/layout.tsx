@@ -26,32 +26,8 @@ export const metadata: Metadata = {
   },
   description:
     "Full-home siding installation & replacement in Massachusetts — Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides, not patch repairs. Licensed (MA HIC #192348) · 20+ years · Bilingual EN/PT · Free estimate: (508) 590-9193.",
-  keywords: [
-    "siding installation Massachusetts",
-    "siding contractor near me MA",
-    "siding installation MA",
-    "Hardie plank siding Massachusetts",
-    "vinyl siding installation MA",
-    "fiber cement siding Massachusetts",
-    "commercial siding installation MA",
-    "siding replacement Massachusetts",
-    "window installation Massachusetts",
-    "door installation MA",
-    "carpentry services Massachusetts",
-    "home remodeling Massachusetts",
-    "licensed contractor Massachusetts",
-    "insured contractor MA",
-    "Alfa Construction Inc",
-    "exterior siding MA",
-    "residential siding Massachusetts",
-    "siding repair MA",
-    "clapboard siding Massachusetts",
-    "shake siding installation MA",
-    "Bellingham MA contractor",
-    "MetroWest siding contractor",
-    "Worcester county siding",
-    "siding company Massachusetts",
-  ],
+  // meta `keywords` removed — Google ignores it and it still listed
+  // window/door/carpentry/remodeling + "siding repair MA" (off-positioning).
   authors: [{ name: "Alfa Construction Inc", url: "https://alfapaintingcarpentry.com" }],
   creator: "Alfa Construction Inc",
   publisher: "Alfa Construction Inc",
@@ -106,12 +82,12 @@ export const metadata: Metadata = {
     // Google Search Console verified via galaxyinfomkt@gmail.com
   },
   other: {
+    // geo.* are legitimate local-business hints; kept. Legacy "revisit-after"
+    // (ignored by Google) and redundant "language" (html lang covers it) removed.
     "geo.region": "US-MA",
     "geo.placename": "Bellingham, Massachusetts",
     "geo.position": "42.0687;-71.4748",
     "ICBM": "42.0687, -71.4748",
-    "revisit-after": "3 days",
-    "language": "EN",
   },
 };
 
