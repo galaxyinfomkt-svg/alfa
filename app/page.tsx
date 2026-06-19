@@ -5,6 +5,7 @@ import { getFaqPage, getOrganizationRating } from "@/data/schema";
 import { homeFaqs } from "@/data/faqData";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
+import ReviewsSSR from "@/components/ReviewsSSR";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -560,8 +561,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Real reviews from Google via GHL Reviews Widget */}
-          <ReviewsWidget />
+          {/* SSR reviews — indexable HTML that backs the #organization rating.
+              Source: data/reviews.ts (TODO(Luiz): paste real reviews). */}
+          <ReviewsSSR />
+
+          {/* Live Google reviews via GHL Reputation Hub widget (iframe, below). */}
+          <div className="mt-10">
+            <ReviewsWidget />
+          </div>
 
           <div className="text-center mt-8">
             <a
