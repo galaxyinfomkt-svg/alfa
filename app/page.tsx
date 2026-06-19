@@ -119,9 +119,11 @@ export default function HomePage() {
               <p className="text-lg text-gray-300 mb-3 leading-relaxed max-w-xl">
                 <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small repairs.
               </p>
-              {/* Lead qualifier — keeps small-job leads out of the funnel. TODO(Luiz): confirm price floor. */}
+              {/* Lead qualifier — keeps small-job leads out of the funnel.
+                  TODO(Luiz): quando tiver o piso de preço, acrescentar algo como
+                  "projects typically start around $__k." nesta frase. */}
               <p className="text-sm text-gray-300 mb-3 leading-relaxed max-w-xl bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
-                We take <strong className="text-white">complete exterior re-sides only</strong> — projects typically start around <strong className="text-white">${/* TODO(Luiz) */}[__]k</strong>. We do not do patch repairs, single-trim, or single-window jobs.
+                We take <strong className="text-white">complete exterior re-sides only</strong> — full-home siding installation and replacement. We do not do patch repairs, single-trim, or single-window jobs.
               </p>
               <p className="text-base text-alfa-gold-light mb-8 leading-relaxed max-w-xl">
                 <strong>Itemized, written estimates</strong> — materials, labor, permits, disposal. Licensed (MA HIC #192348) · {company.experience} years · Bilingual EN/PT.
