@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { company, breadcrumbSchema } from "@/data/company";
-import { getFaqPage } from "@/data/schema";
+import { getFaqPage, getOrganizationRating } from "@/data/schema";
 import { homeFaqs } from "@/data/faqData";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
@@ -52,6 +52,15 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
         { name: "Home", url: "https://alfapaintingcarpentry.com" },
       ])) }} />
+
+      {/* AggregateRating + reviews — SOMENTE na home (mesmo @id do #organization).
+          Mantém a nota agregada em no máx. 1 página; zero nas ~440 programáticas. */}
+      {(() => {
+        const rating = getOrganizationRating();
+        return rating ? (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rating) }} />
+        ) : null;
+      })()}
 
       {/* FAQ Schema — siding-only, source: data/faqData.ts. Texto VISÍVEL
           é renderizado abaixo na FAQ section. Schema + visible text precisam

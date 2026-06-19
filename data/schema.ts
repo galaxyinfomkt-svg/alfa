@@ -8,6 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { siteConfig as s } from "./siteConfig";
+import { googleReviews } from "./reviews";
 
 const BUSINESS_ID = `${s.url}/#business`;
 type Node = Record<string, unknown>;
@@ -77,13 +78,45 @@ export function getLocalBusiness(opts?: { city?: string; citySlug?: string }): N
     },
   };
 
-  // Só emite a nota se houver contagem REAL (ver aviso no siteConfig).
-  if (s.reviewCount) {
-    node.aggregateRating = {
+  // aggregateRating NÃO sai daqui. getLocalBusiness() roda no layout global
+  // (todas as ~440 páginas). A nota agregada vive SÓ na home via
+  // getOrganizationRating(), respaldada por reviews reais em SSR.
+  return node;
+}
+
+// ── AggregateRating + reviews (SOMENTE na home) ─────────────────────────────
+// Mesmo @id do #business → o Google funde no nó da organização. Injetar apenas
+// em app/page.tsx para que a nota apareça em no máx. 1 página.
+// ⚠️ TODO(Luiz): confirmar rating/reviewCount contra o GBP ao vivo antes de
+// publicar. As reviews vêm de data/reviews.ts (colar as reais lá).
+export function getOrganizationRating(): Node | null {
+  if (!s.reviewCount) return null;
+  const node: Node = {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "@id": BUSINESS_ID,
+    name: s.name,
+    aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: s.rating,
       reviewCount: s.reviewCount,
-    };
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+  if (googleReviews.length > 0) {
+    node.review = googleReviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      datePublished: r.date,
+      reviewBody: r.text,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(r.rating),
+        bestRating: "5",
+        worstRating: "1",
+      },
+    }));
   }
   return node;
 }

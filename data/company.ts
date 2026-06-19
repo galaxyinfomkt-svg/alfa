@@ -50,9 +50,9 @@ export const localBusinessSchema = {
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   "@id": `${BASE_URL}/#organization`,
   name: "Alfa Construction Inc",
-  alternateName: ["Alfa Construction", "Alfa Siding", "Alfa Painting & Carpentry", "Alfa Construction Inc"],
+  alternateName: ["Alfa Construction", "Alfa Siding"],
   description:
-    "Expert siding installation, window & door installation, carpentry and home remodeling services in Massachusetts. Licensed & insured contractor with 18+ years of experience serving 100+ cities.",
+    "Massachusetts siding specialists — complete full-home siding installation and replacement in Hardie Plank fiber cement, vinyl, cedar, and shake. Licensed & insured contractor with 20+ years of experience.",
   telephone: "+15085909193",
   email: "info@alfapaintingcarpentry.com",
   url: BASE_URL,
@@ -128,42 +128,42 @@ export const localBusinessSchema = {
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Home Improvement Services",
+    name: "Siding Installation & Replacement",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Siding Installation & Repair",
+          name: "Siding Installation & Replacement",
           url: `${BASE_URL}/services/siding`,
-          description: "Professional Hardie Plank, vinyl siding, and full replacement services across Massachusetts.",
+          description: "Complete full-home siding installation and replacement across Massachusetts.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Window & Door Installation",
-          url: `${BASE_URL}/services/windows-doors`,
-          description: "Energy-efficient window and door installation services.",
+          name: "Hardie Plank Fiber Cement Siding",
+          url: `${BASE_URL}/services/hardie-plank-siding`,
+          description: "James Hardie fiber cement siding installation with 30-year manufacturer warranty.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Carpentry & Trim Work",
-          url: `${BASE_URL}/services/carpentry`,
-          description: "Fine carpentry, trim replacement, and door installation services.",
+          name: "Vinyl Siding Installation",
+          url: `${BASE_URL}/services/vinyl-siding`,
+          description: "Premium full-home vinyl siding installation and replacement.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Home Remodeling & Renovation",
-          url: `${BASE_URL}/services/remodeling`,
-          description: "Complete home renovation from kitchens to bathrooms.",
+          name: "Cedar Shake Siding",
+          url: `${BASE_URL}/services/cedar-shake-siding`,
+          description: "Authentic Western Red Cedar shake siding installation.",
         },
       },
     ],
@@ -194,7 +194,7 @@ export const contractorSchema = {
   name: "Alfa Construction Inc",
   alternateName: ["Alfa Construction", "Alfa Siding & Construction"],
   description:
-    "Licensed siding installation, window & door installation, carpentry and home remodeling contractor serving Massachusetts. Expert craftsmanship with 18+ years of experience.",
+    "Licensed Massachusetts siding contractor specializing in complete full-home siding installation and replacement — Hardie Plank fiber cement, vinyl, cedar, and shake. Expert craftsmanship with 20+ years of experience.",
   url: BASE_URL,
   telephone: "+15085909193",
   email: "info@alfapaintingcarpentry.com",
@@ -217,21 +217,15 @@ export const contractorSchema = {
   },
   knowsAbout: [
     "Siding Installation",
+    "Siding Replacement",
     "Hardie Plank Siding",
     "Vinyl Siding",
     "Fiber Cement Siding",
-    "Commercial Siding Installation",
+    "Commercial Siding Installation", // TODO(Luiz): remover se NÃO atenderem comercial
     "Clapboard Siding",
     "Shake Siding",
-    "Window Installation",
-    "Door Installation",
-    "Door Replacement",
-    "Carpentry",
-    "Trim Work",
-    "Home Remodeling",
-    "Kitchen Remodeling",
-    "Bathroom Remodeling",
-    "Deck Construction",
+    "Cedar Siding",
+    "Board and Batten Siding",
   ],
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
@@ -436,14 +430,8 @@ export function serviceSchema(service: {
         priceCurrency: "USD",
       },
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: "22",
-      reviewCount: "22",
-    },
+    // aggregateRating removido: a nota agregada vive SÓ no #organization (home),
+    // nunca replicada por Service nas ~440 páginas programáticas. Ver data/schema.ts.
   };
 }
 
