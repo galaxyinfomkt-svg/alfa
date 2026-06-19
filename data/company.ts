@@ -88,7 +88,6 @@ export const localBusinessSchema = {
       closes: "18:00",
     },
   ],
-  priceRange: "$$",
   currenciesAccepted: "USD",
   paymentAccepted: "Cash, Check, Credit Card",
   foundingDate: "2006",

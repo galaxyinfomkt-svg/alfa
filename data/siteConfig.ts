@@ -43,9 +43,9 @@ export const siteConfig = {
     },
   ],
 
-  // Schema.org price tier ($ = budget, $$ = mid, $$$ = premium, $$$$ = luxury).
-  // This is a tier indicator, NOT a dollar amount. Standard for GBP / LocalBusiness.
-  priceRange: "$$$",
+  // priceRange removido por diretriz: o site não sinaliza preço (nem o tier
+  // $$$ do schema.org). Se um dia quiser reativar, é um indicador de faixa
+  // (NÃO um valor): "$"=budget … "$$$$"=luxury.
   foundingDate: "2006",
   yearsExperience: 20,
   founder: "Fabio",

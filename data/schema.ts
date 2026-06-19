@@ -39,7 +39,6 @@ export function getLocalBusiness(opts?: { city?: string; citySlug?: string }): N
     email: s.email,
     image: s.image,
     logo: s.logo,
-    priceRange: s.priceRange,
     foundingDate: s.foundingDate,
     founder: { "@type": "Person", name: s.founder },
     knowsLanguage: [...s.languages],
