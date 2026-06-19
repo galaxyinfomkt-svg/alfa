@@ -1,7 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { company } from "@/data/company";
-import { cities } from "@/data/cities";
+import { getCoreCities } from "@/data/cities";
+
+// Só cidades "core" (dentro do raio real ~35 mi). Extended são noindex e
+// ficam fora do rodapé também. Ver data/cities.ts.
+const footerCities = getCoreCities();
 
 const serviceLinks = [
   { href: "/services/siding", label: "Siding Installation & Replacement" },
@@ -153,11 +157,11 @@ export default function Footer() {
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-              Service Areas – 109+ Cities Across Massachusetts
+              Service Areas Across MetroWest, Worcester &amp; Norfolk County
             </span>
           </div>
           <p className="text-center text-gray-400 text-sm leading-relaxed">
-            {cities.map((city, i) => (
+            {footerCities.map((city, i) => (
               <span key={city.slug}>
                 <Link
                   href={`/massachusetts/${city.slug}`}
@@ -165,7 +169,7 @@ export default function Footer() {
                 >
                   {city.name}
                 </Link>
-                {i < cities.length - 1 && <span className="mx-1.5">•</span>}
+                {i < footerCities.length - 1 && <span className="mx-1.5">•</span>}
               </span>
             ))}
           </p>

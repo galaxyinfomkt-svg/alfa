@@ -1764,6 +1764,49 @@ export const cities: City[] = [
 
 // Helper functions
 
+// ─────────────────────────────────────────────────────────────────────────────
+// SERVICE-AREA TIER (drive-time from Bellingham 02019, ~35 mi / 56.327 m radius)
+//
+// "extended" = beyond the real ~35-min service radius (North Shore, Boston-north
+// inner metro, Fitchburg/Leominster). These pages are noindex (follow:true),
+// excluded from the sitemap and the footer city list — Alfa may still take the
+// job, but we do not SEO-target them, fixing the over-reach a Google rater would
+// flag. Everything else is "core".
+//
+// Implemented as a Set + helper (instead of a field on all 109 objects) to keep
+// a single source of truth and avoid mass edits. // TODO(Luiz): adjust the list
+// if real drive-times differ (e.g. Cambridge/Somerville/Quincy are borderline
+// ~30-40 min and were kept as core).
+// ─────────────────────────────────────────────────────────────────────────────
+export type CityTier = "core" | "extended";
+
+export const EXTENDED_CITY_SLUGS: ReadonlySet<string> = new Set([
+  // North Shore
+  "salem", "lynn", "peabody", "beverly", "danvers", "saugus",
+  // Boston-north inner metro
+  "woburn", "winchester", "arlington", "medford", "malden", "melrose",
+  "stoneham", "reading", "wakefield",
+  // Far NW (Worcester County north edge)
+  "fitchburg", "leominster",
+]);
+
+export function getCityTier(slug: string): CityTier {
+  return EXTENDED_CITY_SLUGS.has(slug) ? "extended" : "core";
+}
+
+export function isExtendedCity(slug: string): boolean {
+  return EXTENDED_CITY_SLUGS.has(slug);
+}
+
+/** Core cities only (within the real service radius) — for sitemap + footer. */
+export function getCoreCities(): City[] {
+  return cities.filter((city) => !EXTENDED_CITY_SLUGS.has(city.slug));
+}
+
+export function getCoreCitySlugs(): string[] {
+  return getCoreCities().map((city) => city.slug);
+}
+
 export function getCityBySlug(slug: string): City | undefined {
   return cities.find((city) => city.slug === slug);
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getCityBySlug, cities, getExtendedNearbyCities } from "@/data/cities";
+import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity } from "@/data/cities";
 import { getFeaturedProjects } from "@/data/projects";
 import { company, breadcrumbSchema } from "@/data/company";
 import { getLocalBusiness, getService } from "@/data/schema";
@@ -55,11 +55,15 @@ export async function generateMetadata({
   if (!city) return {};
 
   const title = `${city.name} MA Siding Contractor · 5★ · Free Estimate in 24h`;
-  const description = `Siding, windows & carpentry in ${city.name}, ${city.county} County. ${company.experience} years, license ${company.license}, 22 ★★★★★ reviews. Free estimate in 24h. Call ${company.phone}.`;
+  const description = `Full-home siding installation & replacement in ${city.name}, ${city.county} County. ${company.experience} years, license ${company.license}, 22 ★★★★★ reviews. Free estimate in 24h. Call ${company.phone}.`;
 
   return {
     title,
     description,
+    // Cidades fora do raio real (~35 mi): noindex, follow. Ver data/cities.ts.
+    robots: isExtendedCity(city.slug)
+      ? { index: false, follow: true }
+      : undefined,
     openGraph: {
       title,
       description,
@@ -74,38 +78,42 @@ export async function generateMetadata({
 
 /* ---------- services list ---------- */
 
-const servicesList = [
+// PIVOT SIDING-ONLY: the city hub sells one service (full-home siding) plus the
+// three material choices. The siding card links to the local city/siding page;
+// the material cards link to the statewide /services/* pages.
+const sidingCard = {
+  slug: "siding",
+  name: "Full-Home Siding Installation & Replacement",
+  description:
+    "Complete exterior re-side in Hardie Plank, vinyl, cedar, or shake. Sheathing inspection, weather-resistant barrier, Z-flashing, trim. We do not take patch repairs.",
+  icon: "siding",
+  cta: "Get a Free Siding Quote",
+};
+
+const materialCards = [
   {
-    slug: "siding",
-    name: "Siding Installation & Repair",
+    slug: "hardie-plank-siding",
+    name: "Hardie Plank Fiber Cement",
     description:
-      "Hardie Plank, vinyl siding, and full replacement services. Protect your home from New England weather while upgrading its appearance.",
+      "James Hardie fiber cement — 30-year transferable warranty, Class A fire rated, built for New England freeze-thaw cycles.",
     icon: "siding",
-    cta: "Get a Free Siding Quote",
+    cta: "Hardie Plank Details",
   },
   {
-    slug: "windows-doors",
-    name: "Window & Door Installation",
+    slug: "vinyl-siding",
+    name: "Premium Vinyl Siding",
     description:
-      "Energy-efficient window and door installation. Reduce drafts, lower energy bills, and enhance your home's comfort and security.",
-    icon: "windows-doors",
-    cta: "Get a Free Window & Door Estimate",
+      "Premium 25-year vinyl in 40+ colors. The budget-conscious full re-side, typically installed in 5-7 days.",
+    icon: "siding",
+    cta: "Vinyl Siding Details",
   },
   {
-    slug: "carpentry",
-    name: "Carpentry & Trim Work",
+    slug: "cedar-shake-siding",
+    name: "Cedar Shake Siding",
     description:
-      "Fine carpentry, trim replacement, and door installation. Precision craftsmanship to restore and enhance your home's woodwork and details.",
-    icon: "carpentry",
-    cta: "Schedule Your Carpentry Consultation",
-  },
-  {
-    slug: "remodeling",
-    name: "Home Remodeling & Renovation",
-    description:
-      "Complete home renovation from kitchens to bathrooms. Increase your home's value and livability with our full-service remodeling team.",
-    icon: "remodeling",
-    cta: "Start Your Remodeling Project",
+      "Authentic Western Red Cedar shake — the traditional New England look, hand-installed on rear-ventilated furring.",
+    icon: "siding",
+    cta: "Cedar Shake Details",
   },
 ];
 
@@ -197,14 +205,15 @@ export default async function CityPage({
                   </div>
 
                   <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white mb-5 leading-tight">
-                    Siding, Windows &amp; Carpentry Contractor{" "}
+                    Siding Installation &amp; Replacement Contractor{" "}
                     <span className="text-alfa-gold">in {city.name}, MA</span>
                   </h1>
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    Alfa Construction Inc provides expert siding installation,
-                    window &amp; door installation, carpentry, and home remodeling services to
-                    homeowners in {city.name}, Massachusetts. Licensed, insured, and
-                    backed by {company.experience} years of experience.
+                    Alfa Construction Inc provides complete full-home siding installation
+                    and replacement to homeowners in {city.name}, Massachusetts — Hardie
+                    Plank, vinyl, cedar, and shake. We specialize in full exterior re-sides,
+                    not patch repairs. Licensed, insured, and backed by {company.experience} years
+                    of experience.
                   </p>
 
                   {/* Credentials */}
@@ -249,18 +258,15 @@ export default async function CityPage({
               Our Services in {city.name}, MA
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              From siding installation to complete home renovation, Alfa Construction Inc
-              delivers quality craftsmanship to {city.name} homeowners. Explore
-              our full range of services below.
+              Alfa Construction Inc delivers complete full-home siding installation
+              and replacement to {city.name} homeowners. Choose the material that fits
+              your home below.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {servicesList.map((service) => (
-              <ServiceCard
-                key={service.slug}
-                {...service}
-                citySlug={city.slug}
-              />
+            <ServiceCard {...sidingCard} citySlug={city.slug} />
+            {materialCards.map((service) => (
+              <ServiceCard key={service.slug} {...service} />
             ))}
           </div>
         </div>
@@ -282,10 +288,10 @@ export default async function CityPage({
               </p>
               <p className="text-gray-400 leading-relaxed mb-4">
                 Homes in {city.name} are predominantly characterized by{" "}
-                {city.homeStyle}. Whether you need new siding, replacement windows,
-                trim repair, or a full remodel, our
+                {city.homeStyle}. When it is time for a complete exterior re-side, our
                 team understands the unique architectural needs of{" "}
-                {city.name}&apos;s housing stock.
+                {city.name}&apos;s housing stock and the siding materials that hold up best
+                in this part of Massachusetts.
               </p>
               <p className="text-gray-400 leading-relaxed mb-6">
                 {city.uniqueFact}

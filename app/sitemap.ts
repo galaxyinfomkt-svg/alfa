@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllCitySlugs } from "@/data/cities";
+import { getCoreCitySlugs } from "@/data/cities";
 import { getAllProjectSlugs } from "@/data/projects";
 import { getAllBlogSlugs } from "@/data/blog";
 
@@ -15,7 +15,9 @@ const serviceSlugs = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const citySlugs = getAllCitySlugs();
+  // Só cidades "core" (dentro do raio real ~35 mi). As "extended" são
+  // noindex e ficam fora do sitemap. Ver data/cities.ts.
+  const citySlugs = getCoreCitySlugs();
   const projectSlugs = getAllProjectSlugs();
   const blogSlugs = getAllBlogSlugs();
   const now = new Date().toISOString();

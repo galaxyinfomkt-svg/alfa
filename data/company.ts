@@ -25,7 +25,7 @@ export const company = {
   owner: "Fabio",
   hours: "Mon–Sat 7:00 AM – 6:00 PM",
   hoursStructured: "Mo-Sa 07:00-18:00",
-  serviceArea: "Massachusetts (MetroWest · Worcester County · Norfolk County · North Shore)",
+  serviceArea: "Massachusetts (MetroWest · Worcester County · Norfolk County)",
   instagram: "https://www.instagram.com/alfaconstructioninc/",
   facebook: "https://www.facebook.com/alfacarpentrypainting",
   googleReview: "https://g.page/r/CZ1rhJ3jJReMEAE/review",
@@ -123,7 +123,7 @@ export const localBusinessSchema = {
         latitude: 42.0687,
         longitude: -71.4748,
       },
-      geoRadius: "80467",
+      geoRadius: "56327",
     },
   ],
   hasOfferCatalog: {

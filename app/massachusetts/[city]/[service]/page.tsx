@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getCityBySlug, cities, getExtendedNearbyCities } from "@/data/cities";
+import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity } from "@/data/cities";
 import { getServiceBySlug } from "@/data/services";
 import { company, breadcrumbSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
@@ -106,6 +106,11 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // Cidades fora do raio real (~35 mi): noindex, follow. Atendemos, mas não
+    // fazemos SEO-target — evita o over-reach. Ver data/cities.ts.
+    robots: isExtendedCity(city.slug)
+      ? { index: false, follow: true }
+      : undefined,
     openGraph: {
       title,
       description,
