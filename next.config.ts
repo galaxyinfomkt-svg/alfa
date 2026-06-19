@@ -111,7 +111,15 @@ const nextConfig: NextConfig = {
       { source: "/cities/:path*", destination: "/massachusetts/:path*", permanent: true },
     ];
 
-    return [...cityServiceRedirects, ...serviceRedirects, ...legacyRedirects];
+    // Off-positioning blog posts retired in the siding-only pivot (carpentry/
+    // trim repair + full-home renovation). 301 to the siding service page so
+    // their link equity flows to the core offer and no URL 404s.
+    const blogRedirects = [
+      { source: "/blog/warning-signs-trim-needs-carpentry-repair-winter", destination: "/services/siding", permanent: true },
+      { source: "/blog/renovating-older-homes-in-milton-ma", destination: "/services/siding", permanent: true },
+    ];
+
+    return [...cityServiceRedirects, ...serviceRedirects, ...legacyRedirects, ...blogRedirects];
   },
 };
 

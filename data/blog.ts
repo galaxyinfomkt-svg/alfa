@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Our Recommendation for Massachusetts Homeowners</h2>
       <p>Both products are solid choices, but our team at Alfa Construction Inc generally recommends Hardie Plank for homeowners who plan to stay in their homes long-term and want the highest level of durability and curb appeal. For homeowners seeking a budget-friendly upgrade that still provides excellent protection against New England weather, quality vinyl <a href="/services/siding">siding installed properly</a> is a reliable choice. We serve homeowners across Massachusetts including <a href="/massachusetts/framingham/siding">Framingham</a>, <a href="/massachusetts/natick/siding">Natick</a>, <a href="/massachusetts/newton/siding">Newton</a>, and <a href="/massachusetts/worcester/siding">Worcester</a>.</p>
 
-      <p>The most important factor in either case is professional installation. Improperly installed siding, regardless of the material, will fail prematurely. Many homeowners also pair their siding project with <a href="/services/windows-doors">window and door upgrades</a> or <a href="/services/carpentry">carpentry repairs</a> for a complete home transformation. Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free consultation on siding options for your home. As a licensed Massachusetts contractor (#192348), we stand behind every installation with a comprehensive warranty.</p>
+      <p>The most important factor in either case is professional installation. Improperly installed siding, regardless of the material, will fail prematurely. A full-home re-side also includes new flashing, trim, corner boards, and weather barrier as part of the same project — a complete exterior transformation. Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free consultation on siding options for your home. As a licensed Massachusetts contractor (#192348), we stand behind every installation with a comprehensive warranty.</p>
     `,
     date: "2025-02-10",
     author: "Alfa Construction Team",
@@ -76,58 +76,6 @@ export const blogPosts: BlogPost[] = [
       "Massachusetts",
       "home exterior",
       "fiber cement",
-    ],
-  },
-  {
-    slug: "warning-signs-trim-needs-carpentry-repair-winter",
-    title:
-      "5 Warning Signs Your Home's Trim Needs Carpentry Repair Before Winter",
-    excerpt:
-      "Don't let damaged trim leave your Massachusetts home vulnerable to winter weather. Learn the 5 critical warning signs that your exterior trim needs professional carpentry repair.",
-    content: `
-      <h2>Why Exterior Trim Matters More Than You Realize</h2>
-      <p>Your home's exterior trim does far more than add visual appeal. Window casings, door frames, fascia boards, corner boards, and rake trim all serve as critical barriers that seal your home against the elements. In Massachusetts, where winter brings freezing rain, heavy snow loads, and bitter winds, compromised trim can lead to serious and expensive damage. At Alfa Construction Inc (License #192348), our skilled carpenters repair and replace exterior trim on homes throughout MetroWest, and we've seen firsthand how small problems become major issues when left unaddressed before winter arrives.</p>
-
-      <h2>1. Visible Cracks and Splits in Trim Boards</h2>
-      <p>Wood trim naturally expands and contracts with New England's dramatic temperature and humidity changes. Over time, this constant movement causes cracks and splits. Small hairline cracks might seem minor, but they allow water to penetrate behind the surface. Once winter hits, that trapped water freezes and expands, widening the cracks further. By spring, what was a small crack can become a fully split board that requires complete replacement. Inspect all your trim boards closely, paying special attention to south-facing and west-facing surfaces that experience the most sun exposure and thermal cycling.</p>
-
-      <h2>2. Soft or Spongy Wood When Pressed</h2>
-      <p>Walk around your home and press firmly on your trim boards, particularly at the bottom edges of window casings, along the base of door frames, and on fascia boards near the roofline. If the wood gives under pressure or feels soft and spongy, rot has already set in. Rotting trim is a serious problem because it compromises the seal around windows and doors, allowing cold air and moisture to infiltrate your home during winter. It can also spread to adjacent framing lumber, turning a simple trim repair into a major structural project.</p>
-
-      <h2>3. Gaps Between Trim and Siding or Windows</h2>
-      <p>Check for gaps where your trim meets the siding, windows, and doors. Caulk deteriorates over time, and as trim boards warp or shrink, gaps open up. These gaps are more than cosmetic concerns. They become entry points for water, wind, insects, and rodents. Before Massachusetts winter weather arrives, every joint and seam in your exterior trim should be tight and properly sealed. Our carpenters at Alfa Construction Inc carefully assess each joint and determine whether re-caulking will suffice or whether the trim board itself needs replacement.</p>
-
-      <h2>4. Peeling or Bubbling Finish on Trim Surfaces</h2>
-      <p>When the finish on your trim begins to peel, bubble, or flake, it usually means moisture is trapped behind the surface. This is a warning sign that the wood beneath is absorbing water, which is the first step toward rot. In many cases, the failure is localized to specific areas where water is being channeled by gravity or wind-driven rain. Common trouble spots include the tops of window headers, the undersides of eaves, and anywhere that trim meets a horizontal surface where water can pool. Simply covering over these areas without addressing the underlying moisture issue will only delay the inevitable damage.</p>
-
-      <h2>5. Insect Damage or Bore Holes</h2>
-      <p>Carpenter ants and other wood-boring insects are common throughout Massachusetts, and they love compromised exterior trim. Small round holes, sawdust-like debris (called frass) near trim boards, or hollow-sounding wood when tapped are all signs of insect activity. These pests are attracted to damp, softened wood, which means insect damage and rot often go hand in hand. If insects have established colonies in your trim, the damage may extend deeper than what's visible on the surface. A thorough inspection by a professional carpenter can determine the full extent of the damage.</p>
-
-      <h2>Why Fall Is the Time to Act</h2>
-      <p>Massachusetts homeowners have a narrow window between the end of summer and the first hard freeze to address exterior trim issues. Carpentry repairs require dry conditions for proper installation and finishing, and primer needs adequate temperatures to cure correctly. Waiting until spring means your home spends the entire winter with compromised trim, exposing it to months of freeze-thaw cycles, ice dams, and driven snow.</p>
-
-      <h2>Professional Carpentry Repair from Alfa Construction Inc</h2>
-      <p>At Alfa Construction Inc, we don't just patch over problems. Our <a href="/services/carpentry">expert carpenters</a> carefully remove damaged trim, inspect the underlying structure for hidden damage, and install new trim using materials chosen to withstand New England's demanding climate. We offer both traditional wood trim and modern composite alternatives like Azek and PVC that resist rot and insects entirely. We serve homeowners across Massachusetts including <a href="/massachusetts/framingham/carpentry">Framingham</a>, <a href="/massachusetts/natick/carpentry">Natick</a>, <a href="/massachusetts/wellesley/carpentry">Wellesley</a>, and <a href="/massachusetts/worcester/carpentry">Worcester</a>.</p>
-
-      <p>Many homeowners combine trim repair with <a href="/services/siding">siding upgrades</a> for a complete exterior refresh. Don't wait until winter storms expose your home's vulnerabilities. Call Alfa Construction Inc at <strong>(508) 590-9193</strong> to schedule a pre-winter trim inspection. As a licensed Massachusetts contractor (#192348), we provide honest assessments and quality craftsmanship that protects your home for years to come.</p>
-    `,
-    date: "2024-11-05",
-    author: "Alfa Construction Team",
-    category: "Carpentry",
-    readTime: "7 min read",
-    image: "/images/deck-carpentry-staircase-railing-massachusetts.png",
-    metaTitle:
-      "5 Warning Signs Your Trim Needs Repair Before Winter | Alfa Construction MA",
-    metaDescription:
-      "Learn the 5 critical warning signs that your Massachusetts home's exterior trim needs carpentry repair before winter. Expert advice from Alfa Construction Inc.",
-    tags: [
-      "carpentry",
-      "trim repair",
-      "winter preparation",
-      "Massachusetts",
-      "home maintenance",
-      "New England weather",
-      "wood rot",
     ],
   },
   {
@@ -156,7 +104,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Quality Assurance and Accountability</h2>
       <p>Licensed contractors have a reputation to maintain and a registration that can be revoked. This creates a powerful incentive to deliver quality work and resolve any issues that arise. Unlicensed contractors have no such accountability. They can walk away from a botched job with no professional consequences.</p>
-      <p>At Alfa Construction Inc, our license (#192348) represents our commitment to upholding the standards required by the Commonwealth of Massachusetts. Every project we complete, from siding installation to carpentry repairs to full remodeling, meets or exceeds local building codes and manufacturer specifications. We stand behind our work because our professional reputation depends on it.</p>
+      <p>At Alfa Construction Inc, our license (#192348) represents our commitment to upholding the standards required by the Commonwealth of Massachusetts. Every full-home siding installation and replacement we complete meets or exceeds local building codes and manufacturer specifications. We stand behind our work because our professional reputation depends on it.</p>
 
       <h2>Insurance and Liability Concerns</h2>
       <p>Many homeowners don't realize that their homeowner's insurance policy may not cover damage caused by unlicensed contractors. If an unlicensed worker installs siding incorrectly and water damage results, your insurance company may deny the claim because the work was not performed by a qualified professional. This can leave you paying out of pocket for both the original failed work and the repairs needed to fix it.</p>
@@ -175,9 +123,9 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>Choose a Contractor You Can Trust</h2>
-      <p>At Alfa Construction Inc, we are proud to be a fully licensed and insured Massachusetts contractor. Our team brings years of experience in <a href="/services/siding">siding installation</a>, <a href="/services/carpentry">carpentry repair</a>, and <a href="/services/remodeling">remodeling</a> to every project, and we are committed to transparency, quality, and customer satisfaction. We serve homeowners in <a href="/massachusetts/framingham">Framingham</a>, <a href="/massachusetts/natick">Natick</a>, <a href="/massachusetts/worcester">Worcester</a>, <a href="/massachusetts/brookline">Brookline</a>, and <a href="/massachusetts/cambridge">Cambridge</a> — plus 100+ other Massachusetts communities. New England weather demands quality workmanship, and our clients throughout MetroWest trust us to deliver exactly that.</p>
+      <p>At Alfa Construction Inc, we are proud to be a fully licensed and insured Massachusetts contractor. Our team brings years of experience in <a href="/services/siding">siding installation and replacement</a>, <a href="/services/hardie-plank-siding">Hardie Plank fiber cement</a>, and <a href="/services/cedar-shake-siding">cedar shake siding</a> to every project, and we are committed to transparency, quality, and customer satisfaction. We serve homeowners in <a href="/massachusetts/framingham">Framingham</a>, <a href="/massachusetts/natick">Natick</a>, <a href="/massachusetts/worcester">Worcester</a>, <a href="/massachusetts/brookline">Brookline</a>, and <a href="/massachusetts/cambridge">Cambridge</a> — plus 100+ other Massachusetts communities. New England weather demands quality workmanship, and our clients throughout MetroWest trust us to deliver exactly that.</p>
 
-      <p>Ready to start your <a href="/services/remodeling">home improvement project</a> the right way? Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free estimate. We'll provide proof of our licensing and insurance upfront, so you can move forward with confidence.</p>
+      <p>Ready to start your <a href="/services/siding">full-home siding project</a> the right way? Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free estimate. We'll provide proof of our licensing and insurance upfront, so you can move forward with confidence.</p>
     `,
     date: "2024-10-15",
     author: "Alfa Construction Team",
@@ -242,7 +190,7 @@ export const blogPosts: BlogPost[] = [
       <ul>
         <li>Get at least three quotes from licensed Massachusetts contractors and compare them carefully</li>
         <li>Schedule your project for the off-season (late fall or early spring) when contractors may offer better pricing</li>
-        <li>Combine your siding project with <a href="/services/windows-doors">window replacements</a> or <a href="/services/carpentry">trim work</a> to save on setup and labor costs</li>
+        <li>Re-side the entire exterior in one project — doing all four sides together saves on setup, scaffolding, and labor versus phasing the work</li>
         <li>Choose materials that match your long-term plans for the home. If you plan to stay 20 or more years, investing in Hardie Plank or cedar may save money over time</li>
       </ul>
 
@@ -587,7 +535,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Estimated time:</strong> 3 to 7 days for a typical Massachusetts home, depending on size and complexity.</p>
 
       <h2>Step 7: Trim and Detail Work</h2>
-      <p>After the main siding panels are installed, the focus shifts to trim and finishing details. This includes installing corner boards, window and door casings, J-channel or receiver trim, soffit and fascia, and any decorative elements. Trim work is where craftsmanship really shows. Clean, tight joints and precise cuts separate professional installations from amateur work. At Alfa Construction Inc, our <a href="/services/carpentry">skilled carpenters</a> handle all trim work with the precision it demands. All trim joints are caulked with high-quality exterior sealant for a watertight, finished appearance.</p>
+      <p>After the main siding panels are installed, the focus shifts to trim and finishing details. This includes installing corner boards, window and door casings, J-channel or receiver trim, soffit and fascia, and any decorative elements. Trim work is where craftsmanship really shows. Clean, tight joints and precise cuts separate professional installations from amateur work. At Alfa Construction Inc, our skilled installers handle all siding trim work with the precision it demands. All trim joints are caulked with high-quality exterior sealant for a watertight, finished appearance.</p>
       <p><strong>Estimated time:</strong> 2 to 4 days depending on the amount of trim and detail work required.</p>
 
       <h2>Step 8: Final Inspection and Cleanup</h2>
@@ -618,88 +566,6 @@ export const blogPosts: BlogPost[] = [
       "insulation",
       "flashing",
       "home improvement",
-    ],
-  },
-  {
-    slug: "renovating-older-homes-in-milton-ma",
-    title: "Renovating Older Homes in Milton, MA — An 18-Year Contractor's Honest Guide",
-    excerpt:
-      "Milton has more pre-1950 homes than most of Eastern Massachusetts. They renovate differently. After 20 years of working on older Milton-area properties, here's what every homeowner should know before signing a renovation contract.",
-    content: `
-      <h2>Why Milton's Older Homes Are Different</h2>
-      <p>About 62% of Milton's housing stock predates 1950 — significantly higher than the Massachusetts state average. That means most Milton renovation projects deal with original cedar lath-and-plaster walls, knob-and-tube remnants, balloon framing, settled foundations, and exterior trim that's been painted over 40+ times. None of those things appear on a typical contractor's bid. They all show up after the work starts.</p>
-
-      <p>After 20 years of renovating older homes across Milton, East Milton, and the surrounding South Shore communities, our team at Alfa Construction Inc (Massachusetts HIC license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>) has learned to bid older Milton homes with every probable surprise itemized upfront. This guide explains why most older-home renovations cost more than first quoted — and how to choose a contractor who tells you that before you sign.</p>
-
-      <h2>The 7 Things Every Milton Older-Home Renovation Will Find</h2>
-
-      <h3>1. Rotted Sheathing Behind the Siding (3 out of 4 homes)</h3>
-      <p>Strip the old siding off a Milton home built before 1970 and roughly 75% of them show some level of sheathing rot. The original boards — often 1-inch nominal pine — have absorbed decades of moisture through failing flashing, gutter overflow, and ice dam damming. We've never finished a full exterior on a pre-1950 Milton home without replacing at least some sheathing. The honest bid lists sheathing repair as its own itemized line upfront, not as a surprise "change order."</p>
-
-      <h3>2. Knob-and-Tube Wiring Hidden in the Walls</h3>
-      <p>Massachusetts banned new knob-and-tube installations in 1985, but pre-1950 Milton homes still have it running through wall cavities and attic spaces. It is generally legal to leave undisturbed if it's in good condition, but most insurance carriers (and any modern home buyer) will require replacement. Renovations that touch the wall cavity expose this — and your contractor needs a licensed electrician on standby. Knob-and-tube replacement is itemized separately on the bid so you can see the scope.</p>
-
-      <h3>3. Lead Paint on Trim, Windows, and Siding</h3>
-      <p>Homes built before 1978 in Milton are presumed to contain lead-based paint. Massachusetts has stricter Lead Law requirements than the federal RRP rule — if a child under six lives or regularly visits the home, deleading is mandatory. Any sanding, scraping, or window replacement triggers EPA RRP-certified protocols, which are itemized as a separate line on the bid. Reputable Milton contractors are <a href="https://www.epa.gov/lead/renovation-repair-and-painting-program" target="_blank" rel="noopener noreferrer">EPA RRP certified</a>; ask for the firm certification number on every older-home bid.</p>
-
-      <h3>4. Original Single-Pane Windows With Lead Glazing</h3>
-      <p>The lovely wavy-glass divided-light windows in many Milton older homes are usually original — and almost always single pane with cracked or hardened glazing. Replacing them with energy-efficient units triggers two questions: keep the original sash and install storm panels, or replace with new wood-clad windows from <a href="https://www.andersenwindows.com/products/windows/" target="_blank" rel="noopener noreferrer">Andersen 400 Series</a> or Marvin Elevate? Each Milton historical district has its own answer. We pull permits with the Milton Historical Commission for any pre-1900 home.</p>
-
-      <h3>5. Asbestos Siding (Common in Milton 1940–1970 Homes)</h3>
-      <p>The cement-asbestos shingle siding that was popular on Milton 1940s–1970s ranch and Cape homes is non-friable and generally safe to leave in place. But once you strip it for a renovation, Massachusetts requires <a href="https://www.mass.gov/asbestos" target="_blank" rel="noopener noreferrer">MA DEP-certified abatement</a> with sealed containment, HEPA filtration, and licensed disposal. Asbestos siding removal is documented as its own permitted line item on the bid. Skip this step and the homeowner faces six-figure DEP fines.</p>
-
-      <h3>6. Balloon Framing Without Fire Stops</h3>
-      <p>Pre-1940 Milton homes are mostly balloon-framed — wall studs run continuous from foundation to roof, creating natural chimneys for fire to spread. Modern code requires fire blocking at every floor level. A serious renovation should add fire stops as part of the wall opening work. Most contractors skip this. We don't — it's a 1-day labor item on an open-wall renovation and it protects the home for the next century.</p>
-
-      <h3>7. Original Plaster Walls Behind New Drywall</h3>
-      <p>If a previous owner drywalled over the original plaster, you'll find it during the renovation. Sometimes the plaster is fine; sometimes it's full of horsehair and crumbling. Either way, you need to decide: leave it sandwiched, demo it out to add insulation, or restore. Closed-cell spray foam in the cavity is the standard upgrade — but only after asbestos and lead surveys clear the work area.</p>
-
-      <h2>What a Real Milton Older-Home Renovation Bid Looks Like</h2>
-      <p>An honest renovation bid on a 1920s Milton Colonial includes line items for each of the above, plus permits, debris disposal, lead-safe work practices, and cleanup. A bid significantly lighter than the scope above is leaving items out — they reappear as change orders during the work, often at marked-up rates.</p>
-
-      <p>We've seen Milton homeowners pay a deposit on a thinly-scoped exterior renovation, only to receive a final invoice several times larger once the wall opens up and the surprises start. The deposit becomes leverage; the homeowner pays the marked-up change orders because demoing the walls back closed isn't an option. The fix: every probable surprise gets itemized in writing before work begins, with the scope walked in person.</p>
-
-      <h2>Permits and Milton Historical Commission</h2>
-      <p>The Town of Milton requires building permits for any structural, electrical, plumbing, or major exterior work. Properties in the historic districts (Brush Hill, East Milton Square, Milton Village) need <a href="https://www.townofmilton.org/historical-commission" target="_blank" rel="noopener noreferrer">Historical Commission</a> sign-off on visible exterior changes. Reputable contractors pull permits and walk you through Commission review when applicable. Permit fees are typically 0.5–1% of project value in Milton.</p>
-
-      <p>The Building Department uses the <a href="https://www.mass.gov/info-details/massachusetts-state-building-code-780-cmr" target="_blank" rel="noopener noreferrer">Massachusetts State Building Code (780 CMR)</a>. Any contractor working in Milton must hold a Massachusetts Construction Supervisor License (CSL) and a Home Improvement Contractor (HIC) registration. Verify both at the <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA Division of Professional Licensure</a> before signing anything.</p>
-
-      <h2>How to Vet a Milton Older-Home Renovator (5 Questions)</h2>
-      <ol>
-        <li><strong>"Are you EPA RRP certified for lead-safe work, and what's your firm certification number?"</strong> Pre-1978 Milton homes require it. A contractor who can't produce the number on the spot is not the right one.</li>
-        <li><strong>"Will your written bid itemize sheathing repair, lead-safe practices, knob-and-tube replacement, and asbestos abatement separately?"</strong> Anyone bundling these as "miscellaneous" is hiding them.</li>
-        <li><strong>"Can you pull the Milton Historical Commission permit if my home is in a historic district?"</strong> Many contractors avoid Commission work because it slows the timeline. Find one comfortable with the process.</li>
-        <li><strong>"How many pre-1950 Milton homes have you renovated in the last 5 years, and can you give me three local references?"</strong> Names, addresses, phone numbers. Real ones call back.</li>
-        <li><strong>"What's your Massachusetts HIC license number and current insurance certificate?"</strong> Ours is <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>. Yours should have one — verifiable independently.</li>
-      </ol>
-
-      <h2>Areas We Serve Around Milton</h2>
-      <p>Alfa Construction serves Milton, East Milton, Lower Mills, Hyde Park, Quincy, Braintree, Randolph, Canton, Dedham, Norwood, Westwood, Hingham, and the rest of the South Shore. Our 20-year team handles siding, window and door replacement, carpentry, rotted trim repair, and full older-home renovations across this Norfolk County corridor.</p>
-
-      <h2>The Honest Pitch</h2>
-      <p>Renovating an older Milton home well takes more than a generic siding bid implies — the difference between a clean final invoice and an open-ended nightmare is whether the bid was written by someone who'd seen Milton older homes before. Our crew has worked on Milton homes for 20 years. We're bilingual (English and Portuguese), licensed (<a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA HIC #192348</a>, valid through April 2027), fully insured, EPA RRP-certified, and we itemize every line item before work begins.</p>
-
-      <p>For a free, on-site assessment of your Milton home renovation — including a written estimate with every probable surprise priced upfront — call Fabio directly at <strong>(508) 590-9193</strong>. We respond to all estimate requests within 24 hours. English or Portuguese.</p>
-    `,
-    date: "2026-05-11",
-    author: "Fabio",
-    category: "Renovation",
-    readTime: "10 min read",
-    image: "/images/dark-shake-siding-renovation-after-ma.jpg",
-    metaTitle: "Renovating Older Homes in Milton MA · 18-Year Honest Guide",
-    metaDescription:
-      "Pre-1950 Milton homes need different bids. After 20 years renovating Milton area, here are the 7 surprises every older-home job finds — and how to vet a contractor. (508) 590-9193.",
-    tags: [
-      "milton ma contractor",
-      "renovating older home milton",
-      "older home renovation massachusetts",
-      "milton ma renovation",
-      "licensed contractor milton ma",
-      "lead paint renovation",
-      "epa rrp certified",
-      "milton historical commission",
-      "knob and tube wiring",
-      "asbestos siding removal",
     ],
   },
   {
