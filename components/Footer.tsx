@@ -4,10 +4,10 @@ import { company } from "@/data/company";
 import { cities } from "@/data/cities";
 
 const serviceLinks = [
-  { href: "/services/siding", label: "Siding Installation & Repair" },
-  { href: "/services/windows-doors", label: "Window & Door Installation" },
-  { href: "/services/carpentry", label: "Carpentry & Trim Work" },
-  { href: "/services/remodeling", label: "Home Remodeling & Renovation" },
+  { href: "/services/siding", label: "Siding Installation & Replacement" },
+  { href: "/services/hardie-plank-siding", label: "Hardie Plank Fiber Cement" },
+  { href: "/services/vinyl-siding", label: "Vinyl Siding" },
+  { href: "/services/cedar-shake-siding", label: "Cedar Shake Siding" },
 ];
 
 const blogLinks = [
