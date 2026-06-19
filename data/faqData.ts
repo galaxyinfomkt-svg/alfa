@@ -26,7 +26,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. Alfa Construction Inc is a licensed and insured Massachusetts contractor (MA HIC #192348) with 18+ years of experience, owner-operated by Fabio. Our team is bilingual (English & Portuguese).",
+    a: "Yes. Alfa Construction Inc is a licensed and insured Massachusetts contractor (MA HIC #192348) with 20+ years of experience, owner-operated by Fabio. Our team is bilingual (English & Portuguese).",
   },
   {
     q: "How long does a full siding installation take?",

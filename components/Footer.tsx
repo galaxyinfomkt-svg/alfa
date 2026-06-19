@@ -39,7 +39,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-400 text-sm mb-5 leading-relaxed">
-              Massachusetts siding specialists. Complete full-home siding installation and replacement in Hardie Plank, vinyl, cedar, and shake. Licensed, insured, 18+ years.
+              Massachusetts siding specialists. Complete full-home siding installation and replacement in Hardie Plank, vinyl, cedar, and shake. Licensed, insured, 20+ years.
             </p>
             <div className="space-y-2.5 text-sm">
               <a href={company.phoneTel} className="flex items-center gap-2 text-alfa-gold hover:text-alfa-gold-light transition-colors">

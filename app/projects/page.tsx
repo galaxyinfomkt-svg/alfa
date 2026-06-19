@@ -91,7 +91,7 @@ export default function ProjectsPage() {
             <span className="text-alfa-gold">Transformed.</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg mb-8">
-            18 years of siding, windows, carpentry &amp; remodeling work across 109+ MA cities — every photo is a real Alfa Construction job.
+            20 years of complete full-home siding installation &amp; replacement across Massachusetts — every photo is a real Alfa Construction job.
           </p>
 
           {/* Stats data list — Princeton GEO Method 2 */}
@@ -110,7 +110,7 @@ export default function ProjectsPage() {
             </div>
             <div>
               <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-1">Years</dt>
-              <dd className="text-2xl md:text-3xl font-bold text-white">18+</dd>
+              <dd className="text-2xl md:text-3xl font-bold text-white">20+</dd>
             </div>
           </dl>
         </div>

@@ -29,7 +29,7 @@ export function getLocalBusiness(opts?: { city?: string; citySlug?: string }): N
     "@id": BUSINESS_ID,
     name: s.name,
     description:
-      "Massachusetts siding specialists — complete full-home siding installation and replacement in Hardie Plank fiber cement, vinyl, cedar, and shake. Licensed (MA HIC #192348), insured, 18+ years.",
+      "Massachusetts siding specialists — complete full-home siding installation and replacement in Hardie Plank fiber cement, vinyl, cedar, and shake. Licensed (MA HIC #192348), insured, 20+ years.",
     serviceType: "Siding Installation & Replacement",
     url:
       city && opts?.citySlug

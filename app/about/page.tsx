@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Meet Fabio · 18 Years Siding MA Homes Since 2006 · License #192348",
   description:
-    "Fabio founded Alfa in 2006. 18 years, 109 MA cities, 22 ★★★★★ reviews, zero complaints. Owner-operator, bilingual EN/PT, license #192348. Free estimate: (508) 590-9193.",
+    "Fabio founded Alfa in 2006. 20 years, 109 MA cities, 22 ★★★★★ reviews, zero complaints. Owner-operator, bilingual EN/PT, license #192348. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/about" },
 };
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-alfa-gold text-black p-6 rounded-2xl shadow-xl">
-                <p className="text-4xl font-bold">18+</p>
+                <p className="text-4xl font-bold">20+</p>
                 <p className="text-sm font-medium">Years Serving MA</p>
               </div>
             </div>
@@ -58,10 +58,10 @@ export default function AboutPage() {
                 Alfa Construction Inc was founded by Fabio with a simple vision: deliver exceptional quality construction services with integrity and respect. Starting with residential construction projects in the MetroWest area, the company quickly earned a reputation for meticulous attention to detail and outstanding results.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Over 18 years later, Alfa Construction has refined its focus to one craft: <strong>complete full-home siding installation and replacement</strong> across Massachusetts. Hardie Plank, vinyl, cedar, shake. We serve 109 cities across MetroWest, Worcester County, Norfolk County, Middlesex County, and the North Shore. Carpentry, window, and door work happen only as add-ons to a full re-side.
+                Over 20 years later, Alfa Construction has refined its focus to one craft: <strong>complete full-home siding installation and replacement</strong> across Massachusetts. Hardie Plank, vinyl, cedar, shake. We serve MetroWest, Worcester County, Norfolk County, and southern Middlesex County. Carpentry, window, and door work happen only as add-ons to a full re-side.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                What hasn&apos;t changed is our commitment to treating every home as if it were our own. Our bilingual team (English &amp; Portuguese) brings professionalism, craftsmanship, and a personal touch to every project — from a single siding repair to a full home renovation.
+                What hasn&apos;t changed is our commitment to treating every home as if it were our own. Our bilingual team (English &amp; Portuguese) brings professionalism, craftsmanship, and a personal touch to every complete exterior re-side we take on.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
@@ -77,7 +77,7 @@ export default function AboutPage() {
                   <p className="text-sm text-gray-400">Google Rating</p>
                 </div>
                 <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">18+</p>
+                  <p className="text-2xl font-bold text-alfa-gold">20+</p>
                   <p className="text-sm text-gray-400">Years Experience</p>
                 </div>
               </div>

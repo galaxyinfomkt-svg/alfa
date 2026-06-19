@@ -548,7 +548,7 @@ export default async function CityPage({
               },
               {
                 title: `${company.experience} Years Experience`,
-                text: `With over 18 years serving Massachusetts, we bring unmatched expertise to every ${city.name} project.`,
+                text: `With over 20 years serving Massachusetts, we bring unmatched expertise to every ${city.name} project.`,
                 icon: (
                   <svg
                     className="w-8 h-8"

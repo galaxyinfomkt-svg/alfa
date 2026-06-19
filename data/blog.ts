@@ -624,12 +624,12 @@ export const blogPosts: BlogPost[] = [
     slug: "renovating-older-homes-in-milton-ma",
     title: "Renovating Older Homes in Milton, MA — An 18-Year Contractor's Honest Guide",
     excerpt:
-      "Milton has more pre-1950 homes than most of Eastern Massachusetts. They renovate differently. After 18 years of working on older Milton-area properties, here's what every homeowner should know before signing a renovation contract.",
+      "Milton has more pre-1950 homes than most of Eastern Massachusetts. They renovate differently. After 20 years of working on older Milton-area properties, here's what every homeowner should know before signing a renovation contract.",
     content: `
       <h2>Why Milton's Older Homes Are Different</h2>
       <p>About 62% of Milton's housing stock predates 1950 — significantly higher than the Massachusetts state average. That means most Milton renovation projects deal with original cedar lath-and-plaster walls, knob-and-tube remnants, balloon framing, settled foundations, and exterior trim that's been painted over 40+ times. None of those things appear on a typical contractor's bid. They all show up after the work starts.</p>
 
-      <p>After 18 years of renovating older homes across Milton, East Milton, and the surrounding South Shore communities, our team at Alfa Construction Inc (Massachusetts HIC license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>) has learned to bid older Milton homes with every probable surprise itemized upfront. This guide explains why most older-home renovations cost more than first quoted — and how to choose a contractor who tells you that before you sign.</p>
+      <p>After 20 years of renovating older homes across Milton, East Milton, and the surrounding South Shore communities, our team at Alfa Construction Inc (Massachusetts HIC license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>) has learned to bid older Milton homes with every probable surprise itemized upfront. This guide explains why most older-home renovations cost more than first quoted — and how to choose a contractor who tells you that before you sign.</p>
 
       <h2>The 7 Things Every Milton Older-Home Renovation Will Find</h2>
 
@@ -674,10 +674,10 @@ export const blogPosts: BlogPost[] = [
       </ol>
 
       <h2>Areas We Serve Around Milton</h2>
-      <p>Alfa Construction serves Milton, East Milton, Lower Mills, Hyde Park, Quincy, Braintree, Randolph, Canton, Dedham, Norwood, Westwood, Hingham, and the rest of the South Shore. Our 18-year team handles siding, window and door replacement, carpentry, rotted trim repair, and full older-home renovations across this Norfolk County corridor.</p>
+      <p>Alfa Construction serves Milton, East Milton, Lower Mills, Hyde Park, Quincy, Braintree, Randolph, Canton, Dedham, Norwood, Westwood, Hingham, and the rest of the South Shore. Our 20-year team handles siding, window and door replacement, carpentry, rotted trim repair, and full older-home renovations across this Norfolk County corridor.</p>
 
       <h2>The Honest Pitch</h2>
-      <p>Renovating an older Milton home well takes more than a generic siding bid implies — the difference between a clean final invoice and an open-ended nightmare is whether the bid was written by someone who'd seen Milton older homes before. Our crew has worked on Milton homes for 18 years. We're bilingual (English and Portuguese), licensed (<a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA HIC #192348</a>, valid through April 2027), fully insured, EPA RRP-certified, and we itemize every line item before work begins.</p>
+      <p>Renovating an older Milton home well takes more than a generic siding bid implies — the difference between a clean final invoice and an open-ended nightmare is whether the bid was written by someone who'd seen Milton older homes before. Our crew has worked on Milton homes for 20 years. We're bilingual (English and Portuguese), licensed (<a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">MA HIC #192348</a>, valid through April 2027), fully insured, EPA RRP-certified, and we itemize every line item before work begins.</p>
 
       <p>For a free, on-site assessment of your Milton home renovation — including a written estimate with every probable surprise priced upfront — call Fabio directly at <strong>(508) 590-9193</strong>. We respond to all estimate requests within 24 hours. English or Portuguese.</p>
     `,
@@ -688,7 +688,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/dark-shake-siding-renovation-after-ma.jpg",
     metaTitle: "Renovating Older Homes in Milton MA · 18-Year Honest Guide",
     metaDescription:
-      "Pre-1950 Milton homes need different bids. After 18 years renovating Milton area, here are the 7 surprises every older-home job finds — and how to vet a contractor. (508) 590-9193.",
+      "Pre-1950 Milton homes need different bids. After 20 years renovating Milton area, here are the 7 surprises every older-home job finds — and how to vet a contractor. (508) 590-9193.",
     tags: [
       "milton ma contractor",
       "renovating older home milton",
@@ -706,7 +706,7 @@ export const blogPosts: BlogPost[] = [
     slug: "best-siding-for-new-england-homes",
     title: "The Best Siding for New England Homes (2026 Guide)",
     excerpt:
-      "After installing siding on 500+ Massachusetts homes over 18 years, here is the honest answer to what works best in New England's climate — by material, by budget, and by home age.",
+      "After installing siding on 500+ Massachusetts homes over 20 years, here is the honest answer to what works best in New England's climate — by material, by budget, and by home age.",
     content: `
       <h2>The Short Answer</h2>
       <p>For most New England homes, the best siding is <strong>James Hardie fiber cement (HardiePlank)</strong>. It survives freeze-thaw cycles that crack vinyl, lasts 50+ years versus vinyl's 20-30, carries a 30-year manufacturer warranty, and meets Class A fire ratings. Vinyl wins on upfront cost (30-40% cheaper). Cedar shake wins on traditional New England curb appeal but costs the most over time. Below: the full reasoning, with material-by-material breakdown.</p>
@@ -783,7 +783,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>About This Recommendation</h2>
-      <p>Alfa Construction Inc has installed all five materials across 109+ Massachusetts cities over 18 years. We hold Massachusetts Home Improvement Contractor (HIC) license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>, valid through April 2027, and carry full general liability and workers' compensation insurance. Our team is bilingual (English and Portuguese) and serves homeowners across MetroWest, Worcester County, the South Shore, and Cape Cod.</p>
+      <p>Alfa Construction Inc has installed all five materials across 109+ Massachusetts cities over 20 years. We hold Massachusetts Home Improvement Contractor (HIC) license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>, valid through April 2027, and carry full general liability and workers' compensation insurance. Our team is bilingual (English and Portuguese) and serves homeowners across MetroWest, Worcester County, the South Shore, and Cape Cod.</p>
 
       <p>For a free, itemized estimate on your siding project, call Fabio directly at <strong>(508) 590-9193</strong> or visit our <a href="/contact">contact page</a>. We respond to all estimate requests within 24 hours.</p>
     `,
@@ -794,7 +794,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/dark-shake-siding-renovation-after-ma.jpg",
     metaTitle: "Best Siding for New England Homes (2026 Guide) — MA Expert",
     metaDescription:
-      "After 500+ MA installs over 18 years, here's the honest answer on Hardie vs vinyl vs cedar vs LP SmartSide for New England — cost, lifespan, install quality. (508) 590-9193.",
+      "After 500+ MA installs over 20 years, here's the honest answer on Hardie vs vinyl vs cedar vs LP SmartSide for New England — cost, lifespan, install quality. (508) 590-9193.",
     tags: [
       "best siding new england",
       "siding comparison massachusetts",

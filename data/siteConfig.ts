@@ -19,6 +19,13 @@ export const siteConfig = {
   image:
     "https://alfapaintingcarpentry.com/images/dark-shake-siding-renovation-after-ma.jpg",
 
+  // NAP (Name-Address-Phone) — tratado como SERVICE-AREA business: exibimos só
+  // "Bellingham, MA" (sem rua) no site e no schema vivo. O endereço de rua
+  // "34 Pearl Street" só existe no schema legado/morto de data/company.ts.
+  // ⚠️ TODO(Luiz): confirmar o NAP OFICIAL do Google Business Profile e garantir
+  // que name + address + phone batam EXATAMENTE entre site, schema e GBP. Se o
+  // GBP expõe endereço de rua, decidir entre (a) exibir a rua aqui também, ou
+  // (b) ocultar a rua no GBP (service-area). Não misturar os dois.
   address: {
     addressLocality: "Bellingham",
     addressRegion: "MA",
@@ -40,7 +47,7 @@ export const siteConfig = {
   // This is a tier indicator, NOT a dollar amount. Standard for GBP / LocalBusiness.
   priceRange: "$$$",
   foundingDate: "2006",
-  yearsExperience: 18,
+  yearsExperience: 20,
   founder: "Fabio",
   licenseLabel: "MA HIC License",
   licenseNumber: "192348",

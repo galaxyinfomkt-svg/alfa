@@ -166,7 +166,7 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-alfa-gold/10 rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-alfa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
-              <p className="font-bold text-white text-sm">18+ Years Experience</p>
+              <p className="font-bold text-white text-sm">20+ Years Experience</p>
               <p className="text-xs text-gray-400">Trusted since 2006</p>
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -239,7 +239,7 @@ export default function HomePage() {
               {
                 num: "03",
                 title: "Expert Installation",
-                body: "Our 18-year crew handles the work — Hardie Plank, vinyl, cedar, windows, carpentry — to manufacturer spec on a 5-7 day timeline for typical exteriors.",
+                body: "Our 20-year crew handles the work — Hardie Plank, vinyl, cedar, windows, carpentry — to manufacturer spec on a 5-7 day timeline for typical exteriors.",
                 icon: (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />),
               },
               {
@@ -290,7 +290,7 @@ export default function HomePage() {
                 {company.experience} Years of Construction Excellence in Massachusetts
               </h2>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Founded by Fabio, Alfa Construction Inc has been serving Massachusetts homeowners for over 18 years. What started as a passion for quality craftsmanship has grown into one of the most trusted siding and construction companies in the state.
+                Founded by Fabio, Alfa Construction Inc has been serving Massachusetts homeowners for over 20 years. What started as a passion for quality craftsmanship has grown into one of the most trusted siding and construction companies in the state.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 We specialize <strong className="text-white">exclusively in complete siding installation and full-home replacements</strong> — Hardie Plank, vinyl, cedar, shake. Carpentry, sheathing repair, and window/door work happen only when they&apos;re part of a full re-side. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
@@ -324,7 +324,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-alfa-gold text-black p-6 rounded-2xl shadow-xl">
-                <p className="text-4xl font-bold">18+</p>
+                <p className="text-4xl font-bold">20+</p>
                 <p className="text-sm font-medium">Years of Excellence</p>
               </div>
             </div>
@@ -521,7 +521,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <ScrollReveal delay={0}>
               <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">18+</p>
+                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">20+</p>
                 <p className="text-alfa-ink-muted mt-2 text-sm">Years Experience</p>
               </div>
             </ScrollReveal>

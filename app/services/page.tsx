@@ -63,7 +63,7 @@ export default function ServicesPage() {
             Our Professional Services
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Alfa Construction Inc offers a complete range of home improvement services across Massachusetts. Licensed, insured, and backed by 18+ years of experience.
+            Alfa Construction Inc specializes exclusively in complete full-home siding installation and replacement across Massachusetts. Licensed, insured, and backed by 20+ years of experience.
           </p>
         </div>
       </section>

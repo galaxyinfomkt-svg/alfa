@@ -20,7 +20,7 @@ export const company = {
   },
   license: "#192348",
   licenseExpiry: "04/2027",
-  experience: "18+",
+  experience: "20+",
   foundedYear: 2006,
   owner: "Fabio",
   hours: "Mon–Sat 7:00 AM – 6:00 PM",
@@ -32,7 +32,7 @@ export const company = {
   googleMapsUrl: "https://maps.google.com/?cid=10275746837959009437",
   logo: "/images/logo.png",
   differentials: [
-    "18+ years of construction excellence",
+    "20+ years of construction excellence",
     "Licensed & Insured in Massachusetts",
     "Free estimates on all projects",
     "Bilingual team (English & Portuguese)",
