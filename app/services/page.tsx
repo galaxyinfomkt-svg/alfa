@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/data/company";
+import { getAllServiceSlugs, getServiceBySlug } from "@/data/services";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 
@@ -10,42 +11,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
 };
 
-// PIVOT SIDING-ONLY — Alfa vende um único serviço: siding installation & replacement.
-// As 4 cards abaixo são os 4 materiais (escolha do cliente), todos sob a mesma família.
-const services = [
-  {
-    slug: "siding",
-    name: "Full-Home Siding Installation",
-    description:
-      "Complete exterior re-side across Massachusetts. Sheathing inspection, weather-resistant barrier (DuPont Tyvek), Z-flashing at every penetration, manufacturer-spec fastening. Hardie Plank, vinyl, cedar, shake, or board & batten — your choice. We do not take patch jobs or single-panel repairs.",
+// SIDING-ONLY — all 10 siding services (the full city × service matrix hub).
+const services = getAllServiceSlugs()
+  .map((slug) => getServiceBySlug(slug))
+  .filter((s): s is NonNullable<typeof s> => Boolean(s))
+  .map((s) => ({
+    slug: s.slug,
+    name: s.name,
+    description: s.description,
     icon: "siding",
-    cta: "Get a Free Siding Estimate",
-  },
-  {
-    slug: "hardie-plank-siding",
-    name: "Hardie Plank Fiber Cement",
-    description:
-      "30-year transferable manufacturer warranty. ASTM C1186 Type A Grade II, Class A fire rated. Handles MA freeze-thaw cycles, won't rot, won't burn. The long-term forever-home choice — most New England homeowners' best resale move.",
-    icon: "siding",
-    cta: "Hardie Plank Details",
-  },
-  {
-    slug: "vinyl-siding",
-    name: "Premium Vinyl Siding",
-    description:
-      "Premium 25-year vinyl in 40+ colors, ASTM D3679 certified. The budget-conscious full re-side option. 5-7 day install for a typical 2,000 sqft Massachusetts home. Faster install, lower upfront cost, 20-30 year lifespan.",
-    icon: "siding",
-    cta: "Vinyl Siding Details",
-  },
-  {
-    slug: "cedar-shake-siding",
-    name: "Cedar Shake Siding",
-    description:
-      "Authentic Western Red Cedar shake — the traditional New England look. Weathers to silver-gray over 3-5 years. Hand-installed on rear-ventilated furring strips for maximum longevity. Best for Cape Cod, historic homes, and waterfront properties.",
-    icon: "siding",
-    cta: "Cedar Shake Details",
-  },
-];
+    cta: s.cta,
+  }));
 
 export default function ServicesPage() {
   return (
