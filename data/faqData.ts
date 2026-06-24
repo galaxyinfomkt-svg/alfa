@@ -13,8 +13,8 @@ export const homeFaqs: Faq[] = [
     a: "We install and replace all major siding systems: James Hardie fiber cement (HardiePlank), vinyl, cedar, shake, and board & batten. Every project is a complete installation or full-home replacement built to manufacturer spec for New England weather.",
   },
   {
-    q: "Do you do small siding repairs, or only full installations?",
-    a: "We specialize exclusively in complete siding installation and full-home replacements — we do not take on small patch repairs, single-panel fixes, or touch-up work. This focus is how we deliver the quality and warranty our clients expect on full re-sides.",
+    q: "Do you do siding repairs, or only full installations?",
+    a: "Both — siding is all we do. We handle complete full-home siding installation and replacement, and we also offer dedicated siding repair for storm damage, cracked or loose panels, and isolated rot. We focus exclusively on siding (not windows, roofing, or general remodeling), which is how we deliver the quality and warranty our clients expect.",
   },
   {
     q: "How do you quote a full siding replacement?",

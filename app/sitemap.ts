@@ -1,18 +1,13 @@
 import type { MetadataRoute } from "next";
 import { getCoreCitySlugs } from "@/data/cities";
+import { getAllServiceSlugs } from "@/data/services";
 import { getAllProjectSlugs } from "@/data/projects";
 import { getAllBlogSlugs } from "@/data/blog";
 
 const BASE_URL = "https://alfapaintingcarpentry.com";
 
-// PIVOT SIDING-ONLY — só /services/siding (+ sub-tipos hardie/vinyl/cedar
-// que continuam relevantes pra material-specific SEO).
-const serviceSlugs = [
-  "siding",
-  "hardie-plank-siding",
-  "vinyl-siding",
-  "cedar-shake-siding",
-];
+// City × service matrix (siding-only services). All 10 siding service slugs.
+const serviceSlugs = getAllServiceSlugs();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Só cidades "core" (dentro do raio real ~35 mi). As "extended" são
@@ -48,13 +43,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // ─── City + Siding Pages (109 — sem carpentry/windows/remodeling/painting) ───
-  const cityServicePages: MetadataRoute.Sitemap = citySlugs.map((city) => ({
-    url: `${BASE_URL}/massachusetts/${city}/siding`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
+  // ─── City × Service Pages (109 cities × 10 siding services ≈ 1.090) ───
+  const cityServicePages: MetadataRoute.Sitemap = citySlugs.flatMap((city) =>
+    serviceSlugs.map((service) => ({
+      url: `${BASE_URL}/massachusetts/${city}/${service}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
+  );
 
   // ─── Project Pages ───
   const projectPages: MetadataRoute.Sitemap = projectSlugs.map((slug) => ({

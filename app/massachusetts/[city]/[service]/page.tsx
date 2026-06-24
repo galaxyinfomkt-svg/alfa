@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity } from "@/data/cities";
-import { getServiceBySlug } from "@/data/services";
+import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 import { company, breadcrumbSchema } from "@/data/company";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
@@ -79,13 +79,13 @@ const serviceNoteMap: Record<string, CityNoteKey> = {
 /* ---------- static params: 100 cities x 5 services = 500 pages ---------- */
 
 export async function generateStaticParams() {
-  // PIVOT SIDING-ONLY: gerar SÓ /massachusetts/{city}/siding (109 páginas).
-  // As outras combinações (carpentry, windows-doors, remodeling, painting)
-  // são interceptadas por 301 em next.config.ts → /massachusetts/{city}.
-  return cities.map((city) => ({
-    city: city.slug,
-    service: "siding",
-  }));
+  // City × service matrix (siding-only services). 109 cities × 10 siding
+  // services = 1.090 pages. Deprecated multi-trade combos (painting/carpentry/
+  // remodeling/windows-doors) stay 301'd in next.config.ts.
+  const slugs = getAllServiceSlugs();
+  return cities.flatMap((city) =>
+    slugs.map((service) => ({ city: city.slug, service })),
+  );
 }
 
 /* ---------- dynamic SEO metadata ---------- */

@@ -119,10 +119,10 @@ export default function HomePage() {
               <p className="text-lg text-gray-300 mb-3 leading-relaxed max-w-xl">
                 <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small repairs.
               </p>
-              {/* Lead qualifier — keeps small-job leads out of the funnel.
+              {/* Positioning line — siding-only (we now also offer siding repair).
                   Diretriz do cliente: o site NÃO menciona preço. */}
               <p className="text-sm text-gray-300 mb-3 leading-relaxed max-w-xl bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
-                We take <strong className="text-white">complete exterior re-sides only</strong> — full-home siding installation and replacement. We do not do patch repairs, single-trim, or single-window jobs.
+                <strong className="text-white">Siding is all we do</strong> — full-home installation, replacement, and repair in Hardie Plank, vinyl, cedar, and more. We focus exclusively on siding, not other trades.
               </p>
               <p className="text-base text-alfa-gold-light mb-8 leading-relaxed max-w-xl">
                 <strong>Itemized, written estimates</strong> — materials, labor, permits, disposal. Licensed (MA HIC #192348) · {company.experience} years · Bilingual EN/PT.

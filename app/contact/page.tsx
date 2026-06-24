@@ -28,9 +28,9 @@ export default function ContactPage() {
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Ready to start your project? Contact Alfa Construction Inc today. We provide free, no-obligation estimates for complete full-home siding installation and replacement across Massachusetts.
           </p>
-          {/* Lead qualifier — diretriz do cliente: o site NÃO menciona preço. */}
+          {/* Positioning line — siding-only. Diretriz: o site NÃO menciona preço. */}
           <p className="text-gray-300 max-w-2xl mx-auto text-sm mt-4 bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
-            We take <strong className="text-white">complete exterior re-sides only</strong> — full-home siding installation and replacement. We do not do patch repairs, single-trim, or single-window jobs.
+            <strong className="text-white">Siding is all we do</strong> — full-home installation, replacement, and repair in Hardie Plank, vinyl, cedar, and more. We focus exclusively on siding, not other trades.
           </p>
         </div>
       </section>

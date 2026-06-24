@@ -12,6 +12,12 @@ const serviceLinks = [
   { href: "/services/hardie-plank-siding", label: "Hardie Plank Fiber Cement" },
   { href: "/services/vinyl-siding", label: "Vinyl Siding" },
   { href: "/services/cedar-shake-siding", label: "Cedar Shake Siding" },
+  { href: "/services/clapboard-siding", label: "Clapboard Siding" },
+  { href: "/services/board-and-batten-siding", label: "Board & Batten Siding" },
+  { href: "/services/insulated-siding", label: "Insulated Siding" },
+  { href: "/services/engineered-wood-siding", label: "Engineered Wood Siding" },
+  { href: "/services/commercial-siding", label: "Commercial Siding" },
+  { href: "/services/siding-repair", label: "Siding Repair" },
 ];
 
 const blogLinks = [

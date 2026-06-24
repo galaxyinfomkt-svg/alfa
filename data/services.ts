@@ -1,26 +1,17 @@
-export interface Service {
-  slug: string;
-  name: string;
-  shortName: string;
-  description: string;
-  longDescription: string;
-  icon: string;
-  heroImage: string;
-  keywords: string[];
-  painPoints: string[];
-  solutions: string[];
-  process: { step: number; title: string; description: string }[];
-  benefits: string[];
-  cta: string;
-  ctaDescription: string;
-  faqs: { question: string; answer: string }[];
-  metaTitle: string;
-  metaDescription: string;
-  cityIntros: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
-  cityPainPoints: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
-  citySolutions: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
-  cityClosings: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
-}
+// PIVOT: city × service matrix (siding-only). The Service shape lives in
+// ./serviceType; each siding sub-service is authored in ./services/<slug>.ts.
+import type { Service } from "./serviceType";
+import hardiePlankSiding from "./services/hardie-plank-siding";
+import vinylSiding from "./services/vinyl-siding";
+import cedarShakeSiding from "./services/cedar-shake-siding";
+import clapboardSiding from "./services/clapboard-siding";
+import boardAndBattenSiding from "./services/board-and-batten-siding";
+import insulatedSiding from "./services/insulated-siding";
+import engineeredWoodSiding from "./services/engineered-wood-siding";
+import commercialSiding from "./services/commercial-siding";
+import sidingRepair from "./services/siding-repair";
+
+export type { Service };
 
 const services: Service[] = [  // ─────────────────────────────────────────────────────────────
   // 1. SIDING INSTALLATION & REPLACEMENT (the only service Alfa sells)
@@ -125,9 +116,9 @@ const services: Service[] = [  // ───────────────�
           "Yes. We offer insulated vinyl siding and insulated fiber cement systems that add significant R-value to your walls. These products reduce thermal bridging, eliminate gaps between the siding and sheathing, and create a tighter building envelope. Homeowners typically see a noticeable reduction in heating and cooling costs, which is especially valuable during Massachusetts winters.",
       },
       {
-        question: "Do you do small siding repairs or patch jobs?",
+        question: "Do you do siding repairs, or only full replacements?",
         answer:
-          "No. Alfa Construction specializes exclusively in complete full-home siding installation and replacement. We strip the old cladding down to the sheathing, correct any moisture or rot issues, install a proper weather-resistant barrier, and re-side the entire exterior. We do not take patch repairs, single-panel swaps, or partial sections. If your home needs a full re-side, that is exactly what we do — and we do it right.",
+          "Both — siding is our only trade. Most of our work is complete full-home siding installation and replacement, where we strip the old cladding to the sheathing, correct moisture or rot, install a weather-resistant barrier, and re-side the entire exterior. We also offer dedicated siding repair for storm damage, cracked or loose panels, and isolated rot. See our Siding Repair service for details.",
       },
     ],
     metaTitle:
@@ -224,6 +215,16 @@ const services: Service[] = [  // ───────────────�
     },
   },
 
+  // ─── Siding sub-services (city × service matrix) ───
+  hardiePlankSiding,
+  vinylSiding,
+  cedarShakeSiding,
+  clapboardSiding,
+  boardAndBattenSiding,
+  insulatedSiding,
+  engineeredWoodSiding,
+  commercialSiding,
+  sidingRepair,
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {

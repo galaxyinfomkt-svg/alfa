@@ -1780,15 +1780,10 @@ export const cities: City[] = [
 // ─────────────────────────────────────────────────────────────────────────────
 export type CityTier = "core" | "extended";
 
-export const EXTENDED_CITY_SLUGS: ReadonlySet<string> = new Set([
-  // North Shore
-  "salem", "lynn", "peabody", "beverly", "danvers", "saugus",
-  // Boston-north inner metro
-  "woburn", "winchester", "arlington", "medford", "malden", "melrose",
-  "stoneham", "reading", "wakefield",
-  // Far NW (Worcester County north edge)
-  "fitchburg", "leominster",
-]);
+// Por diretriz do cliente (paridade com a Wolfs / ~109 cidades), TODAS as
+// cidades voltaram a ser "core" — sem noindex, todas no sitemap. A máquina de
+// tier fica aqui caso se queira reduzir o raio de novo no futuro.
+export const EXTENDED_CITY_SLUGS: ReadonlySet<string> = new Set([]);
 
 export function getCityTier(slug: string): CityTier {
   return EXTENDED_CITY_SLUGS.has(slug) ? "extended" : "core";

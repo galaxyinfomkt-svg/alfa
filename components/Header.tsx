@@ -16,10 +16,16 @@ const navLinks = [
 // PIVOT SIDING-ONLY — Alfa vende exclusivamente siding installation/replacement.
 // Carpentry/windows/doors aparecem só como add-on DENTRO da página de siding.
 const serviceItems = [
-  { slug: "siding", name: "Siding Installation", desc: "Hardie Plank, vinyl, cedar — full-home re-sides" },
-  { slug: "hardie-plank-siding", name: "Hardie Plank Siding", desc: "30-year fiber cement warranty" },
+  { slug: "siding", name: "Siding Installation & Replacement", desc: "Full-home re-sides across MA" },
+  { slug: "hardie-plank-siding", name: "Hardie Plank Fiber Cement", desc: "30-year fiber cement warranty" },
   { slug: "vinyl-siding", name: "Vinyl Siding", desc: "Premium 25-year vinyl, 40+ colors" },
   { slug: "cedar-shake-siding", name: "Cedar Shake Siding", desc: "Authentic New England look" },
+  { slug: "clapboard-siding", name: "Clapboard Siding", desc: "Classic colonial lap profile" },
+  { slug: "board-and-batten-siding", name: "Board & Batten Siding", desc: "Vertical farmhouse look" },
+  { slug: "insulated-siding", name: "Insulated Siding", desc: "Added R-value, lower energy bills" },
+  { slug: "engineered-wood-siding", name: "Engineered Wood Siding", desc: "LP SmartSide durability" },
+  { slug: "commercial-siding", name: "Commercial Siding", desc: "Multi-family & commercial" },
+  { slug: "siding-repair", name: "Siding Repair", desc: "Storm & impact damage repair" },
 ];
 
 export default function Header() {
