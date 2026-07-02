@@ -41,25 +41,19 @@ export default function DeferredScripts() {
       // Chat widget loader — only on pages without phone-collecting forms.
       // Carrier rule: one opt-in mechanism per page.
       if (!skipChat) {
-        // Inject the mount-point div now (was previously in layout.tsx,
-        // but rendering it upfront caused Lighthouse to fire the widget).
-        if (!document.querySelector("[data-chat-widget]")) {
-          const mount = document.createElement("div");
-          mount.setAttribute("data-chat-widget", "");
-          mount.setAttribute("data-widget-id", "69f8e9cad86c7d56cea2f255");
-          mount.setAttribute("data-location-id", "BlgWjOKxk32P6dyUTDjY");
-          document.body.appendChild(mount);
+        // GHL Conversation AI chat widget (Alfa Assistant). The loader
+        // self-mounts its own container, so no mount div is needed.
+        if (!document.getElementById("ghl-chat-widget-loader")) {
+          const chat = document.createElement("script");
+          chat.id = "ghl-chat-widget-loader";
+          chat.src = "https://widgets.leadconnectorhq.com/loader.js";
+          chat.setAttribute(
+            "data-resources-url",
+            "https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          );
+          chat.setAttribute("data-widget-id", "6a46da3d615aff07b1904384");
+          document.body.appendChild(chat);
         }
-
-        const chat = document.createElement("script");
-        chat.src = "https://widgets.leadconnectorhq.com/loader.js";
-        chat.setAttribute(
-          "data-resources-url",
-          "https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-        );
-        chat.setAttribute("data-widget-id", "69f8e9cad86c7d56cea2f255");
-        chat.setAttribute("data-source", "WEB_USER");
-        document.body.appendChild(chat);
       }
 
       // ReviewsWidget component owns its own resize-script load now —
