@@ -17,7 +17,6 @@ const serviceLinks = [
   { href: "/services/insulated-siding", label: "Insulated Siding" },
   { href: "/services/engineered-wood-siding", label: "Engineered Wood Siding" },
   { href: "/services/commercial-siding", label: "Commercial Siding" },
-  { href: "/services/siding-repair", label: "Siding Repair" },
 ];
 
 const blogLinks = [

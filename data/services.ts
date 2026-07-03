@@ -9,7 +9,6 @@ import boardAndBattenSiding from "./services/board-and-batten-siding";
 import insulatedSiding from "./services/insulated-siding";
 import engineeredWoodSiding from "./services/engineered-wood-siding";
 import commercialSiding from "./services/commercial-siding";
-import sidingRepair from "./services/siding-repair";
 
 export type { Service };
 
@@ -21,9 +20,9 @@ const services: Service[] = [  // ───────────────�
     name: "Siding Installation & Replacement",
     shortName: "Siding",
     description:
-      "Complete full-home siding installation and replacement across Massachusetts. From Hardie Plank fiber cement to vinyl and cedar, Alfa Construction re-sides your home's entire exterior with durable, beautiful siding. We take full-exterior re-sides, not patch repairs.",
+      "Complete full-home siding installation and replacement across Massachusetts. From Hardie Plank fiber cement to vinyl and cedar, Alfa Construction re-sides your home's entire exterior with durable, beautiful siding. We take full-exterior re-sides, not patch jobs.",
     longDescription:
-      "Your home's siding is its first line of defense against the elements — and its biggest visual statement from the street. At Alfa Construction, we install, repair, and replace siding using the highest-quality materials on the market, including James Hardie fiber cement, premium vinyl, engineered wood, and natural cedar. Our process begins with a thorough inspection of your existing siding and the substrate beneath it. We identify water damage, insulation deficiencies, and structural issues before a single panel goes up. Then we install a proper moisture barrier, ensure adequate ventilation, and mount your new siding with precision fastening for a watertight, wind-resistant finish. Whether your siding has been battered by decades of Massachusetts nor'easters or you simply want a modern aesthetic upgrade, we deliver results that protect your home, slash energy costs, and dramatically boost curb appeal. Every project comes with a detailed warranty and our commitment to your complete satisfaction.",
+      "Your home's siding is its first line of defense against the elements — and its biggest visual statement from the street. At Alfa Construction, we install and replace siding using the highest-quality materials on the market, including James Hardie fiber cement, premium vinyl, engineered wood, and natural cedar. Our process begins with a thorough inspection of your existing siding and the substrate beneath it. We identify water damage, insulation deficiencies, and structural issues before a single panel goes up. Then we install a proper moisture barrier, ensure adequate ventilation, and mount your new siding with precision fastening for a watertight, wind-resistant finish. Whether your siding has been battered by decades of Massachusetts nor'easters or you simply want a modern aesthetic upgrade, we deliver results that protect your home, slash energy costs, and dramatically boost curb appeal. Every project comes with a detailed warranty and our commitment to your complete satisfaction.",
     icon: "Home",
     heroImage: "/images/commercial-siding-installation-massachusetts.png",
     keywords: [
@@ -69,7 +68,7 @@ const services: Service[] = [  // ───────────────�
         step: 3,
         title: "Removal & Substrate Preparation",
         description:
-          "Our crew carefully removes old siding, disposes of debris, and inspects the sheathing beneath. Any rot, mold, or structural issues are repaired. We install or replace housewrap and flashing to create a continuous moisture barrier before any new siding goes on.",
+          "Our crew carefully removes old siding, disposes of debris, and inspects the sheathing beneath. Any rot, mold, or structural issues are replaced. We install or replace housewrap and flashing to create a continuous moisture barrier before any new siding goes on.",
       },
       {
         step: 4,
@@ -103,12 +102,12 @@ const services: Service[] = [  // ───────────────�
       {
         question: "How long does a siding replacement take?",
         answer:
-          "A typical full siding replacement for an average Massachusetts home takes 1 to 3 weeks depending on the size of the house, the siding material chosen, the amount of substrate repair needed, and weather conditions. We provide a clear timeline at the start of every project and keep you updated throughout. Partial repairs and smaller projects can often be completed in a few days.",
+          "A typical full siding replacement for an average Massachusetts home takes 1 to 3 weeks depending on the size of the house, the siding material chosen, the amount of substrate replacement needed, and weather conditions. We provide a clear timeline at the start of every project and keep you updated throughout.",
       },
       {
         question: "Can you install siding over existing siding?",
         answer:
-          "In some cases, yes — new vinyl siding can be installed over a single layer of existing siding if the substrate is sound. However, we generally recommend removing old siding first so we can inspect and repair the sheathing, update the moisture barrier, and ensure a proper installation. Layering siding hides potential problems and can void warranties.",
+          "In some cases, yes — new vinyl siding can be installed over a single layer of existing siding if the substrate is sound. However, we generally recommend removing old siding first so we can inspect and replace the sheathing, update the moisture barrier, and ensure a proper installation. Layering siding hides potential problems and can void warranties.",
       },
       {
         question: "Do you offer insulated siding?",
@@ -116,15 +115,15 @@ const services: Service[] = [  // ───────────────�
           "Yes. We offer insulated vinyl siding and insulated fiber cement systems that add significant R-value to your walls. These products reduce thermal bridging, eliminate gaps between the siding and sheathing, and create a tighter building envelope. Homeowners typically see a noticeable reduction in heating and cooling costs, which is especially valuable during Massachusetts winters.",
       },
       {
-        question: "Do you do siding repairs, or only full replacements?",
+        question: "Do you take on small siding jobs, or only full replacements?",
         answer:
-          "Both — siding is our only trade. Most of our work is complete full-home siding installation and replacement, where we strip the old cladding to the sheathing, correct moisture or rot, install a weather-resistant barrier, and re-side the entire exterior. We also offer dedicated siding repair for storm damage, cracked or loose panels, and isolated rot. See our Siding Repair service for details.",
+          "Full replacements only. Every project is a complete re-side: we strip the old cladding down to the sheathing, correct any moisture or rot, install a proper weather-resistant barrier, and re-side the entire exterior. We do not take patch jobs, single-panel work, or partial sections — full exterior re-sides are our only trade.",
       },
     ],
     metaTitle:
       "Siding Installation & Replacement | Alfa Construction | Massachusetts",
     metaDescription:
-      "Complete full-home siding installation & replacement in Massachusetts. Hardie Plank, vinyl, and cedar siding experts. We do full re-sides, not patch repairs. Free estimates from Alfa Construction.",
+      "Complete full-home siding installation & replacement in Massachusetts. Hardie Plank, vinyl, and cedar siding experts. We do full re-sides, not patch jobs. Free estimates from Alfa Construction.",
     cityIntros: {
       historic: [
         "In {cityName}, where colonial clapboards and Victorian-era wood siding define the streetscape, choosing the right siding material and installer matters deeply. Alfa Construction serves {cityName} homeowners with siding solutions that preserve your home's historic character while delivering the weather resistance and longevity that modern materials provide. We match profiles, textures, and proportions to blend seamlessly with your home's original design.",
@@ -132,13 +131,13 @@ const services: Service[] = [  // ───────────────�
         "Preserving the architectural integrity of a {cityName} historic home while upgrading its building envelope is a delicate balance. Alfa Construction brings that balance to every siding project in {cityName}. We understand local historic guidelines, we source materials that replicate period profiles, and we install everything with the precision that older homes demand.",
       ],
       suburban: [
-        "Your {cityName} home's siding is its most visible feature and its primary defense against the weather. Alfa Construction provides professional siding installation and repair for {cityName} homeowners who want their property to look great and stay protected. Whether you are upgrading from tired vinyl to modern Hardie Plank or repairing storm damage, we deliver clean, efficient results you will love.",
+        "Your {cityName} home's siding is its most visible feature and its primary defense against the weather. Alfa Construction provides professional siding installation and replacement for {cityName} homeowners who want their property to look great and stay protected. Whether you are upgrading from tired vinyl to modern Hardie Plank or replacing storm-damaged siding, we deliver clean, efficient results you will love.",
         "In {cityName} neighborhoods, exterior appearance matters. A home with faded, cracked, or mismatched siding drags down curb appeal and property values for the entire street. Alfa Construction helps {cityName} homeowners take pride in their exterior with beautiful, durable siding installed by experienced professionals who take the time to get every detail right.",
         "If your {cityName} home was built in the last 20 to 30 years, there is a good chance its original siding is reaching the end of its lifespan. Vinyl becomes brittle, colors fade unevenly, and exposure to decades of Massachusetts weather takes its toll. Alfa Construction offers modern siding replacement that improves your home's appearance, energy efficiency, and weather resistance all at once.",
       ],
       rural: [
         "Homes in {cityName} face siding challenges that suburban properties rarely encounter. Open exposure to wind, driving rain, and heavy snow loads puts enormous stress on exterior cladding. Alfa Construction installs siding systems specifically selected for the demands of rural {cityName} properties — products that resist impact, shed water effectively, and hold up against the most punishing New England conditions.",
-        "For {cityName} homeowners maintaining farmhouses, Cape Cods, or country homes, siding replacement is often a top priority. Original wood siding may have decades of deferred maintenance, and patching only goes so far. Alfa Construction provides complete siding solutions for {cityName} properties — from full removal and substrate repair to professional installation of materials that will serve your home for 30 years or more.",
+        "For {cityName} homeowners maintaining farmhouses, Cape Cods, or country homes, siding replacement is often a top priority. Original wood siding may have decades of deferred maintenance, and patching only goes so far. Alfa Construction provides complete siding solutions for {cityName} properties — from full removal and substrate replacement to professional installation of materials that will serve your home for 30 years or more.",
         "Living in {cityName} means your home's exterior works harder than most. Without trees or neighboring buildings to block the wind, siding takes a constant beating. Alfa Construction serves {cityName} with siding products and installation methods engineered for maximum durability in exposed locations, giving rural homeowners the protection and peace of mind they deserve.",
       ],
       urban: [
@@ -150,7 +149,7 @@ const services: Service[] = [  // ───────────────�
     cityPainPoints: {
       historic: [
         "Original wood siding on {cityName} historic homes requires constant upkeep — scraping, priming, painting, caulking — and even with diligent maintenance, moisture eventually finds its way in. Many {cityName} homeowners spend thousands of dollars per decade on exterior maintenance only to see the same problems return. The cycle is exhausting and expensive.",
-        "Previous siding repairs on {cityName} historic homes are often painfully obvious. Mismatched profiles, inconsistent reveal widths, and different wood species create a patchwork appearance that detracts from the home's character. Finding a contractor who can make repairs disappear into the original facade requires skill that many siding installers simply do not have.",
+        "Previous siding replacements on {cityName} historic homes are often painfully obvious. Mismatched profiles, inconsistent reveal widths, and different wood species create a patchwork appearance that detracts from the home's character. Finding a contractor who can make new siding blends into the original facade requires skill that many siding installers simply do not have.",
         "Beneath the surface of many {cityName} historic homes, water damage has been silently spreading for years. By the time homeowners notice interior signs — stains on walls, musty odors, soft spots in floors — the siding has already failed and the sheathing behind it may be compromised. Addressing siding failure early is far less costly than waiting for structural damage.",
       ],
       suburban: [
@@ -164,7 +163,7 @@ const services: Service[] = [  // ───────────────�
         "Many {cityName} properties include detached structures — garages, workshops, barns — that also need siding attention. The cost of covering multiple buildings adds up quickly, and homeowners struggle to find a contractor who will provide a coordinated plan for the entire property rather than just the main house.",
       ],
       urban: [
-        "In {cityName}, homes are often just a few feet apart, making siding inspection and repair difficult without scaffolding and careful coordination with neighbors. This limited access means problems go unnoticed longer and repairs are more complicated when they finally happen. Many {cityName} homeowners delay siding work because the logistics feel overwhelming.",
+        "In {cityName}, homes are often just a few feet apart, making siding inspection difficult without scaffolding and careful coordination with neighbors. This limited access means problems go unnoticed longer and the work is more complicated when they finally happen. Many {cityName} homeowners delay siding work because the logistics feel overwhelming.",
         "Road salt, vehicle emissions, and general urban grime take a measurable toll on siding in {cityName}. Vinyl discolors, wood absorbs contaminants, and even fiber cement can develop surface issues faster in a high-traffic area. The aesthetic decline is gradual, but over a decade it transforms a once-attractive facade into an eyesore.",
         "Multi-family property owners in {cityName} face an additional challenge: coordinating siding work across multiple units while managing tenant expectations, access requirements, and city permitting. The project management burden on top of the construction itself is enough to make many landlords postpone much-needed siding replacement indefinitely.",
       ],
@@ -172,12 +171,12 @@ const services: Service[] = [  // ───────────────�
     citySolutions: {
       historic: [
         "Alfa Construction offers {cityName} homeowners fiber cement siding that replicates the look of original wood clapboard down to the grain texture and shadow lines — but never rots, never attracts insects, and never needs scraping. We match reveal widths and corner details to your home's era, delivering an exterior that looks authentically historic and performs like modern engineering.",
-        "For {cityName} homes where maintaining original materials is a priority, we offer expert wood siding repair and selective replacement. We source matching species and profiles, remove only what is truly beyond saving, and integrate new boards so seamlessly that the repair is virtually invisible. We also address the moisture issues that caused the original failure.",
+        "For {cityName} homes where maintaining original materials is a priority, we offer expert wood siding replacement and selective replacement. We source matching species and profiles, remove only what is truly beyond saving, and integrate new boards so seamlessly that the new boards are virtually invisible. We also address the moisture issues that caused the original failure.",
         "When {cityName} homeowners choose full siding replacement, we treat it as an opportunity to upgrade the entire building envelope. We install modern housewrap, add rigid insulation where possible, replace damaged flashing, and ensure proper ventilation — all before the new siding goes on. The result is a home that looks historically appropriate, feels warmer, and stays dry.",
       ],
       suburban: [
         "Alfa Construction helps {cityName} homeowners choose siding that matches their style, budget, and performance expectations. We bring physical samples to your home so you can compare colors against your roof, trim, and landscaping in natural light. There is no guesswork — you see exactly what your {cityName} home will look like before we begin.",
-        "Our siding installation process for {cityName} homes includes complete removal of old material, thorough substrate inspection and repair, new housewrap installation, and precision mounting of your chosen siding with proper gapping, nailing, and flashing at every penetration. We do not cut corners, and the result is a siding system that performs flawlessly for decades.",
+        "Our siding installation process for {cityName} homes includes complete removal of old material, thorough substrate inspection and replacement, new housewrap installation, and precision mounting of your chosen siding with proper gapping, nailing, and flashing at every penetration. We do not cut corners, and the result is a siding system that performs flawlessly for decades.",
         "For {cityName} homeowners who want maximum energy savings, we offer insulated siding systems that add a continuous layer of rigid insulation behind every panel. This eliminates thermal bridging through studs, reduces drafts, and can lower heating costs by 10 to 20 percent — savings you will appreciate every Massachusetts winter.",
       ],
       rural: [
@@ -224,7 +223,6 @@ const services: Service[] = [  // ───────────────�
   insulatedSiding,
   engineeredWoodSiding,
   commercialSiding,
-  sidingRepair,
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {

@@ -5,7 +5,7 @@ const vinylSiding: Service = {
   name: "Vinyl Siding Installation",
   shortName: "Vinyl Siding",
   description:
-    "Premium vinyl siding installation and full-home replacement across Massachusetts. Alfa Construction re-sides your entire exterior with ASTM D3679 certified vinyl in 40+ colors and profiles — clapboard, Dutch lap, board-and-batten, and shake. We do complete re-sides, never patch repairs.",
+    "Premium vinyl siding installation and full-home replacement across Massachusetts. Alfa Construction re-sides your entire exterior with ASTM D3679 certified vinyl in 40+ colors and profiles — clapboard, Dutch lap, board-and-batten, and shake. We do complete re-sides, never patch jobs.",
   longDescription:
     "Vinyl siding is the most installed exterior cladding in America for good reason: it delivers lasting curb appeal, weather protection, and freedom from painting at a lower upfront cost than fiber cement or wood. At Alfa Construction, we install premium vinyl siding that meets the ASTM D3679 standard for impact resistance, wind load, and weatherability, with a service life of 20 to 40 years. Every project begins with a careful inspection of your existing cladding and the sheathing behind it. We find and correct hidden water damage, rot, and insulation gaps before a single panel is hung. We then install a continuous moisture barrier, flash every window, door, and penetration, and lock your new vinyl panels into place with the proper expansion clearance so they never buckle through Massachusetts freeze-thaw cycles. You choose from more than 40 colors and classic profiles — traditional clapboard, Dutch lap, board-and-batten, and shake — and we can add insulated vinyl panels that bring real R-value to your walls. Modern fade-resistant formulations hold their color for decades, and vinyl never needs scraping, caulking, or repainting. A typical 2,000-square-foot home is completed in five to seven days. With more than 20 years of experience and a bilingual English and Portuguese team, Alfa Construction delivers a watertight, beautiful vinyl exterior backed by a clear warranty.",
   icon: "Home",
@@ -53,7 +53,7 @@ const vinylSiding: Service = {
       step: 3,
       title: "Removal & Substrate Preparation",
       description:
-        "Our crew strips the old siding, hauls away the debris, and inspects the sheathing underneath. Any rot, mold, or structural damage is repaired. We install or replace housewrap and flashing to build a continuous moisture barrier before a single new vinyl panel is hung.",
+        "Our crew strips the old siding, hauls away the debris, and inspects the sheathing underneath. Any rot, mold, or structural damage is replaced. We install or replace housewrap and flashing to build a continuous moisture barrier before a single new vinyl panel is hung.",
     },
     {
       step: 4,
@@ -87,7 +87,7 @@ const vinylSiding: Service = {
     {
       question: "How long does a vinyl siding installation take?",
       answer:
-        "A full vinyl re-side on a typical 2,000-square-foot Massachusetts home takes about five to seven days, depending on the size and shape of the house, the amount of substrate repair needed, and the weather. Larger or more complex homes take longer. We give you a clear timeline at the start of every project and keep you updated throughout so you always know what to expect.",
+        "A full vinyl re-side on a typical 2,000-square-foot Massachusetts home takes about five to seven days, depending on the size and shape of the house, the amount of substrate replacement needed, and the weather. Larger or more complex homes take longer. We give you a clear timeline at the start of every project and keep you updated throughout so you always know what to expect.",
     },
     {
       question: "What vinyl siding colors and profiles do you offer?",
@@ -100,15 +100,15 @@ const vinylSiding: Service = {
         "For many Massachusetts homeowners, yes. Insulated vinyl siding has a layer of rigid foam fused to the back of each panel, which adds real R-value to your walls, reduces thermal bridging through the studs, and helps eliminate drafts. It also makes the panels more rigid and impact resistant. The result is a more comfortable home and lower heating and cooling bills, which is especially valuable through long New England winters.",
     },
     {
-      question: "Do you do small vinyl repairs or patch jobs?",
+      question: "Do you take on small vinyl jobs or patch work?",
       answer:
-        "No. Alfa Construction specializes exclusively in complete full-home vinyl siding installation and replacement. We strip the old cladding down to the sheathing, correct any moisture or rot, install a proper weather-resistant barrier, and re-side the entire exterior. We do not take patch repairs, single-panel swaps, or partial sections — especially since older vinyl colors are often discontinued and impossible to match. If your home needs a full re-side, that is exactly what we do, and we do it right.",
+        "No. Alfa Construction specializes exclusively in complete full-home vinyl siding installation and replacement. We strip the old cladding down to the sheathing, correct any moisture or rot, install a proper weather-resistant barrier, and re-side the entire exterior. We do not take patch jobs, single-panel swaps, or partial sections — especially since older vinyl colors are often discontinued and impossible to match. If your home needs a full re-side, that is exactly what we do, and we do it right.",
     },
   ],
   metaTitle:
     "Vinyl Siding Installation | Alfa Construction | Massachusetts",
   metaDescription:
-    "Premium vinyl siding installation & replacement in Massachusetts. 40+ colors and profiles, ASTM D3679 certified, never needs painting. We do full re-sides, not patch repairs. Free estimates from Alfa Construction.",
+    "Premium vinyl siding installation & replacement in Massachusetts. 40+ colors and profiles, ASTM D3679 certified, never needs painting. We do full re-sides, not patch jobs. Free estimates from Alfa Construction.",
   cityIntros: {
     historic: [
       "In {cityName}, where original clapboards and period detailing define the streetscape, choosing vinyl siding that respects that character takes a careful hand. Alfa Construction installs vinyl profiles for {cityName} homeowners that echo traditional reveal widths and shadow lines while delivering the paint-free, weather-resistant performance modern vinyl is known for. We match the look so your home stays true to its era.",
@@ -122,7 +122,7 @@ const vinylSiding: Service = {
     ],
     rural: [
       "Homes in {cityName} face exterior challenges that more sheltered properties rarely see. Open exposure to wind, driving rain, and heavy snow puts real stress on cladding. Alfa Construction installs ASTM D3679 certified vinyl rated for high-wind and high-impact conditions on rural {cityName} properties — panels that lock tight, shed water, and hold up against the harshest New England weather.",
-      "For {cityName} homeowners with farmhouses, Capes, or country homes, vinyl re-siding is often a top priority. Original wood may carry decades of deferred maintenance, and patching only goes so far. Alfa Construction provides complete vinyl siding for {cityName} properties — from full removal and substrate repair to expert installation of panels built to serve for 20 to 40 years.",
+      "For {cityName} homeowners with farmhouses, Capes, or country homes, vinyl re-siding is often a top priority. Original wood may carry decades of deferred maintenance, and patching only goes so far. Alfa Construction provides complete vinyl siding for {cityName} properties — from full removal and substrate replacement to expert installation of panels built to serve for 20 to 40 years.",
       "Living in {cityName} means your home's exterior works harder than most. With few trees or buildings to break the wind, siding takes a constant beating. Alfa Construction serves {cityName} with premium vinyl and installation methods engineered for maximum durability in exposed locations, giving rural homeowners the protection and peace of mind they deserve.",
     ],
     urban: [
@@ -134,7 +134,7 @@ const vinylSiding: Service = {
   cityPainPoints: {
     historic: [
       "Original wood siding on {cityName} historic homes demands constant upkeep — scraping, priming, painting, caulking — and moisture still finds its way in. Many {cityName} homeowners spend thousands per decade on exterior maintenance only to watch the same problems return. Premium vinyl ends that cycle, but only when it is installed by a crew that respects the home's character.",
-      "Past vinyl patch jobs on {cityName} historic homes are often glaringly obvious. Discontinued colors no longer match, profiles do not line up, and panels of different ages weather at different rates, leaving a quilted look that detracts from the home's charm. Once a color is off the market, a clean partial repair becomes nearly impossible.",
+      "Past vinyl patch jobs on {cityName} historic homes are often glaringly obvious. Discontinued colors no longer match, profiles do not line up, and panels of different ages weather at different rates, leaving a quilted look that detracts from the home's charm. Once a color is off the market, a clean partial patch becomes nearly impossible.",
       "Beneath the surface of many {cityName} historic homes, water has been working its way behind failing siding for years. By the time homeowners notice interior stains, musty odors, or soft spots, the sheathing may already be compromised. Replacing tired cladding with a properly flashed vinyl system stops the damage before it reaches the structure.",
     ],
     suburban: [
@@ -161,7 +161,7 @@ const vinylSiding: Service = {
     ],
     suburban: [
       "Alfa Construction helps {cityName} homeowners choose vinyl that matches their style, budget, and performance goals. We bring physical samples to your home so you can compare colors and profiles against your roof, trim, and landscaping in natural light. There is no guesswork — you see exactly how your {cityName} home will look before we begin.",
-      "Our vinyl installation process for {cityName} homes includes complete removal of the old cladding, thorough substrate inspection and repair, fresh housewrap, and precise panel mounting with center-slot nailing and proper expansion clearance at every course. We do not cut corners, and the result is a vinyl exterior that stays flat, sealed, and sharp for decades.",
+      "Our vinyl installation process for {cityName} homes includes complete removal of the old cladding, thorough substrate inspection and replacement, fresh housewrap, and precise panel mounting with center-slot nailing and proper expansion clearance at every course. We do not cut corners, and the result is a vinyl exterior that stays flat, sealed, and sharp for decades.",
       "For {cityName} homeowners chasing maximum energy savings, we offer insulated vinyl systems with rigid foam fused behind every panel. This adds continuous R-value, breaks the thermal bridge through the studs, and cuts drafts — comfort and lower bills you will appreciate every Massachusetts winter, all behind a fade-resistant finish.",
     ],
     rural: [

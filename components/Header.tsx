@@ -25,7 +25,6 @@ const serviceItems = [
   { slug: "insulated-siding", name: "Insulated Siding", desc: "Added R-value, lower energy bills" },
   { slug: "engineered-wood-siding", name: "Engineered Wood Siding", desc: "LP SmartSide durability" },
   { slug: "commercial-siding", name: "Commercial Siding", desc: "Multi-family & commercial" },
-  { slug: "siding-repair", name: "Siding Repair", desc: "Storm & impact damage repair" },
 ];
 
 export default function Header() {

@@ -68,7 +68,7 @@ export const siteConfig = {
       slug: "siding",
       name: "Siding Installation & Replacement",
       description:
-        "Complete full-home siding installation and replacement across Massachusetts — Hardie Plank fiber cement, vinyl, cedar, and shake. Full-exterior re-sides, not patch repairs.",
+        "Complete full-home siding installation and replacement across Massachusetts — Hardie Plank fiber cement, vinyl, cedar, and shake. Full-exterior re-sides, not patch jobs.",
     },
   ],
 

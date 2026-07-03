@@ -155,7 +155,7 @@ export const blogPosts: BlogPost[] = [
       <p>Your home's siding is its first line of defense against rain, snow, wind, and temperature extremes. In Massachusetts, where winter storms and humid summers put constant stress on exterior materials, siding does not last forever. But how do you know when it is time to replace your siding rather than simply patch or repair it? At Alfa Construction Inc (License #192348), we inspect hundreds of homes every year and help homeowners make informed decisions about their siding. Here are the seven most common warning signs that your siding has reached the end of its useful life.</p>
 
       <h2>1. Warping and Buckling</h2>
-      <p>When siding panels begin to warp, buckle, or pull away from the wall, it is a clear sign of underlying problems. Warping typically indicates that moisture has penetrated behind the siding and is affecting the panels or the sheathing underneath. This is especially common in Massachusetts homes after years of freeze-thaw cycles. Walk around your home and look along the wall surfaces from an angle. Warped panels are often easier to spot from the side than from straight on. If you notice widespread warping across multiple walls, replacement is usually the better option compared to spot repairs.</p>
+      <p>When siding panels begin to warp, buckle, or pull away from the wall, it is a clear sign of underlying problems. Warping typically indicates that moisture has penetrated behind the siding and is affecting the panels or the sheathing underneath. This is especially common in Massachusetts homes after years of freeze-thaw cycles. Walk around your home and look along the wall surfaces from an angle. Warped panels are often easier to spot from the side than from straight on. If you notice widespread warping across multiple walls, replacement is usually the better option compared to spot patching.</p>
 
       <h2>2. Cracking and Breaking</h2>
       <p>Individual cracked panels can often be replaced, but widespread cracking tells a different story. Vinyl siding becomes brittle with age and prolonged UV exposure, making it prone to cracking in cold weather. Fiber cement and wood siding can develop cracks from moisture absorption and freeze-thaw damage. If you are finding cracked panels in multiple areas of your home, the siding material has likely reached the end of its functional lifespan. Small cracks may seem harmless, but every crack is an entry point for water, insects, and cold air.</p>
@@ -199,7 +199,7 @@ export const blogPosts: BlogPost[] = [
       "Discover the 7 warning signs your siding needs replacement. Massachusetts homeowners trust Alfa Construction Inc for expert siding inspections and installation.",
     tags: [
       "siding replacement",
-      "siding repair",
+      "siding replacement",
       "warning signs",
       "Massachusetts",
       "home maintenance",

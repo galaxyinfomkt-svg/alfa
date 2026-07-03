@@ -5,7 +5,7 @@ const boardAndBattenSiding: Service = {
   name: "Board & Batten Siding",
   shortName: "Board & Batten",
   description:
-    "Board-and-batten siding installation and replacement across Massachusetts. Alfa Construction installs vertical wide-board cladding with narrow battens covering the seams, building the dramatic farmhouse and modern-farmhouse look the right way. We take full-exterior re-sides, not patch repairs.",
+    "Board-and-batten siding installation and replacement across Massachusetts. Alfa Construction installs vertical wide-board cladding with narrow battens covering the seams, building the dramatic farmhouse and modern-farmhouse look the right way. We take full-exterior re-sides, not patch jobs.",
   longDescription:
     "Board-and-batten is one of the most striking siding profiles you can put on a home — wide vertical boards run floor to eave, and narrow battens cover the seams between them, creating bold vertical lines and deep shadow play that reads beautifully from the curb. At Alfa Construction, we install board-and-batten in fiber cement using HardiePanel with HardieTrim battens, in engineered wood with LP SmartSide, and in vinyl, matching the material to your home, your exposure, and your budget. Vertical siding is unforgiving of shortcuts: the panels need proper furring and a flat plane to sit against, the fastening schedule has to follow the manufacturer's spec so the boards stay put through expansion and contraction, and every horizontal break, window head, and base condition needs flashing that sheds water down the face rather than trapping it behind the battens. We handle all of it — substrate prep, a continuous weather-resistant barrier, correct batten spacing for the look you want, and clean terminations at corners and trim. Many of our board-and-batten projects pair vertical panels on gables and accent walls with horizontal lap on the main body, a combination that gives a home real architectural depth. Whether you are chasing the modern-farmhouse aesthetic that has taken over New England streets or replacing tired cladding with something with genuine presence, we deliver a board-and-batten exterior that protects your home and turns heads. Every project comes with a detailed warranty and our commitment to your complete satisfaction.",
   icon: "Home",
@@ -53,7 +53,7 @@ const boardAndBattenSiding: Service = {
       step: 3,
       title: "Removal, Substrate Prep & Furring",
       description:
-        "Our crew removes the old siding, disposes of debris, and inspects the sheathing. Any rot or structural issue is repaired, and we install a continuous weather-resistant barrier. Because vertical panels demand a flat, properly backed plane, we install furring and blocking where needed so every board and batten has solid, correctly spaced fastening behind it.",
+        "Our crew removes the old siding, disposes of debris, and inspects the sheathing. Any rot or structural issue is replaced, and we install a continuous weather-resistant barrier. Because vertical panels demand a flat, properly backed plane, we install furring and blocking where needed so every board and batten has solid, correctly spaced fastening behind it.",
     },
     {
       step: 4,
@@ -100,9 +100,9 @@ const boardAndBattenSiding: Service = {
         "Vertical panels do not sit on the wall the same way horizontal lap does, so they require proper furring and blocking to create a flat, well-backed plane with fastening in the right places. They also need a careful flashing strategy at every window head, horizontal break, and base, because gravity pulls water straight down the vertical seams. When furring, fastening, and flashing are done correctly, board-and-batten stays flat and dry for decades; when they are skipped, the boards warp and water gets behind them.",
     },
     {
-      question: "Do you do small board-and-batten repairs or patch jobs?",
+      question: "Do you take on small board-and-batten jobs or patch work?",
       answer:
-        "No. Alfa Construction specializes exclusively in complete full-home siding installation and replacement, including full board-and-batten re-sides. We strip the old cladding to the sheathing, correct any moisture or rot, install a proper weather-resistant barrier and furring, and rebuild the exterior with vertical panels and battens. We do not take patch repairs, single-panel swaps, or partial sections. If your home needs a full board-and-batten exterior, that is exactly what we do — and we do it right.",
+        "No. Alfa Construction specializes exclusively in complete full-home siding installation and replacement, including full board-and-batten re-sides. We strip the old cladding to the sheathing, correct any moisture or rot, install a proper weather-resistant barrier and furring, and rebuild the exterior with vertical panels and battens. We do not take patch jobs, single-panel swaps, or partial sections. If your home needs a full board-and-batten exterior, that is exactly what we do — and we do it right.",
     },
   ],
   metaTitle:
@@ -122,7 +122,7 @@ const boardAndBattenSiding: Service = {
     ],
     rural: [
       "Homes in {cityName} face siding challenges that suburban properties rarely encounter, and board-and-batten — with its barn-and-farmhouse heritage — feels right at home here when it is installed for the exposure. Alfa Construction selects vertical siding products built to resist wind-driven rain and impact for rural {cityName} properties, and we install them with the furring and flashing that exposed walls demand.",
-      "For {cityName} homeowners with farmhouses, Cape Cods, and country homes, board-and-batten is often the look they have always wanted. Alfa Construction provides complete vertical-siding solutions for {cityName} properties, from full removal and substrate repair through professional installation of fiber cement or engineered wood boards and battens that will serve the home for 30 years or more.",
+      "For {cityName} homeowners with farmhouses, Cape Cods, and country homes, board-and-batten is often the look they have always wanted. Alfa Construction provides complete vertical-siding solutions for {cityName} properties, from full removal and substrate replacement through professional installation of fiber cement or engineered wood boards and battens that will serve the home for 30 years or more.",
       "Living in {cityName} means your home's exterior works harder than most, and vertical board-and-batten has to be backed and fastened correctly to survive it. Alfa Construction serves {cityName} with board-and-batten installation engineered for exposed locations — proper furring, manufacturer-spec fastening, and tight flashing — giving rural homeowners the durable farmhouse look they want.",
     ],
     urban: [
@@ -161,7 +161,7 @@ const boardAndBattenSiding: Service = {
     ],
     suburban: [
       "Alfa Construction helps {cityName} homeowners nail the modern-farmhouse look with board-and-batten that is laid out before we ever pick up a panel. We bring physical samples to your home so you can compare colors and textures in natural light, and we map board widths and batten spacing so the finished rhythm on your {cityName} home looks deliberate rather than improvised.",
-      "Our board-and-batten process for {cityName} homes includes full removal of the old cladding, substrate inspection and repair, a fresh weather-resistant barrier, and furring to create the flat plane vertical panels require. We hang every board plumb, set battens at consistent spacing, and flash every window head and base condition so your {cityName} exterior performs as good as it looks.",
+      "Our board-and-batten process for {cityName} homes includes full removal of the old cladding, substrate inspection and replacement, a fresh weather-resistant barrier, and furring to create the flat plane vertical panels require. We hang every board plumb, set battens at consistent spacing, and flash every window head and base condition so your {cityName} exterior performs as good as it looks.",
       "For {cityName} homeowners who want vertical drama on a budget, we offer vinyl board-and-batten, and for those who want maximum durability we recommend fiber cement HardiePanel with HardieTrim battens. Either way, you get the bold farmhouse look your {cityName} home has been missing, installed by a crew that does it correctly the first time.",
     ],
     rural: [

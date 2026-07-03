@@ -5,7 +5,7 @@ const engineeredWoodSiding: Service = {
   name: "Engineered Wood Siding",
   shortName: "Engineered Wood",
   description:
-    "Engineered wood siding installation and replacement across Massachusetts, specializing in LP SmartSide. Alfa Construction re-sides your home's full exterior with treated-strand engineered wood that delivers authentic deep wood-grain looks, termite and rot resistance, and a lighter, more impact-tolerant alternative to fiber cement. We take full-exterior re-sides, not patch repairs.",
+    "Engineered wood siding installation and replacement across Massachusetts, specializing in LP SmartSide. Alfa Construction re-sides your home's full exterior with treated-strand engineered wood that delivers authentic deep wood-grain looks, termite and rot resistance, and a lighter, more impact-tolerant alternative to fiber cement. We take full-exterior re-sides, not patch jobs.",
   longDescription:
     "Engineered wood siding gives your home the warm, deep grain of real wood without the rot, splitting, and endless repainting that plague natural clapboard. At Alfa Construction, we install and replace engineered wood siding across Massachusetts, working primarily with LP SmartSide — a product built from wood strands and fibers that are treated through the SmartGuard process with zinc borate to resist termites and fungal decay all the way through the board, not just on the surface. Compared to fiber cement, engineered wood is dramatically lighter and far more impact-resistant, so it stands up to hail, ladders, and stray baseballs without cracking, and it installs faster with standard carpentry tools rather than the dust and specialized blades that fiber cement demands. It typically lands at a lower price point than James Hardie while still carrying robust manufacturer protection — LP SmartSide is backed by a 5/50-year limited warranty, with up to 50 years of prorated coverage. Our process starts with a full inspection of your existing cladding and the sheathing beneath it, so we catch hidden water damage before a single board goes up. We install a proper weather-resistant barrier, flash every penetration, and mount pre-primed engineered wood — available in lap, panel, and board-and-batten profiles, with factory-finish color options — for a watertight, wind-ready exterior that looks like custom millwork and holds up to decades of New England weather.",
   icon: "Home",
@@ -53,7 +53,7 @@ const engineeredWoodSiding: Service = {
       step: 3,
       title: "Removal & Substrate Preparation",
       description:
-        "Our crew removes the old siding, hauls away the debris, and inspects the sheathing underneath. Any rot, insect damage, or structural issues are repaired, and we install or replace housewrap and flashing to create a continuous weather-resistant barrier before the new engineered wood goes on.",
+        "Our crew removes the old siding, hauls away the debris, and inspects the sheathing underneath. Any rot, insect damage, or structural issues are replaced, and we install or replace housewrap and flashing to create a continuous weather-resistant barrier before the new engineered wood goes on.",
     },
     {
       step: 4,
@@ -100,9 +100,9 @@ const engineeredWoodSiding: Service = {
         "LP SmartSide carries a strong manufacturer limited warranty — commonly described as a 5/50 warranty, meaning up to five years of full labor and replacement coverage followed by prorated coverage out to 50 years on the product itself. Alfa Construction installs strictly to LP specifications so that warranty stays intact, and we back our own workmanship as well. We provide all warranty documentation at the end of every project so you know exactly what is covered.",
     },
     {
-      question: "Do you do small engineered wood siding repairs or patch jobs?",
+      question: "Do you do small engineered wood siding replacements or patch jobs?",
       answer:
-        "No. Alfa Construction specializes exclusively in complete full-home engineered wood siding installation and replacement. We strip the old cladding down to the sheathing, correct any moisture, rot, or insect issues, install a proper weather-resistant barrier, and re-side the entire exterior in engineered wood. We do not take patch repairs, single-board swaps, or partial sections. If your home needs a full re-side in LP SmartSide, that is exactly what we do — and we do it right.",
+        "No. Alfa Construction specializes exclusively in complete full-home engineered wood siding installation and replacement. We strip the old cladding down to the sheathing, correct any moisture, rot, or insect issues, install a proper weather-resistant barrier, and re-side the entire exterior in engineered wood. We do not take patch jobs, single-board swaps, or partial sections. If your home needs a full re-side in LP SmartSide, that is exactly what we do — and we do it right.",
     },
   ],
   metaTitle:
@@ -122,7 +122,7 @@ const engineeredWoodSiding: Service = {
     ],
     rural: [
       "Homes in {cityName} face siding challenges that sheltered suburban lots rarely see — open exposure to wind, driving rain, and hail that punishes exterior cladding. Engineered wood is a natural fit here: LP SmartSide is far more impact-resistant than fiber cement, so it shrugs off the hits that crack and chip other materials. Alfa Construction re-sides rural {cityName} properties with engineered wood built to take a beating and keep its looks.",
-      "For {cityName} homeowners maintaining farmhouses, Capes, and country homes, failing wood siding is often a top priority. Decades of deferred painting leave natural clapboard split and rotting, and patching only goes so far. Alfa Construction provides complete LP SmartSide engineered wood re-sides for {cityName} properties — full removal, substrate repair, and termite-resistant boards that will serve your home for decades.",
+      "For {cityName} homeowners maintaining farmhouses, Capes, and country homes, failing wood siding is often a top priority. Decades of deferred painting leave natural clapboard split and rotting, and patching only goes so far. Alfa Construction provides complete LP SmartSide engineered wood re-sides for {cityName} properties — full removal, substrate replacement, and termite-resistant boards that will serve your home for decades.",
       "Living in {cityName} means your home's exterior works harder than most, with no trees or neighboring buildings to break the wind. Alfa Construction serves {cityName} with engineered wood siding chosen for exactly these conditions — light enough to install cleanly, tough enough to resist impact, and treated against the rot and insects that thrive in exposed rural settings.",
     ],
     urban: [
@@ -134,7 +134,7 @@ const engineeredWoodSiding: Service = {
   cityPainPoints: {
     historic: [
       "Original wood siding on {cityName} historic homes demands relentless upkeep — scraping, priming, painting, caulking — and even then moisture eventually splits and rots the boards. Many {cityName} homeowners pour thousands into repainting every few years only to watch the same failures return. Engineered wood ends that cycle, but only if it is installed by someone who respects the home's period detailing.",
-      "Past siding repairs on {cityName} historic homes are often glaringly obvious, with mismatched profiles and inconsistent reveals breaking up the facade. When natural wood is patched piecemeal, the new boards weather differently and the seams stand out for years. Replicating original wood-grain character across an entire {cityName} elevation takes the kind of profile matching many installers cannot deliver.",
+      "Past siding replacements on {cityName} historic homes are often glaringly obvious, with mismatched profiles and inconsistent reveals breaking up the facade. When natural wood is patched piecemeal, the new boards weather differently and the seams stand out for years. Replicating original wood-grain character across an entire {cityName} elevation takes the kind of profile matching many installers cannot deliver.",
       "Beneath the painted surface of many {cityName} historic homes, untreated wood siding has been quietly feeding rot and insects into the wall. By the time interior stains, soft trim, or carpenter ants appear, the cladding has failed and the sheathing may be compromised. For {cityName} homeowners, switching to termite-resistant engineered wood is far cheaper than waiting for structural damage.",
     ],
     suburban: [
@@ -156,12 +156,12 @@ const engineeredWoodSiding: Service = {
   citySolutions: {
     historic: [
       "Alfa Construction offers {cityName} homeowners LP SmartSide engineered wood that replicates the look of original clapboard down to the deep grain and shadow lines — but resists rot, splitting, and the termites that attack untreated wood. We match reveal widths and corner details to your home's era, delivering a {cityName} exterior that looks authentically historic and performs like modern engineering.",
-      "For {cityName} homes where period proportions are everything, we use LP SmartSide lap and board-and-batten profiles to recreate the original siding pattern across the full elevation. We remove the failing wood, repair the moisture issues underneath, and install engineered boards that weather uniformly, so the {cityName} facade reads as one cohesive, true-to-era surface rather than a patchwork.",
+      "For {cityName} homes where period proportions are everything, we use LP SmartSide lap and board-and-batten profiles to recreate the original siding pattern across the full elevation. We remove the failing wood, correct the moisture issues underneath, and install engineered boards that weather uniformly, so the {cityName} facade reads as one cohesive, true-to-era surface rather than a patchwork.",
       "When {cityName} homeowners choose a full engineered wood re-side, we treat it as a chance to upgrade the entire building envelope. We install modern housewrap, flash every opening, seal cut ends to protect the zinc-borate-treated core, and confirm proper clearances — all before the LP SmartSide goes on. The result is a {cityName} home that looks historically appropriate, stays dry, and shrugs off insects.",
     ],
     suburban: [
       "Alfa Construction helps {cityName} homeowners choose the engineered wood profile and finish that fits their style and budget. We bring LP SmartSide samples to your home so you can compare the deep grain and factory-finish colors against your roof, trim, and landscaping in natural light. There is no guesswork — you see exactly what your {cityName} home will look like before we order a board.",
-      "Our engineered wood installation for {cityName} homes includes complete removal of the old cladding, thorough substrate inspection and repair, fresh housewrap, and precision mounting of LP SmartSide with proper gapping, fastening, and sealed cut ends at every penetration. We install strictly to manufacturer spec, so the warranty stays intact and the {cityName} exterior performs for decades.",
+      "Our engineered wood installation for {cityName} homes includes complete removal of the old cladding, thorough substrate inspection and replacement, fresh housewrap, and precision mounting of LP SmartSide with proper gapping, fastening, and sealed cut ends at every penetration. We install strictly to manufacturer spec, so the warranty stays intact and the {cityName} exterior performs for decades.",
       "For {cityName} homeowners who want real wood character without the upkeep, we install pre-primed and factory-finish LP SmartSide that arrives jobsite-ready and holds its color far longer than field-painted cedar. You get authentic grain, faster installation than fiber cement, and a price point below James Hardie — a combination {cityName} homeowners appreciate every year they skip a repaint.",
     ],
     rural: [

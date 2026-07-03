@@ -19,7 +19,7 @@ const services = [
   {
     slug: "siding",
     name: "Full-Home Siding Installation",
-    description: "Complete exterior re-side in Hardie Plank, vinyl, cedar, shake, or board & batten. Sheathing inspection, weather-resistant barrier, Z-flashing, trim. We do not take small patch repairs.",
+    description: "Complete exterior re-side in Hardie Plank, vinyl, cedar, shake, or board & batten. Sheathing inspection, weather-resistant barrier, Z-flashing, trim. We do not take small patch jobs.",
     icon: "siding",
     cta: "Get a Free Siding Estimate",
   },
@@ -117,12 +117,11 @@ export default function HomePage() {
                 &amp; Replacement Specialists
               </h1>
               <p className="text-lg text-gray-300 mb-3 leading-relaxed max-w-xl">
-                <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small repairs.
+                <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small jobs.
               </p>
-              {/* Positioning line — siding-only (we now also offer siding repair).
-                  Diretriz do cliente: o site NÃO menciona preço. */}
+              {/* Positioning line — siding-only, full re-sides. Diretriz: sem preço, sem reparo. */}
               <p className="text-sm text-gray-300 mb-3 leading-relaxed max-w-xl bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
-                <strong className="text-white">Siding is all we do</strong> — full-home installation, replacement, and repair in Hardie Plank, vinyl, cedar, and more. We focus exclusively on siding, not other trades.
+                <strong className="text-white">Siding is all we do</strong> — complete full-home siding installation and replacement in Hardie Plank, vinyl, cedar, and more. We take full exterior re-sides only, not small jobs or other trades.
               </p>
               <p className="text-base text-alfa-gold-light mb-8 leading-relaxed max-w-xl">
                 <strong>Itemized, written estimates</strong> — materials, labor, permits, disposal. Licensed (MA HIC #192348) · {company.experience} years · Bilingual EN/PT.
@@ -295,7 +294,7 @@ export default function HomePage() {
                 Founded by Fabio, Alfa Construction Inc has been serving Massachusetts homeowners for over 20 years. What started as a passion for quality craftsmanship has grown into one of the most trusted siding and construction companies in the state.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                We specialize <strong className="text-white">exclusively in complete siding installation and full-home replacements</strong> — Hardie Plank, vinyl, cedar, shake. Carpentry, sheathing repair, and window/door work happen only when they&apos;re part of a full re-side. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
+                We specialize <strong className="text-white">exclusively in complete siding installation and full-home replacements</strong> — Hardie Plank, vinyl, cedar, shake. Carpentry, sheathing replacement, and window/door work happen only when they&apos;re part of a full re-side. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
               </p>
               <ul className="space-y-3 mb-8">
                 {company.differentials.map((item, i) => (

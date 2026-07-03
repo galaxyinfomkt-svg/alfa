@@ -5,7 +5,7 @@ const cedarShakeSiding: Service = {
   name: "Cedar Shake & Shingle Siding",
   shortName: "Cedar Shake",
   description:
-    "Western Red Cedar shake and shingle siding installation and replacement across Massachusetts. Alfa Construction re-sides your home's full exterior in hand-split shakes or machine-cut shingles for that classic Cape Cod and historic New England look. We take full-exterior re-sides, not patch repairs.",
+    "Western Red Cedar shake and shingle siding installation and replacement across Massachusetts. Alfa Construction re-sides your home's full exterior in hand-split shakes or machine-cut shingles for that classic Cape Cod and historic New England look. We take full-exterior re-sides, not patch jobs.",
   longDescription:
     "Cedar shake and shingle siding is the material that built New England's coastal cottages, Cape Cods, and shingle-style homes — and it remains the most timeless wood cladding a homeowner can choose. At Alfa Construction, we install and replace full exteriors in Western Red Cedar, working with both hand-split shakes for a thick, rugged, deeply textured wall and machine-cut shingles for a smoother, tighter, more uniform line. Cedar's natural oils make it inherently resistant to insects and decay, and a properly installed wall will protect your home for 30 to 40 years with periodic care. Our process starts beneath the surface: we inspect the existing wall and sheathing, install a continuous moisture barrier, and — critically for wood siding — set the cedar on a rear-ventilated furring layer so the back of every course can breathe and dry. On coastal and salt-air exposures we fasten exclusively with stainless steel so the wall never bleeds rust streaks down a fresh course. Whether you want to keep your cedar a warm honey tone with re-staining every five to seven years, or you love the silver-gray patina cedar earns as it weathers, we deliver an exterior with the depth and character no synthetic product can imitate. Every full re-side comes with a detailed warranty and our commitment to your complete satisfaction.",
   icon: "Home",
@@ -53,7 +53,7 @@ const cedarShakeSiding: Service = {
       step: 3,
       title: "Removal & Substrate Preparation",
       description:
-        "Our crew removes the old cladding, disposes of debris, and inspects the sheathing for rot or prior water damage. We repair what we find, then install or replace housewrap and flashing for a continuous moisture barrier. We add the rear-ventilation furring layer so the new cedar will sit off the wall and dry from behind.",
+        "Our crew removes the old cladding, disposes of debris, and inspects the sheathing for rot or prior water damage. We correct what we find, then install or replace housewrap and flashing for a continuous moisture barrier. We add the rear-ventilation furring layer so the new cedar will sit off the wall and dry from behind.",
     },
     {
       step: 4,
@@ -92,7 +92,7 @@ const cedarShakeSiding: Service = {
     {
       question: "Does cedar siding require a lot of maintenance?",
       answer:
-        "Cedar needs more care than synthetic siding, but the schedule is predictable. If you want to keep a warm stained color, plan to re-stain every five to seven years. If you prefer the natural silver-gray patina cedar develops, you can let it weather with far less intervention while still keeping the wall clean and watching for any damaged courses. Either way, the natural oils in Western Red Cedar resist insects and decay, so maintenance is about finish and moisture rather than constant repair.",
+        "Cedar needs more care than synthetic siding, but the schedule is predictable. If you want to keep a warm stained color, plan to re-stain every five to seven years. If you prefer the natural silver-gray patina cedar develops, you can let it weather with far less intervention while still keeping the wall clean and watching for any damaged courses. Either way, the natural oils in Western Red Cedar resist insects and decay, so maintenance is about finish and moisture rather than constant upkeep.",
     },
     {
       question: "Why does coastal cedar siding need stainless steel fasteners?",
@@ -100,19 +100,19 @@ const cedarShakeSiding: Service = {
         "Salt air corrodes ordinary fasteners, and a corroding nail does two things you do not want: it loses its grip on the cedar, and it bleeds rust streaks down the face of a fresh wall. Stainless steel fasteners do neither. On any coastal or salt-exposed Massachusetts home we fasten the entire cedar wall in stainless so the courses stay tight and the finish stays clean for the life of the siding. It is a detail that separates a wall that ages beautifully from one that streaks within a few years.",
     },
     {
-      question: "Do you do small cedar repairs or patch jobs?",
+      question: "Do you take on small cedar jobs or patch work?",
       answer:
-        "No. Alfa Construction specializes exclusively in complete full-home cedar siding installation and replacement. We strip the old cladding to the sheathing, repair any moisture or rot, install a proper weather-resistant barrier and rear-ventilation furring, and re-side the entire exterior in shakes or shingles. We do not take patch repairs, single-course swaps, or partial sections. If your home needs a full cedar re-side, that is exactly what we do — and we do it right.",
+        "No. Alfa Construction specializes exclusively in complete full-home cedar siding installation and replacement. We strip the old cladding to the sheathing, correct any moisture or rot, install a proper weather-resistant barrier and rear-ventilation furring, and re-side the entire exterior in shakes or shingles. We do not take patch jobs, single-course swaps, or partial sections. If your home needs a full cedar re-side, that is exactly what we do — and we do it right.",
     },
   ],
   metaTitle:
     "Cedar Shake & Shingle Siding | Alfa Construction | Massachusetts",
   metaDescription:
-    "Western Red Cedar shake & shingle siding installation in Massachusetts. Hand-split shakes and machine-cut shingles for that classic Cape Cod look. Full re-sides, not patch repairs. Free estimates from Alfa Construction.",
+    "Western Red Cedar shake & shingle siding installation in Massachusetts. Hand-split shakes and machine-cut shingles for that classic Cape Cod look. Full re-sides, not patch jobs. Free estimates from Alfa Construction.",
   cityIntros: {
     historic: [
       "In {cityName}, where shingle-style cottages and weathered clapboard homes define the streetscape, cedar is not just a siding choice — it is part of the town's architectural language. Alfa Construction serves {cityName} homeowners with Western Red Cedar shake and shingle siding that carries forward the look generations of New England builders established. We match exposure, reveal, and corner detailing so a new wall reads as though it has always belonged.",
-      "Many of the most admired homes in {cityName} were originally clad in cedar, and there is a reason the material has never gone out of style. After decades of weather, original cedar walls often need full replacement rather than another spot repair. Alfa Construction helps {cityName} homeowners re-side in hand-split shakes or machine-cut shingles that honor the home's period character while correcting the ventilation and moisture problems that doomed the original wall.",
+      "Many of the most admired homes in {cityName} were originally clad in cedar, and there is a reason the material has never gone out of style. After decades of weather, original cedar walls often need full replacement rather than another spot patch. Alfa Construction helps {cityName} homeowners re-side in hand-split shakes or machine-cut shingles that honor the home's period character while correcting the ventilation and moisture problems that doomed the original wall.",
       "Preserving the character of a {cityName} historic home while rebuilding its exterior the right way is a careful balance, and cedar is often the only material that truly fits. Alfa Construction brings that balance to every cedar project in {cityName}. We respect the home's proportions, we install Western Red Cedar at authentic exposures, and we detail the wall with the precision older homes demand.",
     ],
     suburban: [
@@ -122,7 +122,7 @@ const cedarShakeSiding: Service = {
     ],
     rural: [
       "Homes in {cityName} face exposure that punishes any exterior, and cedar is no exception. Open wind, driving rain, and heavy snow loads test every course and fastener. Alfa Construction installs Western Red Cedar shake and shingle siding for {cityName} properties with the ventilation, flashing, and stainless fastening that let a wood wall stand up to the most punishing New England conditions.",
-      "For {cityName} homeowners with farmhouses, Cape Cods, or country homes, cedar is often the material that suits the property best — and the one most in need of replacement. Original wood walls carry decades of deferred maintenance, and patching only delays the inevitable. Alfa Construction provides complete cedar re-sides for {cityName} properties, from full removal and substrate repair to a properly ventilated installation built to serve for 30 years or more.",
+      "For {cityName} homeowners with farmhouses, Cape Cods, or country homes, cedar is often the material that suits the property best — and the one most in need of replacement. Original wood walls carry decades of deferred maintenance, and patching only delays the inevitable. Alfa Construction provides complete cedar re-sides for {cityName} properties, from full removal and substrate replacement to a properly ventilated installation built to serve for 30 years or more.",
       "Living in {cityName} means your home's exterior works harder than most, and a cedar wall rewards doing it right. Without trees or neighboring buildings to break the wind, every shake and shingle takes a constant beating. Alfa Construction serves {cityName} with cedar installation methods engineered for exposed locations, giving rural homeowners a wood exterior that lasts.",
     ],
     urban: [
@@ -134,7 +134,7 @@ const cedarShakeSiding: Service = {
   cityPainPoints: {
     historic: [
       "Original cedar walls on {cityName} historic homes were often installed long before anyone understood rear ventilation, so the courses were nailed flat against the sheathing and have been trapping moisture for decades. Many {cityName} homeowners discover that the picturesque weathered wall they love is rotting from the back, and no amount of surface stain will fix a wall that cannot dry.",
-      "Past cedar repairs on {cityName} historic homes tend to stand out badly. Mismatched exposure, shingles instead of shakes, and a different stain color create a patchwork that undermines the home's character. Finding a contractor who can re-side an entire wall so it reads as a single, authentic cedar exterior takes skill many installers simply do not have.",
+      "Past cedar patch jobs on {cityName} historic homes tend to stand out badly. Mismatched exposure, shingles instead of shakes, and a different stain color create a patchwork that undermines the home's character. Finding a contractor who can re-side an entire wall so it reads as a single, authentic cedar exterior takes skill many installers simply do not have.",
       "Beneath the surface of many {cityName} historic homes, water that got behind failing cedar has been spreading silently for years. By the time homeowners see interior stains, musty odors, or soft spots, the cedar has failed and the sheathing behind it may be compromised. Addressing a failing cedar wall early is far less costly than waiting for the structure to suffer.",
     ],
     suburban: [
@@ -161,7 +161,7 @@ const cedarShakeSiding: Service = {
     ],
     suburban: [
       "Alfa Construction helps {cityName} homeowners decide between shakes and shingles and choose a finish direction that fits their style and maintenance appetite. We bring physical cedar samples to your home so you can compare texture and stain against your roof, trim, and landscaping in natural light — no guesswork about how your {cityName} cedar wall will look before we begin.",
-      "Our cedar installation for {cityName} homes includes complete removal of the old material, substrate inspection and repair, new housewrap, the rear-ventilation furring layer, and course-by-course installation at the correct exposure with stainless fasteners. We do not nail cedar flat and we do not cut corners — the result is a wood wall that performs the way cedar is supposed to.",
+      "Our cedar installation for {cityName} homes includes complete removal of the old material, substrate inspection and replacement, new housewrap, the rear-ventilation furring layer, and course-by-course installation at the correct exposure with stainless fasteners. We do not nail cedar flat and we do not cut corners — the result is a wood wall that performs the way cedar is supposed to.",
       "For {cityName} homeowners who love cedar but want a predictable maintenance plan, we set up the wall for success: a quality semi-transparent stain on installation and a clear re-stain schedule of every five to seven years. You get the warmth and character of real Western Red Cedar with a maintenance rhythm you can actually keep.",
     ],
     rural: [

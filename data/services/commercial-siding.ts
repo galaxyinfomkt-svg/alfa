@@ -27,7 +27,7 @@ const commercialSiding: Service = {
     "Re-siding a fully occupied building without displacing tenants, closing storefronts, or generating a wave of complaints and lease disputes",
     "Coordinating certificates of insurance, permitting, and access across a board, a management company, and a tenant roster before a single panel is ordered",
     "Combustible or end-of-life siding on multi-family and mixed-use buildings that does not meet Class A fire-rating expectations for high-occupancy structures",
-    "Mounting maintenance costs from constant patching, repainting, and spot repairs on large exterior surfaces that never fully resolve the underlying problem",
+    "Mounting maintenance costs from constant patching, repainting, and spot patching on large exterior surfaces that never fully resolve the underlying problem",
   ],
   solutions: [
     "Class A fire-rated fiber cement siding installation engineered for multi-family and commercial buildings, delivering non-combustible protection and decades of low-maintenance durability",
@@ -59,7 +59,7 @@ const commercialSiding: Service = {
       step: 4,
       title: "Removal, Prep & Installation",
       description:
-        "Working elevation by elevation, our crew removes old cladding, inspects and repairs the sheathing, and installs continuous housewrap and flashing before mounting new siding to manufacturer and code specifications. Every panel is leveled, properly gapped, and fastened, with extra attention to penetrations, transitions, and shared walls common to multi-family construction.",
+        "Working elevation by elevation, our crew removes old cladding, inspects and replaces failing sheathing, and installs continuous housewrap and flashing before mounting new siding to manufacturer and code specifications. Every panel is leveled, properly gapped, and fastened, with extra attention to penetrations, transitions, and shared walls common to multi-family construction.",
     },
     {
       step: 5,
@@ -100,7 +100,7 @@ const commercialSiding: Service = {
         "Large multi-family and commercial elevations require lifts and scaffolding sized to the surface, plus careful staging in often tight settings. We assess each elevation, plan equipment placement and material laydown around occupied units and active storefronts, and sequence the staging so access stays safe and operations stay uninterrupted. All equipment is demobilized and the site left clean as each phase is completed.",
     },
     {
-      question: "Do you do small commercial siding patches or single-unit repairs?",
+      question: "Do you take on small commercial siding jobs or single-unit patches?",
       answer:
         "No. Alfa Construction focuses on complete commercial and multi-family siding installation and replacement — full building re-clads, not isolated patches or single-panel swaps. We strip cladding to the sheathing, correct moisture and substrate issues, install a proper weather-resistant barrier, and re-side the full surface. If your apartment building, condo, mixed-use property, or strip retail center needs a complete siding system, that is exactly the work we do.",
     },
@@ -122,7 +122,7 @@ const commercialSiding: Service = {
     ],
     rural: [
       "Commercial and multi-family buildings in {cityName} face exterior demands that denser markets rarely see. Open exposure to wind, driving rain, and heavy snow loads puts enormous stress on the large surfaces of apartment buildings and mixed-use structures. Alfa Construction installs commercial siding systems selected for the demands of {cityName} properties — fiber cement and commercial-grade vinyl that resist impact, shed water, and hold up against the most punishing conditions.",
-      "For {cityName} owners managing rural apartment buildings, converted farmhouses with rental units, or small mixed-use blocks, siding replacement is often a deferred priority that finally comes due. Original cladding may carry years of postponed maintenance, and spot repairs only go so far on a large building. Alfa Construction provides complete commercial siding solutions for {cityName} properties, from full removal and substrate repair to durable, low-maintenance installation.",
+      "For {cityName} owners managing rural apartment buildings, converted farmhouses with rental units, or small mixed-use blocks, siding replacement is often a deferred priority that finally comes due. Original cladding may carry years of postponed maintenance, and spot patching only goes so far on a large building. Alfa Construction provides complete commercial siding solutions for {cityName} properties, from full removal and substrate replacement to durable, low-maintenance installation.",
       "Operating a multi-family or commercial property in {cityName} means the exterior works harder than most. With little to break the wind, large cladding surfaces take a constant beating that shortens their service life. Alfa Construction serves {cityName} with siding products and installation methods built for exposed locations, giving rural building owners and managers the protection and predictability they need.",
     ],
     urban: [
@@ -134,7 +134,7 @@ const commercialSiding: Service = {
   cityPainPoints: {
     historic: [
       "Original cladding on {cityName} historic multi-family buildings demands relentless upkeep — scraping, repainting, and patching across large surfaces — and even diligent maintenance fails to keep moisture out for long. Owners and managers in {cityName} spend heavily each decade chasing the same exterior problems on aging apartment and mixed-use blocks, with no lasting resolution and growing liability exposure.",
-      "Past siding repairs on {cityName} historic commercial buildings are often glaringly visible. Mismatched profiles, inconsistent reveals, and different materials create a patchwork facade that undermines the building's character and its market appeal to tenants and shoppers. Finding a commercial contractor who can make repairs disappear into a period streetwall requires experience many siding crews simply lack.",
+      "Past siding replacements on {cityName} historic commercial buildings are often glaringly visible. Mismatched profiles, inconsistent reveals, and different materials create a patchwork facade that undermines the building's character and its market appeal to tenants and shoppers. Finding a commercial contractor who can make patch jobs disappear into a period streetwall requires experience many siding crews simply lack.",
       "Behind the facades of many {cityName} historic apartment and storefront buildings, water has been migrating into the envelope for years. By the time managers see interior signs — unit complaints, musty odors, stained ceilings on shared walls — the cladding has failed and the sheathing may be compromised. On occupied multi-family buildings in {cityName}, addressing siding failure early is far cheaper than waiting for structural and tenant problems to surface.",
     ],
     suburban: [
@@ -161,7 +161,7 @@ const commercialSiding: Service = {
     ],
     suburban: [
       "Alfa Construction helps {cityName} property managers and owners specify cladding that fits the building's character, budget, and performance targets. We bring physical samples to the site so boards and owners can compare colors and profiles against roof, trim, and grounds in natural light. There is no guesswork — stakeholders see exactly how the {cityName} property will look before a single panel is ordered.",
-      "Our commercial siding process for {cityName} buildings includes complete removal of old cladding, full substrate inspection and repair, new housewrap across every elevation, and precision mounting with proper gapping, fastening, and flashing at every penetration. We do not cut corners on multi-family surfaces, and the result is an envelope that performs reliably for decades while the property stays leased.",
+      "Our commercial siding process for {cityName} buildings includes complete removal of old cladding, full substrate inspection and replacement, new housewrap across every elevation, and precision mounting with proper gapping, fastening, and flashing at every penetration. We do not cut corners on multi-family surfaces, and the result is an envelope that performs reliably for decades while the property stays leased.",
       "For {cityName} owners focused on operating costs, we offer insulated and continuous-substrate siding approaches that reduce thermal bridging and drafts across the whole building. Lower energy loss benefits both common areas and tenant units, and a tighter envelope improves comfort complaints — savings and satisfaction that compound across an entire multi-family property each Massachusetts winter.",
     ],
     rural: [

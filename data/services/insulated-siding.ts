@@ -5,7 +5,7 @@ const insulatedSiding: Service = {
   name: "Insulated Siding",
   shortName: "Insulated Siding",
   description:
-    "Energy-efficient insulated siding installation and replacement across Massachusetts. Alfa Construction installs siding panels backed with permanently fused rigid EPS foam that adds continuous R-value, cuts thermal bridging, and lowers heating and cooling bills. We do full-home insulated re-sides, not patch repairs.",
+    "Energy-efficient insulated siding installation and replacement across Massachusetts. Alfa Construction installs siding panels backed with permanently fused rigid EPS foam that adds continuous R-value, cuts thermal bridging, and lowers heating and cooling bills. We do full-home insulated re-sides, not patch jobs.",
   longDescription:
     "Insulated siding is engineered to do two jobs at once: clad and protect your home's exterior, and wrap it in a continuous layer of insulation that ordinary siding cannot provide. At Alfa Construction, we install insulated siding systems in which a contoured panel of rigid EPS foam is permanently fused to the back of each course, filling the gap between the cladding and the wall and adding meaningful R-value to your exterior — typically in the R-2 to R-4-plus range depending on the product you choose. That continuous insulation blanket reduces thermal bridging through the studs, the hidden pathway where heat escapes your framing all winter long. Our process starts with a careful inspection of your existing cladding and the sheathing behind it, because insulated siding only performs when it sits over a sound, dry, properly wrapped wall. We address any moisture damage, install or upgrade the house wrap and weather barrier, and then mount the foam-backed panels with precision fastening so they lie flat, lock tight, and resist wind and impact. The rigid backing also stiffens each panel, dampening road and weather noise and giving the wall a more solid, premium feel. For Massachusetts homeowners staring down another long heating season, insulated siding is one of the few exterior upgrades that pays you back month after month in lower energy bills while transforming how your home looks from the street. Every insulated siding project from Alfa comes with detailed warranty documentation and our commitment to getting the entire envelope right.",
   icon: "Home",
@@ -53,7 +53,7 @@ const insulatedSiding: Service = {
       step: 3,
       title: "Removal & Substrate Preparation",
       description:
-        "Our crew carefully removes the old cladding, disposes of debris, and inspects the sheathing beneath. Any rot, mold, or structural issues are repaired. We install or replace house wrap and flashing to create a continuous, dry weather barrier — the foundation that lets insulated siding perform as designed before any foam-backed panel goes up.",
+        "Our crew carefully removes the old cladding, disposes of debris, and inspects the sheathing beneath. Any rot, mold, or structural issues are replaced. We install or replace house wrap and flashing to create a continuous, dry weather barrier — the foundation that lets insulated siding perform as designed before any foam-backed panel goes up.",
     },
     {
       step: 4,
@@ -100,9 +100,9 @@ const insulatedSiding: Service = {
         "Yes, that is one of its underrated benefits. Because the rigid foam fills the space behind the panel and bonds to the cladding, the wall has less hollow space for sound to pass through and the siding flexes far less. Homeowners near busy roads or in tighter neighborhoods often notice that road, wind, and general outdoor noise is dampened after switching to a foam-backed insulated system.",
     },
     {
-      question: "Do you do small insulated siding repairs or patch jobs?",
+      question: "Do you do small insulated siding replacements or patch jobs?",
       answer:
-        "No. Alfa Construction specializes exclusively in complete full-home insulated siding installation and replacement. We strip the old cladding down to the sheathing, correct any moisture or rot issues, install a proper weather-resistant barrier, and re-side the entire exterior with a foam-backed system so the continuous insulation layer is unbroken. We do not take patch repairs, single-panel swaps, or partial sections. If your home needs a full insulated re-side, that is exactly what we do — and we do it right.",
+        "No. Alfa Construction specializes exclusively in complete full-home insulated siding installation and replacement. We strip the old cladding down to the sheathing, correct any moisture or rot issues, install a proper weather-resistant barrier, and re-side the entire exterior with a foam-backed system so the continuous insulation layer is unbroken. We do not take patch jobs, single-panel swaps, or partial sections. If your home needs a full insulated re-side, that is exactly what we do — and we do it right.",
     },
   ],
   metaTitle:
@@ -122,7 +122,7 @@ const insulatedSiding: Service = {
     ],
     rural: [
       "Homes in {cityName} face exposure that ordinary siding struggles with — open wind, driving rain, and long stretches of cold with little to break the weather. Alfa Construction installs insulated siding selected for the demands of rural {cityName} properties, pairing impact resistance with a continuous foam layer that helps keep heat in when the wind is relentless and the heating season is long.",
-      "For {cityName} homeowners maintaining farmhouses, Capes, or country homes, energy loss through uninsulated walls is a year-after-year expense. Alfa Construction provides complete insulated siding solutions for {cityName} properties — full removal, substrate repair, and installation of foam-backed panels that add R-value across the exterior and stand up to decades of exposed New England weather.",
+      "For {cityName} homeowners maintaining farmhouses, Capes, or country homes, energy loss through uninsulated walls is a year-after-year expense. Alfa Construction provides complete insulated siding solutions for {cityName} properties — full removal, substrate replacement, and installation of foam-backed panels that add R-value across the exterior and stand up to decades of exposed New England weather.",
       "Living in {cityName} means your home works harder than most to stay warm, with no neighboring buildings to block the wind that pulls heat from your walls. Alfa Construction serves {cityName} with insulated siding engineered for exposed locations, combining a rigid, impact-resistant face with continuous insulation that gives rural homeowners both durability and lower heating bills.",
     ],
     urban: [
@@ -157,11 +157,11 @@ const insulatedSiding: Service = {
     historic: [
       "Alfa Construction offers {cityName} homeowners insulated siding that replicates the look of traditional clapboard while finally putting a continuous layer of rigid foam behind the cladding. We match reveal widths and corner details to your home's era, so the exterior reads as authentically historic while the foam backing breaks the thermal bridge and quietly lowers your heating bills.",
       "For {cityName} historic homes where preserving the streetscape matters, we install foam-backed panels with period-sympathetic profiles and address the moisture and air-leak issues behind the old cladding first. The home keeps its character, the walls finally gain real R-value, and the drafts that made winters miserable are dramatically reduced.",
-      "When {cityName} homeowners choose a full insulated re-side, we treat it as a chance to upgrade the entire building envelope. We install modern house wrap, repair damaged flashing, and mount continuous-insulation panels over a sound, dry wall — so the finished home looks historically appropriate, feels noticeably warmer, and stays dry through every nor'easter.",
+      "When {cityName} homeowners choose a full insulated re-side, we treat it as a chance to upgrade the entire building envelope. We install modern house wrap, replace damaged flashing, and mount continuous-insulation panels over a sound, dry wall — so the finished home looks historically appropriate, feels noticeably warmer, and stays dry through every nor'easter.",
     ],
     suburban: [
       "Alfa Construction helps {cityName} homeowners choose insulated siding that matches their style and their energy goals. We bring physical samples — including a cutaway of the foam backing — to your home so you can compare colors against your roof and trim while seeing exactly how much continuous insulation each option adds. There is no guesswork about either the look or the R-value.",
-      "Our insulated siding process for {cityName} homes includes complete removal of the old cladding, substrate inspection and repair, new house wrap, and precision mounting of foam-backed panels with proper gapping and flashing at every penetration. The continuous insulation layer stays unbroken, the envelope stays watertight, and the wall performs far better than the hollow siding it replaced.",
+      "Our insulated siding process for {cityName} homes includes complete removal of the old cladding, substrate inspection and replacement, new house wrap, and precision mounting of foam-backed panels with proper gapping and flashing at every penetration. The continuous insulation layer stays unbroken, the envelope stays watertight, and the wall performs far better than the hollow siding it replaced.",
       "For {cityName} homeowners focused on energy savings, insulated siding adds a continuous layer of rigid foam behind every panel, eliminating the thermal bridge through the studs and tightening the whole envelope. Combined with a properly sealed installation, it helps cut heat loss and trim heating bills — savings you will appreciate every Massachusetts winter.",
     ],
     rural: [

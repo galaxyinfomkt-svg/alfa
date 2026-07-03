@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
   description:
-    "Full-home siding installation & replacement across Massachusetts. Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides — not patch repairs. Licensed (MA HIC #192348). Free estimate: (508) 590-9193.",
+    "Full-home siding installation & replacement across Massachusetts. Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides — not patch jobs. Licensed (MA HIC #192348). Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
 };
 

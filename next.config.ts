@@ -81,7 +81,7 @@ const nextConfig: NextConfig = {
       "foxborough","lynn","saugus","peabody","salem","beverly","danvers","worcester","auburn",
       "millbury","oxford","sutton","webster",
     ];
-    const DEPRECATED_CITY_SERVICES = ["painting", "carpentry", "remodeling", "windows-doors"];
+    const DEPRECATED_CITY_SERVICES = ["painting", "carpentry", "remodeling", "windows-doors", "siding-repair"];
 
     const cityServiceRedirects = CITY_SLUGS.flatMap((city) =>
       DEPRECATED_CITY_SERVICES.map((svc) => ({
@@ -96,6 +96,7 @@ const nextConfig: NextConfig = {
       { source: "/services/carpentry", destination: "/services/siding", permanent: true },
       { source: "/services/remodeling", destination: "/services/siding", permanent: true },
       { source: "/services/windows-doors", destination: "/services/siding", permanent: true },
+      { source: "/services/siding-repair", destination: "/services/siding", permanent: true },
       // Legacy /service/* (singular) — vinham de WordPress velho, ainda no GSC
       { source: "/service/:path*", destination: "/services/siding", permanent: true },
       // Painter/window/door specific URLs from old WP

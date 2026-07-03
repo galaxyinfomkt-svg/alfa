@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     template: "%s | Alfa Construction",
   },
   description:
-    "Full-home siding installation & replacement in Massachusetts — Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides, not patch repairs. Licensed (MA HIC #192348) · 20+ years · Bilingual EN/PT · Free estimate: (508) 590-9193.",
+    "Full-home siding installation & replacement in Massachusetts — Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides, not patch jobs. Licensed (MA HIC #192348) · 20+ years · Bilingual EN/PT · Free estimate: (508) 590-9193.",
   // meta `keywords` removed — Google ignores it and it still listed
-  // window/door/carpentry/remodeling + "siding repair MA" (off-positioning).
+  // window/door/carpentry/remodeling + "siding replacement MA" (off-positioning).
   authors: [{ name: "Alfa Construction Inc", url: "https://alfapaintingcarpentry.com" }],
   creator: "Alfa Construction Inc",
   publisher: "Alfa Construction Inc",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Alfa Construction Inc",
     title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
     description:
-      "Full-home siding installation & replacement across Massachusetts. Hardie Plank · vinyl · cedar · shake. We specialize in complete re-sides, not patch repairs. Licensed (MA HIC #192348) · 20+ years.",
+      "Full-home siding installation & replacement across Massachusetts. Hardie Plank · vinyl · cedar · shake. We specialize in complete re-sides, not patch jobs. Licensed (MA HIC #192348) · 20+ years.",
     url: "https://alfapaintingcarpentry.com",
     images: [
       {

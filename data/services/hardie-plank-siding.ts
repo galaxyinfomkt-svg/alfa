@@ -5,7 +5,7 @@ const hardiePlankSiding: Service = {
   name: "James Hardie Fiber Cement Siding",
   shortName: "Hardie Plank",
   description:
-    "Full-home James Hardie fiber cement siding installation and replacement across Massachusetts. Alfa Construction re-sides entire exteriors with genuine HardiePlank lap siding engineered for New England freeze-thaw cycles. We install complete fiber cement systems, not patch repairs.",
+    "Full-home James Hardie fiber cement siding installation and replacement across Massachusetts. Alfa Construction re-sides entire exteriors with genuine HardiePlank lap siding engineered for New England freeze-thaw cycles. We install complete fiber cement systems, not patch jobs.",
   longDescription:
     "James Hardie fiber cement siding is the most resilient cladding a Massachusetts home can wear, and Alfa Construction installs it the way the manufacturer intended — as a complete, engineered exterior system. HardiePlank lap siding is a dense composite of Portland cement, sand, and cellulose fiber, manufactured to ASTM C1186 Type A Grade II standards and carrying a Class A non-combustible fire rating. Because it is mineral-based rather than organic, it does not feed rot, it does not interest termites, carpenter ants, or woodpeckers, and it shrugs off the warping that plagues wood and the brittleness that overtakes aging vinyl. Every Alfa installation begins by stripping the old cladding to the sheathing so we can inspect for hidden moisture damage, then we wrap the walls in HardieWrap weather barrier, flash every penetration, and hang each board with the precise gapping and corrosion-resistant fastening Hardie specifies for our climate zone. We finish the corners, bands, and openings in matching HardieTrim for a seamless, architecturally correct exterior. Backed by a 30-year non-prorated substrate warranty and ColorPlus Technology factory finishes that resist fading for roughly fifteen years, a properly installed HardiePlank exterior routinely protects a home for half a century. The result is a façade engineered to outlast the weather, lower your maintenance for decades, and dramatically lift your curb appeal.",
   icon: "Home",
@@ -53,7 +53,7 @@ const hardiePlankSiding: Service = {
       step: 3,
       title: "Tear-Off & Substrate Preparation",
       description:
-        "Our crew removes the old siding down to the sheathing, hauls away the debris, and repairs any rot or structural damage we uncover. We then install HardieWrap weather barrier and flash every window, door, and penetration to build a continuous moisture barrier before a single board of fiber cement goes up.",
+        "Our crew removes the old siding down to the sheathing, hauls away the debris, and replaces any rot or structural damage we uncover. We then install HardieWrap weather barrier and flash every window, door, and penetration to build a continuous moisture barrier before a single board of fiber cement goes up.",
     },
     {
       step: 4,
@@ -100,7 +100,7 @@ const hardiePlankSiding: Service = {
         "Yes. James Hardie fiber cement carries a Class A fire rating and is classified as non-combustible because its core ingredients are Portland cement and sand rather than wood. It will not ignite or contribute fuel the way wood clapboards or vinyl do, and vinyl in particular can melt and warp from nothing more than a neighbor's grill or reflected sunlight. For homeowners concerned about fire exposure, the non-combustible nature of HardiePlank is one of its most compelling advantages.",
     },
     {
-      question: "Do you do small Hardie Plank repairs or single-board swaps?",
+      question: "Do you take on small Hardie Plank jobs or single-board swaps?",
       answer:
         "No. Alfa Construction installs James Hardie fiber cement exclusively as complete full-home re-sides. We strip the old cladding to the sheathing, correct any moisture or rot, install HardieWrap and proper flashing, and clad the entire exterior in HardiePlank and HardieTrim as one engineered system. We do not take patch jobs, single-board replacements, or partial sections, because a true Hardie installation only performs as designed when the whole envelope is done correctly.",
     },
@@ -122,7 +122,7 @@ const hardiePlankSiding: Service = {
     ],
     rural: [
       "Homes in {cityName} stand exposed in ways suburban properties rarely are, taking the full force of wind, driving rain, and heavy snow loads against their cladding. Alfa Construction installs James Hardie fiber cement on rural {cityName} homes precisely because it is dense, impact-resistant, and engineered for freeze-thaw punishment. HardiePlank gives exposed {cityName} properties an exterior that holds the line against the hardest New England weather.",
-      "For {cityName} owners maintaining farmhouses, Capes, and country homes, decades of deferred maintenance on wood siding eventually outrun patching. Alfa Construction provides {cityName} properties a complete fiber cement solution — full tear-off, substrate repair, and professional HardiePlank installation that will serve the home for thirty years and beyond. It is the durable answer rural homes have always needed.",
+      "For {cityName} owners maintaining farmhouses, Capes, and country homes, decades of deferred maintenance on wood siding eventually outrun patching. Alfa Construction provides {cityName} properties a complete fiber cement solution — full tear-off, substrate replacement, and professional HardiePlank installation that will serve the home for thirty years and beyond. It is the durable answer rural homes have always needed.",
       "Living in {cityName} means your home's exterior works harder than most, with no neighboring buildings or tree lines to soften the wind. Alfa Construction serves {cityName} with James Hardie fiber cement and installation methods built for exposure, so the siding sheds water and resists impact season after season. Rural homeowners get the protection and the peace of mind that HardiePlank is known for.",
     ],
     urban: [
@@ -134,7 +134,7 @@ const hardiePlankSiding: Service = {
   cityPainPoints: {
     historic: [
       "The original wood clapboards on {cityName} historic homes demand a relentless rhythm of scraping, priming, and painting, and even careful upkeep cannot keep moisture from eventually rotting the boards. Many {cityName} owners pour thousands into exterior maintenance each decade only to watch the same cupping and peeling return. Fiber cement breaks that cycle, but the wood it replaces has to be torn off correctly first.",
-      "Woodpeckers, carpenter ants, and decades of paint buildup leave many {cityName} historic façades looking patched and tired, with mismatched boards betraying past repairs. Finding a contractor who can re-clad the home in a material that resists all of that — while still honoring the historic reveal and trim lines — is harder than most {cityName} owners expect. Organic siding simply keeps inviting the same problems back.",
+      "Woodpeckers, carpenter ants, and decades of paint buildup leave many {cityName} historic façades looking patched and tired, with mismatched boards betraying past patch jobs. Finding a contractor who can re-clad the home in a material that resists all of that — while still honoring the historic reveal and trim lines — is harder than most {cityName} owners expect. Organic siding simply keeps inviting the same problems back.",
       "Behind the painted surface of many {cityName} historic homes, water has been working its way past failing wood siding for years, quietly compromising the sheathing. By the time owners notice interior stains or musty odors, the cladding has failed and the structure beneath may be at risk. Re-siding a {cityName} home in fiber cement only solves the problem if the hidden rot is addressed during tear-off.",
     ],
     suburban: [
@@ -157,11 +157,11 @@ const hardiePlankSiding: Service = {
     historic: [
       "Alfa Construction gives {cityName} homeowners James Hardie HardiePlank that replicates original wood clapboard down to the grain texture and shadow line, yet never rots, never feeds insects, and never needs scraping. We match the reveal widths and corner details to your home's era and finish it in HardieTrim, so the new exterior reads as authentically historic while performing like modern engineering. Your {cityName} façade keeps its soul and loses its maintenance.",
       "For {cityName} homes where period accuracy is paramount, we select HardiePlank profiles and cedarmill textures that mirror the original siding's character before installation begins. We pair them with ColorPlus finishes drawn toward historically appropriate palettes, so the re-side honors the home's heritage rather than fighting it. The {cityName} result is fiber cement that looks like it always belonged on the house.",
-      "When {cityName} owners commit to a full Hardie re-side, we treat it as a chance to upgrade the entire building envelope, not just the surface. We tear off the failing wood, repair hidden rot, install HardieWrap and fresh flashing, and only then hang the HardiePlank — so the home looks historically right, stays dry, and feels tighter. It is the rare upgrade that satisfies both preservation and performance in {cityName}.",
+      "When {cityName} owners commit to a full Hardie re-side, we treat it as a chance to upgrade the entire building envelope, not just the surface. We tear off the failing wood, correct hidden rot, install HardieWrap and fresh flashing, and only then hang the HardiePlank — so the home looks historically right, stays dry, and feels tighter. It is the rare upgrade that satisfies both preservation and performance in {cityName}.",
     ],
     suburban: [
       "Alfa Construction helps {cityName} homeowners choose the HardiePlank profile and ColorPlus finish that fit their style and exposure, bringing physical samples to your home so you can judge color against your roof and trim in real light. There is no guesswork — you see exactly how your {cityName} home will look in genuine fiber cement before we order a single board. The decision is made with confidence, not a brochure.",
-      "Our HardiePlank installation on {cityName} homes is a complete system: full tear-off, substrate inspection and repair, new HardieWrap weather barrier, and precise blind nailing with corrosion-resistant fasteners and proper gapping at every penetration. We finish corners and openings in HardieTrim and seal joints with manufacturer-approved sealant. The {cityName} result is a fiber cement exterior that performs exactly as James Hardie engineered it to.",
+      "Our HardiePlank installation on {cityName} homes is a complete system: full tear-off, substrate inspection and replacement, new HardieWrap weather barrier, and precise blind nailing with corrosion-resistant fasteners and proper gapping at every penetration. We finish corners and openings in HardieTrim and seal joints with manufacturer-approved sealant. The {cityName} result is a fiber cement exterior that performs exactly as James Hardie engineered it to.",
       "For {cityName} owners focused on long-term value, James Hardie fiber cement delivers a roughly fifty-year service life and ColorPlus finishes that hold their color for about fifteen years before any thought of refreshing. That means a generation of standout curb appeal with little more than an occasional gentle rinse. It is the lowest-drama exterior a {cityName} home can wear through New England's seasons.",
     ],
     rural: [

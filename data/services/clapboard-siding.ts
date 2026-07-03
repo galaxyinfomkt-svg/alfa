@@ -5,7 +5,7 @@ const clapboardSiding: Service = {
   name: "Clapboard Siding Installation",
   shortName: "Clapboard",
   description:
-    "Clapboard siding installation and replacement across Massachusetts. Alfa Construction installs horizontal lap siding — the defining New England profile — in fiber cement, engineered wood, cedar, and vinyl, with the consistent reveal and crisp shadow lines that give clapboard its classic look. We take full-exterior re-sides, not patch repairs.",
+    "Clapboard siding installation and replacement across Massachusetts. Alfa Construction installs horizontal lap siding — the defining New England profile — in fiber cement, engineered wood, cedar, and vinyl, with the consistent reveal and crisp shadow lines that give clapboard its classic look. We take full-exterior re-sides, not patch jobs.",
   longDescription:
     "Clapboard is the siding profile that built New England. Long, horizontal boards lapped one over the next, each course casting a clean shadow line down the wall, give colonial, Cape, and farmhouse exteriors their unmistakable character. Alfa Construction installs clapboard siding the way it is meant to be installed — with disciplined attention to the reveal, the overlap, and the weather details that separate a wall that lasts from one that fails. We work in James Hardie fiber cement, engineered wood, natural cedar, and premium vinyl clapboard, and we help you choose the material that fits your home, your exposure, and your budget. Every project starts with an honest look at what is behind your existing siding: we inspect the sheathing, check for hidden moisture, and confirm the wall is sound before a single board goes up. Then we install a continuous weather-resistive barrier, flash every opening and transition correctly, and hang each course with a consistent reveal and proper overlap so water sheds the way clapboard is designed to shed it. Pre-primed and factory-finished options keep the finish crisp for years. Whether your original clapboard has surrendered to decades of nor'easters or you simply want the authentic horizontal-lap look done right, we deliver an exterior that protects your home and looks like it belongs on a Massachusetts street.",
   icon: "Home",
@@ -53,7 +53,7 @@ const clapboardSiding: Service = {
       step: 3,
       title: "Removal & Substrate Preparation",
       description:
-        "Our crew strips the old clapboard down to the sheathing, hauls away the debris, and inspects what is underneath. Any rot or soft spots are repaired, and we install or replace the weather-resistive barrier and flashing so the wall is sound and watertight before new lap siding goes on.",
+        "Our crew strips the old clapboard down to the sheathing, hauls away the debris, and inspects what is underneath. Any rot or soft spots are replaced, and we install or replace the weather-resistive barrier and flashing so the wall is sound and watertight before new lap siding goes on.",
     },
     {
       step: 4,
@@ -100,15 +100,15 @@ const clapboardSiding: Service = {
         "We install both, along with engineered wood and vinyl clapboard. Natural cedar is a beautiful, authentic choice and we install it the right way — back-primed, correctly lapped, and fastened to allow for movement so it lasts. That said, many Massachusetts homeowners choose fiber cement or engineered wood clapboard for the same wood-grain look with far less maintenance and longer finish life. We help you weigh the trade-offs and choose what fits your home.",
     },
     {
-      question: "Do you do small clapboard repairs or patch jobs?",
+      question: "Do you take on small clapboard jobs or patch work?",
       answer:
-        "No. Alfa Construction specializes exclusively in complete full-home clapboard installation and replacement. We strip the old lap siding down to the sheathing, correct any moisture or rot issues, install a proper weather-resistive barrier and flashing, and re-side the entire exterior with a consistent reveal. We do not take patch repairs, single-board swaps, or partial sections. If your home needs a full clapboard re-side, that is exactly what we do — and we do it right.",
+        "No. Alfa Construction specializes exclusively in complete full-home clapboard installation and replacement. We strip the old lap siding down to the sheathing, correct any moisture or rot issues, install a proper weather-resistive barrier and flashing, and re-side the entire exterior with a consistent reveal. We do not take patch jobs, single-board swaps, or partial sections. If your home needs a full clapboard re-side, that is exactly what we do — and we do it right.",
     },
   ],
   metaTitle:
     "Clapboard Siding Installation | Alfa Construction | Massachusetts",
   metaDescription:
-    "Clapboard siding installation & replacement in Massachusetts. Horizontal lap siding in Hardie fiber cement, cedar, engineered wood & vinyl with crisp, consistent reveals. Full re-sides, not patch repairs. Free estimates from Alfa Construction.",
+    "Clapboard siding installation & replacement in Massachusetts. Horizontal lap siding in Hardie fiber cement, cedar, engineered wood & vinyl with crisp, consistent reveals. Full re-sides, not patch jobs. Free estimates from Alfa Construction.",
   cityIntros: {
     historic: [
       "In {cityName}, clapboard is not a style choice — it is the language of the streetscape. Colonials, Capes, and Federals here were clad in horizontal lap siding from the beginning, and the right reveal and shadow line are part of what makes them read as authentic. Alfa Construction serves {cityName} homeowners with clapboard siding that honors that tradition while delivering the weather resistance and longevity modern materials provide.",
@@ -122,7 +122,7 @@ const clapboardSiding: Service = {
     ],
     rural: [
       "Homes in {cityName} put clapboard through a harder test than sheltered properties do. Open exposure to wind-driven rain and heavy snow loads strains every lap and butt joint, and a poorly detailed wall fails fast. Alfa Construction installs horizontal lap siding selected and fastened for the demands of rural {cityName} — products that hold their reveal, shed water, and stand up to the most punishing New England conditions.",
-      "For {cityName} homeowners keeping up farmhouses, Capes, and country homes, the original wood clapboard often carries decades of deferred maintenance, and patching only goes so far. Alfa Construction provides complete clapboard solutions for {cityName} properties — full removal, substrate repair, and professional installation of lap siding built to serve your home for thirty years or more.",
+      "For {cityName} homeowners keeping up farmhouses, Capes, and country homes, the original wood clapboard often carries decades of deferred maintenance, and patching only goes so far. Alfa Construction provides complete clapboard solutions for {cityName} properties — full removal, substrate replacement, and professional installation of lap siding built to serve your home for thirty years or more.",
       "Living in {cityName} means your clapboard works harder than most. With no trees or neighboring buildings to break the wind, every horizontal course takes a constant beating. Alfa Construction serves {cityName} with clapboard products and installation methods engineered for maximum durability in exposed locations, giving rural homeowners the protection and peace of mind they deserve.",
     ],
     urban: [
@@ -134,7 +134,7 @@ const clapboardSiding: Service = {
   cityPainPoints: {
     historic: [
       "Original wood clapboard on {cityName} historic homes demands relentless upkeep — scraping, priming, painting, caulking the laps — and even then moisture eventually finds the back of the boards. Many {cityName} homeowners spend thousands per decade chasing the same peeling and rot, only to watch it return. The cycle is exhausting and expensive.",
-      "Past clapboard repairs on {cityName} historic homes are often painfully obvious: a course with the wrong reveal, an overlap that does not match, a different board profile patched into the original wall. The result is a wavy, mismatched facade that undercuts the home's character, and few installers have the skill to make a repair disappear into the lines.",
+      "Past clapboard patch jobs on {cityName} historic homes are often painfully obvious: a course with the wrong reveal, an overlap that does not match, a different board profile patched into the original wall. The result is a wavy, mismatched facade that undercuts the home's character, and few installers have the skill to make a patch disappear into the lines.",
       "Behind the clapboard on many {cityName} historic homes, water has been working its way in for years through laps that were never flashed or overlapped correctly. By the time the interior signs show — stains, musty odors, soft sheathing — the wall has already failed. Catching clapboard failure early costs far less than waiting for structural damage.",
     ],
     suburban: [
@@ -148,7 +148,7 @@ const clapboardSiding: Service = {
       "Many {cityName} properties include detached structures — garages, workshops, barns — that need clapboard attention right alongside the house. Covering several buildings adds up fast, and homeowners struggle to find a contractor who will plan a coordinated, consistent clapboard exterior across the whole property instead of just the main home.",
     ],
     urban: [
-      "In {cityName}, homes often sit just a few feet apart, making clapboard inspection and repair nearly impossible without staging and careful coordination with neighbors. That limited access means failing laps go unnoticed longer and repairs get more complicated when they finally happen. Many {cityName} homeowners put off clapboard work simply because the logistics feel overwhelming.",
+      "In {cityName}, homes often sit just a few feet apart, making clapboard inspection and replacement nearly impossible without staging and careful coordination with neighbors. That limited access means failing laps go unnoticed longer and the work gets more complicated when they finally happen. Many {cityName} homeowners put off clapboard work simply because the logistics feel overwhelming.",
       "Road salt, vehicle exhaust, and general grime take a measurable toll on clapboard in {cityName}. Vinyl discolors, wood absorbs contaminants at the lap edges, and even fiber cement can pick up surface staining faster in a high-traffic block. The decline is gradual, but over a decade it turns a once-crisp horizontal-lap facade into an eyesore.",
       "Multi-family owners in {cityName} face an added burden: coordinating clapboard work across several units while juggling tenant expectations, access, and city permitting. The project-management load on top of the installation itself is enough to make many landlords postpone a much-needed clapboard re-side indefinitely.",
     ],
@@ -161,7 +161,7 @@ const clapboardSiding: Service = {
     ],
     suburban: [
       "Alfa Construction helps {cityName} homeowners choose clapboard that fits their style, budget, and expectations. We bring physical samples of fiber cement, engineered wood, cedar, and vinyl lap siding to your home so you can compare grain and color against your roof and trim in natural light. There is no guesswork — you see exactly how your {cityName} home's clapboard will look before we begin.",
-      "Our clapboard installation for {cityName} homes includes full removal of the old siding, thorough substrate inspection and repair, fresh weather barrier, and precise course layout with consistent reveals, correct overlap, and flashing at every penetration. We do not cut corners on the laps, and the wall sheds water and looks sharp for decades.",
+      "Our clapboard installation for {cityName} homes includes full removal of the old siding, thorough substrate inspection and replacement, fresh weather barrier, and precise course layout with consistent reveals, correct overlap, and flashing at every penetration. We do not cut corners on the laps, and the wall sheds water and looks sharp for decades.",
       "For {cityName} homeowners chasing energy savings, we pair clapboard with continuous rigid insulation behind the boards where the wall allows. This cuts thermal bridging through the studs, reduces drafts, and helps your {cityName} home hold its heat — savings you will appreciate every Massachusetts winter, with the classic lap look on the outside.",
     ],
     rural: [
