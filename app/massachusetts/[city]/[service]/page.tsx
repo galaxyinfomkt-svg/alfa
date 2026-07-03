@@ -100,8 +100,8 @@ export async function generateMetadata({
   const service = getServiceBySlug(serviceSlug);
   if (!city || !service) return {};
 
-  const title = `${service.shortName} in ${city.name} MA · 5★ · Free Estimate in 24h`;
-  const description = `${service.shortName} in ${city.name}, ${city.county} County by Fabio's 20-year MA crew. License ${company.license} · 22 ★★★★★. Free estimate in 24h. Call ${company.phone}.`;
+  const title = `${service.shortName} in ${city.name}, MA — Free Estimate & 5.0★`;
+  const description = `${service.shortName} in ${city.name}, ${city.county} County — complete full-home installation by Alfa Construction. Licensed & insured, 5.0★. Free written estimate in 24h: ${company.phone}.`;
 
   return {
     title,

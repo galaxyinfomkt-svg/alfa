@@ -54,8 +54,8 @@ export async function generateMetadata({
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `${city.name} MA Siding Contractor · 5★ · Free Estimate in 24h`;
-  const description = `Full-home siding installation & replacement in ${city.name}, ${city.county} County. ${company.experience} years, license ${company.license}, 22 ★★★★★ reviews. Free estimate in 24h. Call ${company.phone}.`;
+  const title = `${city.name} Siding Installation & Replacement — Free Estimate`;
+  const description = `Top-rated ${city.name}, MA siding contractor — full-home installation & replacement in Hardie Plank, vinyl & cedar. Licensed, insured, 5.0★. Free written estimate in 24h: ${company.phone}.`;
 
   return {
     title,
