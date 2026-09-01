@@ -6,9 +6,9 @@ import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Meet Fabio · 18 Years Siding MA Homes Since 2006 · License #192348",
+  title: "Meet Fabio · Siding MA Homes Since 2006",
   description:
-    "Fabio founded Alfa in 2006. 20 years, 109 MA cities, 22 ★★★★★ reviews, zero complaints. Owner-operator, bilingual EN/PT, license #192348. Free estimate: (508) 590-9193.",
+    "Fabio founded Alfa in 2006. 109 MA cities, 22 ★★★★★ reviews. Owner-operator, bilingual EN/PT, license #192348. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/about" },
 };
 

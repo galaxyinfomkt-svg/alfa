@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity } from "@/data/cities";
 import { getFeaturedProjects } from "@/data/projects";
 import { company, breadcrumbSchema } from "@/data/company";
+import { fitTitle, fitDescription } from "@/lib/serpWidth";
 import { getLocalBusiness, getService } from "@/data/schema";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
@@ -54,8 +55,23 @@ export async function generateMetadata({
   const city = getCityBySlug(slug);
   if (!city) return {};
 
-  const title = `${city.name} Siding Installation & Replacement — Free Estimate`;
-  const description = `Top-rated ${city.name}, MA siding contractor — full-home installation & replacement in Hardie Plank, vinyl & cedar. Licensed, insured, 5.0★. Free written estimate in 24h: ${company.phone}.`;
+  // Medido em pixels, nao em caracteres — ver lib/serpWidth.ts. O title
+  // anterior estourava o corte do SERP e perdia a marca; a description
+  // estourava e perdia o telefone, que era o unico CTA do snippet.
+  const title = fitTitle(`${city.name} Siding Contractor`, [
+    " — Installation & Replacement",
+    " — Free Estimate",
+    "",
+  ]);
+
+  const description = fitDescription([
+    `Full-home siding installation & replacement in ${city.name}, MA — Hardie Plank, vinyl & cedar. Licensed & insured, 5.0★. Free estimate: ${company.phone}.`,
+    `Full-home siding in ${city.name}, MA — Hardie Plank, vinyl & cedar. Licensed & insured, 5.0★. Free estimate: ${company.phone}.`,
+  ]);
+
+  // Nenhuma das 109 paginas de cidade tinha og:image. Reusa o mesmo seletor do
+  // hero, para a imagem do compartilhamento bater com a que a pagina mostra.
+  const hero = getCityHeroImage(city.slug);
 
   return {
     title,
@@ -69,6 +85,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
+      images: [{ url: hero.src, width: 1200, height: 630, alt: hero.alt }],
     },
     alternates: {
       canonical: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}`,
@@ -149,7 +166,7 @@ export default async function CityPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
           { name: "Home", url: "https://alfapaintingcarpentry.com" },
-          { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/services" },
+          { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/massachusetts" },
           { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}` },
         ])) }}
       />

@@ -8,6 +8,7 @@ import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 import FormEmbed from "@/components/FormEmbed";
 import { getAllCitySlugs, getCityBySlug } from "@/data/cities";
+import { fitTitle, fitDescriptionWithTail, stripTrailingPhone } from "@/lib/serpWidth";
 
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 import type { Service } from "@/data/serviceType";
@@ -43,15 +44,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const found = getServiceBySlug(slug);
   if (!found) return {};
   const service = toView(found);
+
+  const title = fitTitle(service.metaTitle, [""]);
+  const description = fitDescriptionWithTail(
+    stripTrailingPhone(service.metaDescription),
+    `Free estimate: ${company.phone}.`,
+  );
+
   return {
-    title: service.metaTitle,
-    description: service.metaDescription,
+    title,
+    description,
     alternates: {
       canonical: `https://alfapaintingcarpentry.com/services/${slug}`,
     },
     openGraph: {
-      title: service.metaTitle,
-      description: service.metaDescription,
+      title,
+      description,
       url: `https://alfapaintingcarpentry.com/services/${slug}`,
       images: [{ url: service.heroImage, width: 1200, height: 630, alt: service.name }],
     },

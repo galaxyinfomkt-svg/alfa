@@ -7,9 +7,9 @@ import CTASection from "@/components/CTASection";
 import BeforeAfter from "@/components/BeforeAfter";
 
 export const metadata: Metadata = {
-  title: "MA Siding Projects · Before/After Gallery · 109 Cities Served",
+  title: "MA Siding Projects · Before/After Gallery",
   description:
-    "Before/after siding, window & carpentry projects across Massachusetts. Hardie Plank, vinyl, cedar shake. License #192348 · 22 ★★★★★. Free estimate (508) 590-9193.",
+    "Before/after full-home siding projects across Massachusetts — Hardie Plank, vinyl, cedar shake. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/projects" },
 };
 

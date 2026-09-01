@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/data/company";
 export const metadata: Metadata = {
   title: "SMS Terms & Opt-In Methods",
   description:
-    "How Alfa Construction collects SMS opt-in consent — chat widget, web form, and verbal opt-in. Full CTIA-compliant disclosure of message types, frequency, opt-out, and third-party data policy.",
+    "How Alfa Construction collects SMS opt-in consent — chat widget, web form and verbal. CTIA-compliant disclosure of message types and opt-out.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/sms-terms" },
   robots: { index: true, follow: true },
 };

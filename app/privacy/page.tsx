@@ -4,7 +4,7 @@ import { breadcrumbSchema } from "@/data/company";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Alfa Construction and Cleaning Service Inc. How we collect, use, and protect your personal information, including SMS messaging consent and opt-out.",
+    "Privacy Policy for Alfa Construction Inc — how we collect, use and protect your information, including SMS consent and opt-out.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/privacy" },
   robots: { index: true, follow: true },
 };

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity } from "@/data/cities";
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 import { company, breadcrumbSchema } from "@/data/company";
+import { fitTitle, fitDescription } from "@/lib/serpWidth";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
@@ -100,8 +101,26 @@ export async function generateMetadata({
   const service = getServiceBySlug(serviceSlug);
   if (!city || !service) return {};
 
-  const title = `${service.shortName} in ${city.name}, MA — Free Estimate & 5.0★`;
-  const description = `${service.shortName} in ${city.name}, ${city.county} County — complete full-home installation by Alfa Construction. Licensed & insured, 5.0★. Free written estimate in 24h: ${company.phone}.`;
+  // O title anterior tinha 662px de mediana e estourava o corte do SERP
+  // (~600px) em 905 das 981 paginas — o que sumia era justamente a marca.
+  // Agora o gancho so entra quando cabe: cidades e servicos de nome curto
+  // ganham "— Free Estimate", os longos ficam so com a base.
+  const title = fitTitle(`${service.shortName} in ${city.name}, MA`, [
+    " — Free Estimate & 5.0★",
+    " — Free Estimate",
+    " — 5.0★",
+  ]);
+
+  // A description anterior tinha 1.065px de mediana contra um limite de ~920px
+  // e estourava em 981 de 981 — o trecho cortado era exatamente o telefone.
+  // Esta cabe em todas as 981 com folga, e o telefone sempre aparece.
+  const description = fitDescription([
+    `Full-home ${service.shortName.toLowerCase()} in ${city.name}, MA. Licensed & insured, 20+ yrs, 5.0★. Free written estimate in 24h — call ${company.phone}.`,
+    `Full-home ${service.shortName.toLowerCase()} in ${city.name}, MA. Licensed & insured, 5.0★. Free estimate — call ${company.phone}.`,
+  ]);
+
+  const ogImage =
+    serviceHeroImages[service.slug]?.[0]?.src ?? service.heroImage;
 
   return {
     title,
@@ -116,6 +135,9 @@ export async function generateMetadata({
       description,
       type: "website",
       url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}/${service.slug}`,
+      // 981 destas paginas nao tinham og:image. Compartilhadas no WhatsApp ou
+      // Facebook saiam como retangulo vazio. Herda a foto do proprio servico.
+      images: [{ url: ogImage, width: 1200, height: 630, alt: `${service.shortName} in ${city.name}, Massachusetts` }],
     },
     alternates: {
       canonical: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}/${service.slug}`,
@@ -230,7 +252,7 @@ export default async function CityServicePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([
           { name: "Home", url: "https://alfapaintingcarpentry.com" },
-          { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/services" },
+          { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/massachusetts" },
           { name: service.name, url: `https://alfapaintingcarpentry.com/services/${service.slug}` },
           { name: `${city.name}, MA`, url: `https://alfapaintingcarpentry.com/massachusetts/${city.slug}/${service.slug}` },
         ])) }}

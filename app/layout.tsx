@@ -21,11 +21,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://alfapaintingcarpentry.com"),
   title: {
-    default: "Massachusetts Siding Installation & Replacement | Alfa Construction",
+    default: "Massachusetts Full-Home Siding Installation | Alfa Construction",
     template: "%s | Alfa Construction",
   },
+  // Medida em pixels: a anterior tinha 1.568px contra o corte de ~920px do
+  // snippet, e o que sumia era todo o final, telefone incluido.
   description:
-    "Full-home siding installation & replacement in Massachusetts — Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides, not patch jobs. Licensed (MA HIC #192348) · 20+ years · Bilingual EN/PT · Free estimate: (508) 590-9193.",
+    "Full-home siding installation & replacement across Massachusetts. Hardie Plank, vinyl, cedar, shake. Free estimate: (508) 590-9193.",
   // meta `keywords` removed — Google ignores it and it still listed
   // window/door/carpentry/remodeling + "siding replacement MA" (off-positioning).
   authors: [{ name: "Alfa Construction Inc", url: "https://alfapaintingcarpentry.com" }],
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Alfa Construction Inc",
-    title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
+    title: "Massachusetts Full-Home Siding Installation | Alfa Construction",
     description:
       "Full-home siding installation & replacement across Massachusetts. Hardie Plank · vinyl · cedar · shake. We specialize in complete re-sides, not patch jobs. Licensed (MA HIC #192348) · 20+ years.",
     url: "https://alfapaintingcarpentry.com",
@@ -59,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
+    title: "Massachusetts Full-Home Siding Installation | Alfa Construction",
     description:
       "Full-home siding installation & replacement across Massachusetts. Hardie Plank · vinyl · cedar · shake. License #192348 · 20+ years.",
     images: ["/images/new-construction-siding-windows-board-batten-ma.jpg"],

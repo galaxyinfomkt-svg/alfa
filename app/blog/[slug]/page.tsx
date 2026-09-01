@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPostBySlug, getAllBlogSlugs } from "@/data/blog";
-import { breadcrumbSchema, articleSchema } from "@/data/company";
+import { company, breadcrumbSchema, articleSchema } from "@/data/company";
+import { fitTitle, fitDescriptionWithTail, stripTrailingPhone } from "@/lib/serpWidth";
 import CTASection from "@/components/CTASection";
 
 export async function generateStaticParams() {
@@ -14,12 +15,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
+  const title = fitTitle(post.metaTitle, [""]);
+  const description = fitDescriptionWithTail(
+    stripTrailingPhone(post.metaDescription),
+    `Free estimate: ${company.phone}.`,
+  );
+
   return {
-    title: post.metaTitle,
-    description: post.metaDescription,
+    title,
+    description,
     openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title,
+      description,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],

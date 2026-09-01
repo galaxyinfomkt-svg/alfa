@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { fitTitle, fitDescriptionWithTail, stripTrailingPhone } from "@/lib/serpWidth";
 import { projects, getProjectBySlug, getAllProjectSlugs, normalizeImages } from "@/data/projects";
+import { company } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 const SITE_URL = "https://alfapaintingcarpentry.com";
@@ -16,13 +18,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = getProjectBySlug(slug);
   if (!project) return {};
   const heroAbs = `${SITE_URL}${project.image}`;
+
+  // As descriptions destas paginas vinham do texto longo da obra — a maior
+  // tinha 4.863px contra um limite de snippet de ~920px. Corta em fronteira
+  // de palavra e reanexa o CTA, que antes era o trecho perdido.
+  const title = fitTitle(project.title, [" | Project Portfolio", ""]);
+  const description = fitDescriptionWithTail(
+    stripTrailingPhone(project.description),
+    `Free estimate: ${company.phone}.`,
+  );
+
   return {
-    title: `${project.title} | Project Portfolio`,
-    description: project.description,
+    title,
+    description,
     alternates: { canonical: `${SITE_URL}/projects/${slug}` },
     openGraph: {
       title: project.title,
-      description: project.description,
+      description,
       url: `${SITE_URL}/projects/${slug}`,
       images: [{ url: heroAbs, alt: project.title }],
       type: "article",

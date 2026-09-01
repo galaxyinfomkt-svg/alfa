@@ -5,9 +5,11 @@ import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Massachusetts Siding Installation & Replacement",
+  // Antes esta pagina e a home tinham o MESMO title e description, o que as
+  // punha para competir entre si no mesmo resultado. Diferenciado.
+  title: "Siding Services We Install in Massachusetts",
   description:
-    "Full-home siding installation & replacement across Massachusetts. Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides — not patch jobs. Licensed (MA HIC #192348). Free estimate: (508) 590-9193.",
+    "Hardie Plank, vinyl, cedar shake, clapboard, board & batten and more — every siding we install in MA. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
 };
 

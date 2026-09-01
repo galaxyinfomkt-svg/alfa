@@ -6,9 +6,9 @@ import { breadcrumbSchema } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "MA Siding Guides · Hardie vs Vinyl, Cost, Red Flags · Alfa Blog",
+  title: "MA Siding Guides · Hardie vs Vinyl",
   description:
-    "Honest siding & remodel guides from Fabio's 20 years across MA. Hardie vs Vinyl, hidden bid costs, contractor red flags, real estimates. (508) 590-9193 — Free estimate.",
+    "Honest siding guides from Fabio's 20 years across MA — Hardie vs vinyl, contractor red flags. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/blog" },
 };
 

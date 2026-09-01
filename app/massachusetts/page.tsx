@@ -17,12 +17,12 @@ import CTASection from "@/components/CTASection";
 const COUNTY_ORDER = ["Middlesex", "Worcester", "Norfolk", "Essex"] as const;
 
 export const metadata: Metadata = {
-  title: "Siding Contractor Serving 109 Massachusetts Cities & Towns",
+  title: "Siding Contractor in 109 Massachusetts Cities",
   description:
-    "Alfa Construction installs full-home siding in 109 MA cities across Middlesex, Worcester, Norfolk & Essex. Licensed MA HIC #192348. Free estimate: (508) 590-9193.",
+    "Full-home siding in 109 MA cities — Middlesex, Worcester, Norfolk & Essex. Licensed MA HIC #192348. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/massachusetts" },
   openGraph: {
-    title: "Siding Contractor Serving 109 Massachusetts Cities & Towns",
+    title: "Siding Contractor in 109 Massachusetts Cities",
     description:
       "Full-home siding installation across 109 Massachusetts cities. Licensed, insured, 20+ years.",
     url: "https://alfapaintingcarpentry.com/massachusetts",

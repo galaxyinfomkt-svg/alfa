@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     image: "/images/siding-window-installation-after-massachusetts.jpg",
     metaTitle:
-      "Hardie Plank vs Vinyl Siding for New England Homes",
+      "Hardie Plank vs Vinyl Siding in New England",
     metaDescription:
       "Compare Hardie Plank fiber cement and vinyl siding for Massachusetts homes. Expert analysis of durability, cost, and appearance from Alfa Construction Inc.",
     tags: [
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     image: "/images/commercial-siding-installation-massachusetts.png",
     metaTitle:
-      "Why Hiring a Licensed Contractor in Massachusetts Matters",
+      "Why a Licensed Contractor Matters in Massachusetts",
     metaDescription:
       "Learn why hiring a licensed contractor in Massachusetts is essential for your home project. Protect your investment with Alfa Construction Inc, License #192348.",
     tags: [
@@ -584,7 +584,7 @@ export const blogPosts: BlogPost[] = [
     category: "Siding",
     readTime: "9 min read",
     image: "/images/dark-shake-siding-renovation-after-ma.jpg",
-    metaTitle: "Best Siding for New England Homes (2026 Guide) — MA Expert",
+    metaTitle: "Best Siding for New England Homes — 2026 Guide",
     metaDescription:
       "After 500+ MA installs over 20 years, here's the honest answer on Hardie vs vinyl vs cedar vs LP SmartSide for New England — cost, lifespan, install quality. (508) 590-9193.",
     tags: [
