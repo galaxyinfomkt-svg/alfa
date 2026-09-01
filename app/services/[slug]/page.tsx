@@ -6,6 +6,7 @@ import { company, breadcrumbSchema, faqSchema, serviceSchema } from "@/data/comp
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import SiteVideo from "@/components/SiteVideo";
 import FormEmbed from "@/components/FormEmbed";
 import { getAllCitySlugs, getCityBySlug } from "@/data/cities";
 import { fitTitle, fitDescriptionWithTail, stripTrailingPhone } from "@/lib/serpWidth";
@@ -348,6 +349,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* CTA */}
+      <SiteVideo serviceSlug={slug} placeName="Massachusetts" />
+
       <CTASection title={`Get Your Free ${service.shortName} Estimate`} />
 
     </>

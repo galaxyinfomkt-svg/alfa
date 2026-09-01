@@ -9,6 +9,7 @@ import { fitTitle, fitDescription } from "@/lib/serpWidth";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import SiteVideo from "@/components/SiteVideo";
 import FormEmbed from "@/components/FormEmbed";
 
 /* ---------- hero image rotation by service + city ---------- */
@@ -785,6 +786,8 @@ export default async function CityServicePage({
       </section>
 
       {/* ===== CTA WITH FORM ===== */}
+      <SiteVideo citySlug={city.slug} placeName={`${city.name}, MA`} />
+
       <CTASection
         cityName={city.name}
         title={`Get a Free ${service.shortName} Estimate in ${city.name}`}

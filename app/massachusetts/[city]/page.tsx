@@ -11,6 +11,7 @@ import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import SiteVideo from "@/components/SiteVideo";
 import FormEmbed from "@/components/FormEmbed";
 
 /* ---------- hero image rotation (10 images, varied by city) ---------- */
@@ -869,6 +870,8 @@ export default async function CityPage({
       </section>
 
       {/* ===== CTA WITH FORM ===== */}
+      <SiteVideo citySlug={city.slug} placeName={`${city.name}, MA`} />
+
       <CTASection cityName={city.name} />
     </>
   );
