@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { company } from "@/data/company";
+import LeadForm from "./LeadForm";
 
 /**
  * Lead-capture form embed (GHL FORM SITE ALFA · PiFH0ELuOmHS9iZhGQ5F).
@@ -35,6 +36,11 @@ import { company } from "@/data/company";
  */
 export default function FormEmbed() {
   const [shouldLoad, setShouldLoad] = useState(false);
+  // Se o iframe do GHL nao sinalizar carregamento, o formulario nativo assume.
+  // A auditoria (A-08) achou zero <form> em 1.133 paginas: toda a captacao
+  // dependia deste iframe de terceiro, sem nenhum plano B.
+  const [iframeFailed, setIframeFailed] = useState(false);
+  const [iframeLoaded, setIframeLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Defer iframe load until in-viewport OR first user interaction
@@ -89,6 +95,14 @@ export default function FormEmbed() {
 
     return cleanup;
   }, [shouldLoad]);
+
+  // Se em 10s o iframe nao disparou onLoad, o terceiro nao esta respondendo
+  // (fora do ar, bloqueado por ad blocker, rede ruim). Troca pelo nativo.
+  useEffect(() => {
+    if (!shouldLoad || iframeLoaded) return;
+    const t = setTimeout(() => setIframeFailed(true), 10000);
+    return () => clearTimeout(t);
+  }, [shouldLoad, iframeLoaded]);
 
   // Inject the form_embed.js script only after iframe enters DOM
   useEffect(() => {
@@ -174,7 +188,15 @@ export default function FormEmbed() {
 
         {/* Form / Skeleton */}
         <div className="relative px-2 pb-2 min-h-[700px]">
-          {shouldLoad ? (
+          {iframeFailed ? (
+            <div className="px-4 py-6">
+              <p className="text-sm text-gray-400 mb-5">
+                Our scheduling form is taking too long to load. Here is a direct
+                line to us instead — it goes to the same place.
+              </p>
+              <LeadForm />
+            </div>
+          ) : shouldLoad ? (
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
               style={{
@@ -199,6 +221,7 @@ export default function FormEmbed() {
               data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
               data-form-id="PiFH0ELuOmHS9iZhGQ5F"
               title="FORM SITE ALFA"
+              onLoad={() => setIframeLoaded(true)}
             />
           ) : (
             <FormSkeleton />
@@ -210,17 +233,12 @@ export default function FormEmbed() {
             por um ad blocker ou o JS nao rodar, o site inteiro fica sem
             nenhum <form> — 1.133 paginas sem caminho de conversao alem do
             telefone. Isto garante que sempre exista uma saida visivel. */}
+        {/* Sem JavaScript o iframe do GHL nunca entra na pagina. Este
+            formulario e HTML puro com method="POST" e funciona assim mesmo —
+            ver app/api/lead/route.ts. */}
         <noscript>
-          <div className="px-6 pb-5 text-sm text-gray-300">
-            <p className="mb-3">
-              This form needs JavaScript. You can still reach us directly:
-            </p>
-            <a
-              href={company.phoneTel}
-              className="inline-flex items-center justify-center bg-alfa-gold text-black font-bold px-6 py-3 rounded-lg"
-            >
-              Call {company.phone}
-            </a>
+          <div className="px-6 pb-6">
+            <LeadForm />
           </div>
         </noscript>
 
