@@ -136,9 +136,9 @@ export default function FormEmbed() {
               <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-alfa-gold">
                 Free Estimate
               </p>
-              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
+              <p className="text-xl md:text-2xl font-bold text-white leading-tight">
                 Get your project quoted
-              </h3>
+              </p>
             </div>
           </div>
 

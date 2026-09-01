@@ -121,7 +121,7 @@ const services: Service[] = [  // ───────────────�
       },
     ],
     metaTitle:
-      "Siding Installation & Replacement | Alfa Construction | Massachusetts",
+      "Siding Installation & Replacement in Massachusetts",
     metaDescription:
       "Complete full-home siding installation & replacement in Massachusetts. Hardie Plank, vinyl, and cedar siding experts. We do full re-sides, not patch jobs. Free estimates from Alfa Construction.",
     cityIntros: {

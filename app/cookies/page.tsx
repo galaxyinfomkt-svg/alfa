@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Alfa Construction",
+  title: "Cookie Policy",
   description:
     "Cookie Policy for Alfa Construction and Cleaning Service Inc. How we use cookies and similar tracking technologies on alfapaintingcarpentry.com.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/cookies" },

@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     image: "/images/siding-window-installation-after-massachusetts.jpg",
     metaTitle:
-      "Hardie Plank vs Vinyl Siding for New England Homes | Alfa Construction",
+      "Hardie Plank vs Vinyl Siding for New England Homes",
     metaDescription:
       "Compare Hardie Plank fiber cement and vinyl siding for Massachusetts homes. Expert analysis of durability, cost, and appearance from Alfa Construction Inc.",
     tags: [
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     image: "/images/commercial-siding-installation-massachusetts.png",
     metaTitle:
-      "Why Hiring a Licensed Contractor in Massachusetts Matters | Alfa Construction",
+      "Why Hiring a Licensed Contractor in Massachusetts Matters",
     metaDescription:
       "Learn why hiring a licensed contractor in Massachusetts is essential for your home project. Protect your investment with Alfa Construction Inc, License #192348.",
     tags: [
@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     image: "/images/siding-renovation-before-housewrap-ma.jpg",
     metaTitle:
-      "7 Signs Your Siding Needs Replacement | Alfa MA",
+      "7 Signs Your Siding Needs Replacement",
     metaDescription:
       "Discover the 7 warning signs your siding needs replacement. Massachusetts homeowners trust Alfa Construction Inc for expert siding inspections and installation.",
     tags: [
@@ -322,7 +322,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     image: "/images/dark-shake-siding-renovation-after-ma.jpg",
     metaTitle:
-      "Best Siding Materials for New England Weather | Alfa",
+      "Best Siding Materials for New England Weather",
     metaDescription:
       "Compare the best siding materials for New England weather. Hardie Plank, vinyl, cedar, engineered wood, and shake siding pros and cons for Massachusetts homes.",
     tags: [
@@ -405,7 +405,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     image: "/images/commercial-siding-window-installation-massachusetts.jpg",
     metaTitle:
-      "Commercial Siding Installation in MA | Alfa",
+      "Commercial Siding Installation in MA",
     metaDescription:
       "Commercial siding installation guide for Massachusetts business owners. Material options, regulations, timelines, and costs from Alfa Construction Inc.",
     tags: [
@@ -480,7 +480,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     image: "/images/window-insulation-energyshield-ma.jpg",
     metaTitle:
-      "Siding Installation Process Step by Step | Alfa",
+      "Siding Installation Process Step by Step",
     metaDescription:
       "Follow our step-by-step siding installation guide. From inspection to cleanup, learn what to expect from a professional siding project in Massachusetts.",
     tags: [

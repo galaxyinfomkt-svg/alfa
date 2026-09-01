@@ -106,7 +106,7 @@ const clapboardSiding: Service = {
     },
   ],
   metaTitle:
-    "Clapboard Siding Installation | Alfa Construction | Massachusetts",
+    "Clapboard Siding Installation in Massachusetts",
   metaDescription:
     "Clapboard siding installation & replacement in Massachusetts. Horizontal lap siding in Hardie fiber cement, cedar, engineered wood & vinyl with crisp, consistent reveals. Full re-sides, not patch jobs. Free estimates from Alfa Construction.",
   cityIntros: {

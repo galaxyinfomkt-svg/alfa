@@ -106,7 +106,7 @@ const vinylSiding: Service = {
     },
   ],
   metaTitle:
-    "Vinyl Siding Installation | Alfa Construction | Massachusetts",
+    "Vinyl Siding Installation in Massachusetts",
   metaDescription:
     "Premium vinyl siding installation & replacement in Massachusetts. 40+ colors and profiles, ASTM D3679 certified, never needs painting. We do full re-sides, not patch jobs. Free estimates from Alfa Construction.",
   cityIntros: {

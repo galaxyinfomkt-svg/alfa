@@ -106,7 +106,7 @@ const boardAndBattenSiding: Service = {
     },
   ],
   metaTitle:
-    "Board & Batten Siding | Alfa Construction | Massachusetts",
+    "Board & Batten Siding in Massachusetts",
   metaDescription:
     "Board-and-batten siding installation & replacement in Massachusetts. HardiePanel, LP SmartSide & vinyl vertical siding for the farmhouse look. Full re-sides, not patches. Free estimates from Alfa Construction.",
   cityIntros: {

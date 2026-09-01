@@ -106,7 +106,7 @@ const insulatedSiding: Service = {
     },
   ],
   metaTitle:
-    "Insulated Siding Installation | Alfa Construction | Massachusetts Energy Efficiency",
+    "Insulated Siding Installation in Massachusetts",
   metaDescription:
     "Energy-efficient insulated siding installation & replacement in Massachusetts. Foam-backed siding that adds R-value, cuts thermal bridging, and lowers heating bills. Free estimates from Alfa Construction.",
   cityIntros: {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Alfa Construction",
+  title: "Terms and Conditions",
   description:
     "Terms and Conditions for Alfa Construction and Cleaning Service Inc. The legal terms governing your use of our Website and Services.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/terms" },

@@ -170,7 +170,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           {project.beforeImage && project.afterImage && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <figure>
-                <h3 className="font-bold text-white mb-2 text-center text-sm tracking-widest uppercase">Before</h3>
+                <figcaption className="font-bold text-white mb-2 text-center text-sm tracking-widest uppercase">Before</figcaption>
                 <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-black/20">
                   <Image
                     src={project.beforeImage}
@@ -182,7 +182,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </div>
               </figure>
               <figure>
-                <h3 className="font-bold text-white mb-2 text-center text-sm tracking-widest uppercase">After</h3>
+                <figcaption className="font-bold text-white mb-2 text-center text-sm tracking-widest uppercase">After</figcaption>
                 <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-black/20">
                   <Image
                     src={project.afterImage}

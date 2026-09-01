@@ -5,7 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Massachusetts Siding Installation & Replacement | Alfa Construction",
+  title: "Massachusetts Siding Installation & Replacement",
   description:
     "Full-home siding installation & replacement across Massachusetts. Hardie Plank, vinyl, cedar, shake. We specialize exclusively in complete re-sides — not patch jobs. Licensed (MA HIC #192348). Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/services" },
@@ -47,6 +47,11 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
+          {/* The service cards render as h3. Without this h2 the page jumped
+              h1 → h3, which fails heading-order. */}
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 text-center">
+            Siding Services We Install
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <ServiceCard key={service.slug} {...service} />

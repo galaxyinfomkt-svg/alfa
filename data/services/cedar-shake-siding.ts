@@ -106,7 +106,7 @@ const cedarShakeSiding: Service = {
     },
   ],
   metaTitle:
-    "Cedar Shake & Shingle Siding | Alfa Construction | Massachusetts",
+    "Cedar Shake & Shingle Siding in Massachusetts",
   metaDescription:
     "Western Red Cedar shake & shingle siding installation in Massachusetts. Hand-split shakes and machine-cut shingles for that classic Cape Cod look. Full re-sides, not patch jobs. Free estimates from Alfa Construction.",
   cityIntros: {

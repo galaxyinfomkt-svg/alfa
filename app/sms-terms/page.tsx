@@ -3,7 +3,7 @@ import Link from "next/link";
 import { breadcrumbSchema } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "SMS Terms & Opt-In Methods | Alfa Construction",
+  title: "SMS Terms & Opt-In Methods",
   description:
     "How Alfa Construction collects SMS opt-in consent — chat widget, web form, and verbal opt-in. Full CTIA-compliant disclosure of message types, frequency, opt-out, and third-party data policy.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/sms-terms" },

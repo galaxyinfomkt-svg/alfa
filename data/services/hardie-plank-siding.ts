@@ -106,7 +106,7 @@ const hardiePlankSiding: Service = {
     },
   ],
   metaTitle:
-    "James Hardie Fiber Cement Siding | Alfa Construction | Massachusetts",
+    "James Hardie Fiber Cement Siding in Massachusetts",
   metaDescription:
     "Full-home James Hardie HardiePlank fiber cement siding installation & replacement in Massachusetts. ColorPlus finishes, Class A fire rating, 30-year warranty. Free estimates from Alfa Construction.",
   cityIntros: {

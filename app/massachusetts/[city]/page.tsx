@@ -379,17 +379,30 @@ export default async function CityPage({
                   We Also Serve Nearby Communities
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {city.neighboringCities.map((neighbor) => (
-                    <Link
-                      key={neighbor}
-                      href={`/massachusetts/${neighbor
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      className="inline-block bg-white/5 border border-white/10 text-gray-300 hover:border-alfa-gold/30 hover:text-alfa-gold text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-200"
-                    >
-                      {neighbor}, MA
-                    </Link>
-                  ))}
+                  {city.neighboringCities.map((neighbor) => {
+                    // Only link neighbours that actually have a generated page.
+                    // 22 neighbour names (Boston, Lowell, Brockton...) are not in
+                    // cities.ts, and slugifying them blindly produced 404s.
+                    const slug = neighbor.toLowerCase().replace(/\s+/g, "-");
+                    const hasPage = Boolean(getCityBySlug(slug));
+
+                    return hasPage ? (
+                      <Link
+                        key={neighbor}
+                        href={`/massachusetts/${slug}`}
+                        className="inline-block bg-white/5 border border-white/10 text-gray-300 hover:border-alfa-gold/30 hover:text-alfa-gold text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-200"
+                      >
+                        {neighbor}, MA
+                      </Link>
+                    ) : (
+                      <span
+                        key={neighbor}
+                        className="inline-block bg-white/5 border border-white/10 text-gray-400 text-sm font-medium px-3 py-1.5 rounded-full"
+                      >
+                        {neighbor}, MA
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
 

@@ -106,7 +106,7 @@ const commercialSiding: Service = {
     },
   ],
   metaTitle:
-    "Commercial Siding Installation | Alfa Construction | Massachusetts",
+    "Commercial Siding Installation in Massachusetts",
   metaDescription:
     "Commercial & multi-family siding installation and replacement across Massachusetts. Class A fire-rated fiber cement and commercial-grade vinyl for apartments, condos, and mixed-use. Phased, occupied-building scheduling from Alfa Construction. MA HIC #192348.",
   cityIntros: {

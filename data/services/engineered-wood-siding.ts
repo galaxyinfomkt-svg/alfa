@@ -106,7 +106,7 @@ const engineeredWoodSiding: Service = {
     },
   ],
   metaTitle:
-    "Engineered Wood Siding (LP SmartSide) | Alfa Construction | Massachusetts",
+    "Engineered Wood Siding (LP SmartSide) in Massachusetts",
   metaDescription:
     "Engineered wood siding installation & replacement in Massachusetts. LP SmartSide experts — termite and rot resistant, real wood grain, lighter than fiber cement, up to 50-year warranty. Full re-sides, not patches. Free estimates from Alfa Construction.",
   cityIntros: {
