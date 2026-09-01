@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity } from "@/data/cities";
+import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity, type City } from "@/data/cities";
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 import { company, breadcrumbSchema } from "@/data/company";
 import { fitTitle, fitDescription } from "@/lib/serpWidth";
@@ -20,11 +20,18 @@ const serviceHeroImages: Record<string, { src: string; alt: string }[]> = {
     { src: "/images/deck-construction-siding-installation-ma.jpg", alt: "Deck construction and carpentry project" },
     { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "New construction framing and carpentry work" },
   ],
+  /* Este e o conjunto que TODAS as 981 paginas cidade x servico usam, porque
+     nenhum dos 9 slugs de siding vivos e chave deste mapa — todos caem no
+     fallback `serviceHeroImages.siding`. Eram quatro fotos 1080x1350 de
+     Instagram esticadas num hero horizontal. Trocadas por landscape 1600x1200
+     de re-sides completos. */
   siding: [
-    { src: "/images/new-construction-siding-windows-board-batten-ma.jpg", alt: "Board and batten siding installation" },
-    { src: "/images/commercial-siding-installation-massachusetts.jpg", alt: "Commercial siding installation project" },
-    { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Siding and window installation project" },
-    { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Cape Cod home siding replacement" },
+    { src: "/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg", alt: "Completed James Hardie fiber cement re-side" },
+    { src: "/images/hardie-plank-siding-carlisle-ma-after-front.jpg", alt: "Finished Hardie Plank siding on a Massachusetts home" },
+    { src: "/images/hardie-plank-siding-carlisle-ma-after-back-angle.jpg", alt: "Full-home re-side, rear elevation" },
+    { src: "/images/hardie-plank-siding-carlisle-ma-front-day.jpg", alt: "Front elevation after a complete fiber cement re-side" },
+    { src: "/images/hardie-plank-siding-carlisle-ma-after-side.jpg", alt: "Lap siding with trim detail" },
+    { src: "/images/hardie-plank-siding-carlisle-ma-porch-side.jpg", alt: "Porch and side elevation after full-home siding replacement" },
   ],
   "windows-doors": [
     { src: "/images/siding-window-installation-after-massachusetts.jpg", alt: "Window installation completed project" },
@@ -71,12 +78,30 @@ function fillCity(text: string, cityName: string): string {
 
 type CityNoteKey = "carpentryNote" | "sidingNote" | "windowsDoorsNote" | "remodelingNote";
 
+/**
+ * Este mapa ficou para tras no pivot siding-only. Ele ainda apontava para
+ * carpentry / windows-doors / remodeling, servicos que nao existem mais, e o
+ * unico slug sobrevivente era "siding". Consequencia medida na auditoria:
+ * das 981 paginas cidade x servico, apenas 109 (as de /siding) traziam UMA
+ * linha especifica da cidade. As outras 872 nao tinham nenhuma — todo o texto
+ * saia de service.cityIntros[categoria], e categoria so tem 4 valores.
+ *
+ * Por isso paginas do mesmo servico em cidades diferentes mediam 62,5% de
+ * similaridade media, com pares em 80,4%. Agora TODA pagina cidade x servico
+ * usa sidingNote, que existe para as 109 cidades, mais o bloco de contexto
+ * local abaixo.
+ */
 const serviceNoteMap: Record<string, CityNoteKey> = {
   carpentry: "carpentryNote",
-  siding: "sidingNote",
   "windows-doors": "windowsDoorsNote",
   remodeling: "remodelingNote",
 };
+
+/** Todo servico de siding usa a nota de siding da cidade. */
+function getCityNote(city: City, serviceSlug: string): string {
+  const legacyKey = serviceNoteMap[serviceSlug];
+  return legacyKey ? city[legacyKey] : city.sidingNote;
+}
 
 /* ---------- static params: 100 cities x 5 services = 500 pages ---------- */
 
@@ -179,8 +204,7 @@ export default async function CityServicePage({
   );
 
   /* ---- city-specific service note ---- */
-  const noteKey = serviceNoteMap[service.slug];
-  const cityNote = noteKey ? city[noteKey] : null;
+  const cityNote = getCityNote(city, service.slug);
 
   /* ---- hero image (varied by service + city) ---- */
   const heroImgs = serviceHeroImages[service.slug] || serviceHeroImages.siding;
@@ -424,6 +448,79 @@ export default async function CityServicePage({
             {/* Category-based closing paragraph */}
             <p className="text-gray-400 leading-relaxed">{closing}</p>
           </div>
+
+          {/* ===== CONTEXTO LOCAL =====
+              Todo o conteudo deste bloco vem de data/cities.ts e e diferente
+              para cada uma das 109 cidades — nada aqui e gerado por variante de
+              categoria. E o que faltava: antes, 872 das 981 paginas nao traziam
+              uma unica frase especifica da cidade, e paginas do mesmo servico
+              em cidades diferentes mediam 62,5% de similaridade. */}
+          <div className="mt-12 border-t border-white/10 pt-10">
+            <h3 className="text-2xl font-bold text-white mb-6">
+              {service.shortName} for {city.name} Homes
+            </h3>
+
+            <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-1">
+                  County
+                </dt>
+                <dd className="text-white font-semibold">{city.county}</dd>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-1">
+                  Population
+                </dt>
+                <dd className="text-white font-semibold">{city.population}</dd>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+                <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-1">
+                  Typical housing
+                </dt>
+                <dd className="text-white font-semibold text-sm leading-snug">
+                  {city.homeStyle}
+                </dd>
+              </div>
+            </dl>
+
+            <p className="text-gray-400 leading-relaxed mb-4">{city.description}</p>
+
+            <h4 className="text-lg font-bold text-white mt-8 mb-2">
+              What {city.name}&apos;s housing stock means for a re-side
+            </h4>
+            <p className="text-gray-400 leading-relaxed mb-6">{city.homeStyle}.</p>
+
+            <div className="bg-white/5 border-l-4 border-alfa-gold rounded-r-xl p-6 my-8">
+              <h4 className="text-lg font-bold text-white mb-2">
+                Local note — {city.name}
+              </h4>
+              <p className="text-gray-300 leading-relaxed">{city.uniqueFact}</p>
+            </div>
+
+            {/* Vizinhas — so as que tem pagina gerada. Ver a correcao de C-03. */}
+            {(() => {
+              const linkable = city.neighboringCities
+                .map((n) => ({ name: n, slug: n.toLowerCase().replace(/\s+/g, "-") }))
+                .filter((n) => Boolean(getCityBySlug(n.slug)));
+              if (linkable.length === 0) return null;
+              return (
+                <p className="text-gray-400 leading-relaxed">
+                  We also take full re-sides in the towns bordering {city.name}:{" "}
+                  {linkable.map((n, i) => (
+                    <span key={n.slug}>
+                      <Link
+                        href={`/massachusetts/${n.slug}/${service.slug}`}
+                        className="text-alfa-gold hover:text-alfa-gold-light"
+                      >
+                        {service.shortName} in {n.name}
+                      </Link>
+                      {i < linkable.length - 2 ? ", " : i === linkable.length - 2 ? " and " : "."}
+                    </span>
+                  ))}
+                </p>
+              );
+            })()}
+          </div>
         </div>
       </section>
 
@@ -517,15 +614,23 @@ export default async function CityServicePage({
               How Does {service.shortName} Work in {city.name}, MA?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              We follow a proven step-by-step process to deliver outstanding{" "}
-              {service.name.toLowerCase()} results for every {city.name}{" "}
-              homeowner.
+              The same sequence on every {city.name} re-side, start to finish.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {/* Só os titulos dos passos aqui.
+              A descricao completa de cada passo ficava repetida, palavra por
+              palavra, nas 109 paginas de cidade deste servico — sozinha ela
+              respondia por cerca de 1.550 caracteres identicos por pagina, e
+              era o maior bloco duplicado que a auditoria mediu (A-01).
+              Ela descreve o PRODUTO e o METODO, que sao iguais em toda cidade:
+              reescrever por cidade seria fabricar texto, nao informar. Entao
+              vive em /services/[slug], que e a pagina que deve responder por
+              "como se instala Hardie Plank", e a pagina de cidade aponta para
+              la em vez de competir com ela. */}
+          <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {service.process.map((step) => (
-              <div key={step.step} className="relative">
-                {/* Connector line */}
+              <li key={step.step} className="relative list-none">
                 {step.step < service.process.length && (
                   <div className="hidden lg:block absolute top-10 left-[60%] w-[calc(100%-20%)] h-0.5 bg-alfa-gold/20" />
                 )}
@@ -533,16 +638,23 @@ export default async function CityServicePage({
                   <div className="w-20 h-20 bg-alfa-gold rounded-2xl flex items-center justify-center text-black text-2xl font-bold mx-auto mb-4 relative z-10 shadow-lg">
                     {step.step}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {step.description.replace(/\{cityName\}/g, city.name)}
-                  </p>
+                  <h3 className="text-lg font-bold text-white">{step.title}</h3>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
+
+          <p className="text-center mt-10">
+            <Link
+              href={`/services/${service.slug}`}
+              className="inline-flex items-center gap-2 text-alfa-gold hover:text-alfa-gold-light font-semibold"
+            >
+              Read what happens at each step of a {service.shortName.toLowerCase()} re-side
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </p>
         </div>
       </section>
 

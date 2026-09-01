@@ -17,16 +17,22 @@ import FormEmbed from "@/components/FormEmbed";
 /* ---------- hero image rotation (10 images, varied by city) ---------- */
 
 const heroImages = [
-  { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Exterior siding on Cape Cod home in Bellingham, MA" },
-  { src: "/images/siding-window-installation-after-massachusetts.jpg", alt: "Siding and window installation in Massachusetts" },
-  { src: "/images/new-construction-siding-windows-board-batten-ma.jpg", alt: "Board and batten siding with new windows in Massachusetts" },
-  { src: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg", alt: "Porch soffit and beadboard siding on modern home in MA" },
-  { src: "/images/deck-construction-siding-installation-ma.jpg", alt: "Deck construction and siding installation in Massachusetts" },
-  { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Commercial siding and window installation in Massachusetts" },
-  { src: "/images/deck-carpentry-staircase-railing-massachusetts.jpg", alt: "Custom deck carpentry with staircase railing in MA" },
-  { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "New construction framing with ZIP system in Massachusetts" },
-  { src: "/images/commercial-siding-installation-massachusetts.jpg", alt: "Commercial siding installation project in Massachusetts" },
-  { src: "/images/siding-window-installation-before-massachusetts.jpg", alt: "Home before siding and window renovation in Massachusetts" },
+  /* Rotacao de hero — TODAS landscape 1600x1200.
+     Antes eram quatro fotos 1080x1350 (retrato, formato de Instagram) usadas
+     como hero horizontal em 1.031 das 1.133 paginas: num hero de 1440px+ elas
+     eram esticadas e ficavam visivelmente borradas. Estas sao do conjunto de
+     Carlisle e de Webster, na orientacao certa e com o dobro da largura, e
+     todas mostram re-side COMPLETO — que e o posicionamento do site. */
+  { src: "/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg", alt: "Completed James Hardie fiber cement re-side in Carlisle, MA" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-after-front.jpg", alt: "Finished Hardie Plank siding on a Massachusetts home" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-after-back-angle.jpg", alt: "Full-home Hardie Plank re-side, rear elevation" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-after-side.jpg", alt: "Hardie Plank lap siding with trim detail in Massachusetts" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-after-garage.jpg", alt: "Hardie Plank siding around garage and entry" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-after-rear-skylights.jpg", alt: "Completed re-side with skylights, rear of home" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-front-day.jpg", alt: "Front elevation after a complete fiber cement re-side" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-porch-side.jpg", alt: "Porch and side elevation after full-home siding replacement" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-side-detail.jpg", alt: "Hardie Plank course and corner trim detail" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-action-workers.jpg", alt: "Alfa Construction crew installing fiber cement siding in Massachusetts" },
 ];
 
 function hashStr(s: string): number {

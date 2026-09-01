@@ -73,19 +73,30 @@ export default function HomePage() {
 
       {/* ===== HERO SECTION (RS Development split layout) ===== */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* A foto anterior do hero (dark-shake-siding-renovation-after) e
+            1200x1600, retrato, num hero horizontal — dai o hero aparecer como
+            uma faixa escura, com fios eletricos e uma lixeira no enquadramento.
+            Esta e 1600x1200, re-side completo, casa inteira no quadro. A antiga
+            ainda aparecia DUAS vezes na home: aqui e no antes/depois. */}
         <div className="absolute inset-0">
           <Image
-            src="/images/dark-shake-siding-renovation-after-ma.jpg"
-            alt="Professional dark shake siding renovation by Alfa Construction Inc in Massachusetts"
+            src="/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg"
+            alt="Completed full-home James Hardie fiber cement re-side by Alfa Construction in Carlisle, Massachusetts"
             fill
             sizes="100vw"
             className="object-cover"
             priority
             fetchPriority="high"
-            quality={50}
+            quality={72}
             placeholder="empty"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
+          {/* O gradiente anterior (90/80/60) escurecia a foto inteira, e a
+              obra por tras do hero ficava invisivel — a foto nao fazia
+              trabalho nenhum. Este mantem 88% de preto atras do H1, na
+              esquerda, onde o contraste do texto precisa, e abre para 40% na
+              direita, onde da para ver a casa. A qualidade subiu de 50 para 72:
+              50 e agressivo demais para a imagem de LCP da pagina principal. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/70 to-black/40" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 pt-44 pb-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -383,7 +394,7 @@ export default function HomePage() {
               className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
             >
               <p className="text-alfa-gold font-bold text-sm">MA HIC Verified</p>
-              <p className="text-xs text-gray-400 mt-1">License #{company.license}</p>
+              <p className="text-xs text-gray-400 mt-1">License {company.license}</p>
             </a>
             <a
               href={company.googleReview}
@@ -462,13 +473,20 @@ export default function HomePage() {
 
           {/* Project grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* O site inteiro diz que a Alfa so faz re-side completo e nao
+                pega outras especialidades. Esta galeria mostrava "Deck
+                Carpentry", "Deck & Siding Remodel" e "Andersen Window
+                Installation" — contradizendo o posicionamento na pagina mais
+                importante do site. Agora sao seis obras de siding, todas em
+                landscape 1600x1200 (as anteriores eram 1080x1350 de Instagram,
+                esticadas num card 4:3). */}
             {[
-              { title: "Exterior Siding – Bellingham, MA", service: "Siding", img: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg" },
-              { title: "Commercial Siding – Massachusetts", service: "Siding", img: "/images/commercial-siding-installation-massachusetts.jpg" },
-              { title: "Deck Carpentry – Massachusetts", service: "Carpentry", img: "/images/deck-carpentry-staircase-railing-massachusetts.jpg" },
-              { title: "Deck & Siding Remodel – Massachusetts", service: "Remodeling", img: "/images/deck-construction-siding-installation-ma.jpg" },
-              { title: "Andersen Window Installation – MA", service: "Windows", img: "/images/andersen-window-installation-ma.jpg" },
-              { title: "Green Siding & Deck – Massachusetts", service: "Remodeling", img: "/images/green-siding-exterior-completed-ma.jpg" },
+              { title: "James Hardie Re-Side – Carlisle, MA", service: "Hardie Plank", img: "/images/hardie-plank-siding-carlisle-ma-after-front.jpg" },
+              { title: "Full-Home Re-Side, Rear Elevation – Carlisle, MA", service: "Hardie Plank", img: "/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg" },
+              { title: "Cedar Shake Re-Side – Warren, RI", service: "Cedar Shake", img: "/images/cedar-shake-siding-warren-ri-hydrogap-weather-barrier.jpg" },
+              { title: "Cedar Shake Porch Addition – Webster, MA", service: "Cedar Shake", img: "/images/cedar-shake-siding-porch-addition-webster-ma-mid-build.jpg" },
+              { title: "Green Siding Exterior – Massachusetts", service: "Siding", img: "/images/green-siding-exterior-completed-ma.jpg" },
+              { title: "Crew on Site – Carlisle, MA", service: "Hardie Plank", img: "/images/hardie-plank-siding-carlisle-ma-action-workers.jpg" },
             ].map((project, i) => (
               <Link key={i} href="/projects" className="group relative block rounded-xl overflow-hidden shadow-lg shadow-black/20 border border-white/5">
                 <div className="aspect-[4/3] relative">

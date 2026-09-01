@@ -268,7 +268,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <h3 className="text-alfa-gold font-bold text-sm uppercase tracking-wider mb-3">License &amp; Insurance</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Massachusetts Home Improvement Contractor (HIC) license{" "}
-                <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">#{company.license}</a>, valid through {company.licenseExpiry}. Verifiable through the MA Division of Professional Licensure. Full general liability and workers&apos; compensation insurance — Certificate of Insurance issued per project.
+                <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">{company.license}</a>, valid through {company.licenseExpiry}. Verifiable through the MA Division of Professional Licensure. Full general liability and workers&apos; compensation insurance — Certificate of Insurance issued per project.
               </p>
             </div>
             <div className="bg-alfa-card border border-white/5 rounded-xl p-6">
