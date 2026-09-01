@@ -32,7 +32,7 @@ export const images = {
 
   // Service heroes
   carpentryHero: {
-    src: "/images/deck-carpentry-staircase-railing-massachusetts.png",
+    src: "/images/deck-carpentry-staircase-railing-massachusetts.jpg",
     alt: "Custom deck carpentry with staircase and white railing by Alfa Construction in Massachusetts",
     width: 1080,
     height: 1350,
@@ -65,19 +65,19 @@ export const images = {
       title: "Exterior Siding – Bellingham, MA",
     },
     {
-      src: "/images/commercial-siding-installation-massachusetts.png",
+      src: "/images/commercial-siding-installation-massachusetts.jpg",
       alt: "Commercial siding installation with furring strips in Massachusetts by Alfa Construction",
       service: "Siding Installation & Repair",
       title: "Commercial Siding Installation – Massachusetts",
     },
     {
-      src: "/images/deck-carpentry-staircase-railing-massachusetts.png",
+      src: "/images/deck-carpentry-staircase-railing-massachusetts.jpg",
       alt: "Custom deck with staircase and white vinyl railing in Massachusetts - Alfa Construction carpentry",
       service: "Carpentry & Trim Work",
       title: "Deck & Staircase Carpentry – Massachusetts",
     },
     {
-      src: "/images/deck-construction-siding-installation-ma.png",
+      src: "/images/deck-construction-siding-installation-ma.jpg",
       alt: "Deck construction with blue siding installation in Massachusetts by Alfa Construction",
       service: "Home Remodeling & Renovation",
       title: "Deck & Siding Remodel – Massachusetts",
@@ -162,11 +162,11 @@ export const images = {
       alt: "Modern home interior and exterior showing color coordination in Massachusetts",
     },
     {
-      src: "/images/deck-carpentry-staircase-railing-massachusetts.png",
+      src: "/images/deck-carpentry-staircase-railing-massachusetts.jpg",
       alt: "Carpentry trim work and railing detail showing signs of quality craftsmanship",
     },
     {
-      src: "/images/commercial-siding-installation-massachusetts.png",
+      src: "/images/commercial-siding-installation-massachusetts.jpg",
       alt: "Licensed contractor performing professional siding installation in Massachusetts",
     },
     {

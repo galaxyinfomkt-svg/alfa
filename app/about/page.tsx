@@ -40,7 +40,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/deck-carpentry-staircase-railing-massachusetts.png"
+                  src="/images/deck-carpentry-staircase-railing-massachusetts.jpg"
                   alt="Alfa Construction Inc carpentry work - custom deck staircase and railing in Massachusetts"
                   width={1080}
                   height={1350}

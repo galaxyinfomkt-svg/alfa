@@ -9,7 +9,7 @@ const commercialSiding: Service = {
   longDescription:
     "For property managers, landlords, and building owners, exterior cladding is more than appearance — it is a fire-rated, weather-tight envelope that protects your tenants, your occupancy, and your asset value. At Alfa Construction, we specialize in commercial and multi-family siding installation and replacement for apartments, condominiums, triple-deckers, mixed-use buildings, and strip retail across Massachusetts. We install Class A fire-rated fiber cement and commercial-grade vinyl panel systems engineered for large surface areas and high-occupancy exposure. Our process begins with a full envelope assessment, then moves into coordinated mobilization: lifts and scaffolding sized to the elevation, phased scheduling that keeps units leased and storefronts open, and the certificates of insurance and permitting that institutional owners require. We work directly with on-site management to sequence buildings, stagings, and access so daily operations never stop. Every commercial siding system we install is built for low-maintenance performance — resisting moisture, rot, fading, and impact through decades of New England weather — and is delivered with the documentation and warranty coverage your portfolio depends on. As a licensed Massachusetts contractor (MA HIC #192348) with more than 20 years of experience and a fully bilingual English/Portuguese crew, we make large-scale re-clads predictable, accountable, and clean.",
   icon: "Home",
-  heroImage: "/images/commercial-siding-installation-massachusetts.png",
+  heroImage: "/images/commercial-siding-installation-massachusetts.jpg",
   keywords: [
     "commercial siding installation Massachusetts",
     "multi-family siding contractor MA",

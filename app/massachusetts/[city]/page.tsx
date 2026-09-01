@@ -6,7 +6,7 @@ import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity } from "
 import { getFeaturedProjects } from "@/data/projects";
 import { company, breadcrumbSchema } from "@/data/company";
 import { fitTitle, fitDescription } from "@/lib/serpWidth";
-import { getLocalBusiness, getService } from "@/data/schema";
+import { getService } from "@/data/schema";
 import ServiceCard from "@/components/ServiceCard";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
@@ -20,11 +20,11 @@ const heroImages = [
   { src: "/images/siding-window-installation-after-massachusetts.jpg", alt: "Siding and window installation in Massachusetts" },
   { src: "/images/new-construction-siding-windows-board-batten-ma.jpg", alt: "Board and batten siding with new windows in Massachusetts" },
   { src: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg", alt: "Porch soffit and beadboard siding on modern home in MA" },
-  { src: "/images/deck-construction-siding-installation-ma.png", alt: "Deck construction and siding installation in Massachusetts" },
+  { src: "/images/deck-construction-siding-installation-ma.jpg", alt: "Deck construction and siding installation in Massachusetts" },
   { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Commercial siding and window installation in Massachusetts" },
-  { src: "/images/deck-carpentry-staircase-railing-massachusetts.png", alt: "Custom deck carpentry with staircase railing in MA" },
+  { src: "/images/deck-carpentry-staircase-railing-massachusetts.jpg", alt: "Custom deck carpentry with staircase railing in MA" },
   { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "New construction framing with ZIP system in Massachusetts" },
-  { src: "/images/commercial-siding-installation-massachusetts.png", alt: "Commercial siding installation project in Massachusetts" },
+  { src: "/images/commercial-siding-installation-massachusetts.jpg", alt: "Commercial siding installation project in Massachusetts" },
   { src: "/images/siding-window-installation-before-massachusetts.jpg", alt: "Home before siding and window renovation in Massachusetts" },
 ];
 
@@ -145,18 +145,18 @@ export default async function CityPage({
   const city = getCityBySlug(slug);
   if (!city) notFound();
 
-  /* JSON-LD: GeneralContractor scoped to this city + Service (siding) scoped
-     to this city. Source: data/schema.ts (reads from data/siteConfig.ts). */
-  const cityBusinessSchema = getLocalBusiness({ city: city.name, citySlug: city.slug });
+  /* JSON-LD: apenas o Service com escopo desta cidade.
+     Antes esta pagina emitia TAMBEM um GeneralContractor proprio. Como ele
+     usava o mesmo @id (#business) do no global do layout, mas com url
+     apontando para a pagina da cidade, as 109 paginas de cidade declaravam
+     duas urls conflitantes para a mesma entidade — e o Google escolhia uma
+     delas arbitrariamente. O no de Service abaixo ja carrega o areaServed da
+     cidade e referencia o negocio por provider.@id, entao nenhum sinal local
+     se perde ao remover o bloco duplicado. */
   const citySidingService = getService({ city: city.name, citySlug: city.slug });
 
   return (
     <>
-      {/* GeneralContractor schema scoped to this city */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityBusinessSchema) }}
-      />
       {/* Siding Service scoped to this city */}
       <script
         type="application/ld+json"

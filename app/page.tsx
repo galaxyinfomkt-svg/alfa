@@ -216,7 +216,7 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <span className="text-alfa-gold-dark font-semibold text-sm uppercase tracking-wider">How We Work</span>
             <h2 className="text-3xl md:text-4xl font-bold text-alfa-ink mt-2 mb-4">
-              From Free Estimate to <span className="text-alfa-gold">Finished Home</span>
+              From Free Estimate to <span className="text-alfa-gold-dark">Finished Home</span>
             </h2>
             <p className="text-alfa-ink-muted max-w-2xl mx-auto">
               Every Alfa project follows the same four-step process — no surprises, no hidden change orders.
@@ -252,17 +252,9 @@ export default function HomePage() {
             ].map((step) => (
               <article
                 key={step.num}
-                className="relative bg-white border border-alfa-cream-border rounded-2xl p-7 hover:border-alfa-gold/40 transition-colors overflow-hidden"
+                data-num={step.num}
+                className="alfa-ghost-num relative bg-white border border-alfa-cream-border rounded-2xl p-7 hover:border-alfa-gold/40 transition-colors overflow-hidden"
               >
-                {/* Ghosted numeral — RS signature */}
-                <span
-                  aria-hidden
-                  className="absolute top-2 right-4 text-7xl font-black text-alfa-gold/15 leading-none select-none pointer-events-none"
-                  style={{ fontFeatureSettings: '"tnum"' }}
-                >
-                  {step.num}
-                </span>
-
                 <div className="w-12 h-12 bg-alfa-gold rounded-full flex items-center justify-center mb-5 relative z-10">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {step.icon}
@@ -472,9 +464,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Exterior Siding – Bellingham, MA", service: "Siding", img: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg" },
-              { title: "Commercial Siding – Massachusetts", service: "Siding", img: "/images/commercial-siding-installation-massachusetts.png" },
-              { title: "Deck Carpentry – Massachusetts", service: "Carpentry", img: "/images/deck-carpentry-staircase-railing-massachusetts.png" },
-              { title: "Deck & Siding Remodel – Massachusetts", service: "Remodeling", img: "/images/deck-construction-siding-installation-ma.png" },
+              { title: "Commercial Siding – Massachusetts", service: "Siding", img: "/images/commercial-siding-installation-massachusetts.jpg" },
+              { title: "Deck Carpentry – Massachusetts", service: "Carpentry", img: "/images/deck-carpentry-staircase-railing-massachusetts.jpg" },
+              { title: "Deck & Siding Remodel – Massachusetts", service: "Remodeling", img: "/images/deck-construction-siding-installation-ma.jpg" },
               { title: "Andersen Window Installation – MA", service: "Windows", img: "/images/andersen-window-installation-ma.jpg" },
               { title: "Green Siding & Deck – Massachusetts", service: "Remodeling", img: "/images/green-siding-exterior-completed-ma.jpg" },
             ].map((project, i) => (
@@ -621,7 +613,7 @@ export default function HomePage() {
                 excerpt: "Hardie Plank vs vinyl vs cedar vs LP SmartSide — which siding holds up best in New England weather, by material and home age.",
                 date: "January 6, 2026",
                 category: "Siding",
-                img: "/images/commercial-siding-installation-massachusetts.png",
+                img: "/images/commercial-siding-installation-massachusetts.jpg",
               },
               {
                 slug: "why-licensed-contractor-massachusetts-matters",

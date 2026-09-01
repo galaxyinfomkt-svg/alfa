@@ -15,13 +15,13 @@ import FormEmbed from "@/components/FormEmbed";
 
 const serviceHeroImages: Record<string, { src: string; alt: string }[]> = {
   carpentry: [
-    { src: "/images/deck-carpentry-staircase-railing-massachusetts.png", alt: "Custom deck carpentry with staircase and railing" },
-    { src: "/images/deck-construction-siding-installation-ma.png", alt: "Deck construction and carpentry project" },
+    { src: "/images/deck-carpentry-staircase-railing-massachusetts.jpg", alt: "Custom deck carpentry with staircase and railing" },
+    { src: "/images/deck-construction-siding-installation-ma.jpg", alt: "Deck construction and carpentry project" },
     { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "New construction framing and carpentry work" },
   ],
   siding: [
     { src: "/images/new-construction-siding-windows-board-batten-ma.jpg", alt: "Board and batten siding installation" },
-    { src: "/images/commercial-siding-installation-massachusetts.png", alt: "Commercial siding installation project" },
+    { src: "/images/commercial-siding-installation-massachusetts.jpg", alt: "Commercial siding installation project" },
     { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Siding and window installation project" },
     { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Cape Cod home siding replacement" },
   ],
@@ -31,7 +31,7 @@ const serviceHeroImages: Record<string, { src: string; alt: string }[]> = {
     { src: "/images/commercial-siding-window-installation-massachusetts.jpg", alt: "Window and siding installation" },
   ],
   remodeling: [
-    { src: "/images/deck-construction-siding-installation-ma.png", alt: "Home remodeling with deck and siding" },
+    { src: "/images/deck-construction-siding-installation-ma.jpg", alt: "Home remodeling with deck and siding" },
     { src: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg", alt: "Modern home remodel with porch update" },
     { src: "/images/new-construction-framing-zip-system-massachusetts.jpg", alt: "Home renovation framing stage" },
     { src: "/images/siding-window-installation-after-massachusetts.jpg", alt: "Complete home renovation result" },
@@ -226,24 +226,11 @@ export default async function CityServicePage({
     })),
   };
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: `How to Get ${service.name} in ${city.name}, Massachusetts`,
-    description: `Step-by-step process for getting professional ${service.name.toLowerCase()} services in ${city.name}, MA from Alfa Construction Inc.`,
-    step: service.process.map((step) => ({
-      "@type": "HowToStep",
-      position: step.step,
-      name: step.title,
-      text: step.description.replace(/\{cityName\}/g, city.name),
-    })),
-    totalTime: "P7D",
-    estimatedCost: {
-      "@type": "MonetaryAmount",
-      currency: "USD",
-      value: "Free Estimate",
-    },
-  };
+  // O bloco HowTo que existia aqui foi removido. O Google aposentou o rich
+  // result de HowTo em agosto de 2023 (desktop e mobile), entao ele nao gerava
+  // mais nenhuma aparencia na busca — so peso de HTML em 981 paginas. Alem
+  // disso declarava estimatedCost.value = "Free Estimate", que e invalido:
+  // MonetaryAmount.value espera numero.
 
   return (
     <>
@@ -264,10 +251,6 @@ export default async function CityServicePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       {/* ===== HERO (split layout with background image + form) ===== */}

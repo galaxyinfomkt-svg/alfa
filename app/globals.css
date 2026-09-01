@@ -4,7 +4,12 @@
   /* Brand gold — extracted from Alfa Construction logo */
   --color-alfa-gold: #B8963E;
   --color-alfa-gold-light: #D4AA50;
-  --color-alfa-gold-dark: #9A7A2E;
+  /* Dourado para uso sobre fundo CLARO. #9A7A2E dava 3.52:1 sobre o creme
+     e reprovava no WCAG AA (exige 4.5:1 para texto normal). #7A5F1C passa em
+     todos os fundos claros do site: 5.59:1 no cream-soft, 5.26:1 no cream,
+     6.03:1 no branco. O --color-alfa-gold segue igual — sobre preto ele da
+     7.04:1 e nao tem problema nenhum. */
+  --color-alfa-gold-dark: #7A5F1C;
 
   /* Dark palette */
   --color-alfa-dark: #0A0A0A;
@@ -287,4 +292,24 @@ details summary::-webkit-details-marker {
 ::selection {
   background: rgba(184, 150, 62, 0.3);
   color: #ffffff;
+}
+
+/* Numeral fantasma dos cards de "How We Work".
+   Antes era um <span aria-hidden> com texto real no DOM, com 15% de opacidade
+   sobre branco — 1,14:1 de contraste num elemento que ninguem deve ler. E
+   decoracao, entao passa a viver no CSS, onde decoracao pertence. O resultado
+   visual e identico; o que muda e que deixa de existir um no de texto na
+   arvore do documento. */
+.alfa-ghost-num::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: color-mix(in srgb, var(--color-alfa-gold) 15%, transparent);
+  font-feature-settings: "tnum";
+  pointer-events: none;
+  user-select: none;
 }

@@ -24,7 +24,7 @@ const services: Service[] = [  // ───────────────�
     longDescription:
       "Your home's siding is its first line of defense against the elements — and its biggest visual statement from the street. At Alfa Construction, we install and replace siding using the highest-quality materials on the market, including James Hardie fiber cement, premium vinyl, engineered wood, and natural cedar. Our process begins with a thorough inspection of your existing siding and the substrate beneath it. We identify water damage, insulation deficiencies, and structural issues before a single panel goes up. Then we install a proper moisture barrier, ensure adequate ventilation, and mount your new siding with precision fastening for a watertight, wind-resistant finish. Whether your siding has been battered by decades of Massachusetts nor'easters or you simply want a modern aesthetic upgrade, we deliver results that protect your home, slash energy costs, and dramatically boost curb appeal. Every project comes with a detailed warranty and our commitment to your complete satisfaction.",
     icon: "Home",
-    heroImage: "/images/commercial-siding-installation-massachusetts.png",
+    heroImage: "/images/commercial-siding-installation-massachusetts.jpg",
     keywords: [
       "siding installation Massachusetts",
       "Hardie Plank installer MA",

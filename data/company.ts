@@ -65,7 +65,7 @@ export const localBusinessSchema = {
   image: [
     `${BASE_URL}/images/new-construction-siding-windows-board-batten-ma.jpg`,
     `${BASE_URL}/images/exterior-siding-cape-cod-home-bellingham-ma.jpg`,
-    `${BASE_URL}/images/deck-carpentry-staircase-railing-massachusetts.png`,
+    `${BASE_URL}/images/deck-carpentry-staircase-railing-massachusetts.jpg`,
   ],
   address: {
     "@type": "PostalAddress",
@@ -277,7 +277,7 @@ export const imageGallerySchema = {
     },
     {
       "@type": "ImageObject",
-      url: `${BASE_URL}/images/commercial-siding-installation-massachusetts.png`,
+      url: `${BASE_URL}/images/commercial-siding-installation-massachusetts.jpg`,
       name: "Commercial Siding Installation - Massachusetts",
       description: "Professional commercial siding installation with furring strips and weather barrier in Massachusetts.",
       contentLocation: geoMA,
@@ -317,7 +317,7 @@ export const imageGallerySchema = {
     },
     {
       "@type": "ImageObject",
-      url: `${BASE_URL}/images/deck-carpentry-staircase-railing-massachusetts.png`,
+      url: `${BASE_URL}/images/deck-carpentry-staircase-railing-massachusetts.jpg`,
       name: "Deck Carpentry & Staircase - Massachusetts",
       description: "Custom deck staircase with white vinyl railing and blue siding carpentry work in Massachusetts.",
       contentLocation: geoMA,

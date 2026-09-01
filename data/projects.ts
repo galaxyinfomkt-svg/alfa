@@ -161,8 +161,8 @@ export const projects: Project[] = [
     service: "Siding Installation & Repair",
     serviceSlug: "siding",
     description: "Professional commercial siding installation with furring strips and weather barrier preparation. This large-scale project showcases Alfa Construction's ability to handle commercial exterior projects with precision and efficiency.",
-    image: "/images/commercial-siding-installation-massachusetts.png",
-    images: ["/images/commercial-siding-installation-massachusetts.png"],
+    image: "/images/commercial-siding-installation-massachusetts.jpg",
+    images: ["/images/commercial-siding-installation-massachusetts.jpg"],
     featured: true,
   },
   {
@@ -173,8 +173,8 @@ export const projects: Project[] = [
     service: "Carpentry & Trim Work",
     serviceSlug: "carpentry",
     description: "Custom deck construction with staircase and white vinyl railing. This carpentry project features precision-cut steps, sturdy framing, and an elegant white railing system that complements the blue siding beautifully.",
-    image: "/images/deck-carpentry-staircase-railing-massachusetts.png",
-    images: ["/images/deck-carpentry-staircase-railing-massachusetts.png"],
+    image: "/images/deck-carpentry-staircase-railing-massachusetts.jpg",
+    images: ["/images/deck-carpentry-staircase-railing-massachusetts.jpg"],
     featured: true,
   },
   {
@@ -185,8 +185,8 @@ export const projects: Project[] = [
     service: "Home Remodeling & Renovation",
     serviceSlug: "remodeling",
     description: "Complete deck construction combined with blue siding installation on a multi-level home. This remodel project demonstrates our ability to coordinate multiple trades — carpentry and siding — for a seamless finished result.",
-    image: "/images/deck-construction-siding-installation-ma.png",
-    images: ["/images/deck-construction-siding-installation-ma.png"],
+    image: "/images/deck-construction-siding-installation-ma.jpg",
+    images: ["/images/deck-construction-siding-installation-ma.jpg"],
     featured: true,
   },
   {

@@ -131,7 +131,7 @@ export const blogPosts: BlogPost[] = [
     author: "Alfa Construction Team",
     category: "General",
     readTime: "7 min read",
-    image: "/images/commercial-siding-installation-massachusetts.png",
+    image: "/images/commercial-siding-installation-massachusetts.jpg",
     metaTitle:
       "Why a Licensed Contractor Matters in Massachusetts",
     metaDescription:
