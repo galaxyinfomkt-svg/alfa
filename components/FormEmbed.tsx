@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { company } from "@/data/company";
 
 /**
  * Lead-capture form embed (GHL FORM SITE ALFA · PiFH0ELuOmHS9iZhGQ5F).
@@ -203,6 +204,25 @@ export default function FormEmbed() {
             <FormSkeleton />
           )}
         </div>
+
+        {/* Caminho de conversao para quando o iframe nao carrega.
+            O formulario e um embed do GHL: se o terceiro cair, for bloqueado
+            por um ad blocker ou o JS nao rodar, o site inteiro fica sem
+            nenhum <form> — 1.133 paginas sem caminho de conversao alem do
+            telefone. Isto garante que sempre exista uma saida visivel. */}
+        <noscript>
+          <div className="px-6 pb-5 text-sm text-gray-300">
+            <p className="mb-3">
+              This form needs JavaScript. You can still reach us directly:
+            </p>
+            <a
+              href={company.phoneTel}
+              className="inline-flex items-center justify-center bg-alfa-gold text-black font-bold px-6 py-3 rounded-lg"
+            >
+              Call {company.phone}
+            </a>
+          </div>
+        </noscript>
 
         {/* Footer disclaimer */}
         <div className="border-t border-white/5 px-6 py-3 text-[11px] text-gray-400 flex items-center justify-between gap-3">

@@ -98,9 +98,13 @@ body {
 .animate-float { animation: float 3s ease-in-out infinite; }
 
 /* ─── Phone button pulse (composited — only animates opacity) ── */
-.phone-pulse {
-  position: relative;
-}
+/* NAO declarar position aqui.
+   Esta regra esta fora de @layer, entao vencia o .fixed do Tailwind (que vive
+   em @layer utilities) por ordem de cascata. O resultado: o botao flutuante de
+   ligacao renderizava com position:relative em todas as paginas do site — ele
+   nao flutuava, ficava parado no fim do documento (a 15.909px de scroll numa
+   pagina cidade x servico) e nunca era visto. O proprio .fixed do botao ja
+   cria o bloco de contencao de que o ::before abaixo precisa. */
 .phone-pulse::before {
   content: "";
   position: absolute;
