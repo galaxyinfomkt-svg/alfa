@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { company, breadcrumbSchema } from "@/data/company";
 import FormEmbed from "@/components/FormEmbed";
 import GoogleMap from "@/components/GoogleMap";
-import LeadFormStatus from "@/components/LeadFormStatus";
 
 export const metadata: Metadata = {
   title: "Free MA Siding Estimate in 24h",
@@ -23,12 +21,6 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="pt-40 pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          {/* Confirmacao do envio sem JavaScript. Em <Suspense> e como
-              client component para /contact seguir ESTATICA — ler searchParams
-              direto na page tornaria dinamica a pagina de maior intencao. */}
-          <Suspense fallback={null}>
-            <LeadFormStatus />
-          </Suspense>
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Contact Us</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
             Get Your Free Estimate
