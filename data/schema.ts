@@ -10,7 +10,13 @@
 import { siteConfig as s } from "./siteConfig";
 import { googleReviews } from "./reviews";
 
-const BUSINESS_ID = `${s.url}/#business`;
+/**
+ * O @id canonico do negocio. Todo no que fala da Alfa deve referenciar ESTE
+ * id em vez de redescrever a empresa — e assim que o Google funde tudo numa
+ * entidade so. Exportado porque a pagina cidade x servico monta o Service dela
+ * inline (o getService abaixo e fixo em siding) e precisa apontar para ca.
+ */
+export const BUSINESS_ID = `${s.url}/#business`;
 type Node = Record<string, unknown>;
 
 function abs(path: string): string {

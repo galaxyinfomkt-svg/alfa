@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getCityBySlug, cities, getExtendedNearbyCities, isExtendedCity, type City } from "@/data/cities";
 import { getServiceBySlug, getAllServiceSlugs } from "@/data/services";
 import { company, breadcrumbSchema } from "@/data/company";
+import { BUSINESS_ID } from "@/data/schema";
 import { fitTitle, fitDescription } from "@/lib/serpWidth";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import GoogleMap from "@/components/GoogleMap";
@@ -215,17 +216,18 @@ export default async function CityServicePage({
     "@context": "https://schema.org",
     "@type": "Service",
     name: `${service.name} in ${city.name}, MA`,
+    serviceType: service.name,
     description: `Professional ${service.name.toLowerCase()} services in ${city.name}, Massachusetts by Alfa Construction Inc.`,
+    /* O provider era um LocalBusiness SEM @id, que redescrevia a empresa
+       (nome, telefone, endereco) em vez de apontar para ela. Nas 981 paginas
+       isso criava um segundo esboco de negocio, solto, que o Google nao tinha
+       como ligar ao no principal do layout — o sinal local se perdia no meio
+       do caminho. Agora referencia o mesmo @id, que e como a pagina de cidade
+       ja fazia. Referencia por @id e o que funde as duas em uma entidade. */
     provider: {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
+      "@id": BUSINESS_ID,
       name: company.name,
-      telephone: company.phoneRaw,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Bellingham",
-        addressRegion: "MA",
-        addressCountry: "US",
-      },
     },
     areaServed: {
       "@type": "City",
