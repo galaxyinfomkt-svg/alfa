@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE_URL}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    // O hub de area de atendimento. Foi criado no commit 9b3b612 (era 404
+    // recebendo 110 links internos) e eu esqueci de inclui-lo aqui — as 109
+    // paginas de cidade filhas estavam no sitemap, mas a pagina-mae nao.
+    // Prioridade alta: e a que atende busca estadual ("siding contractor
+    // Massachusetts") e distribui link para as 109 cidades.
+    { url: `${BASE_URL}/massachusetts`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/projects`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
