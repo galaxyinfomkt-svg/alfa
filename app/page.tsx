@@ -8,6 +8,7 @@ import ReviewsWidget from "@/components/ReviewsWidget";
 import ReviewsSSR from "@/components/ReviewsSSR";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import CtaBand from "@/components/CtaBand";
 import ScrollReveal from "@/components/ScrollReveal";
 import FormEmbed from "@/components/FormEmbed";
 import BeforeAfter from "@/components/BeforeAfter";
@@ -220,6 +221,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <CtaBand
+        headline="Ready for your free estimate?"
+        sub="Tell us about your project — we answer the same day."
+      />
 
       {/* ===== OUR PROCESS (RS-style light section with ghosted numerals) ===== */}
       <section className="py-20 bg-alfa-cream-soft border-t border-alfa-cream-border" id="process">
@@ -521,6 +527,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <CtaBand
+        tone="dark"
+        headline="Like what you see? Let's talk about your home."
+        sub="Free, no-obligation estimate from a licensed and insured team."
+      />
 
       {/* ===== STATS SECTION (light) ===== */}
       <section className="py-20 bg-alfa-cream border-t border-alfa-cream-border">
