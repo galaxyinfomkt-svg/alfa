@@ -122,7 +122,32 @@ const nextConfig: NextConfig = {
       { source: "/blog/how-much-does-siding-installation-cost-massachusetts", destination: "/services/siding", permanent: true },
     ];
 
-    return [...cityServiceRedirects, ...serviceRedirects, ...legacyRedirects, ...blogRedirects];
+    // URLs que existiram em builds antigos (fev–mai/2026) e hoje davam 404.
+    // Levantadas comparando o prerender-manifest de 9 builds históricos com o
+    // atual. Painting saiu em 07/04; os slugs de projeto foram trocados em 04/03;
+    // /sms-opt-in viveu um dia (04/05) mas pode estar em cadastro A2P/backlink.
+    const orphanedLegacyRedirects = [
+      { source: "/blog/before-after-exterior-painting-metrowest-homes", destination: "/services/siding", permanent: true },
+      { source: "/blog/choose-interior-paint-colors-massachusetts-home", destination: "/services/siding", permanent: true },
+      { source: "/blog/signs-exterior-paint-needs-replacing-spring-massachusetts", destination: "/services/siding", permanent: true },
+      { source: "/projects/exterior-painting-concord", destination: "/projects", permanent: true },
+      { source: "/projects/exterior-painting-framingham", destination: "/projects", permanent: true },
+      { source: "/projects/home-remodeling-shrewsbury", destination: "/projects", permanent: true },
+      { source: "/projects/interior-painting-newton", destination: "/projects", permanent: true },
+      { source: "/projects/siding-installation-natick", destination: "/projects", permanent: true },
+      { source: "/projects/siding-repair-marlborough", destination: "/projects", permanent: true },
+      { source: "/projects/trim-carpentry-wellesley", destination: "/projects", permanent: true },
+      { source: "/projects/window-installation-brookline", destination: "/projects", permanent: true },
+      { source: "/sms-opt-in", destination: "/sms-terms", permanent: true },
+    ];
+
+    return [
+      ...cityServiceRedirects,
+      ...serviceRedirects,
+      ...legacyRedirects,
+      ...blogRedirects,
+      ...orphanedLegacyRedirects,
+    ];
   },
 };
 
