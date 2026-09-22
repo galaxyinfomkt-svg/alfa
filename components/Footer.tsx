@@ -165,13 +165,15 @@ export default function Footer() {
               Service Areas Across MetroWest, Worcester &amp; Norfolk County
             </span>
           </div>
-          {/* Antes o rodape listava as 109 cidades em TODA pagina do site: 217
-              links por pagina na mediana e 230 KB de HTML, repetidos 1.133
-              vezes. Agora traz as 12 principais e manda o resto para o hub
-              /massachusetts, que existe justamente para isso. As cidades
-              continuam a um clique do hub e no sitemap. */}
+          {/* NAO CORTAR ESTA LISTA. Em 01/09/2026 (f0d4860) ela foi reduzida a
+              12 cidades para enxugar HTML: as outras 97 paginas de cidade
+              cairam de ~1.130 links internos para 14-20 cada (-98%), sairam
+              da profundidade 1 para 2 — Bellingham, a cidade-sede, inclusa — e
+              perderam posicao. O rodape completo e o que distribui autoridade
+              para as 109 cidades. scripts/audit-links.mjs roda no postbuild e
+              bloqueia o deploy se isso se repetir. */}
           <p className="text-center text-gray-400 text-sm leading-relaxed">
-            {footerCities.slice(0, 12).map((city, i) => (
+            {footerCities.map((city, i) => (
               <span key={city.slug}>
                 <Link
                   href={`/massachusetts/${city.slug}`}
@@ -179,10 +181,9 @@ export default function Footer() {
                 >
                   {city.name}
                 </Link>
-                {i < 11 && <span className="mx-1.5">•</span>}
+                <span className="mx-1.5">•</span>
               </span>
             ))}
-            <span className="mx-1.5">•</span>
             <Link
               href="/massachusetts"
               className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors"
