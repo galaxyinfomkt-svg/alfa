@@ -21,8 +21,10 @@
 // ─────────────────────────────────────────────────────────────────────────────
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+// fileURLToPath: no Windows, URL.pathname vira "/C:/..." e o caminho quebrava.
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const APP = path.join(ROOT, ".next/server/app");
 const BASELINE = path.join(ROOT, "scripts/url-baseline.json");
 const SITE = "https://alfapaintingcarpentry.com";
@@ -49,7 +51,8 @@ function walk(dir, out = []) {
 
 const pages = new Map(); // url -> { links:Set, noindex:boolean }
 for (const file of walk(APP)) {
-  let url = file.slice(APP.length, -".html".length);
+  // split(path.sep): no Windows o caminho vem com "\\" e as rotas nao batiam.
+  let url = file.slice(APP.length, -".html".length).split(path.sep).join("/");
   if (url === "/index") url = "/";
   if (url.startsWith("/_not-found")) continue;
   const html = fs.readFileSync(file, "utf8");

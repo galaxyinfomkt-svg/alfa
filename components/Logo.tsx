@@ -8,7 +8,14 @@ import Image from "next/image";
  * com ~120px no header e o nome ficava ilegivel. Aqui so o simbolo e imagem; o
  * nome e texto de verdade, nitido em qualquer tela.
  */
-export default function Logo({ size = "md" }: { size?: "md" | "lg" }) {
+export default function Logo({
+  size = "md",
+  tone = "light",
+}: {
+  size?: "md" | "lg";
+  /** "light" = sobre fundo claro (texto escuro); "dark" = sobre fundo escuro. */
+  tone?: "light" | "dark";
+}) {
   const mark = size === "lg" ? 44 : 38;
   return (
     <span className="flex items-center gap-2.5">
@@ -22,13 +29,13 @@ export default function Logo({ size = "md" }: { size?: "md" | "lg" }) {
       />
       <span className="flex flex-col leading-none">
         <span
-          className={`font-extrabold tracking-wide text-white ${
+          className={`font-extrabold tracking-wide ${tone === "dark" ? "text-white" : "text-ink"} ${
             size === "lg" ? "text-xl" : "text-base md:text-lg"
           }`}
         >
           ALFA CONSTRUCTION
         </span>
-        <span className="mt-1 text-[10px] md:text-[11px] font-semibold tracking-[0.18em] text-alfa-gold">
+        <span className={`mt-1 text-[10px] md:text-[11px] font-semibold tracking-[0.18em] ${tone === "dark" ? "text-alfa-gold" : "text-gold-ink"}`}>
           SIDING SPECIALISTS
         </span>
       </span>

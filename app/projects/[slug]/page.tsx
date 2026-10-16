@@ -136,35 +136,35 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
       />
 
-      <section className="pt-28 md:pt-36 pb-10 md:pb-12 bg-black">
+      <section className="pt-36 md:pt-44 pb-10 md:pb-12 bg-paper">
         <div className="max-w-7xl mx-auto px-4">
-          <nav aria-label="Breadcrumb" className="text-sm text-gray-400 mb-4">
+          <nav aria-label="Breadcrumb" className="text-sm text-ink-soft mb-4">
             <ol className="flex flex-wrap items-center gap-2">
-              <li><Link href="/" className="hover:text-alfa-gold">Home</Link></li>
+              <li><Link href="/" className="hover:text-gold-ink">Home</Link></li>
               <li aria-hidden="true">/</li>
-              <li><Link href="/projects" className="hover:text-alfa-gold">Projects</Link></li>
+              <li><Link href="/projects" className="hover:text-gold-ink">Projects</Link></li>
             </ol>
           </nav>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-3 leading-tight [text-wrap:balance]">{project.title}</h1>
+          <h1 className="font-display text-4xl md:text-6xl text-ink mb-3">{project.title}</h1>
           <div className="flex items-center gap-3 flex-wrap mb-6">
-            <span className="bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full">{project.service}</span>
-            <span className="text-gray-300 text-sm">{location}</span>
+            <span className="bg-alfa-gold text-ink text-xs font-semibold px-3 py-1 rounded-full">{project.service}</span>
+            <span className="text-ink-soft text-sm">{location}</span>
             {images.length > 1 && (
-              <a href="#gallery" className="text-gray-300 text-sm underline underline-offset-4 hover:text-alfa-gold">{images.length} photos</a>
+              <a href="#gallery" className="text-ink-soft text-sm underline underline-offset-4 hover:text-gold-ink">{images.length} photos</a>
             )}
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-6 py-3 rounded-lg transition-colors">
+            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-6 py-3 rounded-lg transition-colors">
               Get a Free Estimate
             </Link>
-            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-lg transition-colors border border-white/30">
+            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-6 py-3 rounded-lg transition-colors border border-line">
               Call {company.phone}
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-alfa-dark">
+      <section className="py-16 bg-mist">
         <div className="max-w-5xl mx-auto px-4">
           {/* Hero image */}
           <figure className="rounded-2xl overflow-hidden shadow-xl mb-8">
@@ -187,8 +187,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           {project.beforeImage && project.afterImage && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <figure>
-                <figcaption className="font-bold text-white mb-2 text-center text-sm tracking-widest uppercase">Before</figcaption>
-                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-black/20">
+                <figcaption className="font-bold text-ink mb-2 text-center text-sm tracking-widest uppercase">Before</figcaption>
+                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-ink/10">
                   <Image
                     src={project.beforeImage}
                     alt={`Before — ${project.title}, ${location}`}
@@ -199,8 +199,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </div>
               </figure>
               <figure>
-                <figcaption className="font-bold text-white mb-2 text-center text-sm tracking-widest uppercase">After</figcaption>
-                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-black/20">
+                <figcaption className="font-bold text-ink mb-2 text-center text-sm tracking-widest uppercase">After</figcaption>
+                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-ink/10">
                   <Image
                     src={project.afterImage}
                     alt={`After — ${project.title}, ${location}`}
@@ -215,33 +215,33 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
           {/* Description */}
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">About This Project</h2>
-            <p className="text-gray-300 leading-relaxed text-lg">{project.description}</p>
+            <h2 className="text-2xl font-bold text-ink mb-4">About This Project</h2>
+            <p className="text-ink-soft leading-relaxed text-lg">{project.description}</p>
           </div>
         </div>
       </section>
 
       {/* ─── FULL GALLERY ─── */}
       {galleryImages.length > 0 && (
-        <section id="gallery" className="py-16 bg-black">
+        <section id="gallery" className="py-16 bg-paper">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
               <div>
-                <span className="text-alfa-gold text-xs font-semibold tracking-widest uppercase">
+                <span className="text-gold-ink text-xs font-semibold tracking-widest uppercase">
                   Full Photo Documentation
                 </span>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">
-                  Project gallery · <span className="text-gray-400">{galleryImages.length} more {galleryImages.length === 1 ? "photo" : "photos"}</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-ink mt-1">
+                  Project gallery · <span className="text-ink-soft">{galleryImages.length} more {galleryImages.length === 1 ? "photo" : "photos"}</span>
                 </h2>
               </div>
-              <span className="text-gray-400 text-sm">{location}</span>
+              <span className="text-ink-soft text-sm">{location}</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {galleryImages.map((img, idx) => (
                 <figure
                   key={img.src}
-                  className="group relative rounded-xl overflow-hidden bg-alfa-card border border-white/5 hover:border-alfa-gold/40 transition-colors"
+                  className="group relative rounded-xl overflow-hidden bg-paper border border-line hover:border-alfa-gold/40 transition-colors"
                 >
                   <div className="aspect-[4/3] relative">
                     <Image
@@ -269,9 +269,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       {/* Related Projects */}
       {relatedProjects.length > 0 && (
-        <section className="py-16 bg-alfa-dark">
+        <section className="py-16 bg-mist">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">More siding projects</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-ink mb-8 text-center">More siding projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedProjects.map((rp) => {
                 const rpImages = normalizeImages(rp.images);
@@ -279,7 +279,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   rpImages.find((i) => i.src === rp.image)?.alt || rp.title;
                 return (
                   <Link key={rp.slug} href={`/projects/${rp.slug}`} className="group block">
-                    <div className="card-hover bg-alfa-card rounded-2xl border border-white/5 overflow-hidden shadow-lg shadow-black/20">
+                    <div className="card-hover bg-paper rounded-2xl border border-line overflow-hidden shadow-lg shadow-ink/10">
                       <div className="aspect-[4/3] relative overflow-hidden">
                         <Image
                           src={rp.image}
@@ -291,8 +291,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         />
                       </div>
                       <div className="p-5">
-                        <h3 className="font-bold text-white group-hover:text-alfa-gold transition-colors">{rp.title}</h3>
-                        <span className="text-gray-400 text-sm mt-1 inline-block">{projectLocation(rp)}</span>
+                        <h3 className="font-bold text-ink group-hover:text-gold-ink transition-colors">{rp.title}</h3>
+                        <span className="text-ink-soft text-sm mt-1 inline-block">{projectLocation(rp)}</span>
                       </div>
                     </div>
                   </Link>

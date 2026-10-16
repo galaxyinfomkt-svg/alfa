@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { company, breadcrumbSchema } from "@/data/company";
-import ReviewsWidget from "@/components/ReviewsWidget";
+import ReviewsSSR from "@/components/ReviewsSSR";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
 
@@ -22,13 +22,12 @@ export default function AboutPage() {
       ])) }} />
 
       {/* Hero */}
-      <section className="pt-28 md:pt-36 pb-12 md:pb-16 bg-black">
+      <section className="pt-36 md:pt-44 pb-12 md:pb-16 bg-paper">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">About Us</span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
+          <h1 className="font-display text-5xl md:text-7xl text-ink mb-4">
             {company.experience} Years Re-Siding Massachusetts Homes
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-ink-soft max-w-2xl mx-auto text-lg">
             Alfa Construction is an owner-operated siding contractor based in Bellingham, MA. Fabio founded it in {company.foundedYear} and still walks every estimate himself.
           </p>
 
@@ -37,13 +36,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg"
             >
               Talk to Fabio
             </Link>
             <a
               href={company.phoneTel}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mist backdrop-blur-sm hover:bg-line text-ink font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-line text-lg"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -55,7 +54,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-alfa-dark">
+      <section className="py-20 bg-mist">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -69,38 +68,38 @@ export default function AboutPage() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 right-4 lg:-right-6 bg-alfa-gold text-black p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 right-4 lg:-right-6 bg-alfa-gold text-ink p-6 rounded-2xl shadow-xl">
                 <p className="text-4xl font-bold">20+</p>
                 <p className="text-sm font-medium">Years re-siding MA homes</p>
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <h2 className="text-3xl font-bold text-ink mb-6">Our Story</h2>
+              <p className="text-ink-soft mb-4 leading-relaxed">
                 Fabio started Alfa Construction in {company.foundedYear}, working on homes around MetroWest. The company grew by referral — one finished house at a time, mostly from neighbors who saw the work.
               </p>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className="text-ink-soft mb-4 leading-relaxed">
                 Over 20 years later, Alfa Construction has refined its focus to one craft: <strong>complete full-home siding installation and replacement</strong> across Massachusetts. Hardie Plank, vinyl, cedar, shake. We serve MetroWest, Worcester County, Norfolk County, and southern Middlesex County. Carpentry, window, and door work happen only as add-ons to a full re-side.
               </p>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-ink-soft mb-6 leading-relaxed">
                 What hasn&apos;t changed is our commitment to treating every home as if it were our own. Our bilingual team (English &amp; Portuguese) brings professionalism, craftsmanship, and a personal touch to every complete exterior re-side we take on.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">{company.foundedYear}</p>
-                  <p className="text-sm text-gray-400">Founded</p>
+                <div className="bg-paper rounded-xl p-4 text-center border border-line">
+                  <p className="text-2xl font-bold text-gold-ink">{company.foundedYear}</p>
+                  <p className="text-sm text-ink-soft">Founded</p>
                 </div>
-                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">{company.reviewCount}</p>
-                  <p className="text-sm text-gray-400">Google Reviews</p>
+                <div className="bg-paper rounded-xl p-4 text-center border border-line">
+                  <p className="text-2xl font-bold text-gold-ink">{company.reviewCount}</p>
+                  <p className="text-sm text-ink-soft">Google Reviews</p>
                 </div>
-                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">5.0</p>
-                  <p className="text-sm text-gray-400">Google Rating</p>
+                <div className="bg-paper rounded-xl p-4 text-center border border-line">
+                  <p className="text-2xl font-bold text-gold-ink">5.0</p>
+                  <p className="text-sm text-ink-soft">Google Rating</p>
                 </div>
-                <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">EN / PT</p>
-                  <p className="text-sm text-gray-400">Bilingual Team</p>
+                <div className="bg-paper rounded-xl p-4 text-center border border-line">
+                  <p className="text-2xl font-bold text-gold-ink">EN / PT</p>
+                  <p className="text-sm text-ink-soft">Bilingual Team</p>
                 </div>
               </div>
             </div>
@@ -109,9 +108,9 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-paper">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Homeowners Choose Alfa</h2>
+          <h2 className="text-3xl font-bold text-ink text-center mb-12">Why Homeowners Choose Alfa</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -136,12 +135,12 @@ export default function AboutPage() {
                 ),
               },
             ].map((value, i) => (
-              <div key={i} className="bg-alfa-card rounded-2xl p-8 text-center border border-white/5">
-                <div className="w-16 h-16 bg-alfa-gold/10 rounded-xl flex items-center justify-center text-alfa-gold mx-auto mb-4">
+              <div key={i} className="bg-paper rounded-2xl p-8 text-center border border-line">
+                <div className="w-16 h-16 bg-alfa-gold/10 rounded-xl flex items-center justify-center text-gold-ink mx-auto mb-4">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold text-ink mb-3">{value.title}</h3>
+                <p className="text-ink-soft text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -149,15 +148,15 @@ export default function AboutPage() {
       </section>
 
       {/* Reviews */}
-      <section className="py-20 bg-alfa-dark">
+      <section className="py-20 bg-mist">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-4">Customer Reviews</h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-10">
+          <h2 className="text-3xl font-bold text-ink text-center mb-4">Customer Reviews</h2>
+          <p className="text-ink-soft text-center max-w-2xl mx-auto mb-10">
             {company.reviewCount} five-star reviews on Google. They update live below.
           </p>
-          <ReviewsWidget />
+          <ReviewsSSR limit={3} />
           <div className="text-center mt-8">
-            <a href={company.googleReview} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-semibold px-6 py-3 rounded-lg transition-all">
+            <a href={company.googleReview} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-ink font-semibold px-6 py-3 rounded-lg transition-all">
               Leave a Review on Google
             </a>
           </div>
@@ -165,9 +164,9 @@ export default function AboutPage() {
       </section>
 
       {/* Map */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-paper">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-10">Our Office in Bellingham, MA</h2>
+          <h2 className="text-3xl font-bold text-ink text-center mb-10">Our Office in Bellingham, MA</h2>
           <GoogleMap />
         </div>
       </section>
