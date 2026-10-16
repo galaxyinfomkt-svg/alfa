@@ -19,28 +19,30 @@ export default function ContactPage() {
       ])) }} />
 
       {/* Hero */}
-      <section className="pt-40 pb-16 bg-black">
+      <section className="pt-28 md:pt-36 pb-10 md:pb-12 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Contact Us</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
             Get Your Free Estimate
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Ready to start your project? Contact Alfa Construction Inc today. We provide free, no-obligation estimates for complete full-home siding installation and replacement across Massachusetts.
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+            Fill out the form or call — Fabio answers in English or Portuguese. You get an itemized written estimate for your full-home re-side within 24 hours of the visit.
           </p>
-          {/* Positioning line — siding-only. Diretriz: o site NÃO menciona preço. */}
-          <p className="text-gray-300 max-w-2xl mx-auto text-sm mt-4 bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
-            <strong className="text-white">Siding is all we do</strong> — complete full-home siding installation and replacement in Hardie Plank, vinyl, cedar, and more. We take full exterior re-sides only, not small jobs or other trades.
-          </p>
+          <a
+            href={company.phoneTel}
+            className="mt-6 inline-flex items-center justify-center whitespace-nowrap bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-3 rounded-lg transition-colors border border-white/30"
+          >
+            Prefer to talk? Call {company.phone}
+          </a>
         </div>
       </section>
 
       {/* Contact Grid */}
-      <section className="py-20 bg-alfa-dark">
+      <section className="py-12 md:py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div>
+            {/* Contact Info — no celular vem depois do formulario */}
+            <div className="order-2 lg:order-1">
               <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
               <div className="space-y-6 mb-8">
                 <a href={company.phoneTel} className="flex items-start gap-4 group">
@@ -60,7 +62,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-white">Location</p>
                     <p className="text-gray-300">{company.address.full}</p>
-                    <p className="text-gray-400 text-sm">Serving all of Massachusetts</p>
+                    <p className="text-gray-400 text-sm">Serving MetroWest, Worcester &amp; Norfolk counties</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -79,7 +81,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-white">License</p>
-                    <p className="text-gray-300">MA License {company.license}</p>
+                    <p className="text-gray-300">MA HIC {company.license}</p>
                     <p className="text-gray-400 text-sm">Valid through {company.licenseExpiry}</p>
                   </div>
                 </div>
@@ -100,7 +102,7 @@ export default function ContactPage() {
             </div>
 
             {/* Form */}
-            <div>
+            <div className="order-1 lg:order-2" id="estimate-form">
               <FormEmbed />
             </div>
           </div>
@@ -110,7 +112,7 @@ export default function ContactPage() {
       {/* Map */}
       <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">Find Us</h2>
+          <h2 className="text-2xl font-bold text-white text-center mb-8">Our Office in Bellingham, MA</h2>
           <GoogleMap />
         </div>
       </section>

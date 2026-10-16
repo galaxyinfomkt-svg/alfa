@@ -9,7 +9,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Meet Fabio · Siding MA Homes Since 2006",
   description:
-    "Fabio founded Alfa in 2006. 109 MA cities, 22 ★★★★★ reviews. Owner-operator, bilingual EN/PT, license #192348. Free estimate: (508) 590-9193.",
+    "Fabio founded Alfa Construction in 2006. Bellingham-based siding contractor, owner-operated, bilingual EN/PT, MA HIC #192348. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/about" },
 };
 
@@ -22,14 +22,14 @@ export default function AboutPage() {
       ])) }} />
 
       {/* Hero */}
-      <section className="pt-40 pb-16 bg-black">
+      <section className="pt-28 md:pt-36 pb-12 md:pb-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">About Us</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
-            {company.experience} Years of Construction Excellence
+            {company.experience} Years Re-Siding Massachusetts Homes
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Alfa Construction Inc has been transforming homes across Massachusetts since 2006. Quality craftsmanship, honest service, and results that speak for themselves.
+            Alfa Construction is an owner-operated siding contractor based in Bellingham, MA. Fabio founded it in {company.foundedYear} and still walks every estimate himself.
           </p>
 
           {/* CTA no hero — antes o primeiro CTA de peso desta pagina caia a
@@ -37,13 +37,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg"
             >
               Talk to Fabio
             </Link>
             <a
               href={company.phoneTel}
-              className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -61,22 +61,23 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/deck-carpentry-staircase-railing-massachusetts.jpg"
-                  alt="Alfa Construction Inc carpentry work - custom deck staircase and railing in Massachusetts"
-                  width={1080}
-                  height={1350}
+                  src="/images/hardie-plank-siding-carlisle-ma-action-workers.jpg"
+                  alt="Alfa Construction crew installing James Hardie siding on a home in Carlisle, MA"
+                  width={1600}
+                  height={1200}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-alfa-gold text-black p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 right-4 lg:-right-6 bg-alfa-gold text-black p-6 rounded-2xl shadow-xl">
                 <p className="text-4xl font-bold">20+</p>
-                <p className="text-sm font-medium">Years Serving MA</p>
+                <p className="text-sm font-medium">Years re-siding MA homes</p>
               </div>
             </div>
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Alfa Construction Inc was founded by Fabio with a simple vision: deliver exceptional quality construction services with integrity and respect. Starting with residential construction projects in the MetroWest area, the company quickly earned a reputation for meticulous attention to detail and outstanding results.
+                Fabio started Alfa Construction in {company.foundedYear}, working on homes around MetroWest. The company grew by referral — one finished house at a time, mostly from neighbors who saw the work.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">
                 Over 20 years later, Alfa Construction has refined its focus to one craft: <strong>complete full-home siding installation and replacement</strong> across Massachusetts. Hardie Plank, vinyl, cedar, shake. We serve MetroWest, Worcester County, Norfolk County, and southern Middlesex County. Carpentry, window, and door work happen only as add-ons to a full re-side.
@@ -86,20 +87,20 @@ export default function AboutPage() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">500+</p>
-                  <p className="text-sm text-gray-400">Projects Completed</p>
+                  <p className="text-2xl font-bold text-alfa-gold">{company.foundedYear}</p>
+                  <p className="text-sm text-gray-400">Founded</p>
                 </div>
                 <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">100+</p>
-                  <p className="text-sm text-gray-400">Cities Served</p>
+                  <p className="text-2xl font-bold text-alfa-gold">{company.reviewCount}</p>
+                  <p className="text-sm text-gray-400">Google Reviews</p>
                 </div>
                 <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
                   <p className="text-2xl font-bold text-alfa-gold">5.0</p>
                   <p className="text-sm text-gray-400">Google Rating</p>
                 </div>
                 <div className="bg-alfa-card rounded-xl p-4 text-center border border-white/5">
-                  <p className="text-2xl font-bold text-alfa-gold">20+</p>
-                  <p className="text-sm text-gray-400">Years Experience</p>
+                  <p className="text-2xl font-bold text-alfa-gold">EN / PT</p>
+                  <p className="text-sm text-gray-400">Bilingual Team</p>
                 </div>
               </div>
             </div>
@@ -122,7 +123,7 @@ export default function AboutPage() {
               },
               {
                 title: "Quality Craftsmanship",
-                description: "Every project receives the same meticulous attention to detail — from careful surface preparation to flawless final finishes. We never cut corners.",
+                description: "Every re-side gets the same steps: tear-off down to sheathing, repairs where needed, weather barrier, flashing at every opening, then siding and trim to manufacturer spec.",
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
                 ),
@@ -150,9 +151,9 @@ export default function AboutPage() {
       {/* Reviews */}
       <section className="py-20 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-10">Customer Reviews</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-4">Customer Reviews</h2>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-10">
-            22 five-star reviews on Google. Read every one of them — they update live below.
+            {company.reviewCount} five-star reviews on Google. They update live below.
           </p>
           <ReviewsWidget />
           <div className="text-center mt-8">
@@ -166,7 +167,7 @@ export default function AboutPage() {
       {/* Map */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-10">Our Location</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-10">Our Office in Bellingham, MA</h2>
           <GoogleMap />
         </div>
       </section>

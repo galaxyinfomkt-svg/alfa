@@ -22,7 +22,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "What areas do you serve?",
-    a: "We are based in Bellingham, MA and serve 109 cities across MetroWest, Worcester County, Norfolk County, Middlesex County, and the North Shore. Contact us for a free estimate anywhere in our service area.",
+    a: "We are based in Bellingham, MA and work across MetroWest, Worcester County, Norfolk County and Middlesex County. Most of our jobs are within about 30 miles of Bellingham — the full list of towns, sorted by distance, is on our service area page.",
   },
   {
     q: "Are you licensed and insured?",

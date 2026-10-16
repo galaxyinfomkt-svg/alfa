@@ -60,27 +60,36 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       })) }} />
       <article>
         {/* Hero */}
-        <section className="relative pt-40 pb-20 bg-black overflow-hidden">
+        <section className="relative pt-28 md:pt-36 pb-12 md:pb-16 bg-black overflow-hidden">
           <div className="absolute inset-0 opacity-20">
             <Image src={post.image} alt={post.title} fill className="object-cover" />
           </div>
           <div className="relative z-10 max-w-4xl mx-auto px-4">
-            <Link href="/blog" className="inline-flex items-center gap-1 text-alfa-gold hover:text-alfa-gold-light transition-colors text-sm mb-4">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-              Back to Blog
+            <Link href="/blog" className="inline-flex items-center gap-1 text-alfa-gold hover:text-alfa-gold-light transition-colors text-sm mb-5">
+              ← Back to Blog
             </Link>
-            <span className="inline-block bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full mb-4">
-              {post.category}
-            </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            <div>
+              <span className="inline-block bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                {post.category}
+              </span>
+            </div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight [text-wrap:balance]">
               {post.title}
             </h1>
-            <div className="flex items-center gap-4 text-gray-400 text-sm">
-              <span>{post.author}</span>
-              <span>·</span>
-              <span>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
-              <span>·</span>
-              <span>{post.readTime}</span>
+            <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-gray-400 text-sm mb-6">
+              <span className="whitespace-nowrap">{post.author}</span>
+              <span aria-hidden="true">·</span>
+              <time dateTime={post.date} className="whitespace-nowrap">{new Date(post.date + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
+              <span aria-hidden="true">·</span>
+              <span className="whitespace-nowrap">{post.readTime}</span>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-6 py-3 rounded-lg transition-colors">
+                Get a Free Siding Estimate
+              </Link>
+              <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap border border-white/30 hover:bg-white/10 text-white font-bold px-6 py-3 rounded-lg transition-colors">
+                Call {company.phone}
+              </a>
             </div>
           </div>
         </section>
@@ -89,13 +98,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <section className="py-16 bg-alfa-dark">
           <div className="max-w-3xl mx-auto px-4">
             <div
-              className="prose prose-lg max-w-none prose-headings:text-white prose-headings:font-bold prose-a:text-alfa-gold prose-strong:text-alfa-gold prose-invert"
+              className="prose prose-lg prose-invert max-w-none prose-headings:text-white prose-headings:font-bold prose-a:text-alfa-gold prose-strong:text-alfa-gold-light prose-li:marker:text-alfa-gold"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
             {/* Tags */}
             <div className="mt-10 pt-6 border-t border-white/5">
               <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
+                {[...new Set(post.tags)].map((tag) => (
                   <span key={tag} className="bg-white/5 text-gray-300 text-xs font-medium px-3 py-1 rounded-full">
                     {tag}
                   </span>
@@ -129,7 +138,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </section>
       )}
 
-      <CTASection />
+      <CTASection title="Thinking about new siding?" />
     </>
   );
 }

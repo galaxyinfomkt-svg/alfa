@@ -139,6 +139,8 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <LegalStrip />
         <Footer />
+        {/* Espaco da barra fixa de acao no celular (components/PhoneButton). */}
+        <div className="h-16 lg:hidden" aria-hidden="true" />
         <PhoneButton />
 
         {/* Defer all heavy third-party scripts until user interaction.

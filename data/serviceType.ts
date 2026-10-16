@@ -1,4 +1,4 @@
-// data/serviceType.ts — shared Service shape for the city × service matrix.
+// data/serviceType.ts — shared Service shape (statewide /services/<slug> pages).
 export interface Service {
   slug: string;
   name: string;
@@ -17,8 +17,4 @@ export interface Service {
   faqs: { question: string; answer: string }[];
   metaTitle: string;
   metaDescription: string;
-  cityIntros: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
-  cityPainPoints: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
-  citySolutions: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
-  cityClosings: Record<"historic" | "suburban" | "rural" | "urban", string[]>;
 }

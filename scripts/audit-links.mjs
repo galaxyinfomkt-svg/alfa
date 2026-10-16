@@ -10,7 +10,7 @@
 // Checa, no HTML gerado em .next/server/app:
 //   1. Toda URL de scripts/url-baseline.json responde 200 ou 301 → pagina viva.
 //   2. Toda pagina de cidade (/massachusetts/<cidade>) indexavel recebe pelo
-//      menos MIN_CITY_INBOUND links internos e fica a 1 clique da home.
+//      link de pelo menos 90% das paginas e fica a 1 clique da home.
 //   3. Nenhuma pagina indexavel fica orfa (0 links internos apontando).
 //   4. Toda URL do sitemap foi gerada, e nenhuma URL do sitemap e noindex.
 //
@@ -26,9 +26,11 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..")
 const APP = path.join(ROOT, ".next/server/app");
 const BASELINE = path.join(ROOT, "scripts/url-baseline.json");
 const SITE = "https://alfapaintingcarpentry.com";
-// Com o rodape completo cada cidade recebe ~1.130 links. Abaixo de 500 significa
-// que ela saiu do rodape (ou de algo equivalente) — e isso nao pode passar.
-const MIN_CITY_INBOUND = 500;
+// Com o rodape completo, cada cidade recebe link de praticamente todas as
+// paginas. O minimo era fixo em 500 quando o site tinha ~1.130 paginas; desde
+// out/2026 (as 981 paginas cidade x servico viraram 301) ele e proporcional:
+// pelo menos 90% das paginas geradas precisam linkar cada cidade.
+const MIN_CITY_SHARE = 0.9;
 
 if (process.env.AUDIT_LINKS_SKIP === "1") {
   console.warn("⚠️  audit-links: PULADO por AUDIT_LINKS_SKIP=1 — nada foi verificado.");
@@ -66,6 +68,7 @@ if (pages.size === 0) {
   console.error("✖ audit-links: nenhuma pagina em .next/server/app — rode depois do next build.");
   process.exit(1);
 }
+const MIN_CITY_INBOUND = Math.floor(pages.size * MIN_CITY_SHARE);
 
 // ── Baseline ─────────────────────────────────────────────────────────────────
 const baseline = JSON.parse(fs.readFileSync(BASELINE, "utf8"));

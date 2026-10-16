@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { fitTitle, fitDescriptionWithTail, stripTrailingPhone } from "@/lib/serpWidth";
-import { projects, getProjectBySlug, getAllProjectSlugs, normalizeImages } from "@/data/projects";
+import { projects, getProjectBySlug, getAllProjectSlugs, normalizeImages, projectLocation } from "@/data/projects";
 import { company } from "@/data/company";
 import CTASection from "@/components/CTASection";
 
@@ -50,9 +50,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const images = normalizeImages(project.images);
   const galleryImages = images.filter((img) => img.src !== project.image);
 
-  const relatedProjects = projects
-    .filter((p) => p.slug !== slug && p.serviceSlug === project.serviceSlug)
-    .slice(0, 3);
+  const location = project.addressArea || projectLocation(project);
+
+  // Sempre 3 (ou nenhum) para a grade de 3 colunas nao ficar com buraco.
+  const related = projects.filter((p) => p.slug !== slug && p.serviceSlug === project.serviceSlug);
+  const relatedProjects = related.length >= 3 ? related.slice(0, 3) : [];
 
   // ─── JSON-LD: CreativeWork (Project) + Place (geo) + ImageGallery ──
   const projectSchema = {
@@ -73,7 +75,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           ...(project.geo && {
             contentLocation: {
               "@type": "Place",
-              name: project.addressArea || `${project.city}, ${project.state}`,
+              name: location,
               geo: { "@type": "GeoCoordinates", latitude: project.geo.lat, longitude: project.geo.lng },
             },
           }),
@@ -86,7 +88,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         ...(project.geo && {
           contentLocation: {
             "@type": "Place",
-            name: project.addressArea || `${project.city}, ${project.state}`,
+            name: location,
             address: {
               "@type": "PostalAddress",
               addressLocality: project.city,
@@ -119,7 +121,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         ...(project.geo && {
           spatialCoverage: {
             "@type": "Place",
-            name: project.addressArea || `${project.city}, ${project.state}`,
+            name: location,
             geo: { "@type": "GeoCoordinates", latitude: project.geo.lat, longitude: project.geo.lng },
           },
         }),
@@ -134,27 +136,30 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
       />
 
-      <section className="pt-40 pb-16 bg-black">
+      <section className="pt-28 md:pt-36 pb-10 md:pb-12 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <Link href="/projects" className="inline-flex items-center gap-1 text-alfa-gold hover:text-alfa-gold-light transition-colors text-sm mb-4">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-            Back to Projects
-          </Link>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{project.title}</h1>
-          <div className="flex items-center gap-3 flex-wrap">
+          <nav aria-label="Breadcrumb" className="text-sm text-gray-400 mb-4">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li><Link href="/" className="hover:text-alfa-gold">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/projects" className="hover:text-alfa-gold">Projects</Link></li>
+            </ol>
+          </nav>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-3 leading-tight [text-wrap:balance]">{project.title}</h1>
+          <div className="flex items-center gap-3 flex-wrap mb-6">
             <span className="bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full">{project.service}</span>
-            <span className="text-gray-400 text-sm">
-              {project.addressArea ? (
-                <>📍 {project.addressArea}</>
-              ) : (
-                <>{project.city}, {project.state}</>
-              )}
-            </span>
-            {project.geo && (
-              <span className="text-gray-400 text-xs font-mono">
-                {project.geo.lat.toFixed(4)}°N · {Math.abs(project.geo.lng).toFixed(4)}°W
-              </span>
+            <span className="text-gray-300 text-sm">{location}</span>
+            {images.length > 1 && (
+              <a href="#gallery" className="text-gray-300 text-sm underline underline-offset-4 hover:text-alfa-gold">{images.length} photos</a>
             )}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-6 py-3 rounded-lg transition-colors">
+              Get a Free Estimate
+            </Link>
+            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-lg transition-colors border border-white/30">
+              Call {company.phone}
+            </a>
           </div>
         </div>
       </section>
@@ -186,7 +191,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-black/20">
                   <Image
                     src={project.beforeImage}
-                    alt={`BEFORE — ${project.title}, ${project.addressArea || `${project.city}, ${project.state}`}`}
+                    alt={`Before — ${project.title}, ${location}`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 640px"
@@ -198,7 +203,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-black/20">
                   <Image
                     src={project.afterImage}
-                    alt={`AFTER — ${project.title}, ${project.addressArea || `${project.city}, ${project.state}`}`}
+                    alt={`After — ${project.title}, ${location}`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 640px"
@@ -226,12 +231,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   Full Photo Documentation
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">
-                  Project gallery · <span className="text-gray-400">{images.length} photos</span>
+                  Project gallery · <span className="text-gray-400">{galleryImages.length} more {galleryImages.length === 1 ? "photo" : "photos"}</span>
                 </h2>
               </div>
-              {project.addressArea && (
-                <span className="text-gray-400 text-sm">📍 {project.addressArea}</span>
-              )}
+              <span className="text-gray-400 text-sm">{location}</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -268,7 +271,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       {relatedProjects.length > 0 && (
         <section className="py-16 bg-alfa-dark">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Related Projects</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">More siding projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedProjects.map((rp) => {
                 const rpImages = normalizeImages(rp.images);
@@ -289,9 +292,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       </div>
                       <div className="p-5">
                         <h3 className="font-bold text-white group-hover:text-alfa-gold transition-colors">{rp.title}</h3>
-                        {rp.addressArea && (
-                          <span className="text-gray-400 text-xs mt-1 inline-block">📍 {rp.addressArea}</span>
-                        )}
+                        <span className="text-gray-400 text-sm mt-1 inline-block">{projectLocation(rp)}</span>
                       </div>
                     </div>
                   </Link>
@@ -302,7 +303,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      <CTASection cityName={project.city} />
+      <CTASection cityName={project.city === "Massachusetts" ? undefined : project.city} />
     </>
   );
 }

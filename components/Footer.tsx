@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 import { company } from "@/data/company";
 import { getCoreCities } from "@/data/cities";
+import { blogPosts } from "@/data/blog";
 
 // Só cidades "core" (dentro do raio real ~35 mi). Extended são noindex e
 // ficam fora do rodapé também. Ver data/cities.ts.
@@ -19,10 +20,11 @@ const serviceLinks = [
   { href: "/services/commercial-siding", label: "Commercial Siding" },
 ];
 
-const blogLinks = [
-  { href: "/blog/hardie-plank-vs-vinyl-siding-new-england", label: "Hardie Plank vs Vinyl Siding" },
-  { href: "/blog/why-licensed-contractor-massachusetts-matters", label: "Why Hire a Licensed Contractor" },
-];
+// Os tres posts mais recentes, pela data real de publicacao.
+const blogLinks = [...blogPosts]
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 3)
+  .map((p) => ({ href: `/blog/${p.slug}`, label: p.title.split(":")[0].replace(/ \(.*\)$/, "") }));
 
 export default function Footer() {
   return (
@@ -33,15 +35,7 @@ export default function Footer() {
           {/* Company info */}
           <div>
             <Link href="/" className="inline-block mb-5">
-              <Image
-                src="/images/logo.png"
-                alt="Alfa Construction Inc"
-                width={180}
-                height={50}
-                sizes="180px"
-                className="h-12 w-auto"
-                loading="lazy"
-              />
+              <Logo size="lg" />
             </Link>
             <p className="text-gray-400 text-sm mb-5 leading-relaxed">
               Massachusetts siding specialists. Complete full-home siding installation and replacement in Hardie Plank, vinyl, cedar, and shake. Licensed, insured, 20+ years.
@@ -65,7 +59,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2 text-gray-400">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                MA License {company.license}
+                MA HIC {company.license}
               </p>
             </div>
             {/* Social links */}
@@ -162,7 +156,7 @@ export default function Footer() {
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-              Service Areas Across MetroWest, Worcester &amp; Norfolk County
+              Towns We Serve from Our Bellingham Base
             </span>
           </div>
           {/* NAO CORTAR ESTA LISTA. Em 01/09/2026 (f0d4860) ela foi reduzida a
@@ -172,23 +166,30 @@ export default function Footer() {
               perderam posicao. O rodape completo e o que distribui autoridade
               para as 109 cidades. scripts/audit-links.mjs roda no postbuild e
               bloqueia o deploy se isso se repetir. */}
-          <p className="text-center text-gray-400 text-sm leading-relaxed">
-            {footerCities.map((city, i) => (
-              <span key={city.slug}>
+          {/* Lista em flex-wrap: cada cidade e um item proprio e a linha quebra
+              entre eles. Antes eram <span> colados sem espaco — o navegador
+              nao tinha onde quebrar, e as 110 entradas viravam duas linhas de
+              ~5.900px cortadas pela borda: no celular so 8 cidades ficavam
+              visiveis, no desktop 32. Os links existiam no HTML, mas fora da
+              tela, e o Google desconta link escondido. */}
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-gray-400 max-w-5xl mx-auto">
+            {footerCities.map((city) => (
+              <li key={city.slug}>
                 <Link
                   href={`/massachusetts/${city.slug}`}
                   className="hover:text-alfa-gold transition-colors"
                 >
                   {city.name}
                 </Link>
-                <span className="mx-1.5">•</span>
-              </span>
+              </li>
             ))}
+          </ul>
+          <p className="text-center mt-5">
             <Link
               href="/massachusetts"
-              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors"
+              className="text-alfa-gold font-semibold text-sm hover:text-alfa-gold-light transition-colors"
             >
-              all {footerCities.length} cities we serve
+              See the full service area map →
             </Link>
           </p>
         </div>
@@ -197,7 +198,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <p>© {new Date().getFullYear()} Alfa Construction Inc. All rights reserved. MA License {company.license}</p>
+          <p className="text-center md:text-left">© {new Date().getFullYear()} Alfa Construction Inc. All rights reserved. MA HIC {company.license}</p>
           <p>
             Developed by{" "}
             <a
@@ -209,39 +210,14 @@ export default function Footer() {
               Galaxy IT MKT
             </a>
           </p>
-          <div className="flex gap-5 flex-wrap justify-center items-center">
-            <Link href="/about" className="hover:text-alfa-gold transition-colors">About</Link>
-            <span className="text-gray-700">|</span>
-            <Link href="/contact" className="hover:text-alfa-gold transition-colors">Contact</Link>
-            <span className="text-gray-700">|</span>
-            <Link
-              href="/privacy"
-              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
-            >
-              Privacy Policy
-            </Link>
-            <span className="text-gray-700">|</span>
-            <Link
-              href="/terms"
-              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
-            >
-              Terms &amp; Conditions
-            </Link>
-            <span className="text-gray-700">|</span>
-            <Link
-              href="/cookies"
-              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
-            >
-              Cookie Policy
-            </Link>
-            <span className="text-gray-700">|</span>
-            <Link
-              href="/sms-terms"
-              className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40"
-            >
-              SMS Terms
-            </Link>
-          </div>
+          <ul className="flex gap-x-5 gap-y-2 flex-wrap justify-center items-center">
+            <li><Link href="/about" className="hover:text-alfa-gold transition-colors">About</Link></li>
+            <li><Link href="/contact" className="hover:text-alfa-gold transition-colors">Contact</Link></li>
+            <li><Link href="/privacy" className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40">Privacy Policy</Link></li>
+            <li><Link href="/terms" className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40">Terms &amp; Conditions</Link></li>
+            <li><Link href="/cookies" className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40">Cookie Policy</Link></li>
+            <li><Link href="/sms-terms" className="text-alfa-gold font-semibold hover:text-alfa-gold-light transition-colors underline underline-offset-2 decoration-alfa-gold/40">SMS Terms</Link></li>
+          </ul>
         </div>
       </div>
     </footer>

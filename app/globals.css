@@ -1,4 +1,8 @@
 @import "tailwindcss";
+/* Estilos de artigo (.prose) do blog. Sem este plugin as classes prose do
+   app/blog/[slug] nao geravam nada: subtitulos com o tamanho do texto, sem
+   espaco entre paragrafos e listas sem marcador nos 7 posts. */
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* Brand gold — extracted from Alfa Construction logo */

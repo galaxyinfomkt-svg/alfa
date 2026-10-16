@@ -55,11 +55,11 @@ export const blogPosts: BlogPost[] = [
       <p>In the competitive Massachusetts real estate market, exterior upgrades matter. Hardie Plank siding consistently ranks among the top home improvement projects for return on investment. Many buyers in the MetroWest area and throughout New England specifically seek out homes with fiber cement siding because of its reputation for quality and longevity. Vinyl siding also adds value, though generally to a lesser extent.</p>
 
       <h2>Our Recommendation for Massachusetts Homeowners</h2>
-      <p>Both products are solid choices, but our team at Alfa Construction Inc generally recommends Hardie Plank for homeowners who plan to stay in their homes long-term and want the highest level of durability and curb appeal. For homeowners seeking a budget-friendly upgrade that still provides excellent protection against New England weather, quality vinyl <a href="/services/siding">siding installed properly</a> is a reliable choice. We serve homeowners across Massachusetts including <a href="/massachusetts/framingham/siding">Framingham</a>, <a href="/massachusetts/natick/siding">Natick</a>, <a href="/massachusetts/newton/siding">Newton</a>, and <a href="/massachusetts/worcester/siding">Worcester</a>.</p>
+      <p>Both products are solid choices, but our team at Alfa Construction Inc generally recommends Hardie Plank for homeowners who plan to stay in their homes long-term and want the highest level of durability and curb appeal. For homeowners seeking a budget-friendly upgrade that still provides excellent protection against New England weather, quality vinyl <a href="/services/siding">siding installed properly</a> is a reliable choice. We serve homeowners across Massachusetts including <a href="/massachusetts/framingham">Framingham</a>, <a href="/massachusetts/natick">Natick</a>, <a href="/massachusetts/newton">Newton</a>, and <a href="/massachusetts/worcester">Worcester</a>.</p>
 
       <p>The most important factor in either case is professional installation. Improperly installed siding, regardless of the material, will fail prematurely. A full-home re-side also includes new flashing, trim, corner boards, and weather barrier as part of the same project — a complete exterior transformation. Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free consultation on siding options for your home. As a licensed Massachusetts contractor (#192348), we stand behind every installation with a comprehensive warranty.</p>
     `,
-    date: "2025-02-10",
+    date: "2026-02-25",
     author: "Alfa Construction Team",
     category: "Siding",
     readTime: "7 min read",
@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
       "Hiring an unlicensed contractor in Massachusetts can put your home, finances, and safety at risk. Learn why working with a licensed professional is essential for any home improvement project.",
     content: `
       <h2>The Risks of Hiring an Unlicensed Contractor in Massachusetts</h2>
-      <p>Every year, Massachusetts homeowners lose thousands of dollars to unlicensed contractors who deliver substandard work, disappear mid-project, or cause damage that requires expensive corrections. The Massachusetts Home Improvement Contractor Law exists specifically to protect homeowners, yet many people still hire unregistered workers to save money on home improvement projects. At Alfa Construction Inc (License #192348), we believe understanding why contractor licensing matters is essential for every homeowner planning a renovation, siding installation, carpentry project, or any other exterior work.</p>
+      <p>Every year, Massachusetts homeowners lose thousands of dollars to unlicensed contractors who deliver substandard work, disappear mid-project, or cause damage that requires expensive corrections. The Massachusetts Home Improvement Contractor Law exists specifically to protect homeowners, yet many people still hire unregistered workers to save money on home improvement projects. At Alfa Construction Inc (License #192348), we believe understanding why contractor licensing matters is essential for every homeowner planning a siding replacement or any other exterior project.</p>
 
       <h2>What Massachusetts Law Requires</h2>
       <p>In Massachusetts, any contractor performing home improvement work valued at over $1,000 must be registered with the Office of Consumer Affairs and Business Regulation. This registration requires:</p>
@@ -123,15 +123,15 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>Choose a Contractor You Can Trust</h2>
-      <p>At Alfa Construction Inc, we are proud to be a fully licensed and insured Massachusetts contractor. Our team brings years of experience in <a href="/services/siding">siding installation and replacement</a>, <a href="/services/hardie-plank-siding">Hardie Plank fiber cement</a>, and <a href="/services/cedar-shake-siding">cedar shake siding</a> to every project, and we are committed to transparency, quality, and customer satisfaction. We serve homeowners in <a href="/massachusetts/framingham">Framingham</a>, <a href="/massachusetts/natick">Natick</a>, <a href="/massachusetts/worcester">Worcester</a>, <a href="/massachusetts/brookline">Brookline</a>, and <a href="/massachusetts/cambridge">Cambridge</a> — plus 100+ other Massachusetts communities. New England weather demands quality workmanship, and our clients throughout MetroWest trust us to deliver exactly that.</p>
+      <p>At Alfa Construction Inc, we are proud to be a fully licensed and insured Massachusetts contractor. Our team brings years of experience in <a href="/services/siding">siding installation and replacement</a>, <a href="/services/hardie-plank-siding">Hardie Plank fiber cement</a>, and <a href="/services/cedar-shake-siding">cedar shake siding</a> to every project, and we are committed to transparency, quality, and customer satisfaction. We serve homeowners in <a href="/massachusetts/framingham">Framingham</a>, <a href="/massachusetts/natick">Natick</a>, <a href="/massachusetts/worcester">Worcester</a>, <a href="/massachusetts/brookline">Brookline</a>, and <a href="/massachusetts/cambridge">Cambridge</a> — plus the rest of MetroWest, Worcester County and Norfolk County. New England weather demands quality workmanship, and our clients throughout MetroWest trust us to deliver exactly that.</p>
 
       <p>Ready to start your <a href="/services/siding">full-home siding project</a> the right way? Call Alfa Construction Inc at <strong>(508) 590-9193</strong> for a free estimate. We'll provide proof of our licensing and insurance upfront, so you can move forward with confidence.</p>
     `,
-    date: "2024-10-15",
+    date: "2026-02-25",
     author: "Alfa Construction Team",
     category: "General",
     readTime: "7 min read",
-    image: "/images/commercial-siding-installation-massachusetts.jpg",
+    image: "/images/hardie-plank-siding-carlisle-ma-action-workers.jpg",
     metaTitle:
       "Why a Licensed Contractor Matters in Massachusetts",
     metaDescription:
@@ -149,10 +149,10 @@ export const blogPosts: BlogPost[] = [
     slug: "signs-your-siding-needs-replacement-massachusetts",
     title: "7 Warning Signs Your Siding Needs Replacement",
     excerpt:
-      "Is your siding past its prime? Learn the 7 critical warning signs that indicate your Massachusetts home needs new siding, and when repair might be enough.",
+      "Is your siding past its prime? Learn the 7 warning signs that your Massachusetts home needs new siding, and how to tell when a full replacement is the right call.",
     content: `
       <h2>How to Tell When Your Siding Needs Replacement</h2>
-      <p>Your home's siding is its first line of defense against rain, snow, wind, and temperature extremes. In Massachusetts, where winter storms and humid summers put constant stress on exterior materials, siding does not last forever. But how do you know when it is time to replace your siding rather than simply patch or repair it? At Alfa Construction Inc (License #192348), we inspect hundreds of homes every year and help homeowners make informed decisions about their siding. Here are the seven most common warning signs that your siding has reached the end of its useful life.</p>
+      <p>Your home's siding is its first line of defense against rain, snow, wind, and temperature extremes. In Massachusetts, where winter storms and humid summers put constant stress on exterior materials, siding does not last forever. But how do you know when it is time to replace your siding rather than simply patch or repair it? At Alfa Construction Inc (MA HIC #192348), we walk homes across MetroWest and Worcester County and help homeowners make an informed decision about their siding. Here are the seven most common warning signs that your siding has reached the end of its useful life.</p>
 
       <h2>1. Warping and Buckling</h2>
       <p>When siding panels begin to warp, buckle, or pull away from the wall, it is a clear sign of underlying problems. Warping typically indicates that moisture has penetrated behind the siding and is affecting the panels or the sheathing underneath. This is especially common in Massachusetts homes after years of freeze-thaw cycles. Walk around your home and look along the wall surfaces from an angle. Warped panels are often easier to spot from the side than from straight on. If you notice widespread warping across multiple walls, replacement is usually the better option compared to spot patching.</p>
@@ -175,21 +175,21 @@ export const blogPosts: BlogPost[] = [
       <h2>7. Severe Fading and Discoloration</h2>
       <p>All siding fades to some degree over time, but severe or uneven fading is more than a cosmetic issue. Heavy fading indicates that the siding material has been heavily degraded by UV exposure. UV-damaged vinyl becomes brittle and loses its impact resistance, while faded paint on wood or fiber cement siding means the protective finish has failed, leaving the base material exposed to moisture. If your siding has faded to the point where it looks drastically different from its original color, the protective properties of the material are likely compromised as well.</p>
 
-      <h2>When to Repair vs. When to Replace</h2>
-      <p>Not every siding issue requires full replacement. Here is a general guideline:</p>
+      <h2>Spot Repair or Full Replacement?</h2>
+      <p>Not every siding problem calls for a new exterior. A general guideline:</p>
       <ul>
-        <li><strong>Repair:</strong> If damage is limited to a small area, one wall, or a few individual panels, and the rest of the siding is in good condition, targeted repairs are often sufficient and cost-effective.</li>
-        <li><strong>Replace:</strong> If you are seeing multiple warning signs across different areas of your home, the siding is more than 20 years old, or moisture damage has spread behind the siding, full replacement is the smarter long-term investment.</li>
+        <li><strong>A spot repair may be enough</strong> when the damage is limited to one small area and the rest of the siding is sound, the material is still made, and nothing has gotten behind it.</li>
+        <li><strong>Full replacement makes sense</strong> when you see several of these signs on different walls, the siding is more than 20 years old, the color or profile is discontinued, or moisture has reached the sheathing.</li>
       </ul>
-      <p>A professional inspection can help you make the right call. Our team at Alfa Construction Inc provides honest assessments and will never recommend replacement when a repair will do the job properly.</p>
+      <p>Alfa Construction only takes complete re-sides. If we walk your house and the siding is mostly sound, we will tell you so — a full replacement is not the right answer for every home.</p>
 
       <h2>Protect Your Massachusetts Home with New Siding</h2>
       <p>If you have noticed any of these warning signs on your home, do not wait for the problem to worsen. Water damage behind siding can escalate quickly, especially during Massachusetts winters. <a href="/contact">Contact Alfa Construction Inc</a> today for a thorough siding inspection and a free estimate on <a href="/services/siding">professional siding replacement</a>. Our experienced crew handles every step of the process, from removing old siding to installing a proper weather barrier and finishing with your choice of premium siding materials. View our <a href="/projects">past projects</a> to see the transformations we have delivered for homeowners across Massachusetts.</p>
 
       <p>Call us at <strong>(508) 590-9193</strong> to schedule your free inspection. As a licensed Massachusetts contractor (#192348), we stand behind every project with quality you can trust.</p>
     `,
-    date: "2025-02-28",
-    author: "Alfa Construction Inc",
+    date: "2026-04-07",
+    author: "Alfa Construction Team",
     category: "Siding",
     readTime: "8 min read",
     image: "/images/siding-renovation-before-housewrap-ma.jpg",
@@ -316,8 +316,8 @@ export const blogPosts: BlogPost[] = [
 
       <p>Browse our <a href="/projects">completed projects gallery</a> to see examples of each material installed on Massachusetts homes. When you are ready to move forward, <a href="/contact">contact us</a> or call <strong>(508) 590-9193</strong> for a free consultation. As a licensed Massachusetts contractor (#192348), Alfa Construction Inc delivers expert installation that maximizes the performance and lifespan of whatever siding material you choose.</p>
     `,
-    date: "2025-02-10",
-    author: "Alfa Construction Inc",
+    date: "2026-04-07",
+    author: "Alfa Construction Team",
     category: "Siding",
     readTime: "9 min read",
     image: "/images/dark-shake-siding-renovation-after-ma.jpg",
@@ -399,8 +399,8 @@ export const blogPosts: BlogPost[] = [
 
       <p><a href="/contact">Contact us today</a> or call <strong>(508) 590-9193</strong> to discuss your commercial siding project. We serve businesses throughout Massachusetts and are committed to delivering professional-grade results on every project.</p>
     `,
-    date: "2025-01-20",
-    author: "Alfa Construction Inc",
+    date: "2026-04-07",
+    author: "Alfa Construction Team",
     category: "Commercial",
     readTime: "9 min read",
     image: "/images/commercial-siding-window-installation-massachusetts.jpg",
@@ -431,7 +431,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Step 1: Initial Inspection and Assessment</h2>
       <p>Every siding project begins with a thorough inspection of your home's exterior. Our team examines the existing siding condition, checks for water damage, rot, or insect damage in the sheathing and framing, evaluates the condition of trim, flashing, and windows, and assesses the home's overall structural readiness for new siding.</p>
       <p>This step is critical because it identifies hidden problems that must be addressed before new siding goes on. Installing new siding over rotted sheathing or damaged framing is a recipe for premature failure. The inspection typically takes one to two hours and results in a detailed scope of work and accurate estimate.</p>
-      <p><strong>Estimated time:</strong> 1 to 2 hours for the inspection, plus 2 to 5 business days for the detailed proposal.</p>
+      <p><strong>Estimated time:</strong> 1 to 2 hours for the inspection, with the itemized written estimate in your inbox within 24 hours.</p>
 
       <h2>Step 2: Removal of Old Siding</h2>
       <p>Once the project begins, the first physical step is removing the existing siding. Our crew carefully strips off old siding panels, starting from the top and working down. We inspect each section of exposed sheathing as we go, marking areas that need repair. All old siding material is loaded into a dumpster for proper disposal. If your home has multiple layers of old siding, which is common in older Massachusetts homes, all layers must come off to expose the sheathing for proper inspection and preparation.</p>
@@ -474,11 +474,11 @@ export const blogPosts: BlogPost[] = [
       <h2>Ready to Start Your Siding Project?</h2>
       <p>Now that you understand what goes into a professional siding installation, you can appreciate the importance of hiring experienced, licensed contractors who follow a disciplined process. At Alfa Construction Inc, every project follows the steps outlined above, ensuring your new <a href="/services/siding">siding is installed correctly</a> and built to last. Browse our <a href="/projects">project gallery</a> to see our completed work, then <a href="/contact">contact us</a> or call <strong>(508) 590-9193</strong> for a free estimate on your Massachusetts siding project.</p>
     `,
-    date: "2025-01-05",
-    author: "Alfa Construction Inc",
+    date: "2026-04-07",
+    author: "Alfa Construction Team",
     category: "Siding",
     readTime: "10 min read",
-    image: "/images/window-insulation-energyshield-ma.jpg",
+    image: "/images/hardie-plank-siding-carlisle-ma-install-progress.jpg",
     metaTitle:
       "Siding Installation Process Step by Step",
     metaDescription:
@@ -498,7 +498,7 @@ export const blogPosts: BlogPost[] = [
     slug: "best-siding-for-new-england-homes",
     title: "The Best Siding for New England Homes (2026 Guide)",
     excerpt:
-      "After installing siding on 500+ Massachusetts homes over 20 years, here is the honest answer to what works best in New England's climate — by material, by budget, and by home age.",
+      "After 20 years of full re-sides in Massachusetts, here is the honest answer to what works best in New England's climate — by material, by budget, and by home age.",
     content: `
       <h2>The Short Answer</h2>
       <p>For most New England homes, the best siding is <strong>James Hardie fiber cement (HardiePlank)</strong>. It survives freeze-thaw cycles that crack vinyl, lasts 50+ years versus vinyl's 20-30, carries a 30-year manufacturer warranty, and meets Class A fire ratings. Vinyl wins on upfront cost (30-40% cheaper). Cedar shake wins on traditional New England curb appeal but costs the most over time. Below: the full reasoning, with material-by-material breakdown.</p>
@@ -569,24 +569,24 @@ export const blogPosts: BlogPost[] = [
       <h2>Our Recommendation by Homeowner Type</h2>
       <ul>
         <li><strong>Selling in under 3 years?</strong> Premium vinyl. Cheapest path to "new exterior" appearance for the photos.</li>
-        <li><strong>Forever home in MetroWest, Worcester County, or Cape Cod?</strong> HardiePlank. The 30-year warranty pays back.</li>
+        <li><strong>Forever home you plan to keep for decades?</strong> HardiePlank. The 30-year warranty pays back.</li>
         <li><strong>Historic home (pre-1930) or waterfront?</strong> Cedar shake. Maintains property character and aligns with neighborhood comps.</li>
         <li><strong>Tight budget but want longevity?</strong> LP SmartSide. The honest middle ground most contractors don't quote.</li>
       </ul>
 
       <h2>About This Recommendation</h2>
-      <p>Alfa Construction Inc has installed all five materials across 109+ Massachusetts cities over 20 years. We hold Massachusetts Home Improvement Contractor (HIC) license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>, valid through April 2027, and carry full general liability and workers' compensation insurance. Our team is bilingual (English and Portuguese) and serves homeowners across MetroWest, Worcester County, the South Shore, and Cape Cod.</p>
+      <p>Alfa Construction Inc has installed all five materials on Massachusetts homes for more than 20 years. We hold Massachusetts Home Improvement Contractor (HIC) license <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer">#192348</a>, valid through April 2027, and carry full general liability and workers' compensation insurance. Our team is bilingual (English and Portuguese) and serves homeowners across MetroWest, Worcester County and Norfolk County.</p>
 
       <p>For a free, itemized estimate on your siding project, call Fabio directly at <strong>(508) 590-9193</strong> or visit our <a href="/contact">contact page</a>. We respond to all estimate requests within 24 hours.</p>
     `,
     date: "2026-05-11",
-    author: "Fabio",
+    author: "Alfa Construction Team",
     category: "Siding",
     readTime: "9 min read",
-    image: "/images/dark-shake-siding-renovation-after-ma.jpg",
+    image: "/images/hardie-plank-siding-carlisle-ma-after-front.jpg",
     metaTitle: "Best Siding for New England Homes — 2026 Guide",
     metaDescription:
-      "After 500+ MA installs over 20 years, here's the honest answer on Hardie vs vinyl vs cedar vs LP SmartSide for New England — cost, lifespan, install quality. (508) 590-9193.",
+      "After 20 years of MA re-sides, here's the honest answer on Hardie vs vinyl vs cedar vs LP SmartSide for New England — cost, lifespan, install quality. (508) 590-9193.",
     tags: [
       "best siding new england",
       "siding comparison massachusetts",
