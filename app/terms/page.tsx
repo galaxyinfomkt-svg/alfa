@@ -78,9 +78,8 @@ export default function TermsPage() {
                 <li>
                   <strong>Service</strong> refers to the Website
                   (alfapaintingcarpentry.com), the chat widget, SMS messaging,
-                  email correspondence, and the construction, siding,
-                  carpentry, painting, and cleaning services provided by the
-                  Company.
+                  email correspondence, and the siding installation and
+                  replacement services provided by the Company.
                 </li>
                 <li>
                   <strong>Terms and Conditions</strong> (also referred to as

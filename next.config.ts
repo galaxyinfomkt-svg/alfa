@@ -141,7 +141,36 @@ const nextConfig: NextConfig = {
       { source: "/sms-opt-in", destination: "/sms-terms", permanent: true },
     ];
 
+    // AUDITORIA OUT/2026 — fim da matriz cidade x servico.
+    // As 981 paginas /massachusetts/<cidade>/<material> eram o mesmo template com
+    // ~5% de texto proprio (mediana) e 51% de similaridade entre cidades: o
+    // padrao que o Google trata como conteudo em escala e que rebaixa o dominio
+    // inteiro. Cada uma passa a apontar para a pagina da propria cidade, que
+    // concentra o conteudo local; os materiais seguem em /services/<material>.
+    const SIDING_SERVICE_SLUGS = [
+      "siding", "hardie-plank-siding", "vinyl-siding", "cedar-shake-siding",
+      "clapboard-siding", "board-and-batten-siding", "insulated-siding",
+      "engineered-wood-siding", "commercial-siding",
+    ];
+    const cityServiceMatrixRedirects = [
+      {
+        source: `/massachusetts/:city/:service(${SIDING_SERVICE_SLUGS.join("|")})`,
+        destination: "/massachusetts/:city",
+        permanent: true,
+      },
+    ];
+
+    // Projetos sem nenhum siding (escada de deck, estrutura, janelas) sairam do
+    // portfolio na mesma auditoria.
+    const retiredProjectRedirects = [
+      { source: "/projects/deck-staircase-carpentry-massachusetts", destination: "/projects", permanent: true },
+      { source: "/projects/new-construction-framing-massachusetts", destination: "/projects", permanent: true },
+      { source: "/projects/window-insulation-installation-ma", destination: "/projects", permanent: true },
+    ];
+
     return [
+      ...cityServiceMatrixRedirects,
+      ...retiredProjectRedirects,
       ...cityServiceRedirects,
       ...serviceRedirects,
       ...legacyRedirects,

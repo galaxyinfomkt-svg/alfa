@@ -21,6 +21,9 @@ export const company = {
   license: "#192348",
   licenseExpiry: "04/2027",
   experience: "20+",
+  // Nota e total do Google Business Profile (fonte unica: data/siteConfig.ts).
+  rating: "5.0",
+  reviewCount: "22",
   foundedYear: 2006,
   owner: "Fabio",
   hours: "Mon–Sat 7:00 AM – 6:00 PM",
@@ -30,11 +33,11 @@ export const company = {
   facebook: "https://www.facebook.com/alfacarpentrypainting",
   googleReview: "https://g.page/r/CZ1rhJ3jJReMEAE/review",
   googleMapsUrl: "https://maps.google.com/?cid=10275746837959009437",
-  logo: "/images/logo.png",
+  logo: "/images/logo-alfa-construction.png",
   differentials: [
-    "20+ years of construction excellence",
+    "20+ years installing siding in Massachusetts",
     "Licensed & Insured in Massachusetts",
-    "Free estimates on all projects",
+    "Free, itemized written estimates",
     "Bilingual team (English & Portuguese)",
     "Attention to detail and quality craftsmanship",
     "Proven track record with real client reviews",
@@ -58,7 +61,7 @@ export const localBusinessSchema = {
   url: BASE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${BASE_URL}/images/logo.png`,
+    url: `${BASE_URL}/images/logo-alfa-construction.png`,
     width: 180,
     height: 50,
   },
@@ -463,7 +466,7 @@ export function articleSchema(article: {
       name: "Alfa Construction Inc",
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/images/logo.png`,
+        url: `${BASE_URL}/images/logo-alfa-construction.png`,
       },
     },
     mainEntityOfPage: {

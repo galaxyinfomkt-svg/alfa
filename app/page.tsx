@@ -12,6 +12,20 @@ import CtaBand from "@/components/CtaBand";
 import ScrollReveal from "@/components/ScrollReveal";
 import FormEmbed from "@/components/FormEmbed";
 import BeforeAfter from "@/components/BeforeAfter";
+import { projects, projectLocation } from "@/data/projects";
+import { blogPosts } from "@/data/blog";
+import { cities } from "@/data/cities";
+import { cityDistanceMiles } from "@/data/cityDistances";
+
+// Antes/depois em destaque: a obra de Carlisle e a mais documentada do site.
+const heroProject = projects[0];
+const gridProjects = projects.filter((p) => p.slug !== heroProject.slug).slice(0, 6);
+const latestPosts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
+const nearbyTowns = [...cities]
+  .sort((a, b) => (cityDistanceMiles[a.slug] ?? 99) - (cityDistanceMiles[b.slug] ?? 99))
+  .slice(0, 16);
+const fmtDate = (d: string) =>
+  new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
 // PIVOT SIDING-ONLY: home mostra os 4 materiais de siding como "serviços".
 // Carpintaria/janelas/portas aparecem como add-on DENTRO da página de siding,
@@ -73,7 +87,7 @@ export default function HomePage() {
       />
 
       {/* ===== HERO SECTION (RS Development split layout) ===== */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative lg:min-h-screen flex items-center overflow-hidden">
         {/* A foto anterior do hero (dark-shake-siding-renovation-after) e
             1200x1600, retrato, num hero horizontal — dai o hero aparecer como
             uma faixa escura, com fios eletricos e uma lixeira no enquadramento.
@@ -99,17 +113,17 @@ export default function HomePage() {
               50 e agressivo demais para a imagem de LCP da pagina principal. */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/70 to-black/40" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-44 pb-20 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-32 md:pt-40 lg:pt-44 pb-14 md:pb-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left Side — Badges + Heading */}
             <div>
               {/* Badges */}
-              <div className="flex flex-wrap items-center gap-3 mb-6">
+              <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4 md:mb-6">
                 <span className="inline-flex items-center gap-1.5 bg-alfa-gold text-black text-sm font-bold px-4 py-2 rounded-full">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
-                  Serving 109+ MA Cities
+                  Based in Bellingham, MA
                 </span>
                 <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-full border border-white/20">
                   <span className="flex gap-0.5">
@@ -119,36 +133,32 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </span>
-                  5 (22+ reviews)
+                  5.0 · {company.reviewCount} Google reviews
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-[1.15] md:leading-tight">
                 Massachusetts&apos; Full-Home{" "}
                 <span className="text-alfa-gold">Siding Installation</span>{" "}
                 &amp; Replacement Specialists
               </h1>
-              <p className="text-lg text-gray-300 mb-3 leading-relaxed max-w-xl">
-                <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> We specialize exclusively in complete siding installation and full-home replacements — not patch jobs, touch-ups, or small jobs.
+              <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed max-w-xl">
+                <strong className="text-white">Hardie Plank · vinyl · cedar · shake.</strong> Siding is all we do: complete installation and full-home replacement, done by our own crew — not patch jobs or other trades.
               </p>
-              {/* Positioning line — siding-only, full re-sides. Diretriz: sem preço, sem reparo. */}
-              <p className="text-sm text-gray-300 mb-3 leading-relaxed max-w-xl bg-white/5 border border-alfa-gold/20 rounded-lg px-4 py-3">
-                <strong className="text-white">Siding is all we do</strong> — complete full-home siding installation and replacement in Hardie Plank, vinyl, cedar, and more. We take full exterior re-sides only, not small jobs or other trades.
-              </p>
-              <p className="text-base text-alfa-gold-light mb-8 leading-relaxed max-w-xl">
-                <strong>Itemized, written estimates</strong> — materials, labor, permits, disposal. Licensed (MA HIC #192348) · {company.experience} years · Bilingual EN/PT.
+              <p className="text-base text-alfa-gold-light mb-6 md:mb-8 leading-relaxed max-w-xl">
+                <strong>Itemized written estimate within 24 hours.</strong> MA HIC {company.license} · since {company.foundedYear} · English &amp; Portuguese.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={company.phoneTel}
-                  className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl text-lg"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl text-lg"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   Call {company.phone}
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-white/30 text-lg"
                 >
                   Get Free Estimate
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -187,14 +197,14 @@ export default function HomePage() {
                 <svg className="w-6 h-6 text-alfa-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
               </div>
               <p className="font-bold text-white text-sm">5-Star Rated</p>
-              <p className="text-xs text-gray-400">22+ Google Reviews</p>
+              <p className="text-xs text-gray-400">{company.reviewCount} Google reviews</p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="w-12 h-12 bg-alfa-gold/10 rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-alfa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
               <p className="font-bold text-white text-sm">Free Estimates</p>
-              <p className="text-xs text-gray-400">No obligation quotes</p>
+              <p className="text-xs text-gray-400">Written, itemized, in 24 hours</p>
             </div>
           </div>
         </div>
@@ -206,19 +216,22 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <span className="text-alfa-gold-dark font-semibold text-sm uppercase tracking-wider">What We Do</span>
             <h2 className="text-3xl md:text-4xl font-bold text-alfa-ink mt-2 mb-4">
-              Our Professional Services
+              Siding Is All We Do
             </h2>
             <p className="text-alfa-ink-muted max-w-2xl mx-auto">
-              From siding installation to complete home renovation, Alfa Construction Inc delivers quality craftsmanship backed by {company.experience} years of experience across Massachusetts.
+              Full-home siding installation and replacement in the materials that hold up to New England winters — installed to manufacturer spec by our own crew.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, i) => (
               <ScrollReveal key={service.slug} delay={i * 100}>
                 <ServiceCard {...service} />
               </ScrollReveal>
             ))}
           </div>
+          <p className="text-center mt-10">
+            <Link href="/services" className="text-alfa-ink font-semibold hover:text-alfa-gold-dark">See all 9 siding services →</Link>
+          </p>
         </div>
       </section>
 
@@ -257,7 +270,7 @@ export default function HomePage() {
               {
                 num: "03",
                 title: "Expert Installation",
-                body: "Our 20-year crew handles the work — Hardie Plank, vinyl, cedar, windows, carpentry — to manufacturer spec on a 5-7 day timeline for typical exteriors.",
+                body: "Our own crew strips, inspects the sheathing, wraps, flashes and installs — Hardie Plank, vinyl or cedar — to manufacturer spec, typically in 5–7 days.",
                 icon: (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />),
               },
               {
@@ -297,10 +310,10 @@ export default function HomePage() {
             <div>
               <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">About Alfa Construction</span>
               <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
-                {company.experience} Years of Construction Excellence in Massachusetts
+                {company.experience} Years Re-Siding Massachusetts Homes
               </h2>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Founded by Fabio, Alfa Construction Inc has been serving Massachusetts homeowners for over 20 years. What started as a passion for quality craftsmanship has grown into one of the most trusted siding and construction companies in the state.
+                Fabio founded Alfa Construction in {company.foundedYear} and still walks every estimate himself. The company is based in Bellingham and works across MetroWest, Worcester County and Norfolk County.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 We specialize <strong className="text-white">exclusively in complete siding installation and full-home replacements</strong> — Hardie Plank, vinyl, cedar, shake. Carpentry, sheathing replacement, and window/door work happen only when they&apos;re part of a full re-side. Our bilingual team (English &amp; Portuguese) brings attention to detail, professionalism, and respect to every project.
@@ -325,7 +338,7 @@ export default function HomePage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
                 <Image
                   src="/images/green-siding-exterior-completed-ma.jpg"
-                  alt="Alfa Construction Inc siding project - green siding and deck build in Massachusetts"
+                  alt="Green full-home siding re-side by Alfa Construction in Massachusetts"
                   width={600}
                   height={500}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -367,22 +380,22 @@ export default function HomePage() {
               <p className="text-xs text-gray-400 mt-1">HardiePlank fiber cement</p>
             </a>
             <a
-              href="https://www.andersenwindows.com/products/windows/"
+              href="https://lpcorp.com/products/exterior-siding"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
             >
-              <p className="text-alfa-gold font-bold text-sm">Andersen Windows</p>
-              <p className="text-xs text-gray-400 mt-1">400 Series energy-efficient</p>
+              <p className="text-alfa-gold font-bold text-sm">LP SmartSide</p>
+              <p className="text-xs text-gray-400 mt-1">Engineered wood siding</p>
             </a>
             <a
-              href="https://www.energystar.gov/products/windows_doors_skylights"
+              href="https://www.vinylsiding.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
             >
-              <p className="text-alfa-gold font-bold text-sm">ENERGY STAR</p>
-              <p className="text-xs text-gray-400 mt-1">Certified window installs</p>
+              <p className="text-alfa-gold font-bold text-sm">Vinyl Siding Institute</p>
+              <p className="text-xs text-gray-400 mt-1">ASTM D3679 certified products</p>
             </a>
             <a
               href="https://www.dupont.com/brands/tyvek.html"
@@ -409,23 +422,23 @@ export default function HomePage() {
               className="bg-alfa-card border border-white/5 rounded-xl p-5 hover:border-alfa-gold/40 transition-colors text-center"
             >
               <p className="text-alfa-gold font-bold text-sm">Google 5.0★</p>
-              <p className="text-xs text-gray-400 mt-1">22+ verified reviews</p>
+              <p className="text-xs text-gray-400 mt-1">{company.reviewCount} Google reviews</p>
             </a>
           </div>
 
           {/* Semantic data list — Princeton GEO Method 2 (+37% stats lift). AI extractors parse <dl> directly */}
-          <dl className="grid grid-cols-3 gap-6 bg-alfa-card border border-white/5 rounded-2xl p-8">
+          <dl className="grid grid-cols-3 gap-4 md:gap-6 bg-alfa-card border border-white/5 rounded-2xl p-8">
             <div className="text-center">
               <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Founded</dt>
               <dd className="text-3xl font-bold text-white">{company.foundedYear}</dd>
             </div>
             <div className="text-center">
-              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">MA Cities Served</dt>
-              <dd className="text-3xl font-bold text-white">109+</dd>
+              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Google rating</dt>
+              <dd className="text-3xl font-bold text-white">5.0</dd>
             </div>
             <div className="text-center">
-              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Five-Star Reviews</dt>
-              <dd className="text-3xl font-bold text-white">22+</dd>
+              <dt className="text-xs uppercase tracking-wider text-alfa-gold font-semibold mb-2">Google reviews</dt>
+              <dd className="text-3xl font-bold text-white">{company.reviewCount}</dd>
             </div>
           </dl>
 
@@ -441,7 +454,7 @@ export default function HomePage() {
               Recent Projects
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              See the quality of our work across Massachusetts. Each project reflects our commitment to excellence and attention to detail.
+              Real Alfa Construction re-sides — photographed on the job, before and after.
             </p>
           </div>
           {/* Featured Before/After hero — drag to compare */}
@@ -449,28 +462,28 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-5 gap-0">
               <div className="lg:col-span-3 relative aspect-[4/3] lg:aspect-auto lg:min-h-[480px]">
                 <BeforeAfter
-                  beforeSrc="/images/siding-renovation-before-housewrap-ma.jpg"
-                  afterSrc="/images/dark-shake-siding-renovation-after-ma.jpg"
-                  beforeAlt="Before — house wrap and scaffolding"
-                  afterAlt="After — dark charcoal shake siding with white trim and red door"
+                  beforeSrc={heroProject.beforeImage!}
+                  afterSrc={heroProject.afterImage!}
+                  beforeAlt={`Before — ${heroProject.title}`}
+                  afterAlt={`After — ${heroProject.title}`}
                 />
               </div>
               <div className="lg:col-span-2 p-8 md:p-10 flex flex-col justify-center">
                 <div className="flex gap-2 mb-4">
-                  <span className="bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full">Siding Installation</span>
-                  <span className="bg-white/5 border border-white/10 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">7-day install</span>
+                  <span className="bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full">Before &amp; after</span>
+                  <span className="bg-white/5 border border-white/10 text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">{projectLocation(heroProject)}</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-                  Victorian Charcoal Shake Renovation
+                  {heroProject.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed mb-6 text-sm md:text-base">
-                  Full exterior strip-and-replace: 1980s clapboard → modern charcoal shake siding on DuPont Tyvek with Z-flashing. 18% sheathing replacement found during teardown, all itemized in the original bid. Drag the slider to compare.
+                <p className="text-gray-400 leading-relaxed mb-6 text-sm md:text-base line-clamp-6">
+                  {heroProject.description}
                 </p>
                 <Link
-                  href="/projects"
+                  href={`/projects/${heroProject.slug}`}
                   className="inline-flex items-center gap-2 text-alfa-gold font-semibold hover:gap-3 transition-all"
                 >
-                  See more projects
+                  View the full project
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 </Link>
               </div>
@@ -479,25 +492,11 @@ export default function HomePage() {
 
           {/* Project grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* O site inteiro diz que a Alfa so faz re-side completo e nao
-                pega outras especialidades. Esta galeria mostrava "Deck
-                Carpentry", "Deck & Siding Remodel" e "Andersen Window
-                Installation" — contradizendo o posicionamento na pagina mais
-                importante do site. Agora sao seis obras de siding, todas em
-                landscape 1600x1200 (as anteriores eram 1080x1350 de Instagram,
-                esticadas num card 4:3). */}
-            {[
-              { title: "James Hardie Re-Side – Carlisle, MA", service: "Hardie Plank", img: "/images/hardie-plank-siding-carlisle-ma-after-front.jpg" },
-              { title: "Full-Home Re-Side, Rear Elevation – Carlisle, MA", service: "Hardie Plank", img: "/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg" },
-              { title: "Cedar Shake Re-Side – Warren, RI", service: "Cedar Shake", img: "/images/cedar-shake-siding-warren-ri-hydrogap-weather-barrier.jpg" },
-              { title: "Cedar Shake Porch Addition – Webster, MA", service: "Cedar Shake", img: "/images/cedar-shake-siding-porch-addition-webster-ma-mid-build.jpg" },
-              { title: "Green Siding Exterior – Massachusetts", service: "Siding", img: "/images/green-siding-exterior-completed-ma.jpg" },
-              { title: "Crew on Site – Carlisle, MA", service: "Hardie Plank", img: "/images/hardie-plank-siding-carlisle-ma-action-workers.jpg" },
-            ].map((project, i) => (
-              <Link key={i} href="/projects" className="group relative block rounded-xl overflow-hidden shadow-lg shadow-black/20 border border-white/5">
+            {gridProjects.map((project) => (
+              <Link key={project.slug} href={`/projects/${project.slug}`} className="group relative block rounded-xl overflow-hidden shadow-lg shadow-black/20 border border-white/5">
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src={project.img}
+                    src={project.image}
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -505,12 +504,10 @@ export default function HomePage() {
                     loading="lazy"
                     quality={60}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <span className="inline-block bg-alfa-gold text-black text-xs font-semibold px-3 py-1 rounded-full mb-2">
-                      {project.service}
-                    </span>
-                    <h3 className="text-white font-bold text-lg">{project.title}</h3>
+                    <h3 className="text-white font-bold text-lg leading-snug">{project.title}</h3>
+                    <p className="text-gray-300 text-sm mt-1">{projectLocation(project)}</p>
                   </div>
                 </div>
               </Link>
@@ -533,38 +530,6 @@ export default function HomePage() {
         headline="Like what you see? Let's talk about your home."
         sub="Free, no-obligation estimate from a licensed and insured team."
       />
-
-      {/* ===== STATS SECTION (light) ===== */}
-      <section className="py-20 bg-alfa-cream border-t border-alfa-cream-border">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <ScrollReveal delay={0}>
-              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">20+</p>
-                <p className="text-alfa-ink-muted mt-2 text-sm">Years Experience</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">109+</p>
-                <p className="text-alfa-ink-muted mt-2 text-sm">Cities Served</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">500+</p>
-                <p className="text-alfa-ink-muted mt-2 text-sm">Projects Completed</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={300}>
-              <div className="bg-white border border-alfa-cream-border rounded-2xl p-8">
-                <p className="text-4xl md:text-5xl font-bold text-gold-gradient">5.0</p>
-                <p className="text-alfa-ink-muted mt-2 text-sm">Google Rating</p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
 
       {/* ===== REVIEWS SECTION ===== */}
       <section className="py-20 bg-black border-t border-white/5" id="reviews">
@@ -611,9 +576,19 @@ export default function HomePage() {
               Our Service Area
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Based in Bellingham, MA, we proudly serve 109 cities across MetroWest, Worcester County, Norfolk County, and the North Shore.
+              Based in Bellingham, MA, we re-side homes across MetroWest, Worcester County and Norfolk County. These are the towns closest to our office:
             </p>
           </div>
+          <ul className="flex flex-wrap justify-center gap-2 mb-10">
+            {nearbyTowns.map((c) => (
+              <li key={c.slug}>
+                <Link href={`/massachusetts/${c.slug}`} className="inline-block bg-alfa-card border border-white/10 text-gray-300 hover:border-alfa-gold/40 hover:text-alfa-gold text-sm px-4 py-2 rounded-full transition-colors">{c.name}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/massachusetts" className="inline-block bg-alfa-gold/10 border border-alfa-gold/40 text-alfa-gold text-sm font-semibold px-4 py-2 rounded-full">Full service area →</Link>
+            </li>
+          </ul>
           <GoogleMap />
         </div>
       </section>
@@ -624,41 +599,16 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <span className="text-alfa-gold-dark font-semibold text-sm uppercase tracking-wider">From Our Blog</span>
             <h2 className="text-3xl md:text-4xl font-bold text-alfa-ink mt-2 mb-4">
-              Homeowner Tips &amp; Insights
+              Siding Guides for MA Homeowners
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                slug: "hardie-plank-vs-vinyl-siding-new-england",
-                title: "Hardie Plank vs Vinyl Siding: Which is Better for New England?",
-                excerpt: "A comprehensive comparison of the two most popular siding options for homes in Massachusetts and New England.",
-                date: "February 10, 2025",
-                category: "Siding",
-                img: "/images/siding-window-installation-after-massachusetts.jpg",
-              },
-              {
-                slug: "best-siding-for-new-england-homes",
-                title: "The Best Siding for New England Homes (2026 Guide)",
-                excerpt: "Hardie Plank vs vinyl vs cedar vs LP SmartSide — which siding holds up best in New England weather, by material and home age.",
-                date: "January 6, 2026",
-                category: "Siding",
-                img: "/images/commercial-siding-installation-massachusetts.jpg",
-              },
-              {
-                slug: "why-licensed-contractor-massachusetts-matters",
-                title: "Why Hiring a Licensed Contractor in MA Matters",
-                excerpt: "Understanding the importance of working with licensed and insured contractors for your Massachusetts home project.",
-                date: "October 15, 2024",
-                category: "General",
-                img: "/images/porch-soffit-beadboard-siding-modern-home-ma.jpg",
-              },
-            ].map((post) => (
+            {latestPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
                 <div className="card-hover bg-alfa-card rounded-2xl overflow-hidden shadow-lg shadow-black/20 border border-white/5">
                   <div className="aspect-[16/10] relative overflow-hidden">
                     <Image
-                      src={post.img}
+                      src={post.image}
                       alt={post.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -670,7 +620,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text-gray-400 mb-2">{post.date}</p>
+                    <p className="text-sm text-gray-400 mb-2"><time dateTime={post.date}>{fmtDate(post.date)}</time></p>
                     <h3 className="text-lg font-bold text-white mb-2 group-hover:text-alfa-gold transition-colors">
                       {post.title}
                     </h3>

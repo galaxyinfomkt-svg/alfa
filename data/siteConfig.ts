@@ -15,7 +15,7 @@ export const siteConfig = {
   phoneDisplay: "(508) 590-9193",
   email: "info@alfapaintingcarpentry.com",
 
-  logo: "https://alfapaintingcarpentry.com/images/logo.png",
+  logo: "https://alfapaintingcarpentry.com/images/logo-alfa-construction.png",
   image:
     "https://alfapaintingcarpentry.com/images/dark-shake-siding-renovation-after-ma.jpg",
 

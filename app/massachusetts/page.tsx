@@ -1,42 +1,49 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { breadcrumbSchema } from "@/data/company";
+import { breadcrumbSchema, company } from "@/data/company";
 import { cities } from "@/data/cities";
+import { cityDistanceMiles } from "@/data/cityDistances";
 import CTASection from "@/components/CTASection";
+import GoogleMap from "@/components/GoogleMap";
 
 /**
  * Service-area hub for /massachusetts.
  *
- * This route did not exist. It was linked 110 times — once from every city
- * page ("See all 109 Massachusetts cities we serve") and once from /projects —
- * and every one of those links returned a 404. Beyond fixing the dead links,
- * this is the natural landing page for statewide queries like
- * "siding contractor Massachusetts".
+ * Organizado por distancia real do escritorio em Bellingham, e nao por
+ * condado: e assim que o cliente pensa ("voces atendem a minha cidade?") e
+ * deixa claro, sem exagero, onde a Alfa trabalha com mais frequencia.
  */
 
-const COUNTY_ORDER = ["Middlesex", "Worcester", "Norfolk", "Essex"] as const;
+const BANDS = [
+  { max: 15, title: "Within 15 miles of Bellingham", note: "Our home base — most of our jobs are here." },
+  { max: 25, title: "15 to 25 miles", note: "MetroWest, Blackstone Valley and south of Boston." },
+  { max: 35, title: "25 to 35 miles", note: "Worcester, the Route 2 corridor and the inner suburbs." },
+  { max: Infinity, title: "More than 35 miles", note: "Full-home re-sides only at this distance." },
+] as const;
+
+const miles = (slug: string) => cityDistanceMiles[slug] ?? 99;
 
 export const metadata: Metadata = {
-  title: "Siding Contractor in 109 Massachusetts Cities",
+  title: "Siding Contractor Service Area · Massachusetts",
   description:
-    "Full-home siding in 109 MA cities — Middlesex, Worcester, Norfolk & Essex. Licensed MA HIC #192348. Free estimate: (508) 590-9193.",
+    "Towns we serve from our Bellingham, MA base — sorted by distance. Licensed MA HIC #192348. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/massachusetts" },
   openGraph: {
-    title: "Siding Contractor in 109 Massachusetts Cities",
-    description:
-      "Full-home siding installation across 109 Massachusetts cities. Licensed, insured, 20+ years.",
+    title: "Alfa Construction Service Area — Massachusetts",
+    description: "Full-home siding installation in towns across MetroWest, Worcester County and Norfolk County.",
     url: "https://alfapaintingcarpentry.com/massachusetts",
-    images: ["/images/new-construction-siding-windows-board-batten-ma.jpg"],
+    images: ["/images/hardie-plank-siding-carlisle-ma-after-front.jpg"],
   },
 };
 
 export default function MassachusettsHubPage() {
-  const byCounty = COUNTY_ORDER.map((county) => ({
-    county,
-    towns: cities
-      .filter((c) => c.county === county)
-      .sort((a, b) => a.name.localeCompare(b.name)),
-  })).filter((g) => g.towns.length > 0);
+  const sorted = [...cities].sort((a, b) => miles(a.slug) - miles(b.slug) || a.name.localeCompare(b.name));
+  let lower = -1;
+  const groups = BANDS.map((band) => {
+    const towns = sorted.filter((c) => miles(c.slug) > lower && miles(c.slug) <= band.max);
+    lower = band.max;
+    return { ...band, towns };
+  }).filter((g) => g.towns.length > 0);
 
   return (
     <>
@@ -46,65 +53,75 @@ export default function MassachusettsHubPage() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Home", url: "https://alfapaintingcarpentry.com" },
-              { name: "Massachusetts", url: "https://alfapaintingcarpentry.com/massachusetts" },
+              { name: "Service Area", url: "https://alfapaintingcarpentry.com/massachusetts" },
             ])
           ),
         }}
       />
 
       {/* Hero */}
-      <section className="pt-40 pb-14 bg-black">
+      <section className="pt-28 md:pt-36 pb-12 md:pb-14 bg-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
-            Where We Work
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-5">
-            Siding Installation Across {cities.length} Massachusetts Cities
+          <p className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Where we work</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-5 leading-tight [text-wrap:balance]">
+            Our Massachusetts Service Area
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Alfa Construction is a licensed Massachusetts siding contractor
-            (MA HIC #192348) working across Middlesex, Worcester, Norfolk and
-            Essex counties. We take complete full-home re-sides — Hardie Plank,
-            vinyl, cedar shake, clapboard and board &amp; batten.
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+            Alfa Construction is based in {company.address.locality}, MA. These are the towns we re-side homes in, sorted by
+            distance from our office. Don&apos;t see yours? Call and ask.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href="tel:+15085909193"
-              className="inline-flex items-center justify-center bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-colors duration-200"
-            >
-              Call (508) 590-9193
-            </a>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border border-white/20 hover:border-alfa-gold/50 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-7 py-4 rounded-lg transition-colors text-lg"
             >
-              Request a Free Estimate
+              Get a Free Estimate
             </Link>
+            <a
+              href={company.phoneTel}
+              className="inline-flex items-center justify-center whitespace-nowrap bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-4 rounded-lg transition-colors border border-white/30 text-lg"
+            >
+              Call {company.phone}
+            </a>
           </div>
+          {/* Atalhos para as faixas: a lista e longa e no celular vira rolagem. */}
+          <nav aria-label="Jump to distance" className="mt-8">
+            <ul className="flex flex-wrap justify-center gap-2 text-sm">
+              {groups.map((g, i) => (
+                <li key={g.title}>
+                  <a href={`#band-${i}`} className="inline-block rounded-full border border-white/15 px-4 py-2 text-gray-300 hover:border-alfa-gold/50 hover:text-alfa-gold">
+                    {g.title.replace(" of Bellingham", "")} · {g.towns.length}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </section>
 
-      {/* Counties */}
-      <section className="py-16 bg-alfa-dark">
+      {/* Faixas de distancia */}
+      <section className="py-14 md:py-16 bg-alfa-dark">
         <div className="max-w-7xl mx-auto px-4">
-          {byCounty.map((group) => (
-            <div key={group.county} className="mb-14 last:mb-0">
-              <div className="flex items-baseline gap-3 border-b border-white/10 pb-3 mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
-                  {group.county} County
-                </h2>
-                <span className="text-alfa-gold text-sm font-semibold">
-                  {group.towns.length} cities &amp; towns
-                </span>
+          {groups.map((group, i) => (
+            <div key={group.title} id={`band-${i}`} className="mb-14 last:mb-0 scroll-mt-28">
+              <div className="border-b border-white/10 pb-3 mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-white">{group.title}</h2>
+                <p className="text-gray-400 text-sm mt-1">{group.note}</p>
               </div>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-3">
+              <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
                 {group.towns.map((town) => (
                   <li key={town.slug}>
                     <Link
                       href={`/massachusetts/${town.slug}`}
-                      className="block text-gray-300 hover:text-alfa-gold py-1.5 transition-colors duration-200"
+                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-0.5 md:gap-3 h-full rounded-xl bg-alfa-card border border-white/5 hover:border-alfa-gold/40 px-3 py-2.5 md:px-4 md:py-3 transition-colors group"
                     >
-                      Siding in {town.name}
+                      <span>
+                        <span className="block font-semibold text-white group-hover:text-alfa-gold leading-snug">{town.name}</span>
+                        <span className="block text-xs text-gray-400">{town.county} County</span>
+                      </span>
+                      <span className="text-xs text-alfa-gold/80 whitespace-nowrap">
+                        {miles(town.slug) === 0 ? "Our office" : `${miles(town.slug)} mi`}
+                      </span>
                     </Link>
                   </li>
                 ))}
@@ -114,9 +131,16 @@ export default function MassachusettsHubPage() {
         </div>
       </section>
 
+      <section className="py-14 md:py-16 bg-black border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">Our office in {company.address.locality}</h2>
+          <GoogleMap />
+        </div>
+      </section>
+
       <CTASection
-        title="Not Sure If We Cover Your Town?"
-        subtitle="If your town borders any of the cities above, we almost certainly serve it. Call Fabio and ask — English or Portuguese."
+        title="Not sure if we cover your town?"
+        subtitle="If it's near any of the towns above, we likely do. Call Fabio and ask — English or Portuguese."
       />
     </>
   );

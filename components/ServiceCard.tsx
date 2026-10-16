@@ -26,7 +26,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export default function ServiceCard({ slug, name, description, icon, cta, citySlug }: ServiceCardProps) {
-  const href = citySlug ? `/massachusetts/${citySlug}/${slug}` : `/services/${slug}`;
+  const href = citySlug ? `/massachusetts/${citySlug}` : `/services/${slug}`;
 
   return (
     <Link href={href} className="group block">

@@ -4,10 +4,10 @@
 
 export const images = {
   logo: {
-    src: "/images/logo.png",
+    src: "/images/logo-alfa-construction.png",
     alt: "Alfa Construction Inc Logo - Siding Installation Contractor Massachusetts",
-    width: 1702,
-    height: 1128,
+    width: 1076,
+    height: 260,
   },
 
   // Hero & general

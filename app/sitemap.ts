@@ -5,8 +5,10 @@ import { getAllProjectSlugs } from "@/data/projects";
 import { getAllBlogSlugs } from "@/data/blog";
 
 const BASE_URL = "https://alfapaintingcarpentry.com";
+const SITE_CONTENT_UPDATED = "2026-10-16";
 
-// City × service matrix (siding-only services). All 10 siding service slugs.
+// Materiais de siding (paginas estaduais /services/<slug>). A matriz cidade x
+// servico foi aposentada em out/2026 — ver next.config.ts.
 const serviceSlugs = getAllServiceSlugs();
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,7 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const citySlugs = getCoreCitySlugs();
   const projectSlugs = getAllProjectSlugs();
   const blogSlugs = getAllBlogSlugs();
-  const now = new Date().toISOString();
+  // Data da ultima mudanca real de conteudo. Antes era new Date() a cada build:
+  // todo deploy declarava as paginas todas como alteradas, e o Google passa a
+  // ignorar um lastmod que nunca e confiavel. Atualize ao mudar o conteudo.
+  const now = SITE_CONTENT_UPDATED;
 
   // ─── Core Pages ───
   const staticPages: MetadataRoute.Sitemap = [
@@ -41,23 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.95,
   }));
 
-  // ─── City Landing Pages (109) ───
+  // ─── City Landing Pages ───
   const cityPages: MetadataRoute.Sitemap = citySlugs.map((slug) => ({
     url: `${BASE_URL}/massachusetts/${slug}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.85,
   }));
-
-  // ─── City × Service Pages (109 cities × 10 siding services ≈ 1.090) ───
-  const cityServicePages: MetadataRoute.Sitemap = citySlugs.flatMap((city) =>
-    serviceSlugs.map((service) => ({
-      url: `${BASE_URL}/massachusetts/${city}/${service}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })),
-  );
 
   // ─── Project Pages ───
   const projectPages: MetadataRoute.Sitemap = projectSlugs.map((slug) => ({
@@ -79,7 +74,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...servicePages,
     ...cityPages,
-    ...cityServicePages,
     ...projectPages,
     ...blogPages,
   ];

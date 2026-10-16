@@ -62,7 +62,7 @@ export default function SmsTermsPage() {
                 <li><strong>Office address:</strong> 34 Pearl Street, Bellingham, MA 02019</li>
                 <li><strong>Customer service email:</strong> info@alfapaintingcarpentry.com</li>
                 <li><strong>Website:</strong> <a className="text-alfa-gold underline" href="https://alfapaintingcarpentry.com">alfapaintingcarpentry.com</a></li>
-                <li><strong>License:</strong> Massachusetts Construction License #192348</li>
+                <li><strong>License:</strong> Massachusetts Home Improvement Contractor (HIC) #192348</li>
               </ul>
             </Section>
 

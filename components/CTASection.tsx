@@ -10,9 +10,9 @@ interface CTASectionProps {
 
 export default function CTASection({ title, subtitle, cityName }: CTASectionProps) {
   const heading = title || (cityName
-    ? `Ready to Start Your Project in ${cityName}?`
-    : "Ready to Start Your Project?");
-  const sub = subtitle || `Contact Alfa Construction Inc today for a free estimate. Licensed & insured with ${company.experience} years of experience serving Massachusetts homeowners.`;
+    ? `Ready to re-side your ${cityName} home?`
+    : "Ready for a free siding estimate?");
+  const sub = subtitle || `Call or send the form for a free, itemized written estimate within 24 hours. Licensed MA HIC ${company.license}, insured, ${company.experience} years.`;
 
   return (
     <section className="py-20 bg-black relative overflow-hidden">
@@ -34,14 +34,14 @@ export default function CTASection({ title, subtitle, cityName }: CTASectionProp
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
                 href={company.phoneTel}
-                className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-alfa-gold/20 text-lg"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-alfa-gold/20 text-lg"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 Call {company.phone}
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 hover:border-alfa-gold/30 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:bg-white/10 text-lg"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-white/5 border border-white/10 hover:border-alfa-gold/30 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:bg-white/10 text-lg"
               >
                 Get Free Estimate
               </Link>
