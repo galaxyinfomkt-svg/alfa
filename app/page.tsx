@@ -113,7 +113,7 @@ export default function HomePage() {
               50 e agressivo demais para a imagem de LCP da pagina principal. */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/70 to-black/40" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-32 md:pt-40 lg:pt-44 pb-14 md:pb-20 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-32 md:pt-36 lg:pt-36 pb-14 md:pb-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left Side — Badges + Heading */}
             <div>
@@ -137,7 +137,7 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-[1.15] md:leading-tight">
+              <h1 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white mb-4 md:mb-6 leading-[1.15] md:leading-tight">
                 Massachusetts&apos; Full-Home{" "}
                 <span className="text-alfa-gold">Siding Installation</span>{" "}
                 &amp; Replacement Specialists
