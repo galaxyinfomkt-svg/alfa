@@ -26,19 +26,16 @@ export default function PrivacyPolicyPage() {
         }}
       />
 
-      <article className="pt-40 pb-24 bg-black">
+      <article className="pt-40 pb-24 bg-paper">
         <div className="max-w-4xl mx-auto px-4">
           <header className="mb-12 text-center">
-            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
-              Legal
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
+            <h1 className="font-display text-5xl md:text-7xl text-ink mb-4">
               Privacy Policy
             </h1>
-            <p className="text-gray-400 text-sm">Last updated: {LAST_UPDATED}</p>
+            <p className="text-ink-soft text-sm">Last updated: {LAST_UPDATED}</p>
           </header>
 
-          <div className="prose prose-invert prose-gray max-w-none space-y-8 text-gray-300 leading-relaxed">
+          <div className="prose prose-invert prose-gray max-w-none space-y-8 text-ink-soft leading-relaxed">
             <p>
               This Privacy Policy describes our policies and procedures on the
               collection, use, and disclosure of your information when you use the
@@ -80,14 +77,14 @@ export default function PrivacyPolicyPage() {
               <p>
                 This Privacy Policy is subject to our{" "}
                 <a
-                  className="text-alfa-gold-light hover:text-alfa-gold underline"
+                  className="text-gold-ink hover:text-gold-ink underline"
                   href="/terms"
                 >
                   Terms and Conditions
                 </a>
                 . For information on cookies and tracking technologies, see our{" "}
                 <a
-                  className="text-alfa-gold-light hover:text-alfa-gold underline"
+                  className="text-gold-ink hover:text-gold-ink underline"
                   href="/cookies"
                 >
                   Cookie Policy
@@ -97,7 +94,7 @@ export default function PrivacyPolicyPage() {
             </Section>
 
             <Section title="2. Interpretation and Definitions">
-              <h3 className="text-white font-semibold mt-4 mb-2">Interpretation</h3>
+              <h3 className="text-ink font-semibold mt-4 mb-2">Interpretation</h3>
               <p>
                 Words with the first letter capitalized have meanings defined
                 under the following conditions. The following definitions will
@@ -105,7 +102,7 @@ export default function PrivacyPolicyPage() {
                 singular or plural.
               </p>
 
-              <h3 className="text-white font-semibold mt-6 mb-2">Definitions</h3>
+              <h3 className="text-ink font-semibold mt-6 mb-2">Definitions</h3>
               <ul className="list-disc list-outside ml-6 space-y-2">
                 <li>
                   <strong>Account:</strong> a unique account created for you to
@@ -219,7 +216,7 @@ export default function PrivacyPolicyPage() {
               <p>
                 For more details on the cookies we use, see our{" "}
                 <a
-                  className="text-alfa-gold-light hover:text-alfa-gold underline"
+                  className="text-gold-ink hover:text-gold-ink underline"
                   href="/cookies"
                 >
                   Cookie Policy
@@ -229,7 +226,7 @@ export default function PrivacyPolicyPage() {
             </Section>
 
             <Section title="5. SMS / Text Messaging Consent (A2P 10DLC)">
-              <p className="text-alfa-gold-light font-semibold mb-3">
+              <p className="text-gold-ink font-semibold mb-3">
                 Important — Telephone Consumer Protection Act (TCPA) compliance.
               </p>
               <p>
@@ -333,7 +330,7 @@ export default function PrivacyPolicyPage() {
                   subpoena, or court order.
                 </li>
               </ul>
-              <p className="mt-3 text-alfa-gold-light">
+              <p className="mt-3 text-gold-ink">
                 We do not sell, rent, or share your phone number with third
                 parties for their marketing purposes.
               </p>
@@ -429,7 +426,7 @@ export default function PrivacyPolicyPage() {
                 <li>
                   📧 <strong>Email:</strong>{" "}
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold"
+                    className="text-gold-ink hover:text-gold-ink"
                     href="mailto:info@alfapaintingcarpentry.com"
                   >
                     info@alfapaintingcarpentry.com
@@ -442,7 +439,7 @@ export default function PrivacyPolicyPage() {
                 <li>
                   📞 <strong>Phone:</strong>{" "}
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold"
+                    className="text-gold-ink hover:text-gold-ink"
                     href="tel:+15085909193"
                   >
                     (508) 590-9193
@@ -450,7 +447,7 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
 
-              <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-400">
+              <div className="mt-8 pt-6 border-t border-line text-sm text-ink-soft">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   34 Pearl Street, Bellingham, MA 02019<br />
@@ -460,14 +457,14 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p className="mt-3 flex gap-4 justify-center">
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    className="text-gold-ink hover:text-gold-ink underline font-semibold"
                     href="/terms"
                   >
                     TERMS AND CONDITIONS
                   </a>
                   <span>·</span>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    className="text-gold-ink hover:text-gold-ink underline font-semibold"
                     href="/cookies"
                   >
                     COOKIE POLICY
@@ -491,10 +488,10 @@ function Section({
 }) {
   return (
     <section>
-      <h2 className="text-2xl md:text-3xl font-bold text-white mt-10 mb-4">
+      <h2 className="text-2xl md:text-3xl font-bold text-ink mt-10 mb-4">
         {title}
       </h2>
-      <div className="text-gray-300">{children}</div>
+      <div className="text-ink-soft">{children}</div>
     </section>
   );
 }

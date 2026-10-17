@@ -30,15 +30,15 @@ export default function ServiceCard({ slug, name, description, icon, cta, citySl
 
   return (
     <Link href={href} className="group block">
-      <div className="card-hover bg-alfa-card rounded-2xl p-8 border border-white/5 h-full hover:border-alfa-gold/20">
-        <div className="w-14 h-14 bg-alfa-gold/10 rounded-xl flex items-center justify-center text-alfa-gold mb-5 group-hover:bg-alfa-gold group-hover:text-black transition-all duration-300">
+      <div className="card-hover bg-paper rounded-2xl p-8 border border-line h-full hover:border-alfa-gold/20">
+        <div className="w-14 h-14 bg-alfa-gold/10 rounded-xl flex items-center justify-center text-gold-ink mb-5 group-hover:bg-alfa-gold group-hover:text-ink transition-all duration-300">
           {iconMap[icon] || iconMap.siding}
         </div>
-        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-alfa-gold transition-colors duration-300">
+        <h3 className="text-xl font-bold text-ink mb-3 group-hover:text-gold-ink transition-colors duration-300">
           {name}
         </h3>
-        <p className="text-gray-400 text-sm leading-relaxed mb-4">{description}</p>
-        <span className="inline-flex items-center gap-1 text-alfa-gold font-semibold text-sm group-hover:gap-2 transition-all">
+        <p className="text-ink-soft text-sm leading-relaxed mb-4">{description}</p>
+        <span className="inline-flex items-center gap-1 text-gold-ink font-semibold text-sm group-hover:gap-2 transition-all">
           {cta}
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
         </span>

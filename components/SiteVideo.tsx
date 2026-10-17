@@ -36,7 +36,7 @@ export default function SiteVideo({
   const schema = videoSchema(list);
 
   return (
-    <section className="py-20 bg-alfa-dark" aria-labelledby="site-video-heading">
+    <section className="py-20 bg-mist" aria-labelledby="site-video-heading">
       {schema && (
         <script
           type="application/ld+json"
@@ -44,16 +44,16 @@ export default function SiteVideo({
         />
       )}
       <div className="max-w-4xl mx-auto px-4">
-        <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
+        <span className="text-gold-ink font-semibold text-sm uppercase tracking-wider">
           On the job
         </span>
         <h2
           id="site-video-heading"
-          className="text-3xl md:text-4xl font-bold text-white mt-2 mb-3"
+          className="text-3xl md:text-4xl font-bold text-ink mt-2 mb-3"
         >
           Watch us work in {placeName}
         </h2>
-        <p className="text-gray-400 mb-8">
+        <p className="text-ink-soft mb-8">
           Filmed by our own crew on site. No stock footage.
         </p>
 
@@ -62,7 +62,7 @@ export default function SiteVideo({
             <li key={v.id}>
               {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
               <video
-                className="w-full rounded-xl border border-white/10 bg-black"
+                className="w-full rounded-xl border border-line bg-paper"
                 src={v.src}
                 poster={v.poster}
                 preload="none"
@@ -70,7 +70,7 @@ export default function SiteVideo({
                 playsInline
                 aria-label={v.title}
               />
-              <p className="text-gray-400 text-sm mt-3 leading-relaxed">
+              <p className="text-ink-soft text-sm mt-3 leading-relaxed">
                 {v.description}
               </p>
             </li>

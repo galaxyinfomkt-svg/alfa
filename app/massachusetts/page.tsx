@@ -60,26 +60,25 @@ export default function MassachusettsHubPage() {
       />
 
       {/* Hero */}
-      <section className="pt-28 md:pt-36 pb-12 md:pb-14 bg-black">
+      <section className="pt-36 md:pt-44 pb-12 md:pb-14 bg-paper">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">Where we work</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-5 leading-tight [text-wrap:balance]">
+          <h1 className="font-display text-5xl md:text-7xl text-ink mb-5 [text-wrap:balance]">
             Our Massachusetts Service Area
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+          <p className="text-ink-soft max-w-2xl mx-auto text-lg">
             Alfa Construction is based in {company.address.locality}, MA. These are the towns we re-side homes in, sorted by
             distance from our office. Don&apos;t see yours? Call and ask.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-7 py-4 rounded-lg transition-colors text-lg"
+              className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg transition-colors text-lg"
             >
               Get a Free Estimate
             </Link>
             <a
               href={company.phoneTel}
-              className="inline-flex items-center justify-center whitespace-nowrap bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-4 rounded-lg transition-colors border border-white/30 text-lg"
+              className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-7 py-4 rounded-lg transition-colors border border-line text-lg"
             >
               Call {company.phone}
             </a>
@@ -89,7 +88,7 @@ export default function MassachusettsHubPage() {
             <ul className="flex flex-wrap justify-center gap-2 text-sm">
               {groups.map((g, i) => (
                 <li key={g.title}>
-                  <a href={`#band-${i}`} className="inline-block rounded-full border border-white/15 px-4 py-2 text-gray-300 hover:border-alfa-gold/50 hover:text-alfa-gold">
+                  <a href={`#band-${i}`} className="inline-block rounded-full border border-line px-4 py-2 text-ink-soft hover:border-alfa-gold/50 hover:text-gold-ink">
                     {g.title.replace(" of Bellingham", "")} · {g.towns.length}
                   </a>
                 </li>
@@ -100,24 +99,24 @@ export default function MassachusettsHubPage() {
       </section>
 
       {/* Faixas de distancia */}
-      <section className="py-14 md:py-16 bg-alfa-dark">
+      <section className="py-14 md:py-16 bg-mist">
         <div className="max-w-7xl mx-auto px-4">
           {groups.map((group, i) => (
             <div key={group.title} id={`band-${i}`} className="mb-14 last:mb-0 scroll-mt-28">
-              <div className="border-b border-white/10 pb-3 mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">{group.title}</h2>
-                <p className="text-gray-400 text-sm mt-1">{group.note}</p>
+              <div className="border-b border-line pb-3 mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-ink">{group.title}</h2>
+                <p className="text-ink-soft text-sm mt-1">{group.note}</p>
               </div>
               <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
                 {group.towns.map((town) => (
                   <li key={town.slug}>
                     <Link
                       href={`/massachusetts/${town.slug}`}
-                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-0.5 md:gap-3 h-full rounded-xl bg-alfa-card border border-white/5 hover:border-alfa-gold/40 px-3 py-2.5 md:px-4 md:py-3 transition-colors group"
+                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-0.5 md:gap-3 h-full rounded-xl bg-paper border border-line hover:border-alfa-gold/40 px-3 py-2.5 md:px-4 md:py-3 transition-colors group"
                     >
                       <span>
-                        <span className="block font-semibold text-white group-hover:text-alfa-gold leading-snug">{town.name}</span>
-                        <span className="block text-xs text-gray-400">{town.county} County</span>
+                        <span className="block font-semibold text-ink group-hover:text-gold-ink leading-snug">{town.name}</span>
+                        <span className="block text-xs text-ink-soft">{town.county} County</span>
                       </span>
                       <span className="text-xs text-alfa-gold/80 whitespace-nowrap">
                         {miles(town.slug) === 0 ? "Our office" : `${miles(town.slug)} mi`}
@@ -131,9 +130,9 @@ export default function MassachusettsHubPage() {
         </div>
       </section>
 
-      <section className="py-14 md:py-16 bg-black border-t border-white/5">
+      <section className="py-14 md:py-16 bg-paper border-t border-line">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">Our office in {company.address.locality}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6 text-center">Our office in {company.address.locality}</h2>
           <GoogleMap />
         </div>
       </section>
