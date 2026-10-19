@@ -26,19 +26,16 @@ export default function CookiePolicyPage() {
         }}
       />
 
-      <article className="pt-40 pb-24 bg-black">
+      <article className="pt-40 pb-24 bg-paper">
         <div className="max-w-4xl mx-auto px-4">
           <header className="mb-12 text-center">
-            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
-              Legal
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
+            <h1 className="font-display text-5xl md:text-7xl text-ink mb-4">
               Cookie Policy
             </h1>
-            <p className="text-gray-400 text-sm">Last updated: {LAST_UPDATED}</p>
+            <p className="text-ink-soft text-sm">Last updated: {LAST_UPDATED}</p>
           </header>
 
-          <div className="prose prose-invert prose-gray max-w-none space-y-8 text-gray-300 leading-relaxed">
+          <div className="prose prose-invert prose-gray max-w-none space-y-8 text-ink-soft leading-relaxed">
             <p>
               This Cookie Policy explains how{" "}
               <strong>Alfa Construction and Cleaning Service Inc</strong>{" "}
@@ -46,7 +43,7 @@ export default function CookiePolicyPage() {
               &quot;our&quot;) uses cookies and similar technologies to recognize
               you when you visit our website at{" "}
               <a
-                className="text-alfa-gold-light hover:text-alfa-gold underline"
+                className="text-gold-ink hover:text-gold-ink underline"
                 href="https://alfapaintingcarpentry.com"
               >
                 https://alfapaintingcarpentry.com
@@ -56,7 +53,7 @@ export default function CookiePolicyPage() {
               use of them. In some cases, we may use cookies to collect
               Personal Information (as defined in our{" "}
               <a
-                className="text-alfa-gold-light hover:text-alfa-gold underline"
+                className="text-gold-ink hover:text-gold-ink underline"
                 href="/privacy"
               >
                 Privacy Policy
@@ -155,7 +152,7 @@ export default function CookiePolicyPage() {
               <ul className="list-disc list-outside ml-6 space-y-1 mt-2">
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://support.google.com/chrome/answer/95647"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -165,7 +162,7 @@ export default function CookiePolicyPage() {
                 </li>
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -175,7 +172,7 @@ export default function CookiePolicyPage() {
                 </li>
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://support.apple.com/en-us/HT201265"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -185,7 +182,7 @@ export default function CookiePolicyPage() {
                 </li>
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -195,7 +192,7 @@ export default function CookiePolicyPage() {
                 </li>
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://help.opera.com/en/latest/web-preferences/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -210,7 +207,7 @@ export default function CookiePolicyPage() {
               <ul className="list-disc list-outside ml-6 space-y-1 mt-2">
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://www.aboutads.info/choices/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -220,7 +217,7 @@ export default function CookiePolicyPage() {
                 </li>
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://youradchoices.ca/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -230,7 +227,7 @@ export default function CookiePolicyPage() {
                 </li>
                 <li>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline"
+                    className="text-gold-ink hover:text-gold-ink underline"
                     href="https://www.youronlinechoices.eu/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -255,7 +252,7 @@ export default function CookiePolicyPage() {
                 Our Website may use Flash Cookies for site features and fraud
                 prevention. You can manage Flash settings at the{" "}
                 <a
-                  className="text-alfa-gold-light hover:text-alfa-gold underline"
+                  className="text-gold-ink hover:text-gold-ink underline"
                   href="https://www.adobe.com/support/documentation/en/flashplayer/help/settings_manager.html"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -292,7 +289,7 @@ export default function CookiePolicyPage() {
                 <li>
                   📧 <strong>Email:</strong>{" "}
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold"
+                    className="text-gold-ink hover:text-gold-ink"
                     href="mailto:info@alfapaintingcarpentry.com"
                   >
                     info@alfapaintingcarpentry.com
@@ -301,7 +298,7 @@ export default function CookiePolicyPage() {
                 <li>
                   🌐 <strong>Website:</strong>{" "}
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold"
+                    className="text-gold-ink hover:text-gold-ink"
                     href="https://alfapaintingcarpentry.com"
                   >
                     https://alfapaintingcarpentry.com
@@ -314,7 +311,7 @@ export default function CookiePolicyPage() {
                 </li>
               </ul>
 
-              <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-400">
+              <div className="mt-8 pt-6 border-t border-line text-sm text-ink-soft">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   34 Pearl Street, Bellingham, MA 02019<br />
@@ -324,14 +321,14 @@ export default function CookiePolicyPage() {
                 </p>
                 <p className="mt-3 flex gap-4 justify-center">
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    className="text-gold-ink hover:text-gold-ink underline font-semibold"
                     href="/privacy"
                   >
                     PRIVACY POLICY
                   </a>
                   <span>·</span>
                   <a
-                    className="text-alfa-gold-light hover:text-alfa-gold underline font-semibold"
+                    className="text-gold-ink hover:text-gold-ink underline font-semibold"
                     href="/terms"
                   >
                     TERMS AND CONDITIONS
@@ -355,10 +352,10 @@ function Section({
 }) {
   return (
     <section>
-      <h2 className="text-2xl md:text-3xl font-bold text-white mt-10 mb-4">
+      <h2 className="text-2xl md:text-3xl font-bold text-ink mt-10 mb-4">
         {title}
       </h2>
-      <div className="text-gray-300">{children}</div>
+      <div className="text-ink-soft">{children}</div>
     </section>
   );
 }

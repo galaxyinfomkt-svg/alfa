@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Anton } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,6 +15,16 @@ const inter = Inter({
   // — eliminates FOIT/FOUT and the layout shift Lighthouse measures.
   display: "optional",
   variable: "--font-inter",
+  preload: true,
+});
+
+// Fonte de titulo da marca (brand.json). "swap" aqui: o titulo e o LCP e
+// precisa aparecer na fonte certa; o fallback Impact tem metrica proxima.
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-anton",
   preload: true,
 });
 
@@ -99,10 +109,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${anton.variable}`}>
       <head>
-        <meta name="theme-color" content="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=yes" />
 
@@ -134,7 +144,7 @@ export default function RootLayout({
 
         {/* Reviews widget script - loaded lazily for performance */}
       </head>
-      <body className="font-sans antialiased bg-black text-gray-300">
+      <body className="font-sans antialiased bg-paper text-ink">
         <Header />
         <main className="min-h-screen">{children}</main>
         <LegalStrip />

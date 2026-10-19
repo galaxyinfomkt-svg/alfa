@@ -27,28 +27,25 @@ export default function SmsTermsPage() {
         }}
       />
 
-      <article className="pt-40 pb-24 bg-black">
+      <article className="pt-40 pb-24 bg-paper">
         <div className="max-w-4xl mx-auto px-4">
           <header className="mb-12 text-center">
-            <span className="text-alfa-gold font-semibold text-sm uppercase tracking-wider">
-              A2P 10DLC · TCPA · CTIA Compliance
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
+            <h1 className="font-display text-5xl md:text-7xl text-ink mb-4">
               SMS Terms &amp; Opt-In Methods
             </h1>
-            <p className="text-gray-400 text-sm">Last updated: {LAST_UPDATED}</p>
+            <p className="text-ink-soft text-sm">Last updated: {LAST_UPDATED}</p>
           </header>
 
-          <div className="space-y-10 text-gray-300 leading-relaxed">
+          <div className="space-y-10 text-ink-soft leading-relaxed">
             {/* TOP CALLOUT — the carrier-reviewer-critical statement */}
-            <div className="bg-alfa-card border-l-4 border-alfa-gold p-6 rounded-r-lg">
-              <p className="text-lg font-semibold text-white mb-2">
+            <div className="bg-paper border-l-4 border-alfa-gold p-6 rounded-r-lg">
+              <p className="text-lg font-semibold text-ink mb-2">
                 Alfa Construction and Cleaning Service Inc does NOT sell, rent,
                 share, or transfer your mobile phone number, SMS opt-in
                 consent, or any phone-related data to third parties or
                 affiliates for marketing or promotional purposes.
               </p>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-ink-soft">
                 Your mobile information stays with Alfa. Period.
               </p>
             </div>
@@ -61,7 +58,7 @@ export default function SmsTermsPage() {
                 <li><strong>Sending phone number:</strong> (508) 590-9193</li>
                 <li><strong>Office address:</strong> 34 Pearl Street, Bellingham, MA 02019</li>
                 <li><strong>Customer service email:</strong> info@alfapaintingcarpentry.com</li>
-                <li><strong>Website:</strong> <a className="text-alfa-gold underline" href="https://alfapaintingcarpentry.com">alfapaintingcarpentry.com</a></li>
+                <li><strong>Website:</strong> <a className="text-gold-ink underline" href="https://alfapaintingcarpentry.com">alfapaintingcarpentry.com</a></li>
                 <li><strong>License:</strong> Massachusetts Home Improvement Contractor (HIC) #192348</li>
               </ul>
             </Section>
@@ -70,7 +67,7 @@ export default function SmsTermsPage() {
             <Section title="2. How customers opt in to receive SMS">
               <p>
                 Alfa collects SMS opt-in consent through{" "}
-                <strong className="text-white">three (3) methods</strong>, each
+                <strong className="text-ink">three (3) methods</strong>, each
                 listed in detail below. Every method requires explicit, active
                 consent — we never auto-enroll a customer based on a phone
                 call alone or a purchase.
@@ -113,7 +110,7 @@ export default function SmsTermsPage() {
                 <li><strong>Lead-response</strong> — replies to inbound questions sent by the customer</li>
                 <li><strong>Occasional service reminders</strong> — seasonal availability (only if customer opted in to marketing)</li>
               </ul>
-              <p className="mt-3 text-alfa-gold-light">
+              <p className="mt-3 text-gold-ink">
                 We do NOT send promotional/marketing SMS without explicit
                 second-step opt-in (separate from the project-related opt-in).
               </p>
@@ -145,7 +142,7 @@ export default function SmsTermsPage() {
             <Section title="6. How to opt out">
               <p>You can opt out at any time by:</p>
               <ul className="list-disc list-outside ml-6 space-y-1 mt-2">
-                <li>Replying <strong className="text-alfa-gold">STOP</strong> to any SMS we send</li>
+                <li>Replying <strong className="text-gold-ink">STOP</strong> to any SMS we send</li>
                 <li>Replying UNSUBSCRIBE, CANCEL, QUIT, END, or OPT OUT (also accepted)</li>
                 <li>Calling (508) 590-9193 and asking to be removed</li>
                 <li>Emailing info@alfapaintingcarpentry.com with subject line &ldquo;UNSUBSCRIBE&rdquo;</li>
@@ -153,25 +150,25 @@ export default function SmsTermsPage() {
               <p className="mt-3">
                 You will receive one final confirmation SMS confirming the
                 opt-out, then no further messages until you re-opt-in by
-                replying <strong className="text-alfa-gold">START</strong> or
+                replying <strong className="text-gold-ink">START</strong> or
                 going through one of the opt-in methods above.
               </p>
             </Section>
 
             {/* Section 7 — Help */}
             <Section title="7. How to get help">
-              <p>Reply <strong className="text-alfa-gold">HELP</strong> to any SMS, or:</p>
+              <p>Reply <strong className="text-gold-ink">HELP</strong> to any SMS, or:</p>
               <ul className="list-disc list-outside ml-6 space-y-1 mt-2">
-                <li>📞 Call <a className="text-alfa-gold underline" href="tel:+15085909193">(508) 590-9193</a></li>
-                <li>📧 Email <a className="text-alfa-gold underline" href="mailto:info@alfapaintingcarpentry.com">info@alfapaintingcarpentry.com</a></li>
+                <li>📞 Call <a className="text-gold-ink underline" href="tel:+15085909193">(508) 590-9193</a></li>
+                <li>📧 Email <a className="text-gold-ink underline" href="mailto:info@alfapaintingcarpentry.com">info@alfapaintingcarpentry.com</a></li>
                 <li>🕐 Hours: Monday–Saturday, 7:00 AM – 6:00 PM EST</li>
               </ul>
             </Section>
 
             {/* Section 8 — Third-party sharing (CRITICAL FOR A2P) */}
             <Section title="8. Mobile information & third-party data sharing">
-              <div className="bg-alfa-card border border-alfa-gold/30 p-5 rounded-lg">
-                <p className="text-white font-semibold mb-2">
+              <div className="bg-paper border border-alfa-gold/30 p-5 rounded-lg">
+                <p className="text-ink font-semibold mb-2">
                   Alfa Construction does NOT share, sell, rent, transfer, or
                   otherwise disclose your mobile phone number, SMS opt-in
                   consent record, or any phone-related Personal Information
@@ -190,11 +187,11 @@ export default function SmsTermsPage() {
               </ul>
               <p className="mt-3">
                 Full data-handling disclosure is in our{" "}
-                <Link className="text-alfa-gold underline" href="/privacy">
+                <Link className="text-gold-ink underline" href="/privacy">
                   Privacy Policy §5 (SMS Messaging Consent)
                 </Link>{" "}
                 and{" "}
-                <Link className="text-alfa-gold underline" href="/privacy">
+                <Link className="text-gold-ink underline" href="/privacy">
                   Privacy Policy §7 (Sharing of Personal Data)
                 </Link>
                 .
@@ -231,25 +228,25 @@ export default function SmsTermsPage() {
               </p>
               <ul className="list-disc list-outside ml-6 space-y-1 mt-2">
                 <li>
-                  <Link className="text-alfa-gold underline" href="/privacy">
+                  <Link className="text-gold-ink underline" href="/privacy">
                     Privacy Policy
                   </Link>{" "}
                   — full data-handling disclosure
                 </li>
                 <li>
-                  <Link className="text-alfa-gold underline" href="/terms">
+                  <Link className="text-gold-ink underline" href="/terms">
                     Terms &amp; Conditions
                   </Link>{" "}
                   — service agreement
                 </li>
                 <li>
-                  <Link className="text-alfa-gold underline" href="/cookies">
+                  <Link className="text-gold-ink underline" href="/cookies">
                     Cookie Policy
                   </Link>{" "}
                   — website tracking technologies
                 </li>
               </ul>
-              <p className="mt-3 text-sm text-gray-400">
+              <p className="mt-3 text-sm text-ink-soft">
                 Compliance frameworks observed: Telephone Consumer Protection
                 Act (TCPA), CAN-SPAM Act, CTIA Short Code Monitoring Handbook,
                 A2P 10DLC carrier guidelines (Verizon, AT&amp;T, T-Mobile).
@@ -260,19 +257,19 @@ export default function SmsTermsPage() {
             <Section title="11. Questions about SMS or this policy">
               <ul className="list-none space-y-2">
                 <li>📧 <strong>Email:</strong>{" "}
-                  <a className="text-alfa-gold underline" href="mailto:info@alfapaintingcarpentry.com">
+                  <a className="text-gold-ink underline" href="mailto:info@alfapaintingcarpentry.com">
                     info@alfapaintingcarpentry.com
                   </a>
                 </li>
                 <li>📞 <strong>Phone:</strong>{" "}
-                  <a className="text-alfa-gold underline" href="tel:+15085909193">
+                  <a className="text-gold-ink underline" href="tel:+15085909193">
                     (508) 590-9193
                   </a>
                 </li>
                 <li>📍 <strong>Address:</strong> Alfa Construction and Cleaning Service Inc, 34 Pearl Street, Bellingham, MA 02019</li>
               </ul>
 
-              <div className="mt-8 pt-6 border-t border-alfa-border text-sm text-gray-400">
+              <div className="mt-8 pt-6 border-t border-line text-sm text-ink-soft">
                 <p>
                   Alfa Construction and Cleaning Service Inc<br />
                   34 Pearl Street, Bellingham, MA 02019<br />
@@ -281,15 +278,15 @@ export default function SmsTermsPage() {
                   MA License #192348
                 </p>
                 <p className="mt-3 flex gap-4 justify-center flex-wrap">
-                  <Link className="text-alfa-gold underline font-semibold" href="/privacy">
+                  <Link className="text-gold-ink underline font-semibold" href="/privacy">
                     PRIVACY POLICY
                   </Link>
                   <span>·</span>
-                  <Link className="text-alfa-gold underline font-semibold" href="/terms">
+                  <Link className="text-gold-ink underline font-semibold" href="/terms">
                     TERMS &amp; CONDITIONS
                   </Link>
                   <span>·</span>
-                  <Link className="text-alfa-gold underline font-semibold" href="/cookies">
+                  <Link className="text-gold-ink underline font-semibold" href="/cookies">
                     COOKIE POLICY
                   </Link>
                 </p>
@@ -305,8 +302,8 @@ export default function SmsTermsPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section>
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{title}</h2>
-      <div className="text-gray-300">{children}</div>
+      <h2 className="text-2xl md:text-3xl font-bold text-ink mb-4">{title}</h2>
+      <div className="text-ink-soft">{children}</div>
     </section>
   );
 }
@@ -325,20 +322,20 @@ function Method({
   language: string;
 }) {
   return (
-    <div className="bg-alfa-card border border-alfa-border rounded-lg p-5">
-      <h3 className="text-xl font-bold text-alfa-gold mb-2">
+    <div className="bg-paper border border-line rounded-lg p-5">
+      <h3 className="text-xl font-bold text-gold-ink mb-2">
         Method {num}: {title}
       </h3>
       {url && (
-        <p className="text-sm text-gray-400 mb-3">
+        <p className="text-sm text-ink-soft mb-3">
           Verifiable URL:{" "}
-          <a className="text-alfa-gold-light underline" href={url} target="_blank" rel="noopener noreferrer">
+          <a className="text-gold-ink underline" href={url} target="_blank" rel="noopener noreferrer">
             {url}
           </a>
         </p>
       )}
-      <p className="text-gray-300 mb-3">{description}</p>
-      <div className="bg-black/40 border-l-2 border-alfa-gold pl-3 py-2 text-sm font-mono text-gray-300">
+      <p className="text-ink-soft mb-3">{description}</p>
+      <div className="bg-paper border-l-2 border-alfa-gold pl-3 py-2 text-sm font-mono text-ink-soft">
         {language}
       </div>
     </div>
@@ -347,7 +344,7 @@ function Method({
 
 function SampleMessage({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-alfa-card border border-alfa-border rounded-lg px-4 py-3 font-mono text-sm text-gray-300 whitespace-pre-line">
+    <div className="bg-paper border border-line rounded-lg px-4 py-3 font-mono text-sm text-ink-soft whitespace-pre-line">
       {children}
     </div>
   );

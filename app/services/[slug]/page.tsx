@@ -3,10 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { company, breadcrumbSchema, faqSchema, serviceSchema } from "@/data/company";
-import ReviewsWidget from "@/components/ReviewsWidget";
+import ReviewsSSR from "@/components/ReviewsSSR";
 import CTASection from "@/components/CTASection";
 import SiteVideo from "@/components/SiteVideo";
-import FormEmbed from "@/components/FormEmbed";
 import { cities } from "@/data/cities";
 import { cityDistanceMiles } from "@/data/cityDistances";
 import { fitTitle, fitDescriptionWithTail, stripTrailingPhone } from "@/lib/serpWidth";
@@ -22,7 +21,7 @@ const standards: Record<string, { title: string; body: React.ReactNode }> = {
   },
   "hardie-plank-siding": {
     title: "James Hardie fiber cement",
-    body: <>HardiePlank meets ASTM C1186 (Type A, Grade II) and is non-combustible. We install it over <a href="https://www.jameshardie.com/" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">HardieWrap or an equivalent WRB</a> following James Hardie&apos;s installation instructions, which is what keeps the 30-year non-prorated limited product warranty valid.</>,
+    body: <>HardiePlank meets ASTM C1186 (Type A, Grade II) and is non-combustible. We install it over <a href="https://www.jameshardie.com/" target="_blank" rel="noopener noreferrer" className="text-ink font-semibold underline underline-offset-2">HardieWrap or an equivalent WRB</a> following James Hardie&apos;s installation instructions, which is what keeps the 30-year non-prorated limited product warranty valid.</>,
   },
   "vinyl-siding": {
     title: "Premium vinyl",
@@ -83,7 +82,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const check = (
-  <svg className="w-5 h-5 text-alfa-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  <svg className="w-5 h-5 text-gold-ink shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
   </svg>
 );
@@ -115,171 +114,162 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(service.faqs)) }} />
 
       {/* ===== HERO ===== */}
-      <section className="relative pt-28 md:pt-36 pb-12 md:pb-16 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src={service.heroImage} alt={`${service.name} completed by Alfa Construction in Massachusetts`} fill sizes="100vw" className="object-cover" priority quality={75} />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/35" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-gray-300 mb-4 flex-wrap">
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                <span className="text-gray-500">/</span>
-                <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-                <span className="text-gray-500">/</span>
-                <span className="text-alfa-gold">{service.shortName}</span>
-              </nav>
-              <h1 className="text-[2rem] leading-tight md:text-5xl font-bold text-white mb-4 [text-wrap:balance]">
-                {service.name} in <span className="whitespace-nowrap">Massachusetts</span>
-              </h1>
-              <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
-                {summary} Full exterior re-sides only. Licensed MA HIC {company.license}, insured, {company.experience} years.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
-                <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-black font-bold px-7 py-4 rounded-lg transition-colors text-base md:text-lg">
-                  Get a Free Estimate
-                </Link>
-                <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-4 rounded-lg transition-colors border border-white/30 text-base md:text-lg">
-                  Call {company.phone}
-                </a>
-              </div>
-              <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-200">
-                <li className="flex items-center gap-1.5">5.0 on Google · {company.reviewCount} reviews</li>
-                <li className="flex items-center gap-1.5">Written estimate in 24h</li>
-              </ul>
+      <section className="pt-32 md:pt-40 pb-12 md:pb-16 bg-paper">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 items-center">
+          <div>
+            <nav aria-label="Breadcrumb" className="text-sm text-ink-soft mb-5">
+              <ol className="flex flex-wrap items-center gap-2">
+                <li><Link href="/" className="hover:text-ink underline underline-offset-2">Home</Link></li>
+                <li aria-hidden="true">/</li>
+                <li><Link href="/services" className="hover:text-ink underline underline-offset-2">Siding Services</Link></li>
+                <li aria-hidden="true">/</li>
+                <li aria-current="page" className="text-ink">{service.shortName}</li>
+              </ol>
+            </nav>
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-[4.2rem] text-ink mb-6">
+              {service.name} in Massachusetts
+            </h1>
+            <p className="text-lg text-ink-soft leading-relaxed max-w-xl mb-8">
+              {summary} Full exterior re-sides only. Licensed MA HIC {company.license}, insured, in business since {company.foundedYear}.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href={company.phoneTel} className="inline-flex items-center justify-center bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg text-lg transition-colors">
+                Call {company.phone}
+              </a>
+              <a href="#estimate" className="inline-flex items-center justify-center border-2 border-ink text-ink hover:bg-ink hover:text-white font-bold px-7 py-4 rounded-lg text-lg transition-colors">
+                Get a free estimate
+              </a>
             </div>
-            <div><FormEmbed /></div>
+          </div>
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-mist">
+            <Image src={service.heroImage} alt={`${service.name} completed by Alfa Construction in Massachusetts`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority quality={70} />
           </div>
         </div>
       </section>
 
-      {/* ===== OVERVIEW ===== */}
-      <section className="py-16 md:py-20 bg-alfa-dark">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About {service.name}</h2>
-          <p className="text-gray-300 text-lg leading-relaxed">{service.longDescription}</p>
-        </div>
-      </section>
-
-      {/* ===== PROBLEMS / SOLUTIONS ===== */}
-      <section className="py-16 md:py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-alfa-card rounded-xl border border-white/5 p-6 md:p-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Problems we see on Massachusetts homes</h2>
-            <ul className="space-y-4">
-              {service.painPoints.map((p) => (
-                <li key={p} className="flex gap-3 text-gray-300 leading-relaxed">
-                  <span className="mt-2 w-2 h-2 rounded-full bg-red-400 shrink-0" aria-hidden="true" />{p}
-                </li>
-              ))}
-            </ul>
+      {/* ===== VISAO GERAL ===== */}
+      <section className="py-16 md:py-24 bg-mist border-t border-line">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12">
+          <div>
+            <h2 className="font-display text-4xl md:text-5xl text-ink mb-6">About {service.name.toLowerCase()}</h2>
+            <p className="text-ink-soft text-lg leading-relaxed max-w-prose">{service.longDescription}</p>
           </div>
-          <div className="bg-alfa-card rounded-xl border border-alfa-gold/20 p-6 md:p-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">How a full re-side fixes them</h2>
-            <ul className="space-y-4">
-              {service.solutions.map((s) => (
-                <li key={s} className="flex gap-3 text-gray-300 leading-relaxed">{check}{s}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== PROCESS ===== */}
-      <section className="py-16 md:py-20 bg-alfa-cream text-alfa-ink">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10">Our {service.shortName} process</h2>
-          <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5">
-            {service.process.map((step) => (
-              <li key={step.step} className="bg-white rounded-xl border border-alfa-cream-border p-6">
-                <span className="inline-flex w-9 h-9 items-center justify-center rounded-full bg-alfa-gold text-black font-bold">{step.step}</span>
-                <h3 className="font-bold text-lg mt-4 mb-2">{step.title}</h3>
-                <p className="text-sm text-alfa-ink-muted leading-relaxed">{step.description}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* ===== BENEFITS + STANDARDS ===== */}
-      <section className="py-16 md:py-20 bg-alfa-dark">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-3">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What you get</h2>
-            <ul className="space-y-4">
-              {service.benefits.map((b) => (
-                <li key={b} className="flex gap-3 text-gray-300 leading-relaxed">{check}{b}</li>
-              ))}
-            </ul>
-          </div>
-          <aside className="lg:col-span-2 space-y-5">
-            <div className="bg-alfa-card rounded-xl border border-white/5 p-6">
-              <h3 className="text-alfa-gold font-bold text-sm uppercase tracking-wider mb-3">{std.title}</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">{std.body}</p>
+          <aside className="space-y-5 self-start">
+            <div className="bg-paper border border-line rounded-2xl p-6">
+              <h3 className="font-bold text-ink mb-2">{std.title}</h3>
+              <p className="text-ink-soft text-sm leading-relaxed">{std.body}</p>
             </div>
-            <div className="bg-alfa-card rounded-xl border border-white/5 p-6">
-              <h3 className="text-alfa-gold font-bold text-sm uppercase tracking-wider mb-3">License, insurance &amp; permits</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="bg-paper border border-line rounded-2xl p-6">
+              <h3 className="font-bold text-ink mb-2">License, insurance &amp; permits</h3>
+              <p className="text-ink-soft text-sm leading-relaxed">
                 Massachusetts Home Improvement Contractor{" "}
-                <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">HIC {company.license}</a>, valid through {company.licenseExpiry}. General liability and workers&apos; compensation insurance. Every job is permitted under the{" "}
-                <a href="https://www.mass.gov/info-details/massachusetts-state-building-code-780-cmr" target="_blank" rel="noopener noreferrer" className="text-alfa-gold-light underline hover:text-white">MA State Building Code (780 CMR)</a>.
+                <a href="https://elicensing.hps.state.ma.us/CitizenAccess/GeneralProperty/PropertyLookUp.aspx" target="_blank" rel="noopener noreferrer" className="text-ink font-semibold underline underline-offset-2">HIC {company.license}</a>, valid through {company.licenseExpiry}. General liability and workers&apos; compensation insurance. Every job is permitted under the{" "}
+                <a href="https://www.mass.gov/info-details/massachusetts-state-building-code-780-cmr" target="_blank" rel="noopener noreferrer" className="text-ink font-semibold underline underline-offset-2">MA State Building Code (780 CMR)</a>.
               </p>
             </div>
           </aside>
         </div>
       </section>
 
+      {/* ===== PROBLEMAS / SOLUCOES ===== */}
+      <section className="py-16 md:py-24 bg-paper">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-6">Problems we see on Massachusetts homes</h2>
+            <ul className="divide-y divide-line border-y border-line">
+              {service.painPoints.map((p) => (
+                <li key={p} className="py-4 text-ink-soft leading-relaxed">{p}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-6">How a full re-side fixes them</h2>
+            <ul className="divide-y divide-line border-y border-line">
+              {service.solutions.map((s) => (
+                <li key={s} className="py-4 flex gap-3 text-ink leading-relaxed">{check}{s}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PROCESSO ===== */}
+      <section className="py-16 md:py-24 bg-charcoal text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="font-display text-4xl md:text-5xl mb-12">Our {service.shortName.toLowerCase()} process</h2>
+          <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-x-8 gap-y-10">
+            {service.process.map((step) => (
+              <li key={step.step} className="border-t border-white/20 pt-5">
+                <span className="text-sm font-semibold text-alfa-gold-light">Step {step.step}</span>
+                <h3 className="text-lg font-bold mt-2 mb-2">{step.title}</h3>
+                <p className="text-sm text-white/75 leading-relaxed">{step.description}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ===== BENEFICIOS ===== */}
+      <section className="py-16 md:py-24 bg-paper">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="font-display text-4xl md:text-5xl text-ink mb-8">What you get</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4">
+            {service.benefits.map((b) => (
+              <li key={b} className="flex gap-3 text-ink leading-relaxed">{check}{b}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ===== REVIEWS ===== */}
+      <section className="py-16 md:py-24 bg-mist border-t border-line">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="font-display text-4xl md:text-5xl text-ink mb-10">What homeowners wrote on Google</h2>
+          <ReviewsSSR limit={3} />
+        </div>
+      </section>
+
       {/* ===== FAQ ===== */}
-      <section className="py-16 md:py-20 bg-black">
+      <section className="py-16 md:py-24 bg-paper">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">{service.shortName} questions</h2>
-          <div className="space-y-3">
+          <h2 className="font-display text-4xl md:text-5xl text-ink mb-8">{service.shortName} questions</h2>
+          <div className="divide-y divide-line border-y border-line">
             {service.faqs.map((faq) => (
-              <details key={faq.question} className="bg-alfa-card rounded-xl border border-white/5 group">
-                <summary className="p-5 font-semibold text-white flex justify-between items-center gap-4">
+              <details key={faq.question} className="group">
+                <summary className="py-5 font-semibold text-ink text-lg flex justify-between items-center gap-4">
                   {faq.question}
-                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  <svg className="w-5 h-5 text-ink-soft group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </summary>
-                <p className="px-5 pb-5 text-gray-300 leading-relaxed">{faq.answer}</p>
+                <p className="pb-6 text-ink-soft leading-relaxed">{faq.answer}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== REVIEWS ===== */}
-      <section className="py-16 md:py-20 bg-alfa-cream text-alfa-ink">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">What homeowners say on Google</h2>
-            <p className="text-alfa-ink-muted">5.0 average from {company.reviewCount} Google reviews.</p>
-          </div>
-          <ReviewsWidget />
-        </div>
-      </section>
-
-      {/* ===== AREA + OTHER MATERIALS ===== */}
-      <section className="py-16 md:py-20 bg-black border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
+      {/* ===== AREA + OUTROS MATERIAIS ===== */}
+      <section className="py-16 md:py-24 bg-mist border-t border-line">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Towns near our Bellingham base</h2>
-            <p className="text-gray-400 mb-5">We install {service.shortName} across MetroWest, Worcester County and Norfolk County.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-ink mb-3">Towns near our Bellingham base</h2>
+            <p className="text-ink-soft mb-5">We install {service.shortName.toLowerCase()} across MetroWest, Worcester County and Norfolk County.</p>
             <ul className="flex flex-wrap gap-2 mb-5">
               {nearest.map((c) => (
                 <li key={c.slug}>
-                  <Link href={`/massachusetts/${c.slug}`} className="inline-block bg-alfa-card border border-white/10 text-gray-300 hover:border-alfa-gold/40 hover:text-alfa-gold text-sm px-3 py-1.5 rounded-full transition-colors">{c.name}</Link>
+                  <Link href={`/massachusetts/${c.slug}`} className="inline-block rounded-full bg-paper border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{c.name}</Link>
                 </li>
               ))}
             </ul>
-            <Link href="/massachusetts" className="text-alfa-gold font-semibold hover:text-alfa-gold-light">See the full service area →</Link>
+            <Link href="/massachusetts" className="font-bold text-ink underline underline-offset-4 decoration-alfa-gold decoration-2">See the full service area</Link>
           </div>
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-5">Other siding we install</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-ink mb-5">Other siding we install</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {others.map((o) => (
                 <li key={o.slug}>
-                  <Link href={`/services/${o.slug}`} className="block bg-alfa-card border border-white/5 hover:border-alfa-gold/40 rounded-lg px-4 py-3 text-white font-semibold transition-colors">{o.shortName}</Link>
+                  <Link href={`/services/${o.slug}`} className="flex items-center justify-between bg-paper border border-line hover:border-ink rounded-lg px-4 py-3 text-ink font-semibold transition-colors">
+                    {o.shortName}<span aria-hidden="true">→</span>
+                  </Link>
                 </li>
               ))}
             </ul>
