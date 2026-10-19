@@ -115,8 +115,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       {/* ===== HERO: foto em tela cheia ===== */}
       <section className="relative min-h-[82dvh] flex flex-col">
-        <Image src={service.heroImage} alt={`${service.name} completed by Alfa Construction in Massachusetts`} fill sizes="100vw" className="object-cover" priority quality={70} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/45" aria-hidden="true" />
+        <Image src={service.heroImage} alt={`${service.name} completed by Alfa Construction in Massachusetts`} fill sizes="100vw" className="object-cover" priority quality={85} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/30 to-transparent" aria-hidden="true" />
         <div className="relative mt-auto px-4 pb-16 md:pb-20 pt-36">
           <div className="max-w-7xl mx-auto">
             <nav aria-label="Breadcrumb" className="text-sm text-white/75 mb-5">
@@ -147,7 +149,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="py-16 md:py-24 bg-mist">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12">
           <div>
-            <h2 className="font-display text-4xl md:text-5xl text-ink mb-6">About {service.name.toLowerCase()}</h2>
+            <h2 className="font-display text-4xl md:text-5xl text-ink mb-6">About {service.name}</h2>
             <p className="text-ink-soft text-lg leading-relaxed max-w-prose">{service.longDescription}</p>
           </div>
           <aside className="space-y-5 self-start">

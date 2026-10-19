@@ -55,16 +55,18 @@ export default function HomePage() {
       {/* ===== HERO: a casa pronta em tela cheia ===== */}
       <section className="relative min-h-[100dvh] flex flex-col">
         <Image
-          src="/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg"
+          src="/images/hardie-plank-siding-carlisle-ma-porch-side.jpg"
           alt="Completed full-home James Hardie fiber cement re-side by Alfa Construction in Carlisle, Massachusetts"
           fill
           sizes="100vw"
           className="object-cover"
           priority
           fetchPriority="high"
-          quality={72}
+          quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/45" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/30 to-transparent" aria-hidden="true" />
         <div className="relative mt-auto px-4 pb-24 md:pb-28 pt-36">
           <div className="max-w-7xl mx-auto">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-sm text-white/90">
