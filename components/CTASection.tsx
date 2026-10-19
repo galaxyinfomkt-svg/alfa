@@ -20,7 +20,7 @@ export default function CTASection({ title, subtitle, cityName, id = "estimate" 
     `Tell us about the house. Fabio calls you back the same day, walks the property and sends an itemized written estimate within 24 hours.`;
 
   return (
-    <section id={id} className="scroll-mt-28 py-16 md:py-24 bg-mist border-t border-line">
+    <section id={id} className="scroll-mt-28 py-16 md:py-24 bg-mist">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-10 lg:gap-16 items-start">
         <div className="lg:sticky lg:top-32">
           <h2 className="font-display text-4xl md:text-5xl text-ink mb-5">{heading}</h2>

@@ -18,7 +18,7 @@ export default function PhoneButton() {
       <div className="flex gap-2 py-2 pl-3 pr-20">
         <a
           href={company.phoneTel}
-          className="flex-1 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-alfa-gold px-3 py-3 text-sm font-bold text-ink"
+          className="flex-1 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-alfa-gold px-3 py-3 text-sm font-bold text-ink"
           aria-label={`Call Alfa Construction at ${company.phone}`}
         >
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -28,7 +28,7 @@ export default function PhoneButton() {
         </a>
         <Link
           href="/contact"
-          className="flex-1 inline-flex items-center justify-center whitespace-nowrap rounded-lg border border-ink px-3 py-3 text-sm font-bold text-ink"
+          className="flex-1 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-ink px-3 py-3 text-sm font-bold text-ink"
         >
           Free Estimate
         </Link>

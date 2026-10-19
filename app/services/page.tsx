@@ -38,10 +38,10 @@ export default function ServicesPage() {
             Full-home siding installation and replacement — nine materials and systems, one licensed crew based in Bellingham, MA.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg transition-colors text-lg">
+            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-full transition-colors text-lg">
               Get a Free Estimate
             </Link>
-            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-7 py-4 rounded-lg transition-colors border border-line text-lg">
+            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-7 py-4 rounded-full transition-colors border border-line text-lg">
               Call {company.phone}
             </a>
           </div>
@@ -49,9 +49,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Destaque: re-side completo */}
-      <section className="py-16 md:py-20 bg-mist border-t border-line">
+      <section className="py-16 md:py-20 bg-mist">
         <div className="max-w-7xl mx-auto px-4">
-          <Link href={`/services/${main.slug}`} className="group block bg-paper border border-line hover:border-alfa-gold/40 rounded-2xl overflow-hidden transition-colors">
+          <Link href={`/services/${main.slug}`} className="group block bg-card shadow-soft hover:border-alfa-gold/40 rounded-[2rem] overflow-hidden transition-colors">
             <div className="grid lg:grid-cols-2">
               <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[380px]">
                 <Image src={main.heroImage} alt={`${main.name} by Alfa Construction`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />

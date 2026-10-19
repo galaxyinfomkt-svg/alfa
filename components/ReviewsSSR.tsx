@@ -53,7 +53,7 @@ export default function ReviewsSSR({ limit }: { limit?: number }) {
     <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6">
       {/* A review mais completa ganha destaque: e a que mais responde a duvida
           de quem ja teve problema com outro empreiteiro. */}
-      <figure className="bg-paper border border-line rounded-2xl p-7 md:p-9 flex flex-col">
+      <figure className="bg-card shadow-soft rounded-[2rem] p-7 md:p-9 flex flex-col self-start">
         <Stars rating={first.rating} />
         <blockquote className="mt-4 text-lg md:text-xl leading-relaxed text-ink flex-1">“{first.text}”</blockquote>
         <figcaption className="mt-6 text-sm text-ink-soft">
@@ -62,7 +62,7 @@ export default function ReviewsSSR({ limit }: { limit?: number }) {
       </figure>
       <div className="flex flex-col gap-6">
         {rest.map((r) => (
-          <figure key={r.author + r.date} className="bg-paper border border-line rounded-2xl p-6">
+          <figure key={r.author + r.date} className="bg-card shadow-soft rounded-[2rem] p-6">
             <Stars rating={r.rating} />
             <blockquote className="mt-3 text-ink leading-relaxed">“{r.text}”</blockquote>
             <figcaption className="mt-4 text-sm text-ink-soft">
@@ -75,7 +75,7 @@ export default function ReviewsSSR({ limit }: { limit?: number }) {
           href={company.googleReview}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-lg border border-ink px-5 py-3 font-semibold text-ink hover:bg-ink hover:text-white transition-colors"
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-ink px-5 py-3 font-semibold text-ink hover:bg-ink hover:text-white transition-colors"
         >
           Read all reviews on Google
         </a>

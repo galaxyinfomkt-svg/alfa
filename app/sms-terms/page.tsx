@@ -167,7 +167,7 @@ export default function SmsTermsPage() {
 
             {/* Section 8 — Third-party sharing (CRITICAL FOR A2P) */}
             <Section title="8. Mobile information & third-party data sharing">
-              <div className="bg-paper border border-alfa-gold/30 p-5 rounded-lg">
+              <div className="bg-paper border border-alfa-gold/30 p-5 rounded-full">
                 <p className="text-ink font-semibold mb-2">
                   Alfa Construction does NOT share, sell, rent, transfer, or
                   otherwise disclose your mobile phone number, SMS opt-in
@@ -322,7 +322,7 @@ function Method({
   language: string;
 }) {
   return (
-    <div className="bg-paper border border-line rounded-lg p-5">
+    <div className="bg-card shadow-soft rounded-full p-5">
       <h3 className="text-xl font-bold text-gold-ink mb-2">
         Method {num}: {title}
       </h3>
@@ -344,7 +344,7 @@ function Method({
 
 function SampleMessage({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-paper border border-line rounded-lg px-4 py-3 font-mono text-sm text-ink-soft whitespace-pre-line">
+    <div className="bg-card shadow-soft rounded-full px-4 py-3 font-mono text-sm text-ink-soft whitespace-pre-line">
       {children}
     </div>
   );

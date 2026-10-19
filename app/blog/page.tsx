@@ -40,13 +40,13 @@ export default function BlogPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg text-lg"
             >
               Get a Free Siding Estimate
             </Link>
             <a
               href={company.phoneTel}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mist backdrop-blur-sm hover:bg-line text-ink font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-line text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mist backdrop-blur-sm hover:bg-line text-ink font-bold px-8 py-4 rounded-full transition-all duration-300 border border-line text-lg"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -60,7 +60,7 @@ export default function BlogPage() {
       <section className="py-20 bg-mist">
         <div className="max-w-7xl mx-auto px-4">
           {/* Mais recente em destaque; os outros 6 fecham duas linhas de 3. */}
-          <Link href={`/blog/${featured.slug}`} className="group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-paper rounded-2xl overflow-hidden border border-line hover:border-alfa-gold/40 transition-colors mb-8">
+          <Link href={`/blog/${featured.slug}`} className="group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-paper rounded-[2rem] overflow-hidden border border-line hover:border-alfa-gold/40 transition-colors mb-8">
             <div className="aspect-[16/10] lg:aspect-auto lg:min-h-[320px] relative overflow-hidden">
               <Image src={featured.image} alt={featured.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" priority />
             </div>
@@ -73,7 +73,7 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rest.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                <div className="card-hover bg-paper rounded-2xl overflow-hidden shadow-lg shadow-ink/10 border border-line h-full">
+                <div className="card-hover bg-paper rounded-[2rem] overflow-hidden shadow-lg shadow-ink/10 border border-line h-full">
                   <div className="aspect-[16/10] relative overflow-hidden">
                     <Image src={post.image} alt={post.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                     <span className="absolute top-4 left-4 bg-alfa-gold text-ink text-xs font-semibold px-3 py-1 rounded-full">{post.category}</span>

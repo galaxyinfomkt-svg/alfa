@@ -112,43 +112,39 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         }}
       />
 
-      {/* ===== HERO ===== */}
-      <section className="pt-32 md:pt-40 pb-12 md:pb-16 bg-paper">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 items-center">
-          <div>
-            <nav aria-label="Breadcrumb" className="text-sm text-ink-soft mb-5">
+      {/* ===== HERO: foto em tela cheia ===== */}
+      <section className="relative min-h-[82dvh] flex flex-col">
+        <Image src={heroImg.src} alt={`${heroImg.alt} — siding contractor serving ${city.name}, MA`} fill sizes="100vw" className="object-cover" priority quality={70} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/45" aria-hidden="true" />
+        <div className="relative mt-auto px-4 pb-16 md:pb-20 pt-36">
+          <div className="max-w-7xl mx-auto">
+            <nav aria-label="Breadcrumb" className="text-sm text-white/75 mb-5">
               <ol className="flex flex-wrap items-center gap-2">
-                <li><Link href="/" className="hover:text-ink underline underline-offset-2">Home</Link></li>
+                <li><Link href="/" className="hover:text-white underline underline-offset-2">Home</Link></li>
                 <li aria-hidden="true">/</li>
-                <li><Link href="/massachusetts" className="hover:text-ink underline underline-offset-2">Service Area</Link></li>
+                <li><Link href="/massachusetts" className="hover:text-white underline underline-offset-2">Service Area</Link></li>
                 <li aria-hidden="true">/</li>
-                <li aria-current="page" className="text-ink">{city.name}, MA</li>
+                <li aria-current="page" className="text-white">{city.name}, MA</li>
               </ol>
             </nav>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-ink mb-6">
-              Siding contractor in {city.name}, MA
-            </h1>
-            <p className="text-lg text-ink-soft leading-relaxed max-w-xl mb-8">
-              Full-home siding installation and replacement for {city.name} homes, {distance}. Licensed MA HIC {company.license} and insured, in business since {company.foundedYear}.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href={company.phoneTel} className="inline-flex items-center justify-center bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg text-lg transition-colors">
+            <h1 className="font-display text-white text-5xl sm:text-6xl lg:text-7xl max-w-4xl">Siding contractor in {city.name}, MA</h1>
+            <p className="mt-5 text-white/85 text-lg md:text-xl max-w-2xl leading-relaxed">Full-home siding installation and replacement for {city.name} homes, {distance}. Licensed MA HIC {company.license} and insured, in business since {company.foundedYear}.</p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#estimate" className="group inline-flex items-center justify-between sm:justify-center gap-4 rounded-full bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold pl-7 pr-2 py-2 text-lg transition-colors">
+                Get a free estimate
+                <span className="w-11 h-11 rounded-full bg-ink/10 grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+              <a href={company.phoneTel} className="inline-flex items-center justify-center rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
                 Call {company.phone}
               </a>
-              <a href="#estimate" className="inline-flex items-center justify-center border-2 border-ink text-ink hover:bg-ink hover:text-white font-bold px-7 py-4 rounded-lg text-lg transition-colors">
-                Get a free estimate
-              </a>
             </div>
-          </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-mist">
-            <Image src={heroImg.src} alt={`${heroImg.alt} — siding contractor serving ${city.name}, MA`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority quality={70} />
           </div>
         </div>
       </section>
 
       {/* ===== CASAS DA CIDADE (dados do Censo) ===== */}
       {profile && (
-        <section className="py-16 md:py-24 bg-mist border-t border-line">
+        <section className="py-16 md:py-24 bg-mist">
           <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12">
             <div>
               <h2 className="font-display text-4xl md:text-5xl text-ink mb-6">{city.name} homes, by the numbers</h2>
@@ -156,7 +152,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 {profile.housingParagraphs.map((p) => <p key={p}>{p}</p>)}
               </div>
             </div>
-            <figure className="bg-paper border border-line rounded-2xl p-6 md:p-8 self-start">
+            <figure className="bg-card shadow-soft rounded-[2rem] p-6 md:p-8 self-start">
               <dl className="grid grid-cols-2 gap-x-6 gap-y-5">
                 <div><dt className="text-sm text-ink-soft">Median year built</dt><dd className="text-3xl font-bold text-ink tabular-nums">{profile.h.medianYearBuilt}</dd></div>
                 <div><dt className="text-sm text-ink-soft">Homes</dt><dd className="text-3xl font-bold text-ink tabular-nums">{fmtInt(profile.h.housingUnits)}</dd></div>
@@ -181,7 +177,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             <p className="text-ink-soft max-w-2xl mb-10">Based on when {city.name}&apos;s homes were built, these are the conditions we plan for at the estimate, so they never become a surprise change order.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
               {profile.behindTheSiding.map((b) => (
-                <div key={b.title} className="border-t-2 border-ink pt-5">
+                <div key={b.title} className="rounded-[1.75rem] bg-card shadow-soft p-7">
                   <h3 className="text-xl font-bold text-ink mb-2">{b.title}</h3>
                   <p className="text-ink-soft leading-relaxed">{b.text}</p>
                 </div>
@@ -192,12 +188,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       )}
 
       {/* ===== MATERIAIS PARA O PERFIL ===== */}
-      <section className="py-16 md:py-24 bg-charcoal text-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="px-4 py-6 md:py-10">
+        <div className="max-w-7xl mx-auto rounded-[2.25rem] bg-charcoal text-white px-6 py-12 md:px-12 md:py-16">
           <h2 className="font-display text-4xl md:text-5xl mb-10 max-w-3xl">Siding that suits {city.name} homes</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {(profile?.materialPicks ?? []).map((m) => (
-              <Link key={m.slug} href={`/services/${m.slug}`} className="group block border-t border-white/25 pt-5">
+              <Link key={m.slug} href={`/services/${m.slug}`} className="group block rounded-[1.5rem] bg-white/[0.06] ring-1 ring-white/10 p-6 hover:bg-white/[0.1] transition-colors">
                 <h3 className="text-2xl font-bold group-hover:text-alfa-gold-light transition-colors">{m.label}</h3>
                 <p className="mt-2 text-white/75 leading-relaxed">{m.why}</p>
                 <span className="mt-4 inline-block text-sm font-semibold text-alfa-gold-light">Details →</span>
@@ -223,7 +219,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             </div>
           </div>
           <aside className="space-y-6">
-            <dl className="grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 text-sm border-y border-line py-5">
+            <dl className="grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 text-sm rounded-[1.5rem] bg-card shadow-soft p-6">
               <dt className="text-ink-soft">County</dt><dd className="text-ink">{city.county}</dd>
               <dt className="text-ink-soft">Population</dt><dd className="text-ink">{city.population} (2020 Census)</dd>
               <dt className="text-ink-soft">Typical homes</dt><dd className="text-ink">{city.homeStyle}</dd>
@@ -235,9 +231,9 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 {neighbors.map((n) => (
                   <li key={n.name}>
                     {n.slug ? (
-                      <Link href={`/massachusetts/${n.slug}`} className="inline-block rounded-full border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{n.name}</Link>
+                      <Link href={`/massachusetts/${n.slug}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{n.name}</Link>
                     ) : (
-                      <span className="inline-block rounded-full border border-line px-4 py-2 text-sm text-ink-soft">{n.name}</span>
+                      <span className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm text-ink-soft">{n.name}</span>
                     )}
                   </li>
                 ))}
@@ -259,7 +255,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {shownProjects.map((p) => (
               <Link key={p.slug} href={`/projects/${p.slug}`} className="group block">
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-line">
+                <div className="relative aspect-[4/3] rounded-[1.75rem] overflow-hidden bg-line">
                   <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" quality={60} />
                 </div>
                 <h3 className="mt-3 font-bold text-ink leading-snug group-hover:text-gold-ink transition-colors">{p.title}</h3>
@@ -279,12 +275,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="py-16 md:py-24 bg-mist border-t border-line">
+      <section className="py-16 md:py-24 bg-mist">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-display text-4xl md:text-5xl text-ink mb-8">Questions from {city.name} homeowners</h2>
-          <div className="divide-y divide-line border-y border-line">
+          <div className="space-y-3">
             {faqs.map((f) => (
-              <details key={f.q} className="group">
+              <details key={f.q} className="group rounded-[1.5rem] bg-card shadow-soft px-6">
                 <summary className="py-5 font-semibold text-ink text-lg flex justify-between items-center gap-4">
                   {f.q}
                   <svg className="w-5 h-5 text-ink-soft group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>

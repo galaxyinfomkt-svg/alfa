@@ -41,17 +41,17 @@
      feito por IA). Cinza neutro para alternar secoes. Dourado da marca so
      como preenchimento de botao (#B8963E com texto escuro = 7:1) e, como
      texto, a versao escura #7A5F1C (6:1 no branco). */
-  --color-paper: #FFFFFF;
-  --color-mist: #F3F3F1;
-  --color-line: #E1E1DC;
-  --color-ink: #171612;
+  --color-paper: #F7F5F1;
+  --color-card: #FFFFFF;
+  --color-mist: #EFECE6;
+  --color-line: #E4E0D8;
+  --color-ink: #1B1A17;
   --color-ink-soft: #4B4943;
-  --color-charcoal: #1D1C18;
+  --color-charcoal: #22201B;
   --color-gold-ink: #7A5F1C;
 
-  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
-  /* Anton e a fonte de titulo definida em brand.json (identidade da marca). */
-  --font-display: var(--font-anton), "Anton", Impact, "Arial Narrow Bold", sans-serif;
+  --font-sans: var(--font-manrope), "Manrope", system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-manrope), "Manrope", system-ui, sans-serif;
 
   /* Slightly larger font sizes for better readability */
   --font-size-xs: 0.8125rem; /* 13px (default: 12px) */
@@ -76,19 +76,22 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFFFFF;
-  color: #171612;
+  background-color: #F7F5F1;
+  color: #1B1A17;
 }
 
-/* Titulo de marca: Anton em caixa alta. Espacamento levemente positivo
-   (Anton e condensada; negativo encosta as letras). */
+/* Titulo: Manrope 800, caixa normal, tracking levemente negativo.
+   (A versao anterior usava Anton em caixa alta e parecia manchete de jornal.) */
 .font-display {
   font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.022em;
+  line-height: 1.06;
 }
+
+/* Sombra suave no lugar de borda cinza de 1px. */
+.shadow-soft { box-shadow: 0 1px 2px rgba(27,26,23,.04), 0 18px 48px rgba(27,26,23,.07); }
+.ease-premium { transition-timing-function: cubic-bezier(.32,.72,0,1); }
 h1, h2, h3 { text-wrap: balance; }
 p { text-wrap: pretty; }
 

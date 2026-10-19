@@ -27,7 +27,7 @@ export default function CtaBand({
         <div className="flex flex-col sm:flex-row gap-3 sm:shrink-0">
           <Link
             href="/contact"
-            className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-bold transition-colors ${
+            className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-bold transition-colors ${
               isGold ? "bg-ink text-white hover:bg-charcoal" : "bg-alfa-gold text-ink hover:bg-alfa-gold-light"
             }`}
           >
@@ -35,7 +35,7 @@ export default function CtaBand({
           </Link>
           <a
             href={company.phoneTel}
-            className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-bold border transition-colors ${
+            className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-bold border transition-colors ${
               isGold ? "border-ink/30 text-ink hover:border-ink" : "border-white/30 text-white hover:border-white"
             }`}
           >
