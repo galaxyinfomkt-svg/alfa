@@ -12,6 +12,7 @@ import { getCityProfile } from "@/lib/cityProfile";
 import { getService } from "@/data/schema";
 import { ReviewQuote } from "@/components/ReviewsSSR";
 import CTASection from "@/components/CTASection";
+import FormEmbed from "@/components/FormEmbed";
 import SiteVideo from "@/components/SiteVideo";
 
 /* So fotos deitadas com 1600px+ de largura e sem lixo/escada/obra na cena:
@@ -79,10 +80,6 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const citySidingService = getService({ city: city.name, citySlug: city.slug });
   const heroImg = getCityHeroImage(city.slug);
   const distance = distancePhrase(city.slug, city.name);
-  const neighbors = city.neighboringCities.map((n) => {
-    const nSlug = n.toLowerCase().replace(/\s+/g, "-");
-    return { name: n, slug: getCityBySlug(nSlug) ? nSlug : null };
-  });
   // Obra feita na propria cidade vem primeiro; o resto completa com destaques.
   const localProjects = projects.filter((p) => p.city === city.name);
   const shownProjects = [...localProjects, ...getFeaturedProjects().filter((p) => p.city !== city.name)].slice(0, 3);
@@ -114,7 +111,9 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/30 to-transparent" aria-hidden="true" />
         <div className="relative mt-auto px-4 pb-16 md:pb-20 pt-36">
-          <div className="max-w-7xl mx-auto">
+          {/* Form do GHL ao lado do H1 (pedido da cliente): texto a esquerda, form a direita. */}
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-10 lg:gap-14 items-end">
+          <div>
             <nav aria-label="Breadcrumb" className="text-sm text-white/75 mb-5">
               <ol className="flex flex-wrap items-center gap-2">
                 <li><Link href="/" className="hover:text-white underline underline-offset-2">Home</Link></li>
@@ -124,17 +123,18 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <li aria-current="page" className="text-white">{city.name}, MA</li>
               </ol>
             </nav>
-            <h1 className="font-display text-white text-5xl sm:text-6xl lg:text-7xl max-w-4xl">Siding contractor in {city.name}, MA</h1>
+            <h1 className="font-display text-white text-5xl sm:text-6xl lg:text-[4rem] max-w-4xl">Siding contractor in {city.name}, MA</h1>
             <p className="mt-5 text-white/85 text-lg md:text-xl max-w-2xl leading-relaxed">Full-home siding installation and replacement for {city.name} homes, {distance}. Licensed MA HIC {company.license} and insured, in business since {company.foundedYear}.</p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#estimate" className="group inline-flex items-center justify-between sm:justify-center gap-4 rounded-full bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold pl-7 pr-2 py-2 text-lg transition-colors">
-                Get a free estimate
-                <span className="w-11 h-11 rounded-full bg-ink/10 grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
-              </a>
-              <a href={company.phoneTel} className="inline-flex items-center justify-center rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
+            {/* No celular a bolha flutuante ja liga; aqui o botao so aparece de sm pra cima. */}
+            <div className="mt-8 hidden sm:flex gap-3">
+              <a href={company.phoneTel} className="hidden sm:inline-flex items-center justify-center rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
                 Call {company.phone}
               </a>
             </div>
+          </div>
+          <div id="hero-form" className="w-full max-w-xl lg:justify-self-end scroll-mt-28">
+            <FormEmbed instance="hero" height={500} eager />
+          </div>
           </div>
         </div>
       </section>
@@ -222,20 +222,6 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               <dt className="text-ink-soft">Typical homes</dt><dd className="text-ink">{city.homeStyle}</dd>
               <dt className="text-ink-soft">From our office</dt><dd className="text-ink">{cityDistanceMiles[city.slug] ? `About ${cityDistanceMiles[city.slug]} miles from Bellingham` : "Bellingham"}</dd>
             </dl>
-            <div>
-              <h3 className="font-bold text-ink mb-3">Neighboring towns we serve</h3>
-              <ul className="flex flex-wrap gap-2">
-                {neighbors.map((n) => (
-                  <li key={n.name}>
-                    {n.slug ? (
-                      <Link href={`/massachusetts/${n.slug}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{n.name}</Link>
-                    ) : (
-                      <span className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm text-ink-soft">{n.name}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </aside>
         </div>
       </section>

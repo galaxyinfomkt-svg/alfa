@@ -16,7 +16,21 @@ import { company } from "@/data/company";
  * TODO(Luiz): qualificacao de lead (tipo de projeto, tamanho da casa) se
  * configura nos campos do formulario dentro do GHL, nao aqui.
  */
-export default function FormEmbed({ height = 460 }: { height?: number }) {
+/**
+ * `instance` da um id proprio a cada copia: o form aparece duas vezes na mesma
+ * pagina (hero e rodape) e ids repetidos sao HTML invalido. `eager` carrega na
+ * hora (hero, primeira tela) em vez de esperar a rolagem.
+ */
+export default function FormEmbed({
+  height = 460,
+  instance,
+  eager = false,
+}: {
+  height?: number;
+  instance?: string;
+  eager?: boolean;
+}) {
+  const iframeId = instance ? `inline-PiFH0ELuOmHS9iZhGQ5F-${instance}` : "inline-PiFH0ELuOmHS9iZhGQ5F";
   // form_embed.js ajusta a altura do iframe ao conteudo real do formulario.
   useEffect(() => {
     const scriptId = "ghl-form-embed";
@@ -33,9 +47,9 @@ export default function FormEmbed({ height = 460 }: { height?: number }) {
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/PiFH0ELuOmHS9iZhGQ5F"
         style={{ width: "100%", height, border: "none", display: "block" }}
-        loading="lazy"
+        loading={eager ? "eager" : "lazy"}
         scrolling="no"
-        id="inline-PiFH0ELuOmHS9iZhGQ5F"
+        id={iframeId}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -45,7 +59,7 @@ export default function FormEmbed({ height = 460 }: { height?: number }) {
         data-deactivation-value=""
         data-form-name="FORM SITE ALFA"
         data-height={String(height)}
-        data-layout-iframe-id="inline-PiFH0ELuOmHS9iZhGQ5F"
+        data-layout-iframe-id={iframeId}
         data-form-id="PiFH0ELuOmHS9iZhGQ5F"
         title="Free siding estimate request form"
       />

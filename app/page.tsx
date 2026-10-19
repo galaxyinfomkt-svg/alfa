@@ -6,20 +6,17 @@ import { homeFaqs } from "@/data/faqData";
 import ReviewsSSR from "@/components/ReviewsSSR";
 import GoogleMap from "@/components/GoogleMap";
 import CTASection from "@/components/CTASection";
+import FormEmbed from "@/components/FormEmbed";
 import BeforeAfter from "@/components/BeforeAfter";
 import { projects, projectLocation } from "@/data/projects";
 import { blogPosts } from "@/data/blog";
 import { cities } from "@/data/cities";
-import { cityDistanceMiles } from "@/data/cityDistances";
 import { getAllServices } from "@/data/services";
 
 // Antes/depois em destaque: a obra de Carlisle e a mais documentada do site.
 const heroProject = projects[0];
 const gridProjects = projects.filter((p) => p.slug !== heroProject.slug).slice(0, 6);
 const latestPosts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
-const nearbyTowns = [...cities]
-  .sort((a, b) => (cityDistanceMiles[a.slug] ?? 99) - (cityDistanceMiles[b.slug] ?? 99))
-  .slice(0, 18);
 const fmtDate = (d: string) =>
   new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
@@ -68,22 +65,21 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/30 to-transparent" aria-hidden="true" />
         <div className="relative mt-auto px-4 pb-24 md:pb-28 pt-36">
-          <div className="max-w-7xl mx-auto">
+          {/* Form do GHL ao lado do H1 (pedido da cliente): texto a esquerda, form a direita. */}
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-10 lg:gap-14 items-end">
+          <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-sm text-white/90">
               Full-home siding installation &amp; replacement in Massachusetts
             </p>
-            <h1 className="font-display mt-5 text-white text-[2.7rem] sm:text-6xl lg:text-[4.6rem] max-w-4xl">
+            <h1 className="font-display mt-5 text-white text-[2.7rem] sm:text-6xl lg:text-[4.1rem] max-w-4xl">
               Siding that makes your whole house look new.
             </h1>
             <p className="mt-5 text-white/85 text-lg md:text-xl max-w-xl leading-relaxed">
               Hardie Plank, vinyl, cedar and shake, installed by our own crew. One owner walks every estimate.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#estimate" className="group inline-flex items-center justify-between sm:justify-center gap-4 rounded-full bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold pl-7 pr-2 py-2 text-lg transition-colors">
-                Get a free estimate
-                <span className="w-11 h-11 rounded-full bg-ink/10 grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
-              </a>
-              <a href={company.phoneTel} className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
+            {/* No celular a bolha flutuante ja liga; aqui o botao so aparece de sm pra cima. */}
+            <div className="mt-8 hidden sm:flex gap-3">
+              <a href={company.phoneTel} className="hidden sm:inline-flex items-center justify-center gap-2 rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
                 Call {company.phone}
               </a>
             </div>
@@ -91,6 +87,10 @@ export default function HomePage() {
               Whole-home James Hardie re-side in Carlisle, MA.{" "}
               <Link href={`/projects/${heroProject.slug}`} className="font-semibold text-white underline underline-offset-4">See the project</Link>
             </p>
+          </div>
+          <div id="hero-form" className="w-full max-w-xl lg:justify-self-end scroll-mt-28">
+            <FormEmbed instance="hero" height={500} eager />
+          </div>
           </div>
         </div>
       </section>
@@ -267,14 +267,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="font-display text-4xl md:text-5xl text-ink mb-5">Where we work</h2>
-            <p className="text-ink-soft leading-relaxed mb-6 max-w-lg">From our base in Bellingham we re-side homes across MetroWest, Worcester County and Norfolk County. The towns closest to us:</p>
-            <ul className="flex flex-wrap gap-2 mb-6">
-              {nearbyTowns.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/massachusetts/${c.slug}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{c.name}</Link>
-                </li>
-              ))}
-            </ul>
+            <p className="text-ink-soft leading-relaxed mb-6 max-w-lg">From our base in Bellingham we re-side homes across MetroWest, Worcester County and Norfolk County.</p>
             <Link href="/massachusetts" className="font-bold text-ink underline underline-offset-4 decoration-alfa-gold decoration-2">All {cities.length} towns we serve</Link>
           </div>
           <GoogleMap />

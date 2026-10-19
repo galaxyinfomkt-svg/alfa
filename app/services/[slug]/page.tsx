@@ -5,9 +5,8 @@ import { notFound } from "next/navigation";
 import { company, breadcrumbSchema, faqSchema, serviceSchema } from "@/data/company";
 import ReviewsSSR from "@/components/ReviewsSSR";
 import CTASection from "@/components/CTASection";
+import FormEmbed from "@/components/FormEmbed";
 import SiteVideo from "@/components/SiteVideo";
-import { cities } from "@/data/cities";
-import { cityDistanceMiles } from "@/data/cityDistances";
 import { fitTitle, fitDescriptionWithTail, stripTrailingPhone } from "@/lib/serpWidth";
 import { getServiceBySlug, getAllServiceSlugs, getAllServices } from "@/data/services";
 
@@ -93,9 +92,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   if (!service) notFound();
   const summary = getAllServices().find((s) => s.slug === slug)?.cardSummary ?? service.description;
   const std = standards[slug] ?? standards.siding;
-  const nearest = [...cities]
-    .sort((a, b) => (cityDistanceMiles[a.slug] ?? 99) - (cityDistanceMiles[b.slug] ?? 99))
-    .slice(0, 18);
   const others = getAllServices().filter((s) => s.slug !== slug);
 
   return (
@@ -120,7 +116,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/30 to-transparent" aria-hidden="true" />
         <div className="relative mt-auto px-4 pb-16 md:pb-20 pt-36">
-          <div className="max-w-7xl mx-auto">
+          {/* Form do GHL ao lado do H1 (pedido da cliente): texto a esquerda, form a direita. */}
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-10 lg:gap-14 items-end">
+          <div>
             <nav aria-label="Breadcrumb" className="text-sm text-white/75 mb-5">
               <ol className="flex flex-wrap items-center gap-2">
                 <li><Link href="/" className="hover:text-white underline underline-offset-2">Home</Link></li>
@@ -130,17 +128,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <li aria-current="page" className="text-white">{service.shortName}</li>
               </ol>
             </nav>
-            <h1 className="font-display text-white text-5xl sm:text-6xl lg:text-7xl max-w-4xl">{service.name} in Massachusetts</h1>
+            <h1 className="font-display text-white text-5xl sm:text-6xl lg:text-[4rem] max-w-4xl">{service.name} in Massachusetts</h1>
             <p className="mt-5 text-white/85 text-lg md:text-xl max-w-2xl leading-relaxed">{summary} Full exterior re-sides only. Licensed MA HIC {company.license}, insured, in business since {company.foundedYear}.</p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#estimate" className="group inline-flex items-center justify-between sm:justify-center gap-4 rounded-full bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold pl-7 pr-2 py-2 text-lg transition-colors">
-                Get a free estimate
-                <span className="w-11 h-11 rounded-full bg-ink/10 grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
-              </a>
-              <a href={company.phoneTel} className="inline-flex items-center justify-center rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
+            {/* No celular a bolha flutuante ja liga; aqui o botao so aparece de sm pra cima. */}
+            <div className="mt-8 hidden sm:flex gap-3">
+              <a href={company.phoneTel} className="hidden sm:inline-flex items-center justify-center rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
                 Call {company.phone}
               </a>
             </div>
+          </div>
+          <div id="hero-form" className="w-full max-w-xl lg:justify-self-end scroll-mt-28">
+            <FormEmbed instance="hero" height={500} eager />
+          </div>
           </div>
         </div>
       </section>
@@ -249,15 +248,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="py-16 md:py-24 bg-mist">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-ink mb-3">Towns near our Bellingham base</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-ink mb-3">Where we install</h2>
             <p className="text-ink-soft mb-5">We install {service.shortName.toLowerCase()} across MetroWest, Worcester County and Norfolk County.</p>
-            <ul className="flex flex-wrap gap-2 mb-5">
-              {nearest.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/massachusetts/${c.slug}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{c.name}</Link>
-                </li>
-              ))}
-            </ul>
             <Link href="/massachusetts" className="font-bold text-ink underline underline-offset-4 decoration-alfa-gold decoration-2">See the full service area</Link>
           </div>
           <div>

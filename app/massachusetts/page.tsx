@@ -102,25 +102,17 @@ export default function MassachusettsHubPage() {
       <section className="py-14 md:py-16 bg-mist">
         <div className="max-w-7xl mx-auto px-4">
           {groups.map((group, i) => (
-            <div key={group.title} id={`band-${i}`} className="mb-14 last:mb-0 scroll-mt-28">
-              <div className="border-b border-line pb-3 mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-ink">{group.title}</h2>
+            <div key={group.title} id={`band-${i}`} className="mb-10 last:mb-0 scroll-mt-28">
+              <div className="mb-4">
+                <h2 className="text-xl md:text-2xl font-bold text-ink">{group.title}</h2>
                 <p className="text-ink-soft text-sm mt-1">{group.note}</p>
               </div>
-              <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+              {/* Lista compacta so com nomes: 109 cartoes ocupavam a tela toda. */}
+              <ul className="columns-2 sm:columns-3 lg:columns-5 gap-x-6 text-[15px] leading-relaxed">
                 {group.towns.map((town) => (
-                  <li key={town.slug}>
-                    <Link
-                      href={`/massachusetts/${town.slug}`}
-                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-0.5 md:gap-3 h-full rounded-xl bg-card shadow-soft hover:border-alfa-gold/40 px-3 py-2.5 md:px-4 md:py-3 transition-colors group"
-                    >
-                      <span>
-                        <span className="block font-semibold text-ink group-hover:text-gold-ink leading-snug">{town.name}</span>
-                        <span className="block text-xs text-ink-soft">{town.county} County</span>
-                      </span>
-                      <span className="text-xs text-alfa-gold/80 whitespace-nowrap">
-                        {miles(town.slug) === 0 ? "Our office" : `${miles(town.slug)} mi`}
-                      </span>
+                  <li key={town.slug} className="break-inside-avoid">
+                    <Link href={`/massachusetts/${town.slug}`} className="text-ink hover:text-gold-ink transition-colors">
+                      {town.name}
                     </Link>
                   </li>
                 ))}
