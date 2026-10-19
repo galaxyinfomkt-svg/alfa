@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { projects, projectLocation } from "@/data/projects";
-import { cities } from "@/data/cities";
-import { cityDistanceMiles } from "@/data/cityDistances";
 import { breadcrumbSchema, company } from "@/data/company";
 import CTASection from "@/components/CTASection";
 import BeforeAfter from "@/components/BeforeAfter";
@@ -14,10 +12,6 @@ export const metadata: Metadata = {
     "Before/after full-home siding projects across Massachusetts — Hardie Plank, vinyl, cedar shake. Free estimate: (508) 590-9193.",
   alternates: { canonical: "https://alfapaintingcarpentry.com/projects" },
 };
-
-const nearbyTowns = [...cities]
-  .sort((a, b) => (cityDistanceMiles[a.slug] ?? 99) - (cityDistanceMiles[b.slug] ?? 99))
-  .slice(0, 12);
 
 export default function ProjectsPage() {
   // Os 3 primeiros antes/depois em destaque; a grade abaixo mostra todos.
@@ -129,22 +123,6 @@ export default function ProjectsPage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ===== SERVICE AREA ===== */}
-      <section className="py-16 md:py-20 bg-mist">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-ink mb-3">Where we work</h2>
-          <p className="text-ink-soft max-w-2xl mx-auto mb-8">Based in Bellingham, we re-side homes across MetroWest, Worcester County and Norfolk County.</p>
-          <ul className="flex flex-wrap justify-center gap-2 mb-8">
-            {nearbyTowns.map((c) => (
-              <li key={c.slug}>
-                <Link href={`/massachusetts/${c.slug}`} className="inline-block bg-card shadow-soft text-ink-soft hover:border-alfa-gold/40 hover:text-gold-ink text-sm px-4 py-2 rounded-full transition-colors">{c.name}</Link>
-              </li>
-            ))}
-          </ul>
-          <Link href="/massachusetts" className="text-gold-ink font-semibold hover:text-gold-ink">See the full service area →</Link>
         </div>
       </section>
 
