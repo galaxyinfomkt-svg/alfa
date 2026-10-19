@@ -113,53 +113,49 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(service.faqs)) }} />
 
-      {/* ===== HERO ===== */}
-      <section className="pt-32 md:pt-40 pb-12 md:pb-16 bg-paper">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 items-center">
-          <div>
-            <nav aria-label="Breadcrumb" className="text-sm text-ink-soft mb-5">
+      {/* ===== HERO: foto em tela cheia ===== */}
+      <section className="relative min-h-[82dvh] flex flex-col">
+        <Image src={service.heroImage} alt={`${service.name} completed by Alfa Construction in Massachusetts`} fill sizes="100vw" className="object-cover" priority quality={70} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/45" aria-hidden="true" />
+        <div className="relative mt-auto px-4 pb-16 md:pb-20 pt-36">
+          <div className="max-w-7xl mx-auto">
+            <nav aria-label="Breadcrumb" className="text-sm text-white/75 mb-5">
               <ol className="flex flex-wrap items-center gap-2">
-                <li><Link href="/" className="hover:text-ink underline underline-offset-2">Home</Link></li>
+                <li><Link href="/" className="hover:text-white underline underline-offset-2">Home</Link></li>
                 <li aria-hidden="true">/</li>
-                <li><Link href="/services" className="hover:text-ink underline underline-offset-2">Siding Services</Link></li>
+                <li><Link href="/services" className="hover:text-white underline underline-offset-2">Siding Services</Link></li>
                 <li aria-hidden="true">/</li>
-                <li aria-current="page" className="text-ink">{service.shortName}</li>
+                <li aria-current="page" className="text-white">{service.shortName}</li>
               </ol>
             </nav>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-[4.2rem] text-ink mb-6">
-              {service.name} in Massachusetts
-            </h1>
-            <p className="text-lg text-ink-soft leading-relaxed max-w-xl mb-8">
-              {summary} Full exterior re-sides only. Licensed MA HIC {company.license}, insured, in business since {company.foundedYear}.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href={company.phoneTel} className="inline-flex items-center justify-center bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg text-lg transition-colors">
+            <h1 className="font-display text-white text-5xl sm:text-6xl lg:text-7xl max-w-4xl">{service.name} in Massachusetts</h1>
+            <p className="mt-5 text-white/85 text-lg md:text-xl max-w-2xl leading-relaxed">{summary} Full exterior re-sides only. Licensed MA HIC {company.license}, insured, in business since {company.foundedYear}.</p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#estimate" className="group inline-flex items-center justify-between sm:justify-center gap-4 rounded-full bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold pl-7 pr-2 py-2 text-lg transition-colors">
+                Get a free estimate
+                <span className="w-11 h-11 rounded-full bg-ink/10 grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+              <a href={company.phoneTel} className="inline-flex items-center justify-center rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
                 Call {company.phone}
               </a>
-              <a href="#estimate" className="inline-flex items-center justify-center border-2 border-ink text-ink hover:bg-ink hover:text-white font-bold px-7 py-4 rounded-lg text-lg transition-colors">
-                Get a free estimate
-              </a>
             </div>
-          </div>
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-mist">
-            <Image src={service.heroImage} alt={`${service.name} completed by Alfa Construction in Massachusetts`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority quality={70} />
           </div>
         </div>
       </section>
 
       {/* ===== VISAO GERAL ===== */}
-      <section className="py-16 md:py-24 bg-mist border-t border-line">
+      <section className="py-16 md:py-24 bg-mist">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12">
           <div>
             <h2 className="font-display text-4xl md:text-5xl text-ink mb-6">About {service.name.toLowerCase()}</h2>
             <p className="text-ink-soft text-lg leading-relaxed max-w-prose">{service.longDescription}</p>
           </div>
           <aside className="space-y-5 self-start">
-            <div className="bg-paper border border-line rounded-2xl p-6">
+            <div className="bg-card shadow-soft rounded-[2rem] p-6">
               <h3 className="font-bold text-ink mb-2">{std.title}</h3>
               <p className="text-ink-soft text-sm leading-relaxed">{std.body}</p>
             </div>
-            <div className="bg-paper border border-line rounded-2xl p-6">
+            <div className="bg-card shadow-soft rounded-[2rem] p-6">
               <h3 className="font-bold text-ink mb-2">License, insurance &amp; permits</h3>
               <p className="text-ink-soft text-sm leading-relaxed">
                 Massachusetts Home Improvement Contractor{" "}
@@ -176,17 +172,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-ink mb-6">Problems we see on Massachusetts homes</h2>
-            <ul className="divide-y divide-line border-y border-line">
+            <ul className="space-y-3">
               {service.painPoints.map((p) => (
-                <li key={p} className="py-4 text-ink-soft leading-relaxed">{p}</li>
+                <li key={p} className="rounded-2xl bg-card shadow-soft px-5 py-4 text-ink-soft leading-relaxed">{p}</li>
               ))}
             </ul>
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-ink mb-6">How a full re-side fixes them</h2>
-            <ul className="divide-y divide-line border-y border-line">
+            <ul className="space-y-3">
               {service.solutions.map((s) => (
-                <li key={s} className="py-4 flex gap-3 text-ink leading-relaxed">{check}{s}</li>
+                <li key={s} className="rounded-2xl bg-card shadow-soft px-5 py-4 flex gap-3 text-ink leading-relaxed">{check}{s}</li>
               ))}
             </ul>
           </div>
@@ -194,12 +190,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* ===== PROCESSO ===== */}
-      <section className="py-16 md:py-24 bg-charcoal text-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="px-4 py-6 md:py-10">
+        <div className="max-w-7xl mx-auto rounded-[2.25rem] bg-charcoal text-white px-6 py-12 md:px-12 md:py-16">
           <h2 className="font-display text-4xl md:text-5xl mb-12">Our {service.shortName.toLowerCase()} process</h2>
           <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-x-8 gap-y-10">
             {service.process.map((step) => (
-              <li key={step.step} className="border-t border-white/20 pt-5">
+              <li key={step.step} className="rounded-[1.5rem] bg-white/[0.06] ring-1 ring-white/10 p-6">
                 <span className="text-sm font-semibold text-alfa-gold-light">Step {step.step}</span>
                 <h3 className="text-lg font-bold mt-2 mb-2">{step.title}</h3>
                 <p className="text-sm text-white/75 leading-relaxed">{step.description}</p>
@@ -222,7 +218,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* ===== REVIEWS ===== */}
-      <section className="py-16 md:py-24 bg-mist border-t border-line">
+      <section className="py-16 md:py-24 bg-mist">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="font-display text-4xl md:text-5xl text-ink mb-10">What homeowners wrote on Google</h2>
           <ReviewsSSR limit={3} />
@@ -233,9 +229,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="py-16 md:py-24 bg-paper">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-display text-4xl md:text-5xl text-ink mb-8">{service.shortName} questions</h2>
-          <div className="divide-y divide-line border-y border-line">
+          <div className="space-y-3">
             {service.faqs.map((faq) => (
-              <details key={faq.question} className="group">
+              <details key={faq.question} className="group rounded-[1.5rem] bg-card shadow-soft px-6">
                 <summary className="py-5 font-semibold text-ink text-lg flex justify-between items-center gap-4">
                   {faq.question}
                   <svg className="w-5 h-5 text-ink-soft group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -248,7 +244,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* ===== AREA + OUTROS MATERIAIS ===== */}
-      <section className="py-16 md:py-24 bg-mist border-t border-line">
+      <section className="py-16 md:py-24 bg-mist">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-ink mb-3">Towns near our Bellingham base</h2>
@@ -256,7 +252,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <ul className="flex flex-wrap gap-2 mb-5">
               {nearest.map((c) => (
                 <li key={c.slug}>
-                  <Link href={`/massachusetts/${c.slug}`} className="inline-block rounded-full bg-paper border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{c.name}</Link>
+                  <Link href={`/massachusetts/${c.slug}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{c.name}</Link>
                 </li>
               ))}
             </ul>
@@ -267,7 +263,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {others.map((o) => (
                 <li key={o.slug}>
-                  <Link href={`/services/${o.slug}`} className="flex items-center justify-between bg-paper border border-line hover:border-ink rounded-lg px-4 py-3 text-ink font-semibold transition-colors">
+                  <Link href={`/services/${o.slug}`} className="flex items-center justify-between bg-card shadow-soft hover:bg-mist rounded-full px-4 py-3 text-ink font-semibold transition-colors">
                     {o.shortName}<span aria-hidden="true">→</span>
                   </Link>
                 </li>

@@ -81,10 +81,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <span className="whitespace-nowrap">{post.readTime}</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-6 py-3 rounded-lg transition-colors">
+              <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-6 py-3 rounded-full transition-colors">
                 Get a Free Siding Estimate
               </Link>
-              <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap border border-line hover:bg-mist text-ink font-bold px-6 py-3 rounded-lg transition-colors">
+              <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap border border-line hover:bg-mist text-ink font-bold px-6 py-3 rounded-full transition-colors">
                 Call {company.phone}
               </a>
             </div>
@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
             {/* Tags */}
-            <div className="mt-10 pt-6 border-t border-line">
+            <div className="mt-10 pt-6">
               <div className="flex flex-wrap gap-2">
                 {[...new Set(post.tags)].map((tag) => (
                   <span key={tag} className="bg-mist text-ink-soft text-xs font-medium px-3 py-1 rounded-full">
@@ -120,7 +120,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedPosts.map((rp) => (
                 <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group block">
-                  <div className="card-hover bg-paper rounded-2xl overflow-hidden shadow-lg shadow-ink/10 border border-line">
+                  <div className="card-hover bg-paper rounded-[2rem] overflow-hidden shadow-lg shadow-ink/10 border border-line">
                     <div className="aspect-[16/10] relative overflow-hidden">
                       <Image src={rp.image} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>

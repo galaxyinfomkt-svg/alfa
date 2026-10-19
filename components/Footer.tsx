@@ -87,7 +87,7 @@ export default function Footer() {
                 <li key={link.href}><Link href={link.href} className={linkCls}>{link.label}</Link></li>
               ))}
             </ul>
-            <Link href="/contact" className="inline-flex items-center bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-5 py-3 rounded-lg text-sm transition-colors">
+            <Link href="/contact" className="inline-flex items-center bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-5 py-3 rounded-full text-sm transition-colors">
               Get a free estimate
             </Link>
           </div>

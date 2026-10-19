@@ -36,13 +36,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg text-lg"
             >
               Talk to Fabio
             </Link>
             <a
               href={company.phoneTel}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mist backdrop-blur-sm hover:bg-line text-ink font-bold px-8 py-4 rounded-lg transition-all duration-300 border border-line text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mist backdrop-blur-sm hover:bg-line text-ink font-bold px-8 py-4 rounded-full transition-all duration-300 border border-line text-lg"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -58,7 +58,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <div className="rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
                   src="/images/hardie-plank-siding-carlisle-ma-action-workers.jpg"
                   alt="Alfa Construction crew installing James Hardie siding on a home in Carlisle, MA"
@@ -156,7 +156,7 @@ export default function AboutPage() {
           </p>
           <ReviewsSSR limit={3} />
           <div className="text-center mt-8">
-            <a href={company.googleReview} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-ink font-semibold px-6 py-3 rounded-lg transition-all">
+            <a href={company.googleReview} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-ink font-semibold px-6 py-3 rounded-full transition-all">
               Leave a Review on Google
             </a>
           </div>

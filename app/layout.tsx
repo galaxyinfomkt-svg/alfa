@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Anton } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,23 +8,13 @@ import PhoneButton from "@/components/PhoneButton";
 import DeferredScripts from "@/components/DeferredScripts";
 import { getLocalBusiness, getWebSite } from "@/data/schema";
 
-const inter = Inter({
+// Manrope: grotesca moderna, legivel em texto e forte em titulo (800).
+// Substitui Anton (condensada, caixa alta) + Inter, que davam cara de jornal.
+const manrope = Manrope({
   subsets: ["latin"],
-  // "optional" gives the browser a 100ms budget to load the font.
-  // After that it falls back to the system font and never swaps in
-  // — eliminates FOIT/FOUT and the layout shift Lighthouse measures.
-  display: "optional",
-  variable: "--font-inter",
-  preload: true,
-});
-
-// Fonte de titulo da marca (brand.json). "swap" aqui: o titulo e o LCP e
-// precisa aparecer na fonte certa; o fallback Impact tem metrica proxima.
-const anton = Anton({
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
-  variable: "--font-anton",
+  variable: "--font-manrope",
   preload: true,
 });
 
@@ -109,9 +99,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${anton.variable}`}>
+    <html lang="en" className={manrope.variable}>
       <head>
-        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="theme-color" content="#F7F5F1" />
         <meta name="msapplication-TileColor" content="#FFFFFF" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=yes" />

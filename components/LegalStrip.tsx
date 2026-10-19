@@ -7,7 +7,7 @@ import Link from "next/link";
  */
 export default function LegalStrip() {
   return (
-    <div className="bg-mist border-t border-line">
+    <div className="bg-mist">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <p className="text-xs md:text-sm text-ink-soft leading-relaxed">
           By using this website, submitting a form, or sending us an SMS, you agree to our{" "}

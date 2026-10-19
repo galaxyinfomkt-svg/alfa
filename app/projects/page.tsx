@@ -59,10 +59,10 @@ export default function ProjectsPage() {
             Full-home re-sides by our own crew — every photo on this page is a real Alfa Construction job.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
-            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg transition-colors text-lg">
+            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-full transition-colors text-lg">
               Get a Free Estimate
             </Link>
-            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-7 py-4 rounded-lg transition-colors border border-line text-lg">
+            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-7 py-4 rounded-full transition-colors border border-line text-lg">
               Call {company.phone}
             </a>
           </div>
@@ -77,14 +77,14 @@ export default function ProjectsPage() {
 
       {/* ===== BEFORE / AFTER ===== */}
       {beforeAfter.length > 0 && (
-        <section className="py-16 md:py-20 bg-mist border-t border-line">
+        <section className="py-16 md:py-20 bg-mist">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-ink mt-2 mb-3">Drag to compare</h2>
             </div>
             <div className="space-y-10">
               {beforeAfter.map((project) => (
-                <article key={project.slug} className="bg-paper border border-line rounded-2xl overflow-hidden">
+                <article key={project.slug} className="bg-card shadow-soft rounded-[2rem] overflow-hidden">
                   <div className="grid lg:grid-cols-5">
                     <div className="lg:col-span-3 relative aspect-[4/3] lg:aspect-auto lg:min-h-[440px]">
                       <BeforeAfter beforeSrc={project.beforeImage!} afterSrc={project.afterImage!} beforeAlt={`Before — ${project.title}`} afterAlt={`After — ${project.title}`} />
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
       )}
 
       {/* ===== ALL PROJECTS ===== */}
-      <section className="py-16 md:py-20 bg-paper border-t border-line" id="all">
+      <section className="py-16 md:py-20 bg-paper" id="all">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-ink mb-3">All {projects.length} projects</h2>
@@ -133,14 +133,14 @@ export default function ProjectsPage() {
       </section>
 
       {/* ===== SERVICE AREA ===== */}
-      <section className="py-16 md:py-20 bg-mist border-t border-line">
+      <section className="py-16 md:py-20 bg-mist">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-ink mb-3">Where we work</h2>
           <p className="text-ink-soft max-w-2xl mx-auto mb-8">Based in Bellingham, we re-side homes across MetroWest, Worcester County and Norfolk County.</p>
           <ul className="flex flex-wrap justify-center gap-2 mb-8">
             {nearbyTowns.map((c) => (
               <li key={c.slug}>
-                <Link href={`/massachusetts/${c.slug}`} className="inline-block bg-paper border border-line text-ink-soft hover:border-alfa-gold/40 hover:text-gold-ink text-sm px-4 py-2 rounded-full transition-colors">{c.name}</Link>
+                <Link href={`/massachusetts/${c.slug}`} className="inline-block bg-card shadow-soft text-ink-soft hover:border-alfa-gold/40 hover:text-gold-ink text-sm px-4 py-2 rounded-full transition-colors">{c.name}</Link>
               </li>
             ))}
           </ul>

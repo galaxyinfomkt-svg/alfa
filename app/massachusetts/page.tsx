@@ -72,13 +72,13 @@ export default function MassachusettsHubPage() {
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg transition-colors text-lg"
+              className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-full transition-colors text-lg"
             >
               Get a Free Estimate
             </Link>
             <a
               href={company.phoneTel}
-              className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-7 py-4 rounded-lg transition-colors border border-line text-lg"
+              className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-7 py-4 rounded-full transition-colors border border-line text-lg"
             >
               Call {company.phone}
             </a>
@@ -88,7 +88,7 @@ export default function MassachusettsHubPage() {
             <ul className="flex flex-wrap justify-center gap-2 text-sm">
               {groups.map((g, i) => (
                 <li key={g.title}>
-                  <a href={`#band-${i}`} className="inline-block rounded-full border border-line px-4 py-2 text-ink-soft hover:border-alfa-gold/50 hover:text-gold-ink">
+                  <a href={`#band-${i}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-ink-soft hover:border-alfa-gold/50 hover:text-gold-ink">
                     {g.title.replace(" of Bellingham", "")} · {g.towns.length}
                   </a>
                 </li>
@@ -112,7 +112,7 @@ export default function MassachusettsHubPage() {
                   <li key={town.slug}>
                     <Link
                       href={`/massachusetts/${town.slug}`}
-                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-0.5 md:gap-3 h-full rounded-xl bg-paper border border-line hover:border-alfa-gold/40 px-3 py-2.5 md:px-4 md:py-3 transition-colors group"
+                      className="flex flex-col md:flex-row md:items-center md:justify-between gap-0.5 md:gap-3 h-full rounded-xl bg-card shadow-soft hover:border-alfa-gold/40 px-3 py-2.5 md:px-4 md:py-3 transition-colors group"
                     >
                       <span>
                         <span className="block font-semibold text-ink group-hover:text-gold-ink leading-snug">{town.name}</span>
@@ -130,7 +130,7 @@ export default function MassachusettsHubPage() {
         </div>
       </section>
 
-      <section className="py-14 md:py-16 bg-paper border-t border-line">
+      <section className="py-14 md:py-16 bg-paper">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-ink mb-6 text-center">Our office in {company.address.locality}</h2>
           <GoogleMap />

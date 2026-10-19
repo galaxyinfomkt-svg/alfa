@@ -56,7 +56,7 @@ export default function ReviewsWidget() {
   }, []);
 
   return (
-    <div ref={wrapperRef} className="w-full rounded-xl overflow-hidden border border-alfa-cream-border bg-white">
+    <div ref={wrapperRef} className="w-full rounded-[1.75rem] overflow-hidden border border-alfa-cream-border bg-white">
       <iframe
         className="lc_reviews_widget w-full block border-0"
         src="https://reputationhub.site/reputation/widgets/review_widget/BlgWjOKxk32P6dyUTDjY"

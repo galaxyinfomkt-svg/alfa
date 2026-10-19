@@ -154,10 +154,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             )}
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-6 py-3 rounded-lg transition-colors">
+            <Link href="/contact" className="inline-flex items-center justify-center whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-6 py-3 rounded-full transition-colors">
               Get a Free Estimate
             </Link>
-            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-6 py-3 rounded-lg transition-colors border border-line">
+            <a href={company.phoneTel} className="inline-flex items-center justify-center whitespace-nowrap bg-mist hover:bg-line text-ink font-bold px-6 py-3 rounded-full transition-colors border border-line">
               Call {company.phone}
             </a>
           </div>
@@ -167,7 +167,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <section className="py-16 bg-mist">
         <div className="max-w-5xl mx-auto px-4">
           {/* Hero image */}
-          <figure className="rounded-2xl overflow-hidden shadow-xl mb-8">
+          <figure className="rounded-[2rem] overflow-hidden shadow-xl mb-8">
             <div className="aspect-[16/9] relative">
               <Image
                 src={project.image}
@@ -188,7 +188,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <figure>
                 <figcaption className="font-bold text-ink mb-2 text-center text-sm tracking-widest uppercase">Before</figcaption>
-                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-ink/10">
+                <div className="aspect-[4/3] relative rounded-[1.75rem] overflow-hidden shadow-lg shadow-ink/10">
                   <Image
                     src={project.beforeImage}
                     alt={`Before — ${project.title}, ${location}`}
@@ -200,7 +200,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               </figure>
               <figure>
                 <figcaption className="font-bold text-ink mb-2 text-center text-sm tracking-widest uppercase">After</figcaption>
-                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg shadow-ink/10">
+                <div className="aspect-[4/3] relative rounded-[1.75rem] overflow-hidden shadow-lg shadow-ink/10">
                   <Image
                     src={project.afterImage}
                     alt={`After — ${project.title}, ${location}`}
@@ -241,7 +241,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {galleryImages.map((img, idx) => (
                 <figure
                   key={img.src}
-                  className="group relative rounded-xl overflow-hidden bg-paper border border-line hover:border-alfa-gold/40 transition-colors"
+                  className="group relative rounded-[1.75rem] overflow-hidden bg-card shadow-soft hover:border-alfa-gold/40 transition-colors"
                 >
                   <div className="aspect-[4/3] relative">
                     <Image

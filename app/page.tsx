@@ -25,7 +25,7 @@ const fmtDate = (d: string) =>
 
 // Materiais em destaque (com foto real de obra) e os demais como lista.
 const allServices = getAllServices();
-const featuredSlugs = ["hardie-plank-siding", "vinyl-siding", "cedar-shake-siding", "board-and-batten-siding"];
+const featuredSlugs = ["hardie-plank-siding", "vinyl-siding", "cedar-shake-siding"];
 const featured = featuredSlugs.map((s) => allServices.find((x) => x.slug === s)!).filter(Boolean);
 const otherServices = allServices.filter((s) => !featuredSlugs.includes(s.slug) && s.slug !== "siding");
 
@@ -52,74 +52,68 @@ export default function HomePage() {
       {/* FAQ visivel abaixo usa o MESMO texto (data/faqData.ts). */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPage(homeFaqs)) }} />
 
-      {/* ===== HERO ===== */}
-      <section className="pt-32 md:pt-40 pb-12 md:pb-16 bg-paper">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-14 items-center">
-          <div>
-            <p className="text-ink-soft mb-5">Bellingham, MA · serving MetroWest, Worcester &amp; Norfolk County</p>
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4.4rem] text-ink mb-6">
+      {/* ===== HERO: a casa pronta em tela cheia ===== */}
+      <section className="relative min-h-[100dvh] flex flex-col">
+        <Image
+          src="/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg"
+          alt="Completed full-home James Hardie fiber cement re-side by Alfa Construction in Carlisle, Massachusetts"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+          fetchPriority="high"
+          quality={72}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/45" aria-hidden="true" />
+        <div className="relative mt-auto px-4 pb-24 md:pb-28 pt-36">
+          <div className="max-w-7xl mx-auto">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-sm text-white/90">
               Full-home siding installation &amp; replacement in Massachusetts
-            </h1>
-            <p className="text-lg text-ink-soft leading-relaxed max-w-xl mb-8">
-              Hardie Plank, vinyl, cedar and shake. Siding is all we do: complete tear-off and re-side by our own crew, not patch jobs or other trades.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              <a href={company.phoneTel} className="inline-flex items-center justify-center gap-2 bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-7 py-4 rounded-lg text-lg transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            <h1 className="font-display mt-5 text-white text-[2.7rem] sm:text-6xl lg:text-[4.6rem] max-w-4xl">
+              Siding that makes your whole house look new.
+            </h1>
+            <p className="mt-5 text-white/85 text-lg md:text-xl max-w-xl leading-relaxed">
+              Hardie Plank, vinyl, cedar and shake, installed by our own crew. One owner walks every estimate.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#estimate" className="group inline-flex items-center justify-between sm:justify-center gap-4 rounded-full bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold pl-7 pr-2 py-2 text-lg transition-colors">
+                Get a free estimate
+                <span className="w-11 h-11 rounded-full bg-ink/10 grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+              <a href={company.phoneTel} className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 backdrop-blur hover:bg-white/25 text-white font-semibold px-7 py-4 text-lg transition-colors">
                 Call {company.phone}
               </a>
-              <a href="#estimate" className="inline-flex items-center justify-center gap-2 border-2 border-ink text-ink hover:bg-ink hover:text-white font-bold px-7 py-4 rounded-lg text-lg transition-colors">
-                Get a free estimate
-              </a>
             </div>
-            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-soft">
-              <li className="flex items-center gap-1.5"><span className="flex">{star}{star}{star}{star}{star}</span><span className="font-semibold text-ink">5.0</span> on Google</li>
-              <li>MA HIC {company.license}</li>
-              <li>Since {company.foundedYear}</li>
-              <li>English &amp; Português</li>
-            </ul>
+            <p className="mt-6 text-sm text-white/75">
+              Whole-home James Hardie re-side in Carlisle, MA.{" "}
+              <Link href={`/projects/${heroProject.slug}`} className="font-semibold text-white underline underline-offset-4">See the project</Link>
+            </p>
           </div>
-          <figure className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-mist">
-              <Image
-                src="/images/hardie-plank-siding-carlisle-ma-after-back-cloud.jpg"
-                alt="Completed full-home James Hardie fiber cement re-side by Alfa Construction in Carlisle, Massachusetts"
-                fill
-                sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-cover"
-                priority
-                fetchPriority="high"
-                quality={72}
-              />
-            </div>
-            <figcaption className="mt-3 text-sm text-ink-soft">
-              Whole-home James Hardie re-side, Carlisle, MA. <Link href={`/projects/${heroProject.slug}`} className="font-semibold text-ink underline underline-offset-2">See the project</Link>
-            </figcaption>
-          </figure>
         </div>
       </section>
 
-      {/* ===== FAIXA DE PROVA ===== */}
-      <section className="border-y border-line bg-paper">
-        <dl className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 divide-line md:divide-x">
+      {/* ===== PROVA: cartoes que sobem sobre a foto ===== */}
+      <section className="relative px-4 -mt-14 md:-mt-16 z-10">
+        <dl className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {[
-            ["Licensed & insured", `MA HIC ${company.license}`],
-            ["In business since", String(company.foundedYear)],
-            ["Written estimate", "Itemized, within 24 hours"],
-            ["Owner on every job", "Fabio walks each estimate"],
+            ["5.0 on Google", "Rated by Massachusetts homeowners"],
+            [`MA HIC ${company.license}`, "Licensed & insured"],
+            [`Since ${company.foundedYear}`, "Owner-run, Bellingham based"],
+            ["24-hour estimate", "Itemized and in writing"],
           ].map(([t, d]) => (
-            <div key={t} className="py-6 md:px-6 first:md:pl-0">
-              <dt className="text-sm text-ink-soft">{t}</dt>
-              <dd className="font-semibold text-ink mt-0.5">{d}</dd>
+            <div key={t} className="rounded-[1.5rem] bg-card shadow-soft px-5 py-5 md:px-6">
+              <dt className="font-bold text-ink text-lg">{t}</dt>
+              <dd className="text-sm text-ink-soft mt-1">{d}</dd>
             </div>
           ))}
         </dl>
       </section>
 
       {/* ===== ANTES / DEPOIS ===== */}
-      <section className="py-16 md:py-24 bg-mist" id="work">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+      <section className="px-4 pt-20 md:pt-28" id="work">
+        <div className="max-w-7xl mx-auto rounded-[2.25rem] bg-card shadow-soft p-3 md:p-4 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-center">
+          <div className="relative aspect-[4/3] rounded-[1.75rem] overflow-hidden">
             <BeforeAfter
               beforeSrc={heroProject.beforeImage!}
               afterSrc={heroProject.afterImage!}
@@ -127,41 +121,50 @@ export default function HomePage() {
               afterAlt={`After — ${heroProject.title}`}
             />
           </div>
-          <div>
+          <div className="px-4 pb-6 lg:px-0 lg:pr-8 lg:pb-0">
             <h2 className="font-display text-4xl md:text-5xl text-ink mb-5">Stripped to the sheathing, re-sided to spec</h2>
             <p className="text-sm font-semibold text-gold-ink mb-3">{projectLocation(heroProject)} · drag the handle to compare</p>
             <p className="text-ink-soft leading-relaxed mb-6 line-clamp-[8]">{heroProject.description}</p>
-            <Link href={`/projects/${heroProject.slug}`} className="inline-flex items-center gap-2 font-bold text-ink underline underline-offset-4 decoration-alfa-gold decoration-2 hover:decoration-ink">
+            <Link href={`/projects/${heroProject.slug}`} className="group inline-flex items-center gap-3 rounded-full bg-ink text-white font-semibold pl-6 pr-1.5 py-1.5 hover:bg-charcoal transition-colors">
               See every step of this job
+              <span className="w-9 h-9 rounded-full bg-white/15 grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* ===== MATERIAIS ===== */}
-      <section className="py-16 md:py-24 bg-paper" id="services">
+      <section className="py-20 md:py-28 px-4" id="services">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <h2 className="font-display text-4xl md:text-5xl text-ink max-w-2xl">You pick the siding. We do the whole house.</h2>
             <p className="text-ink-soft max-w-md">Every job is a complete re-side: tear-off, sheathing repair, weather barrier, flashing, trim and cleanup are included.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {featured.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="group block">
-                <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-mist">
-                  <Image src={s.heroImage} alt={`${s.shortName} siding installed by Alfa Construction`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" quality={65} />
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:auto-rows-[270px]">
+            {featured.map((s, i) => (
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                className={`group relative block overflow-hidden rounded-[2rem] bg-mist min-h-[320px] md:min-h-0 ${i === 0 ? "md:col-span-7 md:row-span-2" : "md:col-span-5"}`}
+              >
+                <Image src={s.heroImage} alt={`${s.shortName.replace(/ siding$/i, "")} siding installed by Alfa Construction`} fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover transition-transform duration-700 ease-premium group-hover:scale-[1.04]" quality={65} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" aria-hidden="true" />
+                <div className="absolute inset-x-0 bottom-0 p-6 md:p-7 flex items-end justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{s.shortName}</h3>
+                    <p className="mt-1 text-white/80 max-w-md">{s.cardSummary}</p>
+                  </div>
+                  <span className="shrink-0 w-11 h-11 rounded-full bg-white/20 backdrop-blur text-white grid place-items-center transition-transform duration-500 ease-premium group-hover:translate-x-1" aria-hidden="true">→</span>
                 </div>
-                <h3 className="mt-4 text-xl font-bold text-ink group-hover:text-gold-ink transition-colors">{s.shortName}</h3>
-                <p className="mt-1 text-sm text-ink-soft leading-relaxed">{s.cardSummary}</p>
               </Link>
             ))}
           </div>
-          <div className="mt-10 pt-6 border-t border-line flex flex-col md:flex-row md:items-center gap-4">
+          <div className="mt-8 flex flex-col md:flex-row md:items-center gap-4">
             <p className="font-semibold text-ink shrink-0">Also installed:</p>
             <ul className="flex flex-wrap gap-2">
               {otherServices.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services/${s.slug}`} className="inline-block rounded-full border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{s.shortName}</Link>
+                  <Link href={`/services/${s.slug}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2.5 text-sm font-semibold text-ink hover:bg-mist transition-colors">{s.shortName}</Link>
                 </li>
               ))}
               <li>
@@ -173,13 +176,13 @@ export default function HomePage() {
       </section>
 
       {/* ===== PROCESSO (sequencia real de 4 passos) ===== */}
-      <section className="py-16 md:py-24 bg-charcoal text-white" id="process">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-display text-4xl md:text-5xl mb-12 max-w-2xl">From first call to a finished house</h2>
-          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+      <section className="px-4" id="process">
+        <div className="max-w-7xl mx-auto rounded-[2.25rem] bg-charcoal text-white px-6 py-12 md:px-12 md:py-16">
+          <h2 className="font-display text-4xl md:text-5xl mb-10 max-w-2xl">From first call to a finished house</h2>
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {steps.map((s, i) => (
-              <li key={s.title} className="border-t border-white/20 pt-5">
-                <span className="text-sm font-semibold text-alfa-gold-light">Step {i + 1}</span>
+              <li key={s.title} className="rounded-[1.5rem] bg-white/[0.06] ring-1 ring-white/10 p-6">
+                <span className="inline-grid place-items-center w-9 h-9 rounded-full bg-alfa-gold text-ink text-sm font-bold">{i + 1}</span>
                 <h3 className="text-xl font-bold mt-2 mb-2">{s.title}</h3>
                 <p className="text-white/75 leading-relaxed">{s.body}</p>
               </li>
@@ -212,7 +215,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {gridProjects.map((p) => (
               <Link key={p.slug} href={`/projects/${p.slug}`} className="group block">
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-line">
+                <div className="relative aspect-[4/3] rounded-[1.75rem] overflow-hidden bg-line">
                   <Image src={p.image} alt={p.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" quality={60} />
                 </div>
                 <h3 className="mt-3 font-bold text-ink leading-snug group-hover:text-gold-ink transition-colors">{p.title}</h3>
@@ -226,7 +229,7 @@ export default function HomePage() {
       {/* ===== SOBRE ===== */}
       <section className="py-16 md:py-24 bg-paper" id="about">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-[6/5] rounded-2xl overflow-hidden bg-mist order-last lg:order-first">
+          <div className="relative aspect-[6/5] rounded-[2rem] overflow-hidden bg-mist order-last lg:order-first">
             <Image src="/images/green-siding-exterior-completed-ma.jpg" alt="Sage green full-home re-side with white trim by Alfa Construction in Massachusetts" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" quality={65} />
           </div>
           <div>
@@ -266,7 +269,7 @@ export default function HomePage() {
             <ul className="flex flex-wrap gap-2 mb-6">
               {nearbyTowns.map((c) => (
                 <li key={c.slug}>
-                  <Link href={`/massachusetts/${c.slug}`} className="inline-block rounded-full bg-paper border border-line px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{c.name}</Link>
+                  <Link href={`/massachusetts/${c.slug}`} className="inline-block rounded-full bg-card shadow-soft px-4 py-2 text-sm font-medium text-ink hover:border-ink transition-colors">{c.name}</Link>
                 </li>
               ))}
             </ul>
@@ -280,9 +283,9 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-paper" id="faq">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-display text-4xl md:text-5xl text-ink mb-8">Questions about re-siding</h2>
-          <div className="divide-y divide-line border-y border-line">
+          <div className="space-y-3">
             {homeFaqs.map((faq) => (
-              <details key={faq.q} className="group">
+              <details key={faq.q} className="group rounded-[1.5rem] bg-card shadow-soft px-6">
                 <summary className="py-5 font-semibold text-ink text-lg flex justify-between items-center gap-4">
                   {faq.q}
                   <svg className="w-5 h-5 text-ink-soft group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -295,7 +298,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== GUIAS ===== */}
-      <section className="py-16 md:py-20 bg-paper border-t border-line" id="blog">
+      <section className="py-16 md:py-20 bg-paper" id="blog">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-end justify-between gap-4 mb-8">
             <h2 className="font-display text-3xl md:text-4xl text-ink">Siding guides for Massachusetts homes</h2>
@@ -304,7 +307,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {latestPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-mist">
+                <div className="relative aspect-[16/10] rounded-[1.75rem] overflow-hidden bg-mist">
                   <Image src={post.image} alt={post.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" quality={60} />
                 </div>
                 <p className="mt-3 text-sm text-ink-soft"><time dateTime={post.date}>{fmtDate(post.date)}</time></p>

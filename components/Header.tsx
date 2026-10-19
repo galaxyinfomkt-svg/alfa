@@ -68,32 +68,11 @@ export default function Header() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 ${isScrolled ? "shadow-[0_1px_0_#E1E1DC,0_8px_24px_rgba(23,22,18,0.06)]" : ""}`}>
-      {/* Barra superior: contato + links legais (exigencia A2P/TCR). */}
-      <div className={`bg-charcoal text-white/85 transition-[height,opacity] duration-300 ${isScrolled ? "h-0 overflow-hidden opacity-0" : "opacity-100"}`}>
-        <div className="max-w-7xl mx-auto px-4 py-1.5 flex justify-between items-center gap-4 text-[13px]">
-          <span className="hidden sm:inline">Based in {company.address.locality}, MA · MA HIC {company.license}</span>
-          <a href={`mailto:${company.email}`} className="hover:text-white whitespace-nowrap py-1">
-            {company.email}
-          </a>
-          <div className="flex items-center gap-3">
-            <a href={company.phoneTel} className="font-semibold text-white hover:text-alfa-gold-light whitespace-nowrap py-1">
-              {company.phone}
-            </a>
-            <span className="hidden md:flex items-center gap-3 text-white/70">
-              <span aria-hidden="true">·</span>
-              <Link href="/privacy" className="hover:text-white py-1">Privacy</Link>
-              <Link href="/terms" className="hover:text-white py-1">Terms</Link>
-              <Link href="/cookies" className="hover:text-white py-1">Cookies</Link>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Barra principal */}
-      <div className="bg-paper/95 backdrop-blur border-b border-line">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20 gap-6">
+    <header className="fixed top-0 left-0 right-0 z-50 px-3 pt-3 md:pt-4">
+      {/* Barra principal: pilula flutuante, sombra so depois de rolar */}
+      <div className={`max-w-7xl mx-auto rounded-full bg-card/90 backdrop-blur-xl transition-shadow duration-500 ease-premium ${isScrolled ? "shadow-[0_12px_40px_rgba(27,26,23,0.14)]" : "shadow-[0_8px_30px_rgba(27,26,23,0.08)]"}`}>
+        <div className="pl-5 pr-2">
+          <div className="flex items-center justify-between h-16 gap-6">
             <Link href="/" className="shrink-0" aria-label="Alfa Construction — home">
               <Logo />
             </Link>
@@ -105,7 +84,7 @@ export default function Header() {
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   aria-expanded={isServicesOpen}
                   aria-controls="services-menu"
-                  className={`flex items-center gap-1 px-3 py-2 rounded-md text-[15px] font-medium transition-colors ${isActive("/services") ? "text-gold-ink" : "text-ink hover:text-gold-ink"}`}
+                  className={`flex items-center gap-1 px-3 py-2 rounded-full text-[15px] font-medium transition-colors ${isActive("/services") ? "text-gold-ink" : "text-ink hover:text-gold-ink"}`}
                 >
                   Siding Services
                   <svg className={`w-3.5 h-3.5 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -116,13 +95,13 @@ export default function Header() {
                   id="services-menu"
                   className={`absolute top-full left-0 mt-2 w-[34rem] transition-[opacity,transform] duration-150 ${isServicesOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none invisible"}`}
                 >
-                  <div className="bg-paper border border-line rounded-xl shadow-[0_18px_40px_rgba(23,22,18,0.12)] p-2 grid grid-cols-2 gap-1">
+                  <div className="bg-card rounded-[1.5rem] shadow-[0_24px_60px_rgba(27,26,23,0.16)] p-2 grid grid-cols-2 gap-1">
                     {serviceItems.map((item) => (
                       <Link
                         key={item.slug}
                         href={`/services/${item.slug}`}
                         onClick={() => setIsServicesOpen(false)}
-                        className="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-mist transition-colors"
+                        className="flex flex-col gap-0.5 px-3 py-2.5 rounded-2xl hover:bg-mist transition-colors"
                       >
                         <span className="text-sm font-semibold text-ink">{item.name}</span>
                         <span className="text-xs text-ink-soft">{item.desc}</span>
@@ -131,7 +110,7 @@ export default function Header() {
                     <Link
                       href="/services"
                       onClick={() => setIsServicesOpen(false)}
-                      className="flex items-center px-3 py-2.5 rounded-lg hover:bg-mist text-sm font-semibold text-gold-ink"
+                      className="flex items-center px-3 py-2.5 rounded-2xl hover:bg-mist text-sm font-semibold text-gold-ink"
                     >
                       Compare all siding options →
                     </Link>
@@ -144,7 +123,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   aria-current={isActive(link.href) ? "page" : undefined}
-                  className={`px-3 py-2 rounded-md text-[15px] font-medium transition-colors ${isActive(link.href) ? "text-gold-ink" : "text-ink hover:text-gold-ink"}`}
+                  className={`px-3 py-2 rounded-full text-[15px] font-medium transition-colors ${isActive(link.href) ? "text-gold-ink" : "text-ink hover:text-gold-ink"}`}
                 >
                   {link.label}
                 </Link>
@@ -154,23 +133,23 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-2">
               <Link
                 href="/contact"
-                className="px-4 py-2.5 rounded-lg text-sm font-semibold text-ink border border-line hover:border-ink transition-colors"
+                className="px-4 py-2.5 rounded-full text-sm font-semibold text-ink hover:bg-mist transition-colors"
               >
                 Free Estimate
               </Link>
               <a
                 href={company.phoneTel}
-                className="inline-flex items-center gap-2 whitespace-nowrap bg-alfa-gold hover:bg-alfa-gold-light text-ink font-bold px-4 py-2.5 rounded-lg transition-colors text-sm"
+                className="inline-flex items-center gap-2 whitespace-nowrap bg-ink hover:bg-charcoal text-white font-semibold pl-4 pr-1.5 py-1.5 rounded-full transition-colors text-sm"
               >
-                {phoneIcon}
                 {company.phone}
+                <span className="w-9 h-9 rounded-full bg-alfa-gold text-ink grid place-items-center">{phoneIcon}</span>
               </a>
             </div>
 
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-ink hover:bg-mist"
+              className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-ink hover:bg-mist"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
@@ -188,14 +167,14 @@ export default function Header() {
       {/* Menu do celular */}
       <div
         id="mobile-menu"
-        className={`lg:hidden bg-paper border-b border-line ${isMobileMenuOpen ? "max-h-[calc(100dvh-4rem)] overflow-y-auto" : "max-h-0 overflow-hidden invisible"}`}
+        className={`lg:hidden max-w-7xl mx-auto mt-2 rounded-[1.75rem] bg-card shadow-[0_24px_60px_rgba(27,26,23,0.16)] ${isMobileMenuOpen ? "max-h-[calc(100dvh-6rem)] overflow-y-auto" : "max-h-0 overflow-hidden invisible"}`}
       >
         <nav className="px-4 py-3" aria-label="Mobile">
           <button
             type="button"
             onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
             aria-expanded={isMobileServicesOpen}
-            className="flex items-center justify-between w-full px-3 py-3 text-ink font-semibold rounded-lg hover:bg-mist"
+            className="flex items-center justify-between w-full px-3 py-3 text-ink font-semibold rounded-2xl hover:bg-mist"
           >
             Siding Services
             <svg className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -208,7 +187,7 @@ export default function Header() {
                 key={item.slug}
                 href={`/services/${item.slug}`}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block pl-6 pr-3 py-2.5 text-[15px] text-ink-soft rounded-lg hover:bg-mist hover:text-ink"
+                className="block pl-6 pr-3 py-2.5 text-[15px] text-ink-soft rounded-2xl hover:bg-mist hover:text-ink"
               >
                 {item.name}
               </Link>
@@ -222,17 +201,17 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-3 text-ink font-semibold rounded-lg hover:bg-mist"
+              className="block px-3 py-3 text-ink font-semibold rounded-2xl hover:bg-mist"
             >
               {link.label}
             </Link>
           ))}
           <div className="grid grid-cols-2 gap-2 pt-3">
-            <a href={company.phoneTel} className="inline-flex items-center justify-center gap-2 bg-alfa-gold text-ink font-bold px-4 py-3 rounded-lg">
+            <a href={company.phoneTel} className="inline-flex items-center justify-center gap-2 bg-alfa-gold text-ink font-bold px-4 py-3 rounded-full">
               {phoneIcon}
               Call
             </a>
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="inline-flex items-center justify-center border border-ink text-ink font-semibold px-4 py-3 rounded-lg">
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="inline-flex items-center justify-center border border-ink text-ink font-semibold px-4 py-3 rounded-full">
               Free Estimate
             </Link>
           </div>
