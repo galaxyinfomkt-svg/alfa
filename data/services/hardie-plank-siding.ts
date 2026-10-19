@@ -9,7 +9,7 @@ const hardiePlankSiding: Service = {
   longDescription:
     "James Hardie fiber cement siding is the most resilient cladding a Massachusetts home can wear, and Alfa Construction installs it the way the manufacturer intended — as a complete, engineered exterior system. HardiePlank lap siding is a dense composite of Portland cement, sand, and cellulose fiber, manufactured to ASTM C1186 Type A Grade II standards and carrying a Class A non-combustible fire rating. Because it is mineral-based rather than organic, it does not feed rot, it does not interest termites, carpenter ants, or woodpeckers, and it shrugs off the warping that plagues wood and the brittleness that overtakes aging vinyl. Every Alfa installation begins by stripping the old cladding to the sheathing so we can inspect for hidden moisture damage, then we wrap the walls in HardieWrap weather barrier, flash every penetration, and hang each board with the precise gapping and corrosion-resistant fastening Hardie specifies for our climate zone. We finish the corners, bands, and openings in matching HardieTrim for a seamless, architecturally correct exterior. Backed by a 30-year non-prorated substrate warranty and ColorPlus Technology factory finishes that resist fading for roughly fifteen years, a properly installed HardiePlank exterior routinely protects a home for half a century. The result is a façade engineered to outlast the weather, lower your maintenance for decades, and dramatically lift your curb appeal.",
   icon: "Home",
-  heroImage: "/images/hardie-plank-siding-carlisle-ma-after-front.jpg",
+  heroImage: "/images/hardie-plank-siding-carlisle-ma-after-rear-skylights.jpg",
   keywords: [
     "James Hardie siding Massachusetts",
     "HardiePlank installer MA",

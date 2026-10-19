@@ -14,17 +14,12 @@ import { ReviewQuote } from "@/components/ReviewsSSR";
 import CTASection from "@/components/CTASection";
 import SiteVideo from "@/components/SiteVideo";
 
-/* Fotos landscape de re-sides completos. A rotacao e por cidade, entao duas
+/* So fotos deitadas com 1600px+ de largura e sem lixo/escada/obra na cena:
+   as menores e as em pe ficam borradas em tela cheia. A rotacao e por cidade, entao duas
    cidades vizinhas raramente repetem a mesma foto. */
 const heroImages = [
-  { src: "/images/hardie-plank-siding-carlisle-ma-after-front.jpg", alt: "Finished Hardie Plank siding on a Massachusetts home" },
-  { src: "/images/dark-shake-siding-renovation-after-ma.jpg", alt: "Charcoal shake siding after a full exterior re-side" },
-  { src: "/images/green-siding-exterior-completed-ma.jpg", alt: "Sage green siding with white trim after a full re-side" },
-  { src: "/images/hardie-plank-siding-carlisle-ma-front-day.jpg", alt: "Front elevation after a complete fiber cement re-side" },
-  { src: "/images/blue-gray-siding-red-door-ma.jpg", alt: "Blue-gray clapboard siding with white trim" },
-  { src: "/images/hardie-plank-siding-carlisle-ma-after-garage.jpg", alt: "Hardie Plank siding around garage and entry" },
-  { src: "/images/exterior-siding-cape-cod-home-bellingham-ma.jpg", alt: "Gray clapboard siding on a Cape Cod home in Bellingham, MA" },
-  { src: "/images/hardie-plank-siding-carlisle-ma-after-side.jpg", alt: "Hardie Plank lap siding with trim detail" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-after-rear-skylights.jpg", alt: "Finished Hardie Plank re-side with new deck and skylights" },
+  { src: "/images/hardie-plank-siding-carlisle-ma-porch-side.jpg", alt: "Completed fiber cement re-side with porch and deck" },
 ];
 
 function hashStr(s: string): number {
@@ -114,8 +109,10 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
 
       {/* ===== HERO: foto em tela cheia ===== */}
       <section className="relative min-h-[82dvh] flex flex-col">
-        <Image src={heroImg.src} alt={`${heroImg.alt} — siding contractor serving ${city.name}, MA`} fill sizes="100vw" className="object-cover" priority quality={70} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/45" aria-hidden="true" />
+        <Image src={heroImg.src} alt={`${heroImg.alt} — siding contractor serving ${city.name}, MA`} fill sizes="100vw" className="object-cover" priority quality={85} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/30 to-transparent" aria-hidden="true" />
         <div className="relative mt-auto px-4 pb-16 md:pb-20 pt-36">
           <div className="max-w-7xl mx-auto">
             <nav aria-label="Breadcrumb" className="text-sm text-white/75 mb-5">
