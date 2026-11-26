@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -147,6 +148,15 @@ export default function RootLayout({
             on first pointerdown/touchstart/keydown — keeps initial paint
             free of LeadConnector preconnects + Facebook Pixel x4. */}
         <DeferredScripts />
+
+        {/* GHL External Tracking (Settings > External Tracking, Alfa location):
+            page views, sessions and form submits go to the GHL contact. */}
+        <Script
+          id="ghl-external-tracking"
+          src="https://link.msgsndr.com/js/external-tracking.js"
+          data-tracking-id="tk_a70ba0c4c182498db0d732bf144b3db3"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
